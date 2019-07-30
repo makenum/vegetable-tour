@@ -1,0 +1,72 @@
+{% extends 'example.nunjucks' %}
+{% block title %}Progress{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="page__hd">
+      <h1 class="page__title">Progress</h1>
+      <p class="page__desc">进度条</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+      <div class="aiui-progress">
+        <div class="aiui-progress__bar">
+          <div class="aiui-progress__inner-bar js_progress" style="width: 0%;"></div>
+        </div>
+        <a href="javascript:;" class="aiui-progress__opr">
+          <i class="aiui-icon-cancel"></i>
+        </a>
+      </div>
+      <br>
+      <div class="aiui-progress">
+        <div class="aiui-progress__bar">
+          <div class="aiui-progress__inner-bar js_progress" style="width: 50%;"></div>
+        </div>
+        <a href="javascript:;" class="aiui-progress__opr">
+          <i class="aiui-icon-cancel"></i>
+        </a>
+      </div>
+      <br>
+      <div class="aiui-progress">
+        <div class="aiui-progress__bar">
+          <div class="aiui-progress__inner-bar js_progress" style="width: 80%;"></div>
+        </div>
+        <a href="javascript:;" class="aiui-progress__opr">
+          <i class="aiui-icon-cancel"></i>
+        </a>
+      </div>
+      <div class="aiui-btn-area">
+        <a href="javascript:;" class="aiui-btn aiui-btn_primary" id="btnUpload">上传</a>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
+{% block footer %}
+  <script type="text/javascript">
+    $(function () {
+      var $progress = $('.js_progress'),
+        $btnUpload = $('#btnUpload');
+      var progress = 0;
+
+      function next() {
+        if (progress > 100) {
+          progress = 0;
+          $btnUpload.removeClass('aiui-btn_disabled');
+          return;
+        }
+        $progress.css({
+          width: progress + '%'
+        });
+        progress = ++progress;
+        setTimeout(next, 20);
+      }
+
+      $btnUpload.on('click', function () {
+        if ($btnUpload.hasClass('aiui-btn_disabled')) 
+          return;
+        
+        $btnUpload.addClass('aiui-btn_disabled');
+        next();
+      });
+    });
+  </script>
+{% endblock %}

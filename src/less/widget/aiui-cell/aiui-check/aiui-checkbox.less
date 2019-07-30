@@ -1,0 +1,36 @@
+
+
+@import "../../../base/fn";
+
+.aiui-cells_checkbox {
+    .aiui-check__label{
+      &:before{left:110px;}
+    }
+    .aiui-cell__hd {
+        padding-right: @aiuiCellInnerGapH;
+    }
+    .aiui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: @aiuiLineColorDark;
+            font-size: 46px;
+            display: block;
+            margin:0;
+        }
+    }
+}
+
+// method2 accessbility
+.aiui-check {
+    // checkbox
+    .aiui-cells_checkbox & {
+        &:checked {
+            & + .aiui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: @aiuiColorPrimary;
+                }
+            }
+        }
+    }
+}

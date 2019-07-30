@@ -1,0 +1,34 @@
+{% extends 'example.nunjucks' %}
+{% block title %}msg-warn{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="aiui-msg">
+      <div class="aiui-msg__icon-area">
+        <i class="aiui-icon-warn aiui-icon_msg"></i>
+      </div>
+      <div class="aiui-msg__text-area">
+        <h2 class="aiui-msg__title">操作失败</h2>
+        <p class="aiui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a>
+        </p>
+      </div>
+      <div class="aiui-msg__tips-area">
+        <p class="aiui-msg__tips">提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a>
+        </p>
+      </div>
+      <div class="aiui-msg__opr-area">
+        <p class="aiui-btn-area">
+          <a href="javascript:history.back();" class="aiui-btn aiui-btn_default">辅助操作</a>
+        </p>
+      </div>
+      <div class="aiui-msg__extra-area">
+        <div class="aiui-footer">
+          <p class="aiui-footer__links">
+            <a href="javascript:void(0);" class="aiui-footer__link">底部链接文本</a>
+          </p>
+          <p class="aiui-footer__text">Copyright &copy; 2008-2016 aiui.io</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

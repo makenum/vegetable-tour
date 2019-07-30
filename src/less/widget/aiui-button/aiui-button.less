@@ -1,0 +1,66 @@
+
+
+@import '../../base/fn';
+@import 'aiui-btn_global';
+@import 'aiui-btn_default';
+@import 'aiui-btn_primary';
+@import 'aiui-btn_warn';
+@import 'aiui-btn_disabled';
+@import 'aiui-btn_loading';
+@import 'aiui-btn_plain';
+@import 'aiui-btn_cell';
+
+button,
+input {
+  &.aiui-btn {
+    border-width: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &.aiui-btn_inline,
+  &.aiui-btn_mini {
+    width: auto;
+  }
+  &.aiui-btn_plain-primary,
+  &.aiui-btn_plain-default {
+    border-width: 1PX;
+    background-color: transparent;
+  }
+}
+
+.aiui-btn_mini {
+  display: inline-block;
+  width: auto;
+  padding: 0 unit(24px / @aiuiBtnMiniFontSize, em);
+  line-height: unit(@aiuiBtnMiniHeight / @aiuiBtnMiniFontSize);
+  font-size: @aiuiBtnMiniFontSize;
+}
+
+/*gap between btn*/
+.aiui-btn + .aiui-btn {
+  margin-top: @aiuiBtnDefaultGap;
+}
+
+.aiui-btn.aiui-btn_inline + .aiui-btn.aiui-btn_inline {
+  margin-top: auto;
+  margin-left: @aiuiBtnDefaultGap;
+}
+
+.aiui-btn-area {
+  margin: 96px @aiuiBtnDefaultGap 16px;
+}
+.aiui-btn-area_inline {
+  display: flex;
+  .aiui-btn {
+    margin-top: auto;
+    margin-right: @aiuiBtnDefaultGap;
+    width: 100%;
+    flex: 1;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+
+
+// font
+@aiuiFontEN:-apple-system-font,"Helvetica Neue";
+@aiuiFontCN:"PingFang SC","Hiragino Sans GB","Microsoft YaHei";
+@aiuiFontSans:sans-serif;
+@aiuiFontDefault:@aiuiFontEN,@aiuiFontSans;
+
+// button
+@aiuiBtnWidth:368px;
+@aiuiBtnHeight:80px;
+@aiuiBtnFontSize:34px;
+@aiuiBtnBorderRadius:8px;
+@aiuiBtnDefaultGap:32px;
+
+@aiuiBtnMiniFontSize:32px;
+@aiuiBtnMiniHeight:64px;
+
+@aiuiBtnCellHeight:112px;
+@aiuiBtnCellGap:32px;
+@aiuiBtnCellLineHeight: unit((@aiuiBtnCellHeight - 2 * @aiuiBtnCellGap) / @aiuiBtnFontSize);
+
+@aiuiBtnFontColor:#FFFFFF;
+@aiuiBtnActiveFontColor:#FFFFFF;
+@aiuiBtnDisabledFontColor:rgba(0,0,0,.18);
+@aiuiBtnDisabledBg:overlay(rgba(0,0,0,.02),#FFFFFF);
+@aiuiBtnHoverDefaultMask:@aiuiActiveMaskWhite;
+@aiuiBtnHoverPrimaryMask:@aiuiActiveMaskColored;
+
+@aiuiBtnDefaultFontColor:#06AE56;
+@aiuiBtnDefaultActiveFontColor:#06AE56;
+@aiuiBtnDefaultDisabledFontColor:@aiuiBtnDisabledFontColor;
+
+@aiuiBtnDefaultBg:#F2F2F2;
+@aiuiBtnDefaultActiveBg:#D9D9D9;
+@aiuiBtnDefaultDisabledBg:@aiuiBtnDisabledBg;
+
+
+@aiuiBtnPrimaryFontColor:#FFFFFF;
+@aiuiBtnPrimaryActiveFontColor:#FFFFFF;
+@aiuiBtnPrimaryDisabledFontColor:@aiuiBtnDisabledFontColor;
+
+@aiuiBtnPrimaryBg:#07C160;
+@aiuiBtnPrimaryActiveBg:#06AD56;
+@aiuiBtnPrimaryDisabledBg:@aiuiBtnDisabledBg;
+
+
+@aiuiBtnWarnFontColor:@aiuiColorWarn;
+@aiuiBtnWarnActiveFontColor:@aiuiColorWarn;
+@aiuiBtnWarnDisabledFontColor:@aiuiBtnDisabledFontColor;
+
+@aiuiBtnWarnBg:#F2F2F2;
+@aiuiBtnWarnActiveBg:#D9D9D9;
+@aiuiBtnwarnDisabledBg:@aiuiBtnDisabledBg;
+
+
+@aiuiBtnPlainPrimaryColor:#07C160;
+@aiuiBtnPlainPrimaryBorderColor:rgba(26,173,25,1);
+@aiuiBtnPlainPrimaryActiveColor:overlay(@aiuiBtnHoverPrimaryMask,@aiuiBtnPlainPrimaryColor);
+@aiuiBtnPlainPrimaryActiveBorderColor:overlay(@aiuiBtnHoverPrimaryMask,@aiuiBtnPlainPrimaryBorderColor);
+
+@aiuiBtnPlainDefaultColor:rgba(53,53,53,1);
+@aiuiBtnPlainDefaultBorderColor:rgba(53,53,53,1);
+@aiuiBtnPlainDefaultActiveColor:overlay(@aiuiBtnHoverDefaultMask,@aiuiBtnPlainDefaultColor);
+@aiuiBtnPlainDefaultActiveBorderColor:overlay(@aiuiBtnHoverDefaultMask,@aiuiBtnPlainDefaultBorderColor);
+
+// cell
+
+@aiuiCellBg: #ffffff;
+@aiuiCellBorderColor: @aiuiLineColorLight;
+@aiuiCellGapV: 32px;
+@aiuiCellGapH: 32px;
+@aiuiCellInnerGapH: 32px;
+@aiuiCellHeight: 112px;
+@aiuiCellFontSize: 34px;
+@aiuiCellTipsFontSize: 28px;
+@aiuiCellLabelWidth: 210px;
+
+@aiuiCellLineHeight: unit(
+  (@aiuiCellHeight - 2 * @aiuiCellGapV) / @aiuiCellFontSize
+); // 高度减去上下padding的行高
+@aiuiCellsMarginTop: 16px;
+
+// aiui switch
+@aiuiSwitchHeight: 64px;
+
+// aiui uploader
+@aiuiUploaderBorderColor: #a3a3a3;
+@aiuiUploaderActiveBorderColor: overlay(
+  @aiuiActiveMaskBlack,
+  @aiuiUploaderBorderColor
+);
+@aiuiUploaderFileSpacing: 16px;
+@aiuiUploaderSize: 192px;
+@aiuiUploaderBorderWidth: 1PX;
+
+// dialog
+@aiuiDialogBackgroundColor: #FFFFFF;
+@aiuiDialogLineColor: rgba(0,0,0,.1);
+@aiuiDialogLinkColor: @aiuiLinkColorDefault;
+@aiuiDialogLinkActiveBc: @aiuiBgColorActive;
+@aiuiDialogGapWidth: 48px;
+
+// gird
+@aiuiGridBorderColor:#D9D9D9;
+@aiuiGridFontSize: 28px;
+@aiuiGridIconSize: 56px;
+@aiuiGridColumnCount: 3;
+
+// msg
+@aiuiMsgPaddingTop:96px;
+@aiuiMsgTitleGap:32px;
+
+// progress
+@aiuiProgressBg: @aiuiBgColorDefault;
+@aiuiProgressColor: @aiuiColorPrimary;
+@aiuiProgressHeight: 6px;
+@aiuiProgressCloseBg: #EF4F4F;
+@aiuiProgressActiveBg: #C13E3E;
+
+// tab
+
+@aiuiNavBarHeight:112px;
+@aiuiTabBarHeight:120px;

@@ -1,0 +1,31 @@
+
+
+@import "../../../base/fn";
+
+// method2 accessbility
+.aiui-cells_radio{
+    .aiui-cell__ft {
+        padding-left: @aiuiCellInnerGapH;
+    }
+}
+.aiui-check {
+    // radio
+    .aiui-cells_radio & {
+		& + .aiui-icon-checked {
+			min-width:32px;
+        &:before {
+          margin:0;
+        }
+		}
+        &:checked {
+            & + .aiui-icon-checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: @aiuiColorPrimary;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+
+
+@import '../../base/fn';
+
+.aiui-agree {
+  display: block;
+  padding: 16px 30px;
+  font-size: 26px;
+
+  a {
+    color: @aiuiLinkColorDefault;
+  }
+}
+.aiui-agree__text {
+  color: @aiuiTextColorDesc;
+}
+.aiui-agree__checkbox {
+  appearance: none;
+  outline: 0;
+  font-size: 0;
+
+  border: 1PX solid @aiuiLineColorDark;
+  background-color: #ffffff;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  position: relative;
+
+  vertical-align: 0;
+  top: 4px;
+
+  &:checked {
+    &:before {
+      font-family: 'aiui';
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-align: center;
+      speak: none;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: inherit;
+      content: '\EA08';
+      color: #09bb07;
+      font-size: 26px;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -48%) scale(0.73);
+    }
+  }
+  &:disabled {
+    background-color: #e1e1e1;
+    &:before {
+      color: #adadad;
+    }
+  }
+}

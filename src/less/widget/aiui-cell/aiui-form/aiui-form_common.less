@@ -1,0 +1,77 @@
+
+
+@import "../../../base/fn";
+
+.aiui-label{
+  display:block;
+  width:@aiuiCellLabelWidth;
+  .text_wrap();
+}
+.aiui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: unit(@aiuiCellLineHeight, em);
+    line-height: @aiuiCellLineHeight;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+.aiui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 32px;
+    line-height: inherit;
+    outline: 0;
+}
+
+.aiui-textarea-counter{
+    color: @aiuiTextColorTips;
+    text-align: right;
+    .aiui-cell_warn &{
+        color: @aiuiTextColorWarn;
+    }
+}
+
+.aiui-toptips {
+    display:none;
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:10px;
+    font-size:28px;
+    text-align: center;
+    color: #FFF;
+    z-index: 5000;
+    .text_wrap();
+}
+.aiui-toptips_warn {
+    background-color: @aiuiColorWarn;
+}
+.aiui-cells_form {
+    .aiui-cell__ft{
+        font-size:0;
+    }
+    .aiui-icon-warn{
+        display:none;
+    }
+    input, textarea, label[for]{
+        .setTapColor();
+    }
+}
+.aiui-cell_warn{
+    color:@aiuiTextColorWarn;
+    .aiui-icon-warn{display:inline-block;}
+}

@@ -1,0 +1,15 @@
+
+
+@import "../../base/fn";
+
+.aiui-btn_warn {
+	color:@aiuiBtnWarnFontColor;
+    background-color: @aiuiBtnWarnBg;
+    &:not(.aiui-btn_disabled):visited {
+        color: @aiuiBtnWarnFontColor;
+    }
+    &:not(.aiui-btn_disabled):active {
+        color: @aiuiBtnWarnActiveFontColor;
+        background-color:@aiuiBtnWarnActiveBg;
+    }
+}

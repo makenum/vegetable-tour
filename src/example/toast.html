@@ -1,0 +1,64 @@
+{% extends 'example.nunjucks' %}
+{% block title %}Toast{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="page__hd">
+      <h1 class="page__title">Toast</h1>
+      <p class="page__desc">弹出式提示</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showToast">成功提示</a>
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showLoadingToast">加载中提示</a>
+    </div>
+
+    <!--BEGIN toast-->
+    <div id="toast" style="display: none;">
+      <div class="aiui-mask_transparent"></div>
+      <div class="aiui-toast">
+        <i class="aiui-icon-success-no-circle aiui-icon_toast"></i>
+        <p class="aiui-toast__content">已完成</p>
+      </div>
+    </div>
+    <!--end toast-->
+
+    <!-- loading toast -->
+    <div id="loadingToast" style="display:none;">
+      <div class="aiui-mask_transparent"></div>
+      <div class="aiui-toast">
+        <i class="aiui-loading aiui-icon_toast"></i>
+        <p class="aiui-toast__content">数据加载中</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block footer %}
+  <script type="text/javascript">
+    // toast
+    $(function () {
+      var $toast = $('#toast');
+      $('#showToast').on('click', function () {
+        if ($toast.css('display') != 'none') 
+          return;
+        
+        $toast.fadeIn(100);
+        setTimeout(function () {
+          $toast.fadeOut(100);
+        }, 2000);
+      });
+    });
+
+    // loading
+    $(function () {
+      var $loadingToast = $('#loadingToast');
+      $('#showLoadingToast').on('click', function () {
+        if ($loadingToast.css('display') != 'none') 
+          return;
+        
+        $loadingToast.fadeIn(100);
+        setTimeout(function () {
+          $loadingToast.fadeOut(100);
+        }, 2000);
+      });
+    });
+  </script>
+{% endblock %}

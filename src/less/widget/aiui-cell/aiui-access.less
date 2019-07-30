@@ -1,0 +1,34 @@
+
+
+@import "../../base/fn";
+
+.aiui-cell_access {
+    .setTapColor();
+    color: inherit;
+    &:active {
+        background-color: #ECECEC;
+    }
+    .aiui-cell__ft {
+        padding-right: 32px;
+        position: relative;
+        &:after {
+            content: " ";
+            .setArrow(right, 16px, #B2B2B2, 4px);
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            right: 0;
+        }
+    }
+}
+.aiui-cell_link{
+    color: @aiuiLinkColorDefault;
+    font-size: 34px;
+
+    // 由于aiui-cell:first-child的:before为隐藏，所以这里要重新显示出来
+    &:first-child{
+        &:before{
+            display: block;
+        }
+    }
+}

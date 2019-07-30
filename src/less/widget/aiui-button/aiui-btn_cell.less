@@ -1,0 +1,45 @@
+
+
+@import "../../base/fn";
+
+.aiui-btn_cell{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-weight:700;
+    font-size: @aiuiBtnFontSize;
+    text-align: center;
+    text-decoration: none;
+    color: @aiuiBtnFontColor;
+    line-height: @aiuiBtnCellLineHeight;
+    padding:@aiuiBtnCellGap;
+    .setTapColor();
+    overflow: hidden;
+    background-color:#FFFFFF;
+    & + &{
+      margin-top:@aiuiBtnDefaultGap;
+    }
+    &:active{
+      background-color:@aiuiBgColorActive;
+    }
+}
+.aiui-btn_cell__icon{
+  display:inline-block;
+  vertical-align:middle;
+  width:46px;
+  height:46px;
+  margin:-.6px 10px 0 0;
+}
+.aiui-btn_cell-default{
+  color:rgba(0,0,0,.9);
+}
+.aiui-btn_cell-primary{
+  color:@aiuiLinkColorDefault;
+}
+.aiui-btn_cell-warn{
+  color:@aiuiColorWarn;
+}
+
+

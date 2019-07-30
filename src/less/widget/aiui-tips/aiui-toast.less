@@ -1,0 +1,38 @@
+
+
+@import "../../base/fn";
+
+.aiui-toast {
+    position: fixed;
+    z-index: 5000;
+    width: 242px;
+    min-height: 242px;
+    top: 360px;
+    left: 50%;
+    margin-left: -120;
+    background: rgba(17,17,17,0.7);
+    text-align: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+.aiui-icon_toast {
+    margin: 48px 0 0;
+    display: block;
+    &.aiui-icon-success-no-circle{
+      &:before {
+          color: #FFFFFF;
+          font-size: 110px;
+      }
+    }
+    &.aiui-loading{
+      margin:64px 0 0;
+      width:76px;
+      height:76px;
+      vertical-align: baseline;
+    }
+}
+
+.aiui-toast__content {
+    margin: 0 0 32px;
+    font-size:28px;
+}

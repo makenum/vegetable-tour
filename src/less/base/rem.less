@@ -1,0 +1,79 @@
+
+@vwFontsize: 100;
+@vwDesign: 750;
+@maxWidth: 768PX;
+
+
+/* 1rem = 100px */
+html {
+  @remV: @vwFontsize / @vwDesign * 100vw;
+  font-size: @remV;
+
+  @media screen and (max-width: 320px) {
+    font-size: 42.667PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 321px) and (max-width: 360px) {
+    font-size: 48PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 361px) and (max-width: 375px) {
+    font-size: 50PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 393px) {
+    font-size: 52.4PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 394px) and (max-width: 412px) {
+    font-size: 54.93PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 413px) and (max-width: 414px) {
+    font-size: 55.2PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 415px) and (max-width: 480px) {
+    font-size: 64PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) {
+    font-size: 72PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 640px) {
+    font-size: 85.33PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 720px) {
+    font-size: 96PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 721px) and (max-width: 768px) {
+    font-size: 102.4PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 769px) {
+    font-size: 102.4PX;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    max-width: @maxWidth;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+  }
+}

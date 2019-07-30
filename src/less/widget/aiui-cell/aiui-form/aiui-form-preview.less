@@ -1,0 +1,92 @@
+
+
+@import "../../../base/fn";
+
+.aiui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        .setTopLine(@aiuiCellBorderColor);
+    }
+    &:after{
+        .setBottomLine(@aiuiCellBorderColor);
+    }
+}
+.aiui-form-preview__hd{
+    position: relative;
+    padding: @aiuiCellGapV;
+    text-align: right;
+    line-height: 80px;
+    &:after{
+        .setBottomLine(@aiuiCellBorderColor);
+        left: @aiuiCellGapH;
+    }
+    .aiui-form-preview__value{
+        font-style: normal;
+        font-size: 100px;
+    }
+}
+.aiui-form-preview__bd{
+    padding: @aiuiCellGapV;
+    font-size: 28px;
+    text-align: right;
+    color: @aiuiTextColorDesc;
+    line-height: 2;
+}
+.aiui-form-preview__ft{
+    position: relative;
+    line-height: 100px;
+    display: flex;
+    &:before {
+        .setTopLine(@aiuiDialogLineColor);
+    }
+}
+.aiui-form-preview__item{
+    overflow: hidden;
+}
+.aiui-form-preview__label{
+    float: left;
+    margin-right: 21px;
+    min-width: 128px;
+    color: @aiuiTextColorDesc;
+    text-align: justify;
+    text-align-last: justify;
+}
+.aiui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.aiui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: @aiuiDialogLinkColor;
+    text-align: center;
+    .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: @aiuiDialogLinkActiveBc;
+    }
+    &:after {
+        .setLeftLine(@aiuiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.aiui-form-preview__btn_default {
+    color: @aiuiTextColorTitle;
+}
+.aiui-form-preview__btn_primary {
+    color: @aiuiLinkColorDefault;
+}
