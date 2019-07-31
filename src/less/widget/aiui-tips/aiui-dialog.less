@@ -9,18 +9,19 @@
     left: 32px;
     right: 32px;
     transform: translate(0, -50%);
-
     background-color: @aiuiDialogBackgroundColor;
     text-align: center;
-    border-radius: 3px;
+    border-radius: @aiuiDialogRadius;
     overflow: hidden;
+    
 }
 .aiui-dialog__hd {
+    position: relative;
     padding: 64px @aiuiDialogGapWidth 32px;
 }
 .aiui-dialog__title {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 36px;
     line-height:1.4;
 }
 .aiui-dialog__bd {
@@ -49,7 +50,6 @@
 .aiui-dialog__btn {
     display: block;
     flex: 1;
-    color: @aiuiDialogLinkColor;
     font-weight:700;
     text-decoration: none;
     .setTapColor();
@@ -69,56 +69,9 @@
     }
 }
 .aiui-dialog__btn_default {
-    color: @aiuiTextColorTitle;
+    color: @aiuiTextColorTips;
+}
+.aiui-dialog__btn_primary {
+    color: @aiuiColorPrimary;
 }
 
-.aiui-skin_android{
-    .aiui-dialog {
-        text-align: left;
-        box-shadow: 0 12px 60px 0 rgba(0, 0, 0, .1);
-    }
-    .aiui-dialog__title{
-      font-size:44px;
-      line-height:1.4;
-    }
-    .aiui-dialog__hd{
-        text-align: left;
-    }
-    .aiui-dialog__bd{
-        color:@aiuiTextColorDesc;
-        font-size: 34px;
-        text-align: left;
-        &:first-child{
-            color:@aiuiTextColorTitle;
-        }
-    }
-    .aiui-dialog__ft{
-        display: block;
-        text-align: right;
-        line-height: 80px;
-        padding:0 @aiuiDialogGapWidth 64px;
-        &:after{
-            display: none;
-        }
-    }
-    .aiui-dialog__btn{
-        display: inline-block;
-        vertical-align: top;
-        padding:0 24px;
-        &:after{
-            display: none;
-        }
-        &:last-child{
-            margin-right: -24px;
-        }
-    }
-    .aiui-dialog__btn_default {
-        color: @aiuiTextColorTitle;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .aiui-dialog {
-        width: 35%;
-    }
-}

@@ -1,0 +1,54 @@
+{% extends 'example.nunjucks' %}
+{% block title %}Popup{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="page__hd">
+      <h1 class="page__title">Popup</h1>
+      <p class="page__desc">半屏组件</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showIOSDialog1">样式一</a>
+    </div>
+
+    <div id="dialogs">
+      <!--BEGIN dialog1-->
+      <div class="js_dialog" id="iosDialog1" style="display: none;">
+        <div class="aiui-mask"></div>
+        <div class="aiui-popup">
+          <div class="aiui-popup__bd">
+            <br>
+            <br>
+            可放自定义内容
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END dialog1-->
+      
+    </div>
+  </div>
+{% endblock %}
+{% block footer %}
+  <script type="text/javascript">
+    $(function () {
+      var $iosDialog1 = $('#iosDialog1');
+
+      $('.js_dialog').on('click', '.aiui-mask', function () {
+        $(".aiui-popup").removeClass("aiui-popup__toggle")
+        $(this)
+          .parents('.js_dialog')
+          .fadeOut(200);
+      });
+
+      $('#showIOSDialog1').on('click', function () {
+        $iosDialog1.fadeIn();
+        $iosDialog1
+          .find(".aiui-popup")
+          .addClass("aiui-popup__toggle");
+      });
+    });
+  </script>
+{% endblock %}

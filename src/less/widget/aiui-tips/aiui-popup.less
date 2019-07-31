@@ -1,0 +1,47 @@
+@import "../../base/fn";
+
+.aiui-popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  max-height: 75%;
+  z-index: 5000;
+  line-height: 1.4;
+  background-color: #ffffff;
+  border-top-left-radius: @aiuiDialogRadius;
+  border-top-right-radius: @aiuiDialogRadius;
+  overflow: hidden;
+  padding: 0 constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  //slide up animation
+  transition: transform 0.3s;
+}
+.aiui-popup__hd {
+  height: 128px;
+  display: flex;
+  align-items: center;
+}
+
+.aiui-popup__title {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.aiui-popup__bd {
+  .hyphens();
+  overflow-y: auto;
+}
+
+.aiui-popup__ft {
+  padding: 80px 48px 64px;
+  text-align: center;
+}
+
+//actionSheet aniamtion
+.aiui-popup__toggle {
+  transform: translate(0, 0);
+}
