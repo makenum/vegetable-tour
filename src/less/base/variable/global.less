@@ -7,61 +7,26 @@
 @aiuiFontDefault:@aiuiFontEN,@aiuiFontSans;
 
 // button
-@aiuiBtnHeight:82px;
-@aiuiBtnFontSize:34px;
-@aiuiBtnBorderRadius:8px;
-@aiuiBtnDefaultGap:32px;
+@aiuiBtnDefaultGap:24px;
 
-@aiuiBtnMiniFontSize:32px;
-@aiuiBtnMiniHeight:64px;
-
-@aiuiBtnCellHeight:112px;
-@aiuiBtnCellGap:32px;
-@aiuiBtnCellLineHeight: unit((@aiuiBtnCellHeight - 2 * @aiuiBtnCellGap) / @aiuiBtnFontSize);
-
-@aiuiBtnFontColor:#FFFFFF;
-@aiuiBtnActiveFontColor:#FFFFFF;
-@aiuiBtnDisabledFontColor:rgba(0,0,0,.18);
-@aiuiBtnDisabledBg:overlay(rgba(0,0,0,.02),#FFFFFF);
-@aiuiBtnHoverDefaultMask:@aiuiActiveMaskWhite;
-@aiuiBtnHoverPrimaryMask:@aiuiActiveMaskColored;
-
-@aiuiBtnDefaultFontColor:#06AE56;
-@aiuiBtnDefaultActiveFontColor:#06AE56;
-@aiuiBtnDefaultDisabledFontColor:@aiuiBtnDisabledFontColor;
-
-@aiuiBtnDefaultBg:#F2F2F2;
+@aiuiBtnDefaultFontColor:#333333;
+@aiuiBtnPlainDefaultFontColor: #333333;
+@aiuiBtnPlainDefaultBorderColor: #333333;
+@aiuiBtnDefaultBg:#FFFFFF;
 @aiuiBtnDefaultActiveBg:#D9D9D9;
-@aiuiBtnDefaultDisabledBg:@aiuiBtnDisabledBg;
 
 
 @aiuiBtnPrimaryFontColor:#FFFFFF;
-@aiuiBtnPrimaryActiveFontColor:#FFFFFF;
-@aiuiBtnPrimaryDisabledFontColor:@aiuiBtnDisabledFontColor;
+@aiuiBtnPlainPrimaryFontColor: #19CF77;
+@aiuiBtnPlainPrimaryBorderColor: #19CF77;
+@aiuiBtnPrimaryBg:#19CF77;
+@aiuiBtnPrimaryBgi:linear-gradient(90deg, #2DE080 5%, rgba(25,207,119,0.99) 100%);
+@aiuiBtnPrimaryActiveBg:#27A964;
 
-@aiuiBtnPrimaryBg:linear-gradient(90deg, #2DE080 5%, rgba(25,207,119,0.99) 100%);
-@aiuiBtnPrimaryActiveBg:#06AD56;
-@aiuiBtnPrimaryDisabledBg:@aiuiBtnDisabledBg;
-
-
-@aiuiBtnWarnFontColor:@aiuiColorWarn;
-@aiuiBtnWarnActiveFontColor:@aiuiColorWarn;
-@aiuiBtnWarnDisabledFontColor:@aiuiBtnDisabledFontColor;
-
-@aiuiBtnWarnBg:#F2F2F2;
-@aiuiBtnWarnActiveBg:#D9D9D9;
-@aiuiBtnwarnDisabledBg:@aiuiBtnDisabledBg;
+@aiuiBtnDisabledFontColor:rgba(255,255,255,.4);
+@aiuiBtnDisabledBg: #DDDDDD;
 
 
-@aiuiBtnPlainPrimaryColor:#07C160;
-@aiuiBtnPlainPrimaryBorderColor:rgba(26,173,25,1);
-@aiuiBtnPlainPrimaryActiveColor:overlay(@aiuiBtnHoverPrimaryMask,@aiuiBtnPlainPrimaryColor);
-@aiuiBtnPlainPrimaryActiveBorderColor:overlay(@aiuiBtnHoverPrimaryMask,@aiuiBtnPlainPrimaryBorderColor);
-
-@aiuiBtnPlainDefaultColor:rgba(53,53,53,1);
-@aiuiBtnPlainDefaultBorderColor:rgba(53,53,53,1);
-@aiuiBtnPlainDefaultActiveColor:overlay(@aiuiBtnHoverDefaultMask,@aiuiBtnPlainDefaultColor);
-@aiuiBtnPlainDefaultActiveBorderColor:overlay(@aiuiBtnHoverDefaultMask,@aiuiBtnPlainDefaultBorderColor);
 
 // cell
 
@@ -98,7 +63,9 @@
 @aiuiDialogLineColor: rgba(0,0,0,.1);
 @aiuiDialogLinkColor: @aiuiLinkColorDefault;
 @aiuiDialogLinkActiveBc: @aiuiBgColorActive;
-@aiuiDialogGapWidth: 48px;
+@aiuiDialogWidth: 600px;
+@aiuiDialogGapXWidth: 60px;
+@aiuiDialogGapYWidth: 40px;
 @aiuiDialogRadius: 28px;
 
 // gird

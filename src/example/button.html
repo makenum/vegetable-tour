@@ -1,7 +1,7 @@
 {% extends 'example.nunjucks' %}
 {% block title %}Button{% endblock %}
 {% block content %}
-  <div class="page">
+  <div class="page button">
     <div class="page__hd">
       <h1 class="page__title">Button</h1>
       <p class="page__desc">按钮</p>
@@ -9,45 +9,34 @@
     <div class="page__bd page__bd_spacing">
 
       <div class="button-sp-area">
-        <a href="javascript:;" class="aiui-btn aiui-btn_primary">页面主操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_primary aiui-btn_loading">
-          <i class="aiui-loading"></i>页面主操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_disabled aiui-btn_primary">页面主操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_default">页面次要操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_default aiui-btn_loading">
-          <i class="aiui-loading"></i>页面次操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_disabled aiui-btn_default">页面次要操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_warn">警告类操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_warn aiui-btn_loading">
-          <i class="aiui-loading"></i>警告类操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_disabled aiui-btn_warn">警告类操作</a>
+        <p>颜色</p>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__default">默认</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary">主要</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__disabled">禁用</button>
       </div>
 
       <div class="button-sp-area">
-        <a href="javascript:;" class="aiui-btn aiui-btn_block aiui-btn_primary">页面主操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_block aiui-btn_default">页面次要操作</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_block aiui-btn_warn">警告类操作</a>
-      </div>
-
-      <div class="button-sp-area cell">
-        <a href="javascript:;" class="aiui-btn_cell aiui-btn_cell-default">普通行按钮</a>
-        <a href="javascript:;" class="aiui-btn_cell aiui-btn_cell-primary">强调行按钮</a>
-        <a href="javascript:;" class="aiui-btn_cell aiui-btn_cell-primary">
-          <img class="aiui-btn_cell__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=">
-            强调行按钮
-          </a>
-        <a href="javascript:;" class="aiui-btn_cell aiui-btn_cell-warn">警告行按钮</a>
+        <p>圆角</p>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__default">正常</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__rounded">小圆角</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__disabled aiui-btn__pill">大圆角</button>
       </div>
 
       <div class="button-sp-area">
-        <a href="javascript:;" class="aiui-btn aiui-btn_plain-default">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_plain-default aiui-btn_plain-disabled">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_plain-primary">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_plain-primary aiui-btn_plain-disabled">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_mini aiui-btn_primary">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_mini aiui-btn_default">按钮</a>
-        <a href="javascript:;" class="aiui-btn aiui-btn_mini aiui-btn_warn">按钮</a>
+        <p>尺寸</p>
+        <button type="button" class="aiui-btn aiui-btn__tiny aiui-btn__primary aiui-btn__rounded">迷你</button>
+        <button type="button" class="aiui-btn aiui-btn__small aiui-btn__primary aiui-btn__rounded">小</button>
+        <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__rounded">中等</button>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__rounded">大</button>
+        <button type="button" class="aiui-btn aiui-btn__giant aiui-btn__primary aiui-btn__rounded">巨大</button>
       </div>
+
+      <div class="button-sp-area">
+        <p>线条</p>
+        <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__default aiui-btn__pill">默认</button>
+        <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">主要</button>
+      </div>
+
     </div>
 
   </div>

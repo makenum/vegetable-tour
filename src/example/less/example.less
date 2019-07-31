@@ -7,9 +7,8 @@ body {
 }
 
 body {
-  font-family: -apple-system-font, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 28px;
-
 }
 
 ul {
@@ -34,7 +33,6 @@ body,
 
 /* layout */
 
-
 .page {
   min-height: 100vh;
 }
@@ -53,8 +51,8 @@ body,
 .page__ft {
   padding-top: 80px;
   padding-bottom: 20px;
-  padding-bottom: calc(20px ~'+ constant(safe-area-inset-bottom)');
-  padding-bottom: calc(20px ~'+ env(safe-area-inset-bottom)');
+  padding-bottom: calc(20px ~"+ constant(safe-area-inset-bottom)");
+  padding-bottom: calc(20px ~"+ env(safe-area-inset-bottom)");
   text-align: center;
   img {
     height: 38px;
@@ -168,11 +166,13 @@ body,
     padding: 0;
   }
   .button-sp-area {
-    margin: 30px auto;
-    padding: 30px;
+    padding: 15px 30px;
     text-align: center;
-    &.cell {
-      padding: 30px 0;
+    p {
+      font-size: 28px;
+    }
+    .aiui-btn {
+      margin-top: 10px;
     }
   }
 }
@@ -273,8 +273,7 @@ body,
 }
 
 .page.layers {
-  @layerBaseTransform: translateX(30px) rotateX(45deg) rotateZ(10deg)
-    skew(-15deg);
+  @layerBaseTransform: translateX(30px) rotateX(45deg) rotateZ(10deg) skew(-15deg);
   @layerStartPos: 240px;
   @layerSpacing: 160px;
   @layerSmallStartPos: 280px;
@@ -339,7 +338,7 @@ body,
     }
   }
   .layers__layer_popout {
-    border: 1PX solid rgba(203, 203, 203, 0.5);
+    border: 1px solid rgba(203, 203, 203, 0.5);
     z-index: 4;
     &.j_transform {
       transform: @layerBaseTransform translateZ(@layerStartPos);
@@ -358,8 +357,7 @@ body,
     &.j_transform {
       transform: @layerBaseTransform translateZ(@layerStartPos - @layerSpacing);
       @media only screen and (max-width: 320px) {
-        transform: @layerBaseTransform
-          translateZ(@layerSmallStartPos - @layerSmallSpacing);
+        transform: @layerBaseTransform translateZ(@layerSmallStartPos - @layerSmallSpacing);
       }
     }
   }
@@ -367,11 +365,9 @@ body,
     background-color: rgba(40, 187, 102, 0.5);
     z-index: 2;
     &.j_transform {
-      transform: @layerBaseTransform
-        translateZ(@layerStartPos - 2 * @layerSpacing);
+      transform: @layerBaseTransform translateZ(@layerStartPos - 2 * @layerSpacing);
       @media only screen and (max-width: 320px) {
-        transform: @layerBaseTransform
-          translateZ(@layerSmallStartPos - 2 * @layerSmallSpacing);
+        transform: @layerBaseTransform translateZ(@layerSmallStartPos - 2 * @layerSmallSpacing);
       }
     }
     &.j_pic {
@@ -383,11 +379,9 @@ body,
     background-color: #ffffff;
     z-index: 1;
     &.j_transform {
-      transform: @layerBaseTransform
-        translateZ(@layerStartPos - 3 * @layerSpacing);
+      transform: @layerBaseTransform translateZ(@layerStartPos - 3 * @layerSpacing);
       @media only screen and (max-width: 320px) {
-        transform: @layerBaseTransform
-          translateZ(@layerSmallStartPos - 3 * @layerSmallSpacing);
+        transform: @layerBaseTransform translateZ(@layerSmallStartPos - 3 * @layerSmallSpacing);
       }
     }
     &.j_pic {
@@ -456,8 +450,7 @@ body,
 // iphone x
 @supports (top: constant(safe-area-inset-top)) {
   .page {
-    padding: constant(safe-area-inset-top) constant(safe-area-inset-right)
-      constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
     &.tabbar,
     &.navbar {
       padding-left: 0;
@@ -471,8 +464,7 @@ body,
 }
 @supports (top: env(safe-area-inset-top)) {
   .page {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right)
-      env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     &.tabbar,
     &.navbar,
     &.msg_success,
