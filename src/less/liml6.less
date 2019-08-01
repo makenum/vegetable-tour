@@ -32,7 +32,7 @@
 .app-sign {
   min-height: 1334px;
   padding: 180px 48px 0;
-  background: url("../images/login_logo_bg.png") no-repeat center bottom;
+  background: #ffffff url("../images/login_logo_bg.png") no-repeat center bottom;
   background-size: auto 430px;
   .title {
     font-size: 64px;
@@ -71,5 +71,93 @@
   }
   .login-btn__cell {
     padding-top: 80px;
+  }
+}
+// 我的农场
+.app-farm {
+  .game {
+    position: relative;
+    height: 855px;
+    background: url("../images/farm_header_bg03.png") no-repeat;
+    background-size: contain;
+  }
+  .user-info {
+    padding: 10px 24px;
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+      border-radius: 42px;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding-left: 24px;
+      padding-right: 24px;
+      position: relative;
+      .sunshine {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 30px;
+        img {
+          width: 48px;
+          height: 48px;
+          margin-right: 10px;
+        }
+      }
+      .name {
+        .abs-center;
+        max-width: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 38px;
+        .ellipsis;
+      }
+      .icon-setting-2px {
+        font-size: 60px;
+        color: #fff;
+      }
+    }
+    .level-wrap {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      .level {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        font-size: 20px;
+        background-color: fade(#000, 20);
+        line-height: 1;
+        &-bar {
+          margin-left: 6px;
+          margin-right: 6px;
+          text-align: center;
+          width: 170px;
+          height: 20px;
+          border-radius: 10px;
+          overflow: hidden;
+          background-color: fade(#fff, 20);
+          position: relative;
+          .loading {
+            height: 100%;
+            background-color: #ffa200;
+          }
+          .text {
+            .abs-center;
+          }
+        }
+      }
+      &:before,
+      &:after {
+        content: "";
+        width: 40px;
+        height: 30px;
+        background: url("../images/fillet-bg.png") no-repeat;
+        background-size: contain;
+      }
+      &:after {
+        transform: rotateY(180deg);
+      }
+    }
   }
 }
