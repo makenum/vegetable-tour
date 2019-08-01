@@ -1,16 +1,53 @@
 .aiui-headbar__wrap {
   height: 88px;
+  .aiui-headbar {
+    .fixed-default;
+    z-index: 9;
+  }
 }
 .aiui-headbar {
-  .fixed-default;
-  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 88px;
+  position: relative;
+  &__return {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon-return {
+      font-size: 60px;
+    }
+  }
   &__title {
     .abs-center;
     max-width: 50%;
     .ellipsis;
+    font-size: 38px;
+    font-weight: 700;
+  }
+}
+
+.aiui-headbar__default {
+  background-color: #ffffff;
+  &:after {
+    .setBottomLine(@aiuiLineColorLight);
+  }
+  color: @aiuiColorGray;
+  [class^="icon-"] {
+    &:before {
+      color: @aiuiColorGray;
+    }
+  }
+}
+.aiui-headbar__transparent {
+  background-color: transparent;
+  color: #ffffff;
+  [class^="icon-"] {
+    &:before {
+      color: #ffffff;
+    }
   }
 }
