@@ -48,8 +48,8 @@ var paths = {
     dest: "dist/libs"
   },
   images: {
-    src: "src/img",
-    dest: "dist/img"
+    src: "src/images",
+    dest: "dist/images"
   },
   fonts: {
     src: "src/fonts",
@@ -218,7 +218,7 @@ gulp.task("watch", function(done) {
   gulp.watch(paths.images.src + "/*.*", gulp.parallel("copy-example-img"));
   gulp.watch(paths.fonts.src + "/*.*", gulp.parallel("copy-fonts"));
   gulp.watch(paths.svg.src + "/*.svg", gulp.parallel("copy-svg"));
-  gulp.watch("app/**/*.html").on("change", browserSync.reload);
+  gulp.watch("dist/**/*.html").on("change", browserSync.reload);
   done();
 });
 

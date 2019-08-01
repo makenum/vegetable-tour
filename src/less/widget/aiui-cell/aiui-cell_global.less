@@ -1,79 +1,74 @@
-
-
 @import "../../base/fn";
 
-/*
-z-index:
-0: .aiui-swiped-btn
-1: .aiui-cell_swiped .aiui-cell__bd
-2: .aiui-cells和.aiui-cell的1px线
-*/
-
 .aiui-cells {
-    margin-top: @aiuiCellsMarginTop;
-    background-color: @aiuiCellBg;
-    line-height: @aiuiCellLineHeight;
-    font-size: @aiuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+  // margin-top: @aiuiCellsMarginTop;
+  background-color: @aiuiCellBg;
+  // line-height: @aiuiCellLineHeight;
+  font-size: @aiuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+  overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
 
-    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
-
-    // onepx
-    position: relative;
-    &:before {
-        .setTopLine(@aiuiCellBorderColor);
-        z-index: 2;
-    }
-    &:after {
-        .setBottomLine(@aiuiCellBorderColor);
-        z-index: 2;
-    }
+  // onepx
+  position: relative;
+  &:before {
+    .setTopLine(@aiuiCellBorderColor);
+    z-index: 2;
+  }
+  &:after {
+    .setBottomLine(@aiuiCellBorderColor);
+    z-index: 2;
+  }
 }
-
+.aiui-cells__normal {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
 .aiui-cells__title {
-    margin-top: 32px;
-    margin-bottom: 6px;
-    padding-left: @aiuiCellGapH;
-    padding-right: @aiuiCellGapH;
-    color: @aiuiTextColorDesc;
-    font-size: @aiuiCellTipsFontSize;
-    line-height:1.4;
+  margin-top: 32px;
+  margin-bottom: 6px;
+  padding-left: @aiuiCellGapH;
+  padding-right: @aiuiCellGapH;
+  color: @aiuiTextColorDesc;
+  font-size: @aiuiCellTipsFontSize;
+  line-height: 1.4;
 
-    & + .aiui-cells {
-        margin-top: 0;
-    }
+  & + .aiui-cells {
+    margin-top: 0;
+  }
 }
 
 .aiui-cells__tips {
-    margin-top: 8px; // 8px - 行高
-    color: @aiuiTextColorDesc;
-    padding-left: @aiuiCellGapH;
-    padding-right: @aiuiCellGapH;
-    font-size: @aiuiCellTipsFontSize;
+  margin-top: 8px; // 8px - 行高
+  color: @aiuiTextColorDesc;
+  padding-left: @aiuiCellGapH;
+  padding-right: @aiuiCellGapH;
+  font-size: @aiuiCellTipsFontSize;
 }
 
 .aiui-cell {
-    padding: @aiuiCellGapV;
-    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
-    display: flex;
-    align-items: center;
+  padding: @aiuiCellGapV @aiuiCellGapH;
+  position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+  display: flex;
+  align-items: center;
+  &:before {
+    .setTopLine(@aiuiCellBorderColor);
+    left: @aiuiCellGapH;
+    z-index: 2;
+  }
+  &:first-child {
     &:before {
-        .setTopLine(@aiuiCellBorderColor);
-        left: @aiuiCellGapH;
-        z-index: 2;
+      display: none;
     }
-    &:first-child {
-        &:before {
-            display: none;
-        }
-    }
+  }
 }
-.aiui-cell_primary{
-    align-items: flex-start;
+.aiui-cell_primary {
+  align-items: flex-start;
 }
-.aiui-cell__bd{
-    flex: 1;
+.aiui-cell__bd {
+  flex: 1;
 }
 .aiui-cell__ft {
-    text-align: right;
-    color: @aiuiTextColorDesc;
+  text-align: right;
+  color: @aiuiTextColorDesc;
 }

@@ -22,7 +22,10 @@
 .text-right {
   text-align: right !important;
 }
-
+// color
+.text-primary{
+  color: @aiuiColorPrimary;
+}
 .img-percentage {
   position: absolute;
   top: 0;
@@ -36,4 +39,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.placeholder(@color: #999999) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
 }
