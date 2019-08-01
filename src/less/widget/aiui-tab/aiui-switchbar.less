@@ -1,1 +1,32 @@
 @import "../../base/fn";
+
+.ui-toggle_switch {
+  position: relative;
+  display: flex;
+  &:after {
+    .setFullLine(@aiuiColorPrimary);
+    border-radius: 27px;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .item {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 27px;
+    color: @aiuiColorPrimary;
+    &:first-child {
+      border-top-left-radius: 27px;
+      border-bottom-left-radius: 27px;
+    }
+    &:last-child {
+      border-top-right-radius: 27px;
+      border-bottom-right-radius: 27px;
+    }
+    &.active {
+      background-color: @aiuiColorPrimary;
+      color: #ffffff;
+    }
+  }
+}
