@@ -74,13 +74,11 @@
   }
 }
 // 我的农场
-.app-farm {
-  .game {
-    position: relative;
-    height: 855px;
-    background: url("../images/farm_header_bg03.png") no-repeat;
-    background-size: contain;
-  }
+.farm-game {
+  position: relative;
+  height: 855px;
+  background: url("../images/farm_header_bg03.png") no-repeat;
+  background-size: contain;
   .user-info {
     padding: 10px 24px;
     .main {
@@ -158,6 +156,55 @@
       &:after {
         transform: rotateY(180deg);
       }
+    }
+  }
+}
+
+.land-selection {
+  padding-top: 400px;
+  .land {
+    display: flex;
+    justify-content: center;
+    &-item {
+      &:nth-child(2) {
+        margin-left: -50px;
+        margin-right: -50px;
+      }
+    }
+    .land1 {
+      width: 185px;
+      height: 57px;
+      background: url("../images/land_bg02.png") no-repeat;
+      background-size: contain;
+    }
+    .land2 {
+      width: 377px;
+      height: 97px;
+      background: url("../images/land_bg01.png") no-repeat;
+      background-size: contain;
+    }
+    .land3 {
+      width: 185px;
+      height: 57px;
+      background: url("../images/land_bg03.png") no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.farm-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  &__item {
+    background-color: #fff;
+    border-radius: 28px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+    .header{
+      display: flex;
     }
   }
 }
