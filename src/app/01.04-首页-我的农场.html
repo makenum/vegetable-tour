@@ -1,27 +1,75 @@
-{% extends 'app.nunjucks' %} {% block title %}蔬游-我的农场{% endblock %} {% block content %}
-<div class="app-farm">
-  <div class="game">
-    <!-- start user-info -->
-    <div class="user-info">
-      <div class="main">
-        <div class="sunshine">
-          <img src="../images/sunshine.png" alt="阳光" />
-          <strong>3467</strong>
-        </div>
-        <h3 class="name">豆豆的农场</h3>
-        <button type="button" class="icon-setting-2px"></button>
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-我的农场{% endblock %}
+{% block content %}
+<div class="farm-game">
+  <!-- user-info start -->
+  <div class="user-info">
+    <div class="main">
+      <div class="sunshine">
+        <img src="../images/sunshine.png" alt="阳光" />
+        <strong>3467</strong>
       </div>
-      <div class="level-wrap">
-        <div class="level">
-          <strong>LV.1</strong>
-          <div class="level-bar">
-            <div class="loading" style="width: 54%;"></div>
-            <div class="text"><span>54</span>/<span>90</span></div>
-          </div>
+      <h3 class="name">豆豆的农场</h3>
+      <button type="button" class="icon-setting-2px"></button>
+    </div>
+    <div class="level-wrap">
+      <div class="level">
+        <strong>LV.1</strong>
+        <div class="level-bar">
+          <div class="loading" style="width: 54%;"></div>
+          <div class="text"><span>54</span>/<span>90</span></div>
         </div>
       </div>
     </div>
-     <!-- end user-info -->
+  </div>
+  <!-- user-info end -->
+  <div class="land-selection">
+    <div class="land">
+      <div class="land-item first">
+        <div class="land1"></div>
+      </div>
+      <div class="land-item second">
+        <div class="land2"></div>
+      </div>
+      <div class="land-item third">
+        <div class="land3"></div>
+      </div>
+    </div>
   </div>
 </div>
+<div class="farm-info">
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="title"></h3>
+      <a href="javascript:;">更多</a>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block footer %}
+<script src="../libs/anime.min.js"></script>
+<script>
+  var timelineBasics = function () {
+    var tl = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: 750
+    });
+
+    tl
+      .add({
+        targets: '.land-item.first',
+        translateX: 250,
+      })
+      .add({
+        targets: '.land-item.second',
+        translateX: 250,
+      }, '-=600') // relative offset
+      .add({
+        targets: '.land-item.third',
+        translateX: 250,
+      }, 400); // absolute offset
+  }
+  // timelineBasics();
+
+</script>
+
 {% endblock %}

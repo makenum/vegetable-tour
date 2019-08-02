@@ -1,4 +1,6 @@
-{% extends 'app.nunjucks' %} {% block title %}蔬游-注册页{% endblock %} {% block content %}
+{% extends 'app.nunjucks' %}
+ {% block title %}蔬游-注册页{% endblock %}
+{% block content %}
 <div class="app-sign">
   <h3 class="title">注册</h3>
   <form class="aiui-cells aiui-cells__normal aiui-cells__form aiui-cells__checkbox">
@@ -33,7 +35,8 @@
     </label>
 
     <div class="aiui-cell reg-btn__cell">
-      <button type="submit" class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__primary aiui-btn__pill">注册</button>
+      <button type="submit"
+        class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__primary aiui-btn__pill">注册</button>
     </div>
   </form>
   <div class="tips">已有账号？<a href="01.03-登录页.html" class="text-primary">立即登录</a></div>
