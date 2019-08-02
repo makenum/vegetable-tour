@@ -7,11 +7,10 @@
   justify-content: space-between;
   height: 88px;
   position: relative;
-  .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
+  padding: 0 24px;
+  [class^="icon-"] {
+    width: 68px;
+    height: 68px;
   }
   &__title {
     .abs-center;
@@ -36,8 +35,14 @@
     .setBottomLine(@aiuiLineColorLight);
   }
   color: @aiuiColorGray;
+  [class^="icon-"] {
+    background-color: @aiuiColorGray;
+  }
 }
 .aiui-headbar__transparent {
   background-color: transparent;
   color: #ffffff;
+  [class^="icon-"] {
+    background-color: #ffffff;
+  }
 }
