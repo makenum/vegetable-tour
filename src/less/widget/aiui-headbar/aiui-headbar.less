@@ -1,9 +1,5 @@
 .aiui-headbar__wrap {
   height: 88px;
-  .aiui-headbar {
-    .fixed-default;
-    z-index: 9;
-  }
 }
 .aiui-headbar {
   display: flex;
@@ -11,15 +7,11 @@
   justify-content: space-between;
   height: 88px;
   position: relative;
-  &__return {
-    width: 68px;
-    height: 68px;
+  .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    .icon-return {
-      font-size: 60px;
-    }
+    font-size: 60px;
   }
   &__title {
     .abs-center;
@@ -28,8 +20,16 @@
     font-size: 38px;
     font-weight: 700;
   }
+  &__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
-
+.aiui-headbar__fixed {
+  .fixed-default;
+  z-index: 9;
+}
 .aiui-headbar__default {
   background-color: #ffffff;
   &:after {
