@@ -1,0 +1,27 @@
+{% extends 'app.nunjucks' %} {% block title %}蔬游-我的农场{% endblock %} {% block content %}
+<div class="app-farm">
+  <div class="game">
+    <!-- start user-info -->
+    <div class="user-info">
+      <div class="main">
+        <div class="sunshine">
+          <img src="../images/sunshine.png" alt="阳光" />
+          <strong>3467</strong>
+        </div>
+        <h3 class="name">豆豆的农场</h3>
+        <button type="button" class="icon-setting-2px"></button>
+      </div>
+      <div class="level-wrap">
+        <div class="level">
+          <strong>LV.1</strong>
+          <div class="level-bar">
+            <div class="loading" style="width: 54%;"></div>
+            <div class="text"><span>54</span>/<span>90</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- end user-info -->
+  </div>
+</div>
+{% endblock %}
