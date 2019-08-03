@@ -140,15 +140,55 @@
   background-size: contain;
   &:after {
     content: "";
-    position: fixed;
-    left: auto;
-    right: auto;
-    width: 100%;
+    .fixed-default;
     height: 100%;
     top: 0;
     background-color: fade(@aiuiColorBlack, 60%);
   }
   .aiui-navbar {
     margin: 0 24px;
+  }
+}
+.area-box {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+.area-list {
+  &__item {
+    background-color: @aiuiColorWhite;
+    border-radius: 28px;
+    display: flex;
+    padding: 30px 24px;
+    margin: 24px;
+    .bd {
+      width: 0;
+      min-width: 0;
+      flex-grow: 1;
+      .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        .ellipsisLn(2);
+      }
+      .txt {
+        font-size: 28px;
+        color: @aiuiColorDeepGray;
+        .ellipsisLn(2);
+      }
+    }
+    .distance {
+      font-size: 28px;
+      color: @aiuiColorDeepGray;
+    }
+    .thumb {
+      width: 144px;
+      height: 144px;
+      margin-right: 24px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }

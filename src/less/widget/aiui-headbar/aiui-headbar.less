@@ -46,6 +46,10 @@
   .aiui-search-bar{
     background-color: transparent;
     flex: 1;
+    &__form {
+      background-color:@aiuiBgColorDefault;      
+    }
+    .icon-search {background-color:@aiuiColorDeepGray}
   }
 }
 .aiui-headbar__transparent {
@@ -59,9 +63,7 @@
     flex: 1;
     color: @aiuiColorGray;
     &__form {
-      background-color: fade(@aiuiColorWhite, 20%);
-      border-radius: 35px;
-      
+      background-color: fade(@aiuiColorWhite, 20%);      
     }
     .aiui-search-bar__input{
        color:@aiuiColorWhite;
