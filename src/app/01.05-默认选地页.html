@@ -1,96 +1,123 @@
 {% extends 'app.nunjucks' %}
-{% block title %}默认选地页{% endblock %}
+{% block title %}蔬游-默认选地页{% endblock %}
 {% block content %}
-<div class="aiui-headbar aiui-headbar__fixed aiui-headbar__transparent">
-  <div class="aiui-headbar__item">
-    <a href="javascript:;" class="icon-return"></a>
-  </div>
-  <h3 class="aiui-headbar__title">农场地图</h3>
-  <div class="aiui-headbar__item">
-    <a href="javascript:;" class="icon-list-3px"></a>
-    <a href="javascript:;" class="icon-search"></a>
-  </div>
-</div>
 <div class="app-ground">
-  <div class="ground-list">
-    <ul class="ground-item">
-      <li>
-        <a href="javascript:;" class="ground-01">
-          <img src="../images/farm_bg01.png" class="farm-pic" />
-          <p class="ground-txt">巴马乡农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-02">
-          <div class="bubble-box"><span class="bubble">已种西红柿</span></div>
-          <img src="../images/farm_bg02.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-03">
-          <img src="../images/farm_bg03.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-04">
-          <img src="../images/farm_bg01.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-05">
-          <img src="../images/farm_bg02.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-06">
-          <img src="../images/farm_bg03.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-    </ul>
+  <!--头部导航 start-->
+  <div class="headbar-sticky">
+    <div class="aiui-headbar aiui-headbar__fixed aiui-headbar__transparent">
+      <div class="aiui-headbar__item">
+        <a href="javascript:;" class="icon-return"></a>
+      </div>
+      <h3 class="aiui-headbar__title">农场地图</h3>
+      <div class="aiui-headbar__item">
+        <a href="javascript:;" class="icon-list-3px"></a>
+        <a href="javascript:;" class="icon-search"></a>
+      </div>
+    </div>
   </div>
-  <div class="ground-list">
-    <ul class="ground-item">
-      <li>
-        <a href="javascript:;" class="ground-01">
-          <img src="../images/farm_bg01.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-02">
-          <img src="../images/farm_bg02.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-03">
-          <img src="../images/farm_bg03.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-04">
-          <img src="../images/farm_bg01.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-05 no-farm">
-          <img src="../images/farm_bg04.png" class="farm-pic" />
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;" class="ground-06">
-          <img src="../images/farm_bg03.png" class="farm-pic" />
-          <p class="ground-txt">xx农场</p>
-        </a>
-      </li>
-    </ul>
+  <!--头部导航 end-->
+  <!--内容区域 start-->
+  <div class="app-ground__content">
+    <div class="ground-list">
+      <ul class="ground-item">
+        <li>
+          <a href="javascript:;" class="ground-01">
+            <img src="../images/farm_bg01.png" class="farm-pic" />
+            <p class="ground-txt">巴马乡农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-02">
+            <div class="bubble-box"><span class="bubble">已种西红柿</span></div>
+            <img src="../images/farm_bg02.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-03">
+            <img src="../images/farm_bg03.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-04">
+            <img src="../images/farm_bg01.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-05">
+            <img src="../images/farm_bg02.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-06">
+            <img src="../images/farm_bg03.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ground-list">
+      <ul class="ground-item">
+        <li>
+          <a href="javascript:;" class="ground-01">
+            <img src="../images/farm_bg01.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-02">
+            <img src="../images/farm_bg02.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-03">
+            <img src="../images/farm_bg03.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-04">
+            <img src="../images/farm_bg01.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-05 pt30">
+            <img src="../images/farm_bg04.png" class="farm-pic" />
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="ground-06">
+            <img src="../images/farm_bg03.png" class="farm-pic" />
+            <p class="ground-txt">xx农场</p>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
+  <!--内容区域 end-->
 </div>
+{% endblock %}
+{% block footer %}
+<script src="../libs/sticky.js"></script>
+<script type="text/javascript">
+  $(function () {
+    //顶部headbar固定
+    $(".headbar-sticky").sticky({ topSpacing: 0 });
+    $('.headbar-sticky').on('sticky-start', function () {
+      if ($('.aiui-headbar').hasClass('aiui-headbar__transparent')) {
+        $('.aiui-headbar').removeClass('aiui-headbar__transparent').addClass('aiui-headbar__default');
+      }
+    });
+    $('.headbar-sticky').on('sticky-end', function () {
+      if ($('.aiui-headbar').hasClass('aiui-headbar__default')) {
+        $('.aiui-headbar').removeClass('aiui-headbar__default').addClass('aiui-headbar__transparent');
+      }
+    });
+  });
+</script>
 {% endblock %}

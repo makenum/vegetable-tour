@@ -1,18 +1,9 @@
 //默认选地页
-.no-farm {
-  padding-top: 30px;
-}
 .app-ground {
   background: @aiuiBgColorMain url("../images/farm_main_bg.png") no-repeat center top;
   min-height: 100vh;
   background-size: contain;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 160px;
-  padding-bottom: 104px;
   position: relative;
-  overflow: hidden;
   &:before {
     content: "";
     display: block;
@@ -25,6 +16,9 @@
     transform: translateX(-50%);
     top: 210px;
     z-index: 0;
+  }
+  &__content {
+    padding: 160px 0 104px 0;
   }
 }
 .ground-list {
@@ -115,7 +109,7 @@
   transform: translateX(-50%);
 }
 .bubble {
-  background-color: @aiuiBgColorWhite;
+  background-color: @aiuiColorWhite;
   font-size: 28px;
   color: @aiuiColorPrimary;
   display: inline-block;
@@ -135,6 +129,26 @@
     border-right-width: 7px;
     border-right-color: currentColor;
     border-radius: 0 0 50px 0;
-    color: @aiuiBgColorWhite;
+    color: @aiuiColorWhite;
+  }
+}
+
+//片区列表
+.app-area {
+  background: @aiuiBgColorMain url("../images/farm_main_bg.png") no-repeat center top;
+  min-height: 100vh;
+  background-size: contain;
+  &:after {
+    content: "";
+    position: fixed;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: fade(@aiuiColorBlack, 60%);
+  }
+  .aiui-navbar {
+    margin: 0 24px;
   }
 }
