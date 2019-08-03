@@ -1,28 +1,10 @@
 @import "../../base/fn";
 
 .aiui-cells {
-  // margin-top: @aiuiCellsMarginTop;
   background-color: @aiuiCellBg;
-  // line-height: @aiuiCellLineHeight;
-  font-size: @aiuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
-  overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+  font-size: @aiuiCellFontSize; 
+  overflow: hidden; 
 
-  // onepx
-  position: relative;
-  &:before {
-    .setTopLine(@aiuiCellBorderColor);
-    z-index: 2;
-  }
-  &:after {
-    .setBottomLine(@aiuiCellBorderColor);
-    z-index: 2;
-  }
-}
-.aiui-cells__normal {
-  &:before,
-  &:after {
-    display: none;
-  }
 }
 .aiui-cells__title {
   margin-top: 32px;
