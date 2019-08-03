@@ -104,20 +104,5 @@
 {% endblock %}
 {% block footer %}
 <script src="../libs/sticky.js"></script>
-<script type="text/javascript">
-  $(function () {
-    //顶部headbar固定
-    $(".headbar-sticky").sticky({ topSpacing: 0 });
-    $('.headbar-sticky').on('sticky-start', function () {
-      if ($('.aiui-headbar').hasClass('aiui-headbar__transparent')) {
-        $('.aiui-headbar').removeClass('aiui-headbar__transparent').addClass('aiui-headbar__default');
-      }
-    });
-    $('.headbar-sticky').on('sticky-end', function () {
-      if ($('.aiui-headbar').hasClass('aiui-headbar__default')) {
-        $('.aiui-headbar').removeClass('aiui-headbar__default').addClass('aiui-headbar__transparent');
-      }
-    });
-  });
-</script>
+<script src="../js/headbar.js"></script>
 {% endblock %}
