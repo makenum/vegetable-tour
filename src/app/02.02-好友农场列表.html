@@ -1,0 +1,55 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-好友农场列表{% endblock %}
+{% block content %}
+<div id="dialogs">
+  <!--BEGIN dialog1-->
+  <div class="aiui-popup__wrap" id="friendFarmRanking">
+    <div class="aiui-mask"></div>
+    <div class="aiui-popup aiui-popup__toggle">
+      <div class="friend-farm__ranking">
+        <div class="hd">
+          <div class="info">
+            <div class="avatar">
+              <img src="../images/avatar-friend-demo.png">
+            </div>
+            <h3 class="title">好友农场排行榜</h3>
+          </div>
+          <button type="button" class="icon-close-outline"></button>
+        </div>
+        <div class="bd">
+          <div class="tips">
+            <p>和好友互动赚更多阳光值</p>
+          </div>
+          <div class="ranking">
+            <h4 class="ranking-title">我的好友</h4>
+            <ul class="ranking-list">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END dialog1-->
+  {% endblock %}
+
+  {% block footer %}
+  <script>
+    $(function () {
+      var $friendFarmRanking = $('#friendFarmRanking');
+      $('.aiui-popup__wrap').on('click', '.aiui-mask', function () {
+        $(".aiui-popup").removeClass("aiui-popup__toggle")
+        $(this)
+          .parents('.aiui-popup__wrap')
+          .fadeOut(200);
+      });
+
+      $('#showfriendFarmRanking').on('click', function () {
+        $friendFarmRanking.fadeIn();
+        $friendFarmRanking
+          .find(".aiui-popup")
+          .addClass("aiui-popup__toggle");
+      });
+    });
+  </script>
+  {% endblock %}
