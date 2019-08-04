@@ -218,7 +218,7 @@ gulp.task("watch", function(done) {
   gulp.watch(paths.images.src + "/*.*", gulp.parallel("copy-example-img"));
   gulp.watch(paths.fonts.src + "/*.*", gulp.parallel("copy-fonts"));
   gulp.watch(paths.svg.src + "/*.svg", gulp.parallel("copy-svg"));
-  gulp.watch("dist/**/*.html").on("change", browserSync.reload);
+  gulp.watch("dist/**/*").on("change", browserSync.reload);
   done();
 });
 

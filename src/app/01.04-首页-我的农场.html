@@ -24,17 +24,62 @@
   </div>
   <!-- user-info end -->
   <div class="land-selection">
-    <div class="lands">
-      <div class="land first">
-        <div class="soil">1</div>
-      </div>
-      <div class="land second on">
-        <div class="soil">2</div>
-      </div>
-      <div class="land third">
-        <div class="soil">3</div>
+    <!-- 选地 start -->
+    <div class="swiper-container land-select" id="landSelectSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="soil"></div>
+          <img src="../images/flowering_tree.png" class="flowering_tree">
+        </div>
+        <div class="swiper-slide">
+          <div class="soil"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="soil"></div>
+        </div>
       </div>
     </div>
+    <!-- 选地 end -->
+
+    <div class="swiper-container land-operate" id="landOperateSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="../images/fertilization.png" alt="施肥">
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/watering.png" alt="浇水">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/reward.png" alt="采摘">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/eradicate.png" alt="铲除">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/loose_soil.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/sowing.png" alt="播种">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/deworming.png" alt="杀虫">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="../images/weeding.png" alt="除草">
+        </div>
+      </div>
+
+      <div class="land-operate__next"><i class="icon-arrow-up"></i></div>
+      <div class="land-operate__prev"><i class="icon-arrow-down"></i></div>
+    </div>
+
   </div>
 </div>
 <div class="farm-info">
@@ -189,7 +234,22 @@
   <!-- 好友动态 end -->
 </div>
 {% endblock %} {% block footer %}
-<script src="../libs/anime.min.js"></script>
-<script src="../js/land.js"></script>
+<script src="../libs/swiper.min.js"></script>
+<script>
+  var landSelectSwiper = new Swiper('#landSelectSwiper', {
+    slideToClickedSlide: true,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+  });
 
+  var landOperateSwiper = new Swiper('#landOperateSwiper', {
+    direction: 'vertical',
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.land-operate__next',
+      prevEl: '.land-operate__prev',
+    },
+  });
+</script>
 {% endblock %}

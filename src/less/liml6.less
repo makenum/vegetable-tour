@@ -161,22 +161,22 @@
 }
 
 .land-selection {
-  padding-top: 400px;
+  // padding-top: 350px;
   .lands {
-    display: flex;
-    justify-content: center;
+    position: relative;
     .land {
-      position: relative;
-
-      &.first {
-        transform: scale(0.8) translate(150px, -20px);
-      }
-      &.on {
-        z-index: 1;
-      }
-      &.third {
-        transform: scale(0.8) translate(-150px, -20px);
-      }
+      width: 318px;
+      height: 83px;
+      // &.land1 {
+      //   transform: scale(0.8) translate(150px, -20px);
+      // }
+      // &.land2 {
+      //   transform: scale(1) translate(0, 0);
+      //   z-index: 1;
+      // }
+      // &.land3 {
+      //   transform: scale(0.8) translate(-150px, -20px);
+      // }
       .soil {
         width: 318px;
         height: 83px;
@@ -312,5 +312,90 @@
         }
       }
     }
+  }
+}
+
+.land-select {
+  padding-top: 360px;
+
+  .swiper-slide {
+    display: flex;
+    // transition: 300ms;
+    transform: scale(0.7);
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index: 1;
+  }
+
+  .soil {
+    width: 285px;
+    height: 130px;
+    background: url("../images/land2.png") no-repeat;
+    background-size: contain;
+    text-align: center;
+    line-height: 130px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .flowering_tree {
+    width: 242px;
+    height: 242px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// 土地操作滑块
+.land-operate {
+  width: 100px;
+  height: 436px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: fade(#000, 20%);
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -218px;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__next,
+  &__prev {
+    outline: none;
+    width: 100px;
+    height: 68px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    z-index: 2;
+    .icon-arrow-up,
+    .icon-arrow-down {
+      width: 48px;
+      height: 48px;
+      background-color: #fff;
+    }
+  }
+  &__next {
+    top: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  &__prev {
+    bottom: 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
   }
 }

@@ -1,87 +1,158 @@
-$(".land").each(function(index) {
-  var land = $(this);
-  land.find(".soil").on("click", function() {
-    console.log(index);
-    switch (index) {
-      case 0:
-        land
-          .addClass("on")
-          .siblings()
-          .removeClass("on");
-        landStyleOne(index);
-        break;
-      case 2:
-        land
-          .addClass("on")
-          .siblings()
-          .removeClass("on");
-          landStyleTwo(index);
-      default:
-        break;
-    }
-  });
+$(".land:nth-child(1)").on("click", function() {
+  if ($(this).hasClass("land1")) {
+    $(this)
+      .siblings()
+      .css("z-index", "0");
+    $(this).css("z-index", 10);
+    landOne(1, 2, 3);
+    $(this).removeClass("land1");
+    $(this).addClass("land2");
+    $(this)
+      .next()
+      .removeClass("land2")
+      .addClass("land3");
+    $(this)
+      .next()
+      .next()
+      .removeClass("land3")
+      .addClass("land1");
+  }
+});
+$(".land:nth-child(3)").on("click", function() {
+  if ($(this).hasClass("land1")) {
+    $(this)
+      .siblings()
+      .css("z-index", 0);
+    $(this).css("z-index", 10);
+    landTwo(1, 2, 3);
+    $(this).removeClass("land1");
+    $(this).addClass("land2");
+    $(this)
+      .prev()
+      .removeClass("land3")
+      .addClass("land1");
+    $(this)
+      .prev()
+      .prev()
+      .removeClass("land2")
+      .addClass("land3");
+  }
 });
 
-var landStyleOne = function(index) {
+$(".land:nth-child(2)").on("click", function() {
+  if ($(this).hasClass("land1")) {
+    $(this)
+      .siblings()
+      .css("z-index", 0);
+    $(this).css("z-index", 10);
+    landThree(1, 2, 3);
+    $(this).removeClass("land1");
+    $(this).addClass("land2");
+    $(this)
+      .next()
+      .removeClass("land2")
+      .addClass("land3");
+    $(this)
+      .prev()
+      .removeClass("land3")
+      .addClass("land1");
+  }
+});
+
+var landOne = function(index1, index2, index3) {
   var tl = anime.timeline({
     easing: "easeOutExpo",
-    duration: 650
+    duration: 650,
+    complete: function(anim) {
+      return anim.completed;
+    }
   });
 
   tl.add({
-    targets: ".land.first",
-    zIndex: {
-      value: 1
-    },
+    targets: ".land" + index1,
     translateX: "3.2rem",
-    translateY: "0.2rem",
+    translateY: "0",
     scale: 1
   })
     .add(
       {
-        targets: ".land.second",
+        targets: ".land" + index2,
         scale: 0.8,
-        translateX: "2.6rem"
+        translateX: "2.6rem",
+        translateY: "-0.2rem"
       },
       "-=600"
     ) // relative offset
     .add(
       {
-        targets: ".land.third",
+        targets: ".land" + index3,
         scale: 0.8,
-        translateX: "-6.4rem"
+        translateX: "-6.4rem",
+        translateY: "-0.2rem"
       },
       "-=600"
     ); // absolute offset
 };
-var landStyleTwo = function(index) {
+
+var landTwo = function(index1, index2, index3) {
   var tl = anime.timeline({
     easing: "easeOutExpo",
     duration: 650
   });
 
   tl.add({
-    targets: ".land.first",
-    zIndex: {
-      value: 1
-    },
-    translateX: "3.2rem",
-    translateY: "0.2rem",
+    targets: ".land" + index1,
+    translateX: "-3.2rem",
+    translateY: "0",
     scale: 1
   })
     .add(
       {
-        targets: ".land.second",
+        targets: ".land" + index2,
         scale: 0.8,
-        translateX: "2.6rem"
+        translateX: "5.2rem",
+        translateY: "-0.2rem"
       },
       "-=600"
     ) // relative offset
     .add(
       {
-        targets: ".land.third",
+        targets: ".land" + index3,
         scale: 0.8,
-        translateX: "-6.4rem"
+        translateX: "-2.6rem",
+        translateY: "-0.2rem"
+      },
+      "-=600"
+    ); // absolute offset
+};
+
+var landThree = function(index1, index2, index3) {
+  var tl = anime.timeline({
+    easing: "easeOutExpo",
+    duration: 650
+  });
+
+  tl.add({
+    targets: ".land" + index1,
+    translateX: "0",
+    translateY: "0",
+    scale: 1
+  })
+    .add(
+      {
+        targets: ".land" + index2,
+        scale: 0.8,
+        translateX: "-1.5rem",
+        translateY: "-0.2rem"
+      },
+      "-=600"
+    ) // relative offset
+    .add(
+      {
+        targets: ".land" + index3,
+        scale: 0.8,
+        translateX: "1.5rem",
+        translateY: "-0.2rem"
       },
       "-=600"
     ); // absolute offset
