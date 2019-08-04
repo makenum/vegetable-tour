@@ -1,84 +1,41 @@
-
-
 @import "../../base/fn";
 @import "../aiui-button/aiui-button";
 
 .aiui-msg {
-    padding-top: @aiuiMsgPaddingTop;
-    padding:calc(@aiuiMsgPaddingTop ~"+ constant(safe-area-inset-top)") constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
-    padding:calc(@aiuiMsgPaddingTop ~"+ env(safe-area-inset-top)") env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    text-align: center;
-    line-height:1.4;
-    min-height:100%;
-    box-sizing:border-box;
-    display:flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    a:not(.aiui-btn){
-      color: @aiuiLinkColorDefault;
-      display: inline-block;
-      vertical-align: baseline;
-    }
-}
-.aiui-msg__icon-area {
-    margin-bottom: 64px;
-}
-.aiui-msg__text-area {
-    margin-bottom: 64px;
-    padding:0 64px;
-    flex:1;
-    line-height:1.6;
-    &:first-child{padding-top:192px;}
-}
-.aiui-msg__title {
-    margin-bottom: @aiuiMsgTitleGap;
-    font-weight: 700;
-    font-size: 44px;
-    word-wrap:break-word;
-    word-break:break-all;
-}
-.aiui-msg__desc {
+  text-align: center;
+  &__hd {
+    padding: 64px;
+    min-height: 324px;
+  }
+  &__success {
+    background-color: @aiuiColorPrimary;
+  }
+  &__warn {
+    background-color: @aiuiColorWarn;
+  }
+  &__title {
+    color: @aiuiColorWhite;
     font-size: 34px;
-    color: @aiuiTextColorTitle;
-    word-wrap:break-word;
-    word-break:break-all;
-    margin-bottom:32px;
-}
-.aiui-msg__desc-primary {
+    font-weight: normal;
+  }
+  &__bd {
+    padding: 50px 48px 0 48px;
+  }
+  &__desc {
     font-size: 28px;
-    color: @aiuiTextColorDesc;
-    word-wrap:break-word;
-    word-break:break-all;
-    margin-bottom:32px;
-}
-.aiui-msg__opr-area {
-    margin-bottom: 32px;
-    .aiui-btn-area{margin:0}
-    .aiui-btn + .aiui-btn{margin-bottom:32px;}
-    &:last-child{margin-bottom:192px;}
-    & + .aiui-msg__extra-area{
-      margin-top:48px;
+  }
+  &__ft {
+    padding: 40px 100px;
+    .aiui-btn {
+      padding: 0 35px;
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
     }
+  }
 }
-.aiui-msg__tips-area {
-    margin-bottom: 32px;
-    padding:0 80px;
-    .aiui-msg__opr-area + &{
-      margin-bottom: 96px;
-    }
-    &:last-child{
-      margin-bottom: 128px;
-    }
+.aiui-icon__msg {
+  width: 120px;
+  height: 120px;
+  background-color: @aiuiColorWhite;
 }
-.aiui-msg__tips {
-  font-size:24px;
-  color: @aiuiTextColorDesc;
-}
-.aiui-msg__extra-area {
-    margin-bottom: 48px;
-    font-size: 24px;
-    color: @aiuiTextColorDesc;
-    a{color: @aiuiLinkColorDefault;}
-}
-
-

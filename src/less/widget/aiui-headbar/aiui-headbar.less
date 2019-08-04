@@ -24,13 +24,18 @@
     display: flex;
     align-items: center;
   }
+  .text-right {
+    font-size: 28px;
+    padding:0 24px;
+    color: @aiuiColorPrimary;
+  }
 }
 .aiui-headbar__fixed {
   .fixed-default;
   z-index: 9;
 }
 .aiui-headbar__default {
-  background-color: #ffffff;
+  background-color: @aiuiColorWhite;
   &:after {
     .setBottomLine(@aiuiLineColorLight);
   }
@@ -38,11 +43,32 @@
   [class^="icon-"] {
     background-color: @aiuiColorGray;
   }
+  .aiui-search-bar{
+    background-color: transparent;
+    flex: 1;
+    &__form {
+      background-color:@aiuiBgColorDefault;      
+    }
+    .icon-search {background-color:@aiuiColorDeepGray}
+  }
 }
 .aiui-headbar__transparent {
   background-color: transparent;
-  color: #ffffff;
+  color: @aiuiColorWhite;
   [class^="icon-"] {
-    background-color: #ffffff;
+    background-color: @aiuiColorWhite;
+  }
+  .aiui-search-bar {
+    background-color: transparent;
+    flex: 1;
+    color: @aiuiColorGray;
+    &__form {
+      background-color: fade(@aiuiColorWhite, 20%);      
+    }
+    .aiui-search-bar__input{
+       color:@aiuiColorWhite;
+       .placeholder(fade(@aiuiColorWhite, 40%));
+    }
+    .icon-search {background-color:@aiuiColorWhite}
   }
 }

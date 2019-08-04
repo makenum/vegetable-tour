@@ -1,18 +1,9 @@
 //默认选地页
-.no-farm {
-  padding-top: 30px;
-}
 .app-ground {
   background: @aiuiBgColorMain url("../images/farm_main_bg.png") no-repeat center top;
   min-height: 100vh;
   background-size: contain;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 160px;
-  padding-bottom: 104px;
   position: relative;
-  overflow: hidden;
   &:before {
     content: "";
     display: block;
@@ -25,6 +16,9 @@
     transform: translateX(-50%);
     top: 210px;
     z-index: 0;
+  }
+  &__content {
+    padding: 160px 0 104px 0;
   }
 }
 .ground-list {
@@ -115,7 +109,7 @@
   transform: translateX(-50%);
 }
 .bubble {
-  background-color: @aiuiBgColorWhite;
+  background-color: @aiuiColorWhite;
   font-size: 28px;
   color: @aiuiColorPrimary;
   display: inline-block;
@@ -135,6 +129,66 @@
     border-right-width: 7px;
     border-right-color: currentColor;
     border-radius: 0 0 50px 0;
-    color: @aiuiBgColorWhite;
+    color: @aiuiColorWhite;
+  }
+}
+
+//片区列表
+.app-area {
+  background: @aiuiBgColorMain url("../images/farm_main_bg.png") no-repeat center top;
+  min-height: 100vh;
+  background-size: contain;
+  &:after {
+    content: "";
+    .fixed-default;
+    height: 100%;
+    top: 0;
+    background-color: fade(@aiuiColorBlack, 60%);
+  }
+  .aiui-navbar {
+    margin: 0 24px;
+  }
+}
+.area-box {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+.area-list {
+  &__item {
+    background-color: @aiuiColorWhite;
+    border-radius: 28px;
+    display: flex;
+    padding: 30px 24px;
+    margin: 24px;
+    .bd {
+      width: 0;
+      min-width: 0;
+      flex-grow: 1;
+      .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        .ellipsisLn(2);
+      }
+      .txt {
+        font-size: 28px;
+        color: @aiuiColorDeepGray;
+        .ellipsisLn(2);
+      }
+    }
+    .distance {
+      font-size: 28px;
+      color: @aiuiColorDeepGray;
+    }
+    .thumb {
+      width: 144px;
+      height: 144px;
+      margin-right: 24px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
