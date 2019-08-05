@@ -1,143 +1,191 @@
 //我的地块
-.button-thumb{
+.button-thumb {
     margin-left: 24px;
 }
-.shop-list{
+
+.shop-list {
     background-color: @aiuiColorWhite;
     border-radius: 28px;
     display: flex;
     flex-direction: column;
     padding: 30px 24px;
     margin: 24px;
-    &_item{
+
+    &_item {
         display: flex;
     }
+
     .thumb {
         width: 180px;
         height: 180px;
         margin-right: 24px;
+
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-      }
-    .bd{
+    }
+
+    .bd {
         .Cell.\-fill;
-        h3{
+
+        h3 {
             font-size: 36px;
             margin-bottom: 20px;
             .ellipsisLn(1);
         }
     }
-    .ft{
+
+    .ft {
         display: flex;
         justify-content: flex-end;
         padding-top: @aiuiCellInnerGapH;
-        button{
+
+        button {
             margin-left: @aiuiCellInnerGapH;
         }
     }
 }
-.aiui-cells-mt{
+
+.aiui-cells-mt {
     margin-top: @aiuiCellInnerGapH;
 
 }
-.paintgrow-form{
-    .aiui-cell__bd{
+
+.paintgrow-form {
+    .aiui-cell__bd {
         font-size: @aiuiCellTipsFontSize;
-        color:@aiuiColorMedGray
+        color: @aiuiColorMedGray
     }
-    .aiui-cells__title{
+
+    .aiui-cells__title {
         padding-bottom: @aiuiCellInnerGapH;
-        color:@aiuiColorMedGray
+        color: @aiuiColorMedGray
     }
 }
+
 // 雇农首页
-.farmhand-bg{
+.farmhand-bg {
     height: 100vh;
-    background:@aiuiColorWhite;
+    background: @aiuiColorWhite;
 }
-.farmhand-index{
+
+.farmhand-index {
     position: relative;
     width: 750px;
     background: url("../images/farm_header_bg01.png") no-repeat;
     background-size: 750px;
     overflow: hidden;
-    .user-bg{
-        margin:290px auto 0;
+
+    .user-bg {
+        margin: 290px auto 0;
         width: 180px;
         height: 180px;
         overflow: hidden;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
         }
-    }  
+    }
 }
-.farmhand-balance{
+
+.farmhand-balance {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 40px;
-    .md{
-        margin-right: 160px;
-        .title{
+    padding: 0 72px;
+    .md {
+
+        .title {
             font-size: @aiuiCellTipsFontSize;
-            color:@aiuiColorMedGray
+            color: @aiuiColorMedGray
         }
-        .price{
+
+        .price {
             font-size: 60px;
-            color:@aiuiColorGray; 
-            small{
+            color: @aiuiColorGray;
+
+            small {
                 display: inline-block;
                 margin-left: 10px;
-                font-size: 30px; 
-                color:@aiuiColorMedGray 
+                font-size: 30px;
+                color: @aiuiColorMedGray
             }
         }
     }
 }
-.farmhand-list{
+
+.farmhand-list {
     display: flex;
     flex-wrap: wrap;
     padding: 50px 24px 0;
-    .title{
+    text-align: center;
+    .title {
         font-size: 30px;
         padding-bottom: 20px;
         text-align: center;
     }
-    a{
+    .aiui-btn {
+        min-width: 170px;
+        margin: 0 auto;
+    }
+
+    a {
         width: 340px;
         height: 300px;
         border-radius: 28px;
-        &:first-child{
+
+        &:first-child {
             background: #FCF1F5;
             margin-right: 20px;
             margin-bottom: 20px;
+            .aiui-btn{
+                color:@aiuiColorRed;
+                &:before{
+                    border-color:@aiuiColorRed;
+                }
+            }
         }
-        &:nth-child(2){
+        &:nth-child(2) {
             background: #FBF5EA;
             margin-bottom: 20px;
+         
+            .aiui-btn{
+                color:@aiuiColorWarn;
+                &:before{
+                    border-color:@aiuiColorWarn;
+                }
+            }
         }
-        &:nth-child(3){
+        &:nth-child(3) {
             background: #EEF4FC;
             margin-right: 20px;
+          
+            .aiui-btn{
+                color:@aiuiColorBlue;
+                &:before{
+                    border-color:@aiuiColorBlue;
+                }
+            }
         }
-        &:last-child{
+
+        &:last-child {
             background: #E4F5F1
         }
     }
-    .icon-img{
+
+    .icon-img {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 148px;
-        .icon-task{
+        img{
             width: 64px;
         }
     }
 
-  
 }
