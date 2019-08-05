@@ -10,17 +10,16 @@
 }
 
 .aiui-cells__title {
-  margin-top: 32px;
-  margin-bottom: 6px;
-  padding-left: @aiuiCellGapH;
-  padding-right: @aiuiCellGapH;
+  padding: @aiuiCellGapV @aiuiCellGapH;
   color: @aiuiTextColorDesc;
   font-size: @aiuiCellTipsFontSize;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 .aiui-cells__tips {
-  padding: 24px 24px 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
   &.\-primary {
     background-color: #fff;
   }
@@ -39,7 +38,7 @@
   &:before {
     .setTopLine(@aiuiCellBorderColor);
     left: @aiuiCellGapH;
-    z-index: 2;
+    z-index: 1;
   }
   &:first-child {
     &:before {

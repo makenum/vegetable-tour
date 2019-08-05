@@ -1,5 +1,111 @@
 {% extends 'app.nunjucks' %}
 {% block title %}新增收货地址{% endblock %}
 {% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">新增收货地址</h3>
+  </div>
+</div>
+<!--头部导航 start-->
 
+<div class="aiui-cells edit-address__cells">
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">姓名</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="请填写收货人">
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">联系电话</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="tel" placeholder="请填写联系电话">
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell_access" id="selectAddressBtn">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">收货地址</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="请选择地址" readonly>
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+    </div>
+    <div class="aiui-cell__bd">
+      <textarea class="aiui-textarea" placeholder="请填写详细地址" rows="3"></textarea>
+    </div>
+  </div>
+</div>
+
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">保存</button>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<script>
+  // 选择省市区
+  $('#selectAddressBtn').bind('click', function () {
+    aiui.picker([{
+      label: '广东省',
+      value: 0,
+      children: [{
+        label: '广州市',
+        value: 0,
+        children: [{
+          label: '天河区',
+          value: 0
+        }, {
+          label: '海珠区',
+          value: 1
+        }, {
+          label: '白云区',
+          value: 2
+        }]
+      }, {
+        label: '深圳市',
+        value: 1,
+        children: [{
+          label: '罗湖区',
+          value: 0
+        }, {
+          label: '南山区',
+          value: 1
+        }, {
+          label: '宝安区',
+          value: 2
+        }]
+      }]
+    }], {
+        depth: 3,
+        defaultValue: [0, 1, 1],
+        title: '请选择地区',
+        onChange: function (result) {
+          console.log(result);
+        },
+        onConfirm: function (result) {
+          console.log(result);
+          $('#selectAddressBtn').find(".aiui-input").val(result[0].label + result[1].label + result[2].label);
+        },
+        id: 'selectAddressPicker'
+      });
+  });
+</script>
 {% endblock %}
