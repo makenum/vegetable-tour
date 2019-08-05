@@ -1,6 +1,6 @@
 @import "../../base/fn";
 
-.aiui-popup__wrap{
+.aiui-popup__wrap {
   display: none;
   position: relative;
   z-index: 5000;
@@ -26,16 +26,29 @@
   transition: transform 0.3s;
 }
 .aiui-popup__hd {
-  height: 128px;
-  display: flex;
-  align-items: center;
-}
-
-.aiui-popup__title {
-  display: block;
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: 700;
-  font-size: 30px;
+  position: relative;
+  &:after {
+    .setBottomLine(@aiuiLineColorLight);
+  }
+  .toolbar {
+    padding: 30px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &-title {
+      font-size: 32px;
+    }
+    .icon-close {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      margin-top: -24px;
+      width: 48px;
+      height: 48px;
+      background-color: @aiuiColorGray;
+    }
+  }
 }
 
 .aiui-popup__bd {
@@ -44,8 +57,7 @@
 }
 
 .aiui-popup__ft {
-  padding: 80px 48px 64px;
-  text-align: center;
+  padding: 30px 24px;
 }
 
 //actionSheet aniamtion

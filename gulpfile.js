@@ -133,7 +133,7 @@ gulp.task("copy-svg", function() {
 // 复制 libs
 
 gulp.task("copy-libs", function() {
-  return gulp.src(paths.libs.src + "/**/*").pipe(gulp.dest(paths.libs.dest));
+  return gulp.src(paths.libs.src + "/**/*.*").pipe(gulp.dest(paths.libs.dest));
 });
 // 复制 js
 gulp.task("copy-js", function() {
