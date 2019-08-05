@@ -122,7 +122,7 @@
     text-align: center;
     .title {
         font-size: 30px;
-        padding-bottom: 20px;
+        padding-bottom:  @aiuiCellInnerGapH;
         text-align: center;
     }
     .aiui-btn {
@@ -137,8 +137,8 @@
 
         &:first-child {
             background: #FCF1F5;
-            margin-right: 20px;
-            margin-bottom: 20px;
+            margin-right:  @aiuiCellInnerGapH;
+            margin-bottom:  @aiuiCellInnerGapH;
             .aiui-btn{
                 color:@aiuiColorRed;
                 &:before{
@@ -148,7 +148,7 @@
         }
         &:nth-child(2) {
             background: #FBF5EA;
-            margin-bottom: 20px;
+            margin-bottom:  @aiuiCellInnerGapH;
          
             .aiui-btn{
                 color:@aiuiColorWarn;
@@ -159,7 +159,7 @@
         }
         &:nth-child(3) {
             background: #EEF4FC;
-            margin-right: 20px;
+            margin-right:  @aiuiCellInnerGapH;
           
             .aiui-btn{
                 color:@aiuiColorBlue;
@@ -183,5 +183,10 @@
             width: 64px;
         }
     }
-
+}
+.cash-out__item{
+    background: #FBF5EA;
+    border-radius: 28px;
+    margin: @aiuiCellInnerGapH 24px;
+    padding:48px 20px
 }
