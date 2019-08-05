@@ -2,10 +2,13 @@
 
 .aiui-cells {
   background-color: @aiuiCellBg;
-  font-size: @aiuiCellFontSize; 
-  overflow: hidden; 
-
+  font-size: @aiuiCellFontSize;
+  overflow: hidden;
 }
+.aiui-cells__gap {
+  margin-top: 20px;
+}
+
 .aiui-cells__title {
   margin-top: 32px;
   margin-bottom: 6px;
@@ -14,24 +17,19 @@
   color: @aiuiTextColorDesc;
   font-size: @aiuiCellTipsFontSize;
   line-height: 1.4;
-
-  & + .aiui-cells {
-    margin-top: 0;
-  }
 }
 
 .aiui-cells__tips {
-  margin-top: 8px; // 8px - 行高
-  color: @aiuiTextColorDesc;
-  padding-left: @aiuiCellGapH;
-  padding-right: @aiuiCellGapH;
-  font-size: @aiuiCellTipsFontSize;
+  padding: 24px 24px 0;
+  &.\-primary {
+    background-color: #fff;
+  }
 }
 
 .aiui-cell {
   padding: @aiuiCellGapV @aiuiCellGapH;
-  position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
-  display: flex;
+  position: relative;
+  .Grid;
   align-items: center;
   &:before {
     .setTopLine(@aiuiCellBorderColor);
@@ -43,10 +41,13 @@
       display: none;
     }
   }
+  .icon-arrow-right {
+    width: 38px;
+    height: 38px;
+    background-color: #999;
+  }
 }
-.aiui-cell_primary {
-  align-items: flex-start;
-}
+
 .aiui-cell__bd {
   flex: 1;
 }
