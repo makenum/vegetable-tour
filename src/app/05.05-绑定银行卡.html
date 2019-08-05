@@ -10,7 +10,7 @@
     <h3 class="aiui-headbar__title">提现</h3>
 </div>
 <!--头部导航 start-->
-<form class="aiui-cells__checkbox">
+<form>
     <div class="aiui-cells">
         <div class="aiui-cell">
             <div class="aiui-cell__bd">
@@ -31,28 +31,43 @@
             </div>
         </div>
         <div class="aiui-cell">
+            <div class="aiui-cell__hd"> <img src="../images/icon-bank.png" class="bank-img" alt=""> </div>
             <div class="aiui-cell__bd">
-                <img src="../images/" alt="">
+
                 <span>招商银行</span>
             </div>
 
         </div>
     </div>
-
-    <label class="aiui-cell aiui-check__label" for="s12">
-        <div class="aiui-cell__hd">
-            <input type="checkbox" name="checkbox1" class="aiui-check" id="s12" checked="checked">
-            <i class="aiui-icon-checked"></i>
+    <div class="aiui-cells">
+        <div class="aiui-cell__ft aiui-cell__ft_tag">
+            <span class="text-deep__gray">银行预留手机号</span>
+            <i class="icon-tips-circle"></i>
         </div>
-        <div class="aiui-cell__bd">
-            <div class="text-deep__gray">同意 <a class="text-primary fz28"> 《绑定银行卡协议》</a></div>
-        </div>
-    </label>
-    <div class="aiui-footbtn__wrap">
-            <div class="aiui-footbtn">
-                <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">下一步</button>
+    </div>
+    <div class="aiui-cells">
+        <div class="aiui-cell">
+            <div class="aiui-cell__bd">
+                <input class="aiui-input aiui-input__big" type="text" value="138 8888 8888">
+            </div> </div>
+    </div>
+    <div class="aiui-cells__checkbox">
+        <label class="aiui-cell aiui-check__label" for="s12">
+            <div class="aiui-cell__hd">
+                <input type="checkbox" name="checkbox1" class="aiui-check" id="s12" checked="checked">
+                <i class="aiui-icon-checked"></i>
             </div>
+            <div class="aiui-cell__bd">
+                <div class="text-deep__gray">同意 <a class="text-primary fz28"> 《绑定银行卡协议》</a></div>
+            </div>
+        </label>
+    </div>
+    <div class="aiui-footbtn__wrap">
+        <div class="aiui-footbtn">
+            <button type="button"
+                class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">下一步</button>
         </div>
+    </div>
 </form>
 
 
