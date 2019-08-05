@@ -1,0 +1,24 @@
+{% extends 'example.nunjucks' %}
+{% block title %}蔬游-买地成功{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar aiui-headbar__default">
+  <div class="aiui-headbar__item">
+    <a href="javascript:history.back();" class="icon-return"></a>
+  </div>
+  <h3 class="aiui-headbar__title">支付成功</h3>
+</div>
+<!--头部导航 end-->
+<div class="aiui-msg">
+  <div class="aiui-msg__hd aiui-msg__success">
+    <i class="icon-success aiui-icon__msg"></i>
+    <h2 class="aiui-msg__title">支付成功</h2>
+  </div>
+  <div class="aiui-msg__bd">
+    <p class="aiui-msg__desc">恭喜您成功租种鄂尔多斯农场南瓜地1块，编号为<span class="text-primary">A1096</span>。详细地址：内蒙古自治区鄂尔多斯某某村某某组8号。</p>
+  </div>
+  <div class="aiui-msg__ft">
+    <a href="javascript:;" class="aiui-btn aiui-btn__plain aiui-btn__large aiui-btn__primary aiui-btn__pill">去我的农场</a>
+  </div>
+</div>
+{% endblock %}
