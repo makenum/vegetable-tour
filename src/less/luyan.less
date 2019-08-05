@@ -2,19 +2,25 @@
 .button-thumb {
     margin-left: 24px;
 }
-
-.shop-list {
+.shop-list{
     background-color: @aiuiColorWhite;
     border-radius: 28px;
     display: flex;
     flex-direction: column;
     padding: 30px 24px;
     margin: 24px;
-
-    &_item {
+    .ft {
         display: flex;
-    }
+        justify-content: flex-end;
+        padding-top: @aiuiCellInnerGapH;
 
+        button {
+            margin-left: @aiuiCellInnerGapH;
+        }
+    }
+}
+.shop-list_item  {
+    display: flex;
     .thumb {
         width: 180px;
         height: 180px;
@@ -33,19 +39,9 @@
         h3 {
             font-size: 36px;
             margin-bottom: 20px;
-            .ellipsisLn(1);
+            .ellipsisLn(2);
         }
-    }
-
-    .ft {
-        display: flex;
-        justify-content: flex-end;
-        padding-top: @aiuiCellInnerGapH;
-
-        button {
-            margin-left: @aiuiCellInnerGapH;
-        }
-    }
+    } 
 }
 
 .aiui-cells-mt {
