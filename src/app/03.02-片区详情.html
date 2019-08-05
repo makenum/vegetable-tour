@@ -1,0 +1,64 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-片区详情{% endblock %}
+{% block content %}
+<div class="app-area__detail">
+  <!--头部导航 start-->
+  <div class="headbar-sticky">
+    <div class="aiui-headbar aiui-headbar__fixed aiui-headbar__transparent">
+      <div class="aiui-headbar__item">
+        <a href="javascript:history.back();" class="icon-return"></a>
+      </div>
+      <h3 class="aiui-headbar__title">鄂尔多斯农场</h3>
+    </div>
+  </div>
+  <!--头部导航 end-->
+  <!--内容部分 start-->
+  <div class="detail-content">
+    <!--查看地图 start-->
+    <div class="Grid -right">
+      <a href="javascript:;" class="area-map">
+        <div class="area-map__hd"><i class="icon-map"></i></div>
+        <div class="area-map__ft">查看地图</div>
+      </a>
+    </div>
+    <!--查看地图 end-->
+    <!--内容 start-->
+    <div class="detail-box">
+      <div class="avatar avatar-180"><img src="../images/farm_tu02.png" /></div>
+      <div class="Grid detail-item">
+        <div class="Cell -1of3 detail-item__list">
+          <h4 class="title">总面积(亩)</h4>
+          <span class="txt">3494</span>
+        </div>
+        <div class="Cell -1of3 detail-item__list">
+          <h4 class="title">总耕地(块)</h4>
+          <span class="txt">1.2万</span>
+        </div>
+        <div class="Cell -1of3 detail-item__list">
+          <h4 class="title">所在地</h4>
+          <span class="txt">内蒙古</span>
+        </div>
+      </div>
+      <div class="detail-desc">
+        <p>鄂尔多斯农场是内蒙古自治区下辖地级市，位于黄河几字湾河套腹地，独处内蒙古自治区西南部，西北东三面为黄河环绕，南临古长城，毗邻晋陕宁三省区。</p>
+      </div>
+      <!--可选租地 start-->
+      <div class="optional-land">
+        <h3 class="title"><span>可选租地</span></h3>
+        <div class="optional-item">
+          <a href="javascript:;" class="optional-item__list">
+            <div class="optional-item__bd"></div>
+          </a>
+        </div>
+      </div>
+      <!--可选租地 end-->
+    </div>
+    <!--内容 end-->
+  </div>
+  <!--内容部分 end-->
+</div>
+{% endblock %}
+{% block footer %}
+<script src="../libs/sticky.js"></script>
+<script src="../js/headbar.js"></script>
+{% endblock %}
