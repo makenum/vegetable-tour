@@ -1,0 +1,49 @@
+{% extends 'app.nunjucks' %}
+{% block title %}配送信息{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <a href="javascript:;" class="icon-return">
+    </a>
+    <h3 class="aiui-headbar__title">配送信息</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+
+<div class="aiui-cells__tips -primary">
+  <p>配送地址</p>
+</div>
+
+<div class="aiui-cells">
+  <div class="aiui-cell -top aiui-cell_access">
+    <div class="Cell -1of5">
+      <i class="icon-address"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">钱多多</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+    <i class="icon-arrow-right"></i>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell -top">
+    <div class="shop-list_item">
+      <div class="thumb"><img src="../images/farm_tu01.png"></div>
+      <div class="bd">
+        <h3>鄂尔多斯农场a1096地块</h3>
+        <p class="text-deep__gray">已下架</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

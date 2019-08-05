@@ -488,3 +488,89 @@
     }
   }
 }
+// 我的农场
+.farm-tips__dialog {
+  .hd {
+    height: 225px;
+    background: url("../images/dialog_header_bg.png") no-repeat;
+    background-size: contain;
+    padding-top: 34px;
+    .thumb {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 6px solid @aiuiColorPrimary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 90px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  .bd {
+    background-color: #fff;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    .content {
+      padding: 40px 60px;
+      .title {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 36px;
+        color: @aiuiColorWarn;
+      }
+      .desc {
+        font-size: 30px;
+        margin-top: 40px;
+        text-align: center;
+      }
+    }
+    .btns {
+      display: flex;
+      padding: 40px 30px;
+      .aiui-btn {
+        flex: 1;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+// 地址列表
+.address-list {
+}
+.address {
+  .hd {
+    display: flex;
+    align-items: center;
+    .name {
+      font-size: 36px;
+      margin-right: 24px;
+    }
+    .phone {
+      flex: 1;
+      color: #999;
+      font-size: 30px;
+    }
+  }
+  .bd {
+    margin-top: 15px;
+    .desc {
+      .ellipsisLn(2);
+      font-size: 28px;
+    }
+  }
+}
+
+.aiui-cell {
+  .icon-address {
+    width: 68px;
+    height: 68px;
+    background-color: #999;
+  }
+}

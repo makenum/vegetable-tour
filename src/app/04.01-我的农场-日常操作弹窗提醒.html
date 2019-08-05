@@ -1,0 +1,129 @@
+{% extends 'app.nunjucks' %}
+{% block title %}我的农场-日常操作弹窗提醒{% endblock %}
+{% block linkcss %}
+<style>
+  .demo {
+    padding: 10px;
+  }
+
+  .aiui-btn {
+    margin-top: 10px;
+  }
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="demo">
+  <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill"
+    id="showDialog1">浇水提醒弹窗</button>
+  <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill"
+    id="showDialog2">未采摘提醒弹窗</button>
+  <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill"
+    id="showDialog3">需要配送提醒弹窗</button>
+</div>
+
+<!-- 浇水提醒弹窗 start -->
+<div class="aiui-dialog__wrap" id="Dialog1">
+  <div class="aiui-mask"></div>
+  <div class="aiui-dialog__custom farm-tips__dialog">
+    <div class="hd">
+      <div class="thumb">
+        <img src="../images/watering.png" alt="浇水">
+      </div>
+    </div>
+    <div class="bd">
+      <div class="content">
+        <h3 class="title">您要浇水吗？</h3>
+        <div class="desc">浇水需要花掉200阳光值，是否现在浇水？</div>
+      </div>
+
+      <div class="btns">
+        <button type="button"
+          class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__default close-dialog__btn">再考虑一下</button>
+        <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary">立即采摘</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 浇水提醒弹窗 end -->
+<!-- 未采摘提醒弹窗 start -->
+<div class="aiui-dialog__wrap" id="Dialog2">
+  <div class="aiui-mask"></div>
+  <div class="aiui-dialog__custom farm-tips__dialog">
+    <div class="hd">
+      <div class="thumb">
+        <img src="../images/mature.png" alt="西红柿">
+      </div>
+    </div>
+    <div class="bd">
+      <div class="content">
+        <h3 class="title">您有蔬菜未采摘</h3>
+        <div class="desc">您的西红柿已经成熟，采摘需要花掉200阳光值，是否现在采摘？</div>
+      </div>
+
+      <div class="btns">
+        <button type="button"
+          class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__default close-dialog__btn">再考虑一下</button>
+        <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary">立即采摘</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 未采摘提醒弹窗 start -->
+
+<!-- 需要配送提醒弹窗 start -->
+<div class="aiui-dialog__wrap" id="Dialog3">
+  <div class="aiui-mask"></div>
+  <div class="aiui-dialog__custom farm-tips__dialog">
+    <div class="hd">
+      <div class="thumb">
+        <img src="../images/icon-car.png" alt="配送">
+      </div>
+    </div>
+    <div class="bd">
+      <div class="content">
+        <h3 class="title">您有蔬菜需要配送！</h3>
+        <div class="desc">您的西红柿已经采摘完毕，需要尽快配送，是否现在配送？</div>
+      </div>
+
+      <div class="btns">
+        <button type="button"
+          class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__default close-dialog__btn">再考虑一下</button>
+        <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary">立即采摘</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- 需要配送提醒弹窗 start -->
+
+</div>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+  $(function () {
+    var $Dialog1 = $('#Dialog1'),
+      $Dialog2 = $('#Dialog2'),
+      $Dialog3 = $('#Dialog3');
+    // 关闭弹窗操作
+    $(document).on('click', '.aiui-mask,.close-dialog__btn', function () {
+      $(this)
+        .parents('.aiui-dialog__wrap')
+        .fadeOut(200);
+    });
+    // 打开弹窗操作
+    $('#showDialog1').on('click', function () {
+      $Dialog1.fadeIn(200);
+    });
+    $('#showDialog2').on('click', function () {
+      $Dialog2.fadeIn(200);
+    });
+    $('#showDialog3').on('click', function () {
+      $Dialog3.fadeIn(200);
+    });
+  });
+</script>
+{% endblock %}
