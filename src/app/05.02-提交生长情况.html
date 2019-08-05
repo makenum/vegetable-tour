@@ -3,13 +3,12 @@
 {% block content %}
 <!--头部导航 start-->
 <div class="aiui-headbar aiui-headbar__default">
-    <a href="javascript:;" class="aiui-headbar__return">
-        <i class="icon-return"></i>
-    </a>
+    <a href="javascript:;" class="icon-return">
+      </a>
     <h3 class="aiui-headbar__title">提交蔬菜生长情况</h3>
 </div>
 <!--头部导航 start-->
-<!--头部导航 start-->
+<!--content start-->
 <div class="aiui-cells aiui-cells_form paintgrow-form">
     <div class="aiui-cells__title">生长情况</div>
     <div class="aiui-cell aiui-cell_switch ">
@@ -49,7 +48,12 @@
           </div>
         </div>
       </div>
-<!--头部导航 end-->
+<!--content end-->
+<div class="aiui-footbtn__wrap">
+    <div class=".aiui-footbtn">
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">提交</button>
+    </div>
+</div>
 {% endblock %}
 {% block footer %}
 <script src="../js/uploader.js"></script>

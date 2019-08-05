@@ -2,18 +2,12 @@
 
 @import "../../base/fn";
 
-.aiui-footer {
-    color: @aiuiTextColorTips;
-    font-size: 28px;
-    line-height:1.4;
-    text-align: center;
+.aiui-footbtn__wrap {
+
     height: 120px;
     position: relative;
-    a{
-        color: @aiuiLinkColorDefault;
-    }
 }
-.aiui-footer_fixed-bottom{
+.aiui-footbtn{
     background: #f5f5f5;
     position: fixed;
     display: flex;
@@ -26,28 +20,4 @@
     padding: 0px 24px;
     height: 120px;
 }
-.aiui-footer__links{
-    font-size: 0;
-}
-.aiui-footer__link{
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 16px;
-    position: relative;
-    font-size: 28px;
-    &:before{
-        .setLeftLine();
-        left: -16px;
-        top: 10px;
-        bottom: 10px;
-    }
-    &:first-child{
-        &:before{
-            display: none;
-        }
-    }
-}
-.aiui-footer__text{
-    padding: 0 32px;
-    font-size: 24px;
-}
+

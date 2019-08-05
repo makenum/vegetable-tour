@@ -2,7 +2,7 @@
 .button-thumb{
     margin-left: 24px;
 }
-.myarea-list{
+.shop-list{
     background-color: @aiuiColorWhite;
     border-radius: 28px;
     display: flex;
@@ -33,23 +33,111 @@
     .ft{
         display: flex;
         justify-content: flex-end;
-        padding-top: 20px;
+        padding-top: @aiuiCellInnerGapH;
         button{
-            margin-left: 20px;
+            margin-left: @aiuiCellInnerGapH;
         }
     }
 }
 .aiui-cells-mt{
-    margin-top: 20px;
+    margin-top: @aiuiCellInnerGapH;
 
 }
 .paintgrow-form{
     .aiui-cell__bd{
-        font-size: 28px;
+        font-size: @aiuiCellTipsFontSize;
         color:@aiuiColorMedGray
     }
     .aiui-cells__title{
-        padding-bottom: 20px;
+        padding-bottom: @aiuiCellInnerGapH;
         color:@aiuiColorMedGray
     }
+}
+// 雇农首页
+.farmhand-bg{
+    height: 100vh;
+    background:@aiuiColorWhite;
+}
+.farmhand-index{
+    position: relative;
+    width: 750px;
+    background: url("../images/farm_header_bg01.png") no-repeat;
+    background-size: 750px;
+    overflow: hidden;
+    .user-bg{
+        margin:290px auto 0;
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }  
+}
+.farmhand-balance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    .md{
+        margin-right: 160px;
+        .title{
+            font-size: @aiuiCellTipsFontSize;
+            color:@aiuiColorMedGray
+        }
+        .price{
+            font-size: 60px;
+            color:@aiuiColorGray; 
+            small{
+                display: inline-block;
+                margin-left: 10px;
+                font-size: 30px; 
+                color:@aiuiColorMedGray 
+            }
+        }
+    }
+}
+.farmhand-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 24px 0;
+    .title{
+        font-size: 30px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    a{
+        width: 340px;
+        height: 300px;
+        border-radius: 28px;
+        &:first-child{
+            background: #FCF1F5;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        &:nth-child(2){
+            background: #FBF5EA;
+            margin-bottom: 20px;
+        }
+        &:nth-child(3){
+            background: #EEF4FC;
+            margin-right: 20px;
+        }
+        &:last-child{
+            background: #E4F5F1
+        }
+    }
+    .icon-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 148px;
+        .icon-task{
+            width: 64px;
+        }
+    }
+
+  
 }
