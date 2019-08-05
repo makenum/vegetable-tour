@@ -26,6 +26,11 @@
   }
 }
 
+.aiui-cell__col {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 .aiui-cell {
   padding: @aiuiCellGapV @aiuiCellGapH;
   position: relative;
@@ -45,13 +50,21 @@
     width: 38px;
     height: 38px;
     background-color: #999;
+    margin-left: 10px;
   }
 }
 
+.aiui-cell__hd {
+  margin-right: 30px;
+}
 .aiui-cell__bd {
   flex: 1;
 }
+.aiui-cell__primary {
+  align-items: flex-start;
+}
 .aiui-cell__ft {
-  text-align: right;
-  color: @aiuiTextColorDesc;
+  position: relative;
+  display: flex;
+  align-items: center;
 }

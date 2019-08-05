@@ -1,36 +1,36 @@
-
-
 @import "../../../base/fn";
 
 .aiui-cells__checkbox {
-    .aiui-check__label{
-      &:before{left:110px;}
+  .aiui-check__label {
+    &:before {
+      left: 110px;
     }
-    .aiui-cell__hd {
-        padding-right: @aiuiCellInnerGapH;
+  }
+  .aiui-cell__hd {
+    padding-right: @aiuiCellInnerGapH;
+  }
+  .aiui-icon-checked {
+    &:before {
+      content: "\EA01";
+      color: @aiuiLineColorDark;
+      font-size: 46px;
+      display: block;
+      margin: 0;
     }
-    .aiui-icon-checked {
-        &:before {
-            content: '\EA01';
-            color: @aiuiLineColorDark;
-            font-size: 46px;
-            display: block;
-            margin:0;
-        }
-    }
+  }
 }
 
 // method2 accessbility
 .aiui-check {
-    // checkbox
-    .aiui-cells__checkbox & {
-        &:checked {
-            & + .aiui-icon-checked {
-                &:before {
-                    content: '\EA06';
-                    color: @aiuiColorPrimary;
-                }
-            }
+  // checkbox
+  .aiui-cells__checkbox & {
+    &:checked {
+      & + .aiui-icon-checked {
+        &:before {
+          content: "\EA06";
+          color: @aiuiColorPrimary;
         }
+      }
     }
+  }
 }

@@ -1,31 +1,34 @@
-
-
 @import "../../../base/fn";
 
 // method2 accessbility
-.aiui-cells__radio{
-    .aiui-cell__ft {
-        padding-left: @aiuiCellInnerGapH;
+.aiui-cells__radio {
+  .aiui-icon-checked {
+    &:before {
+      content: "\EA01";
+      color: @aiuiLineColorDark;
+      font-size: 46px;
+      display: block;
+      margin: 0;
     }
+  }
 }
 .aiui-check {
-    // radio
-    .aiui-cells__radio & {
-		& + .aiui-icon-checked {
-			min-width:32px;
-        &:before {
-          margin:0;
-        }
-		}
-        &:checked {
-            & + .aiui-icon-checked {
-                &:before {
-                    display: block;
-                    content: '\EA08';
-                    color: @aiuiColorPrimary;
-                    font-size: 32px;
-                }
-            }
-        }
+  // radio
+  .aiui-cells__radio & {
+    & + .aiui-icon-checked {
+      min-width: 32px;
+      &:before {
+        margin: 0;
+      }
     }
+    &:checked {
+      & + .aiui-icon-checked {
+        &:before {
+          display: block;
+          content: "\EA06";
+          color: @aiuiColorPrimary;
+        }
+      }
+    }
+  }
 }
