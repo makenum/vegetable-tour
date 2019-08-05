@@ -2,9 +2,12 @@
 
 .aiui-popup {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: auto;
+  right: auto;
   bottom: 0;
+  width: 100%;
+  max-width: @maxWidth;
+  margin: auto;
   transform: translate(0, 100%);
   max-height: 75%;
   z-index: 5000;
