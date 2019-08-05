@@ -48,7 +48,8 @@
   <!--内容区域 end-->
   <div class="aiui-footbtn__wrap">
     <div class="aiui-footbtn aiui-footbtn__transparent">
-      <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn_brown aiui-btn__pill">到这里去</button>
+      <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn_brown aiui-btn__pill"
+        id="cityPickerHook">到这里去</button>
       <button type="button"
         class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">我要租种</button>
       <!--已租种把class aiui-btn__primary改为aiui-btn__disabled-->
@@ -59,6 +60,36 @@
 {% block footer %}
 <script src="../libs/swiper.min.js"></script>
 <script>
+  // 选择地区
+  $('#cityPickerHook').on('click', function () {
+    aiui.picker([
+      {
+        label: '湖南省',
+        value: 0
+      }, {
+        label: '江西省',
+        value: 1
+      }, {
+        label: '广东省',
+        value: 2
+      }, {
+        label: '福建省',
+        value: 3
+      }, {
+        label: '其他',
+        value: 4
+      }
+    ], {
+        onChange: function (result) {
+          console.log(result);
+        },
+        onConfirm: function (result) {
+          console.log(result);
+        },
+        title: '选择地区'
+      });
+  });
+  //swiper相册浏览器
   var albumSwiper = new Swiper('#albumSwiper', {
     slidesPerView: 'auto',
     paginationClickable: true,

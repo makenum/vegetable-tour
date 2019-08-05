@@ -43,12 +43,6 @@
         }
     } 
 }
-
-.aiui-cells-mt {
-    margin-top: @aiuiCellInnerGapH;
-
-}
-
 .paintgrow-form {
     .aiui-cell__bd {
         font-size: @aiuiCellTipsFontSize;
@@ -63,7 +57,7 @@
 
 // 雇农首页
 .farmhand-bg {
-    height: 100vh;
+    min-height: 100vh;
     background: @aiuiColorWhite;
 }
 
@@ -184,12 +178,37 @@
         }
     }
 }
+// 提现
 .cash-out__item{
     background: #FBF5EA;
     border-radius: 28px;
     margin: @aiuiCellInnerGapH 24px;
     padding: 48px;
-    .title{
-        
+    .price{
+        font-size: 60px;
+        small{
+            display: inline-block;
+            margin-left: 10px;
+            font-size:30px
+        }
     }
 }
+.aiui-input__big{
+    font-size: 48px;
+    &::placeholder{
+        font-size: 48px; 
+    }
+}
+.bank-img{
+    width: 36px;
+}
+.aiui-cell__ft_tag{
+   margin-left: 20px;
+}
+.icon-tips-circle{
+    width: 38px;
+    height: 38px;
+    background-color: #999;
+    margin-left: 10px;
+}
+
