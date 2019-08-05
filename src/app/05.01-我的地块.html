@@ -1,29 +1,30 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的地块{% endblock %}
 {% block content %}
-<!--头部导航 start-->
-<div class="aiui-headbar aiui-headbar__default">
-    <a href="javascript:;" class="aiui-headbar__return">
-        <i class="icon-return"></i>
-    </a>
-    <h3 class="aiui-headbar__title">我的地块</h3>
-</div>
-<!--头部导航 start-->
-<!--搜索区域 start-->
-<div class="aiui-search-bar aiui-search-bar_focusing" id="searchBar">
-    <form class="aiui-search-bar__form">
-        <div class="aiui-search-bar__box">
-            <i class="icon-search"></i>
-            <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off" placeholder="搜索"
-                required="">
-            <a href="javascript:" class="icon-close-fill" id="searchClear"></a>
-        </div>
-        <label class="aiui-search-bar__label" id="searchText">
-            <i class="icon-search"></i>
-            <span>搜索</span>
-        </label>
-    </form>
-    <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill button-thumb">搜索</button>
+<div class="headbar-sticky">
+    <!--头部导航 start-->
+    <div class="aiui-headbar aiui-headbar__default">
+            <a href="javascript:;" class="icon-return">
+                </a>
+        <h3 class="aiui-headbar__title">我的地块</h3>
+    </div>
+    <!--头部导航 start-->
+    <!--搜索区域 start-->
+    <div class="aiui-search-bar aiui-search-bar_focusing" id="searchBar">
+        <form class="aiui-search-bar__form">
+            <div class="aiui-search-bar__box">
+                <i class="icon-search"></i>
+                <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off" placeholder="搜索"
+                    required="">
+                <a href="javascript:" class="icon-close-fill" id="searchClear"></a>
+            </div>
+            <label class="aiui-search-bar__label" id="searchText">
+                <i class="icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill button-thumb">搜索</button>
+    </div>
 </div>
 <!--搜索区域 end-->
 <!--内容区域 start-->
@@ -44,8 +45,8 @@
     </div>
     <div class="aiui-tab__panel">
         <div class="aiui-tab__content">
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -57,8 +58,8 @@
                         class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">恢复</button>
                 </div>
             </div>
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -70,8 +71,8 @@
                         class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交生长情况</button>
                 </div>
             </div>
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -87,8 +88,8 @@
             </div>
         </div>
         <div class="aiui-tab__content">
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -102,8 +103,8 @@
             </div>
         </div>
         <div class="aiui-tab__content">
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -119,8 +120,8 @@
             </div>
         </div>
         <div class="aiui-tab__content">
-            <div class="myarea-list">
-                <div class="myarea-list_item">
+            <div class="shop-list">
+                <div class="shop-list_item">
                     <div class="thumb"><img src="../images/farm_tu01.png"></div>
                     <div class="bd">
                         <h3>鄂尔多斯农场a1096地块</h3>
@@ -145,8 +146,10 @@
 </div>
 {% endblock %}
 {% block footer %}
+<script src="../libs/sticky.js"></script>
 <script type="text/javascript">
     $(function () {
+        $(".headbar-sticky").sticky({ topSpacing: 0 });
         //tab
         aiui.tab('#tab', {
             defaultIndex: 0,
