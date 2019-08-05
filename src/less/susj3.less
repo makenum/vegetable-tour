@@ -201,7 +201,7 @@
 .detail-content {
   padding: 562px 24px 0 24px;
 }
-.area-map {
+.view-box {
   &__hd {
     width: 68px;
     height: 68px;
@@ -368,4 +368,58 @@
   color: @aiuiColorDeepGray;
   text-align: center;
   padding: 24px;
+}
+
+//查看实景相册
+.app-album {
+  background: url("../images/area_bg.png") no-repeat center top;
+  min-height: 100vh;
+  background-size: cover;
+}
+.album-box {
+  padding-top: 740px;
+  .view-box {
+    margin: 0 24px;
+  }
+}
+.swiper-box {
+  margin-top: 30px;
+  height: 212px;
+  background-color: fade(@aiuiColorBlack, 60%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+  .swiper-container {
+    width: 100%;
+  }
+  .swiper-slide {
+    width: 170px;
+    box-sizing: border-box;
+    margin: 0 12px;
+    &.active {
+      .thumb {
+        border-color: @aiuiColorPrimary;
+      }
+      .thumb-txt {
+        color: @aiuiColorPrimary;
+      }
+    }
+  }
+  .thumb {
+    width: 170px;
+    height: 120px;
+    border: 4px solid @aiuiColorWhite;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .thumb-txt {
+    padding-top: 10px;
+    font-size: 28px;
+    color: @aiuiColorWhite;
+    line-height: normal;
+  }
 }

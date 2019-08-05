@@ -1,16 +1,18 @@
-
-
 // font
-@aiuiFontEN:-apple-system-font,"Helvetica Neue";
-@aiuiFontCN:"PingFang SC","Hiragino Sans GB","Microsoft YaHei";
-@aiuiFontSans:sans-serif;
-@aiuiFontDefault:@aiuiFontEN,@aiuiFontSans;
-@aiuiFontDefaultSize:28px;
-
+@aiuiFontEN: -apple-system-font, "Helvetica Neue";
+@aiuiFontCN: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+@aiuiFontSans: sans-serif;
+@aiuiFontDefault: @aiuiFontEN, @aiuiFontSans;
+@aiuiFontDefaultSize: 28px;
 
 // button
-@aiuiBtnDefaultGap:24px;
+@aiuiBtnDefaultGap: 24px;
 
+@aiuiBtnDefaultFontColor: #333333;
+@aiuiBtnPlainDefaultFontColor: #333333;
+@aiuiBtnPlainDefaultBorderColor: #333333;
+@aiuiBtnDefaultBg: #ffffff;
+@aiuiBtnDefaultActiveBg: #d9d9d9;
 @aiuiBtnDefaultFontColor:#ffffff;
 @aiuiBtnPlainDefaultFontColor: #333333;
 @aiuiBtnPlainDefaultBorderColor: #333333;
@@ -28,7 +30,16 @@
 @aiuiBtnDisabledFontColor:rgba(255,255,255,.4);
 @aiuiBtnDisabledBg: #DDDDDD;
 
+@aiuiBtnPrimaryFontColor: #ffffff;
+@aiuiBtnPlainPrimaryFontColor: #19cf77;
+@aiuiBtnPlainPrimaryBorderColor: #19cf77;
+@aiuiBtnPrimaryBg: #19cf77;
+@aiuiBtnPrimaryBgi: linear-gradient(90deg, #2de080 5%, rgba(25, 207, 119, 0.99) 100%);
+@aiuiBtnPrimaryActiveBg: #27a964;
+@aiuiBtnBrownActiveBg: #683802;
 
+@aiuiBtnDisabledFontColor: rgba(255, 255, 255, 0.4);
+@aiuiBtnDisabledBg: #dddddd;
 
 // cell
 
@@ -42,9 +53,7 @@
 @aiuiCellTipsFontSize: 28px;
 @aiuiCellLabelWidth: 210px;
 
-@aiuiCellLineHeight: unit(
-  (@aiuiCellHeight - 2 * @aiuiCellGapV) / @aiuiCellFontSize
-); // 高度减去上下padding的行高
+@aiuiCellLineHeight: unit((@aiuiCellHeight - 2 * @aiuiCellGapV) / @aiuiCellFontSize); // 高度减去上下padding的行高
 @aiuiCellsMarginTop: 16px;
 
 // aiui switch
@@ -52,17 +61,14 @@
 
 // aiui uploader
 @aiuiUploaderBorderColor: #a3a3a3;
-@aiuiUploaderActiveBorderColor: overlay(
-  @aiuiActiveMaskBlack,
-  @aiuiUploaderBorderColor
-);
+@aiuiUploaderActiveBorderColor: overlay(@aiuiActiveMaskBlack, @aiuiUploaderBorderColor);
 @aiuiUploaderFileSpacing: 16px;
 @aiuiUploaderSize: 112px;
-@aiuiUploaderBorderWidth: 1PX;
+@aiuiUploaderBorderWidth: 1px;
 
 // dialog
-@aiuiDialogBackgroundColor: #FFFFFF;
-@aiuiDialogLineColor: rgba(0,0,0,.1);
+@aiuiDialogBackgroundColor: #ffffff;
+@aiuiDialogLineColor: rgba(0, 0, 0, 0.1);
 @aiuiDialogLinkColor: @aiuiLinkColorDefault;
 @aiuiDialogLinkActiveBc: @aiuiBgColorActive;
 @aiuiDialogWidth: 600px;
@@ -71,23 +77,23 @@
 @aiuiDialogRadius: 28px;
 
 // gird
-@aiuiGridBorderColor:#D9D9D9;
+@aiuiGridBorderColor: #d9d9d9;
 @aiuiGridFontSize: 28px;
 @aiuiGridIconSize: 56px;
 @aiuiGridColumnCount: 3;
 
 // msg
-@aiuiMsgPaddingTop:96px;
-@aiuiMsgTitleGap:32px;
+@aiuiMsgPaddingTop: 96px;
+@aiuiMsgTitleGap: 32px;
 
 // progress
 @aiuiProgressBg: @aiuiBgColorDefault;
 @aiuiProgressColor: @aiuiColorPrimary;
 @aiuiProgressHeight: 6px;
-@aiuiProgressCloseBg: #EF4F4F;
-@aiuiProgressActiveBg: #C13E3E;
+@aiuiProgressCloseBg: #ef4f4f;
+@aiuiProgressActiveBg: #c13e3e;
 
 // tab
 
-@aiuiNavBarHeight:112px;
-@aiuiTabBarHeight:120px;
+@aiuiNavBarHeight: 112px;
+@aiuiTabBarHeight: 120px;
