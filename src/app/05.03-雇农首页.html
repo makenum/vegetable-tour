@@ -1,6 +1,7 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-雇农首页{% endblock %}
 {% block content %}
+ <div class="farmhand-bg">
     <div class="farmhand-index">
         <div class="user-bg">
             <img src="../images/default_avatar.png" alt="">
@@ -8,8 +9,22 @@
     </div>
     <div class="farmhand-balance">
         <div class="md">
-            <p>余额（元）</p>
-            <p></p> 
+            <p class="title">余额（元）</p>
+            <p class="price">437,890<small>.00</small></p> 
+        </div>
+        <div>
+             <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__pill"">立即提现</button>
         </div>
     </div>
+    <div class="farmhand-list">
+        <a href="">
+            <div class="icon-img"><img src="../images/icon-task.png" class="icon-task" alt=""></div>
+            <p class="title text-red">我的任务</p>
+            <div class=""></div>
+        </a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+</div>
 {% endblock %}
