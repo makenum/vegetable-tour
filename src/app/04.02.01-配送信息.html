@@ -11,13 +11,12 @@
 </div>
 <!--头部导航 start-->
 
-<div class="aiui-cells__tips -primary">
-  <p>配送地址</p>
-</div>
-
 <div class="aiui-cells">
-  <div class="aiui-cell -top aiui-cell_access">
-    <div class="Cell -1of5">
+  <div class="aiui-cell aiui-cell__primary aiui-cell_access">
+    <div class="aiui-cell__col">
+      <span>配送地址</span>
+    </div>
+    <div class="aiui-cell__hd">
       <i class="icon-address"></i>
     </div>
     <div class="aiui-cell__bd">
@@ -31,19 +30,114 @@
         </div>
       </div>
     </div>
-    <i class="icon-arrow-right"></i>
-  </div>
-</div>
-<div class="aiui-cells aiui-cells__gap">
-  <div class="aiui-cell -top">
-    <div class="shop-list_item">
-      <div class="thumb"><img src="../images/farm_tu01.png"></div>
-      <div class="bd">
-        <h3>鄂尔多斯农场a1096地块</h3>
-        <p class="text-deep__gray">已下架</p>
-      </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
     </div>
   </div>
 </div>
 
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="Cell -2of2 shop-list_item">
+      <div class="thumb"><img src="../images/farm_tu01.png"></div>
+      <div class="bd">
+        <h3>鄂尔多斯农场a1096地块西红柿</h3>
+        <p class="fz28 text-deep__gray">总计10平方</p>
+      </div>
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell_access" id="selectDeliveryBtn">
+    <div class="aiui-cell__hd Cell -7of24">
+      <span>配送方式</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <span class="text-deep__gray">普通配送</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <span>快递：免邮</span>
+      <i class="icon-arrow-right"></i>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__col">
+      <span>订单备注</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="aiui-textarea__group">
+        <textarea class="aiui-textarea" placeholder="请输入备注信息" rows="3"></textarea>
+        <div class="aiui-textarea-counter"><span>0</span>/200</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button"
+      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">确定（您需支付0元）</button>
+  </div>
+</div>
+
+<!-- 选择配送方式弹窗 start -->
+<div class="aiui-popup__wrap" id="selectDeliveryPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup">
+    <div class="aiui-popup__bd">
+
+      <div class="aiui-picker__hd">
+        <button class="aiui-picker__btn close-popup__btn">取消</button>
+        <h3 class="aiui-picker__title">请选择配送方式</h3>
+        <button class="aiui-picker__btn">确定</button>
+      </div>
+      <div class="aiui-cells aiui-cells__radio">
+        <label class="aiui-cell aiui-check__label" for="x11">
+          <div class="aiui-cell__hd">
+            <span>快递</span>
+          </div>
+          <div class="aiui-cell__bd">
+            <p class="text-deep__gray">免邮</p>
+          </div>
+          <div class="aiui-cell__ft">
+            <input type="radio" class="aiui-check" name="radio1" id="x11">
+            <span class="aiui-icon-checked"></span>
+          </div>
+        </label>
+        <label class="aiui-cell aiui-check__label" for="x12">
+          <div class="aiui-cell__hd">
+            <span>冷链</span>
+          </div>
+          <div class="aiui-cell__bd">
+            <p class="text-deep__gray">免邮</p>
+          </div>
+          <div class="aiui-cell__ft">
+            <input type="radio" name="radio1" class="aiui-check" id="x12" checked="checked">
+            <span class="aiui-icon-checked"></span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 选择配送方式弹窗 end -->
+
+{% endblock %}
+
+{% block footer %}
+<script>
+  $(function () {
+    // 关闭Popup操作
+    $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
+      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(200);
+    });
+    // 打开Popup操作
+    $('#selectDeliveryBtn').on('click', function () {
+      $("#selectDeliveryPopup").fadeIn(200);
+      $("#selectDeliveryPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+    });
+  });
+</script>
 {% endblock %}
