@@ -9,6 +9,8 @@
 }
 .aiui-uploader__title{
     flex: 1;
+    font-size: 28px;
+    color:@aiuiColorMedGray
 }
 .aiui-uploader__info{
     color: @aiuiTextColorTips;
@@ -65,14 +67,16 @@
     width: @aiuiUploaderSize;
     height: @aiuiUploaderSize;
     box-sizing:border-box;
-    background-color:@aiuiBgColorDefault;
+    border-radius: 10px;
+    border:@aiuiUploaderBorderWidth solid  @aiuiBgColorDefault;
+    // background-color:@aiuiBgColorDefault;
     &:before, &:after{
         content: " ";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: @aiuiUploaderBorderColor;
+        background-color: @aiuiBgColorDefault;
     }
     &:before{
         width: @aiuiUploaderBorderWidth + 1;
