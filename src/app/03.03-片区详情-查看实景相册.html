@@ -1,0 +1,68 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-片区详情-查看实景相册{% endblock %}
+{% block content %}
+<div class="app-album">
+  <!--头部导航 start-->
+  <div class="aiui-headbar aiui-headbar__fixed aiui-headbar__default">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">鄂尔多斯农场南瓜地</h3>
+  </div>
+  <!--头部导航 end-->
+  <!--内容区域 start-->
+  <div class="album-box">
+    <!--查看视频 start-->
+    <div class="Grid -right">
+      <a href="javascript:;" class="view-box">
+        <div class="view-box__hd"><i class="icon-map"></i></div>
+        <div class="view-box__ft">查看视频</div>
+      </a>
+    </div>
+    <!--查看视频 end-->
+    <!--swiper start-->
+    <div class="swiper-box">
+      <div class="swiper-container" id="albumSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide active">
+            <div class="thumb"><img src="../images/farm_tu01.png" /></div>
+            <div class="thumb-txt">今天 10:00</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumb"><img src="../images/farm_tu01.png" /></div>
+            <div class="thumb-txt">今天 10:00</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumb"><img src="../images/farm_tu01.png" /></div>
+            <div class="thumb-txt">今天 10:00</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumb"><img src="../images/farm_tu01.png" /></div>
+            <div class="thumb-txt">今天 10:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--swiper end-->
+  </div>
+  <!--内容区域 end-->
+  <div class="aiui-footbtn__wrap">
+    <div class="aiui-footbtn aiui-footbtn__transparent">
+      <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn_brown aiui-btn__pill">到这里去</button>
+      <button type="button"
+        class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">我要租种</button>
+      <!--已租种把class aiui-btn__primary改为aiui-btn__disabled-->
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+<script src="../libs/swiper.min.js"></script>
+<script>
+  var albumSwiper = new Swiper('#albumSwiper', {
+    slidesPerView: 'auto',
+    paginationClickable: true,
+    freeMode: true
+  });
+</script>
+{% endblock %}
