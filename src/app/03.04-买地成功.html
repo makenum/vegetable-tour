@@ -1,12 +1,14 @@
-{% extends 'example.nunjucks' %}
+{% extends 'app.nunjucks' %}
 {% block title %}蔬游-买地成功{% endblock %}
 {% block content %}
 <!--头部导航 start-->
-<div class="aiui-headbar aiui-headbar__default">
-  <div class="aiui-headbar__item">
-    <a href="javascript:history.back();" class="icon-return"></a>
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">支付成功</h3>
   </div>
-  <h3 class="aiui-headbar__title">支付成功</h3>
 </div>
 <!--头部导航 end-->
 <div class="aiui-msg">

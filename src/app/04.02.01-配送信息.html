@@ -4,8 +4,10 @@
 <!--头部导航 start-->
 <div class="aiui-headbar__wrap">
   <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
-    <a href="javascript:;" class="icon-return">
-    </a>
+    <div class="aiui-headbar__item">
+      <a href="javascript:;" class="icon-return">
+      </a>
+    </div>
     <h3 class="aiui-headbar__title">配送信息</h3>
   </div>
 </div>
@@ -47,7 +49,7 @@
     </div>
   </div>
   <div class="aiui-cell aiui-cell_access" id="selectDeliveryBtn">
-    <div class="aiui-cell__hd Cell -7of24">
+    <div class="aiui-cell__hd">
       <span>配送方式</span>
     </div>
     <div class="aiui-cell__bd">
@@ -83,13 +85,13 @@
 <div class="aiui-popup__wrap" id="selectDeliveryPopup">
   <div class="aiui-mask"></div>
   <div class="aiui-popup">
-    <div class="aiui-popup__bd">
-
-      <div class="aiui-picker__hd">
-        <button class="aiui-picker__btn close-popup__btn">取消</button>
-        <h3 class="aiui-picker__title">请选择配送方式</h3>
-        <button class="aiui-picker__btn">确定</button>
+    <div class="aiui-popup__hd">
+      <div class="toolbar">
+        <button class="icon-close close-popup__btn">取消</button>
+        <h3 class="toolbar-title">请选择配送方式</h3>
       </div>
+    </div>
+    <div class="aiui-popup__bd">
       <div class="aiui-cells aiui-cells__radio">
         <label class="aiui-cell aiui-check__label" for="x11">
           <div class="aiui-cell__hd">
@@ -108,7 +110,7 @@
             <span>冷链</span>
           </div>
           <div class="aiui-cell__bd">
-            <p class="text-deep__gray">免邮</p>
+            <p class="text-deep__gray">20元/公斤</p>
           </div>
           <div class="aiui-cell__ft">
             <input type="radio" name="radio1" class="aiui-check" id="x12" checked="checked">
@@ -116,6 +118,10 @@
           </div>
         </label>
       </div>
+    </div>
+    <div class="aiui-popup__ft">
+      <button type="button"
+        class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
     </div>
   </div>
 </div>
