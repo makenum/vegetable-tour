@@ -1,12 +1,15 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的地块{% endblock %}
 {% block content %}
+<!--头部导航 start-->
 <div class="aiui-headbar aiui-headbar__default">
     <a href="javascript:;" class="aiui-headbar__return">
         <i class="icon-return"></i>
     </a>
     <h3 class="aiui-headbar__title">我的地块</h3>
 </div>
+<!--头部导航 start-->
+<!--搜索区域 start-->
 <div class="aiui-search-bar aiui-search-bar_focusing" id="searchBar">
     <form class="aiui-search-bar__form">
         <div class="aiui-search-bar__box">
@@ -22,6 +25,7 @@
     </form>
     <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill button-thumb">搜索</button>
 </div>
+<!--搜索区域 end-->
 <!--内容区域 start-->
 <div class="aiui-tab" id="tab">
     <div class="aiui-tabbar">
@@ -134,9 +138,10 @@
     </div>
 </div>
 <!--内容区域 end-->
-<div class="aiui-cell ">
-    <button type="button"
-        class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__primary aiui-btn__pill">新增地块</button>
+<div class="aiui-footer ">
+    <div class="aiui-footer_fixed-bottom">
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">新增地块</button>
+    </div>
 </div>
 {% endblock %}
 {% block footer %}

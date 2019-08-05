@@ -1,0 +1,56 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-提交蔬菜生长情况{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar aiui-headbar__default">
+    <a href="javascript:;" class="aiui-headbar__return">
+        <i class="icon-return"></i>
+    </a>
+    <h3 class="aiui-headbar__title">提交蔬菜生长情况</h3>
+</div>
+<!--头部导航 start-->
+<!--头部导航 start-->
+<div class="aiui-cells aiui-cells_form paintgrow-form">
+    <div class="aiui-cells__title">生长情况</div>
+    <div class="aiui-cell aiui-cell_switch ">
+        <div class="aiui-cell__bd ">是否需要施肥</div>
+        <div class="aiui-cell__ft">
+            <input class="aiui-switch" type="checkbox" checked="checked">
+        </div>
+    </div>
+    <div class="aiui-cell aiui-cell_switch ">
+        <div class="aiui-cell__bd">是否需要松土</div>
+        <div class="aiui-cell__ft">
+            <input class="aiui-switch" type="checkbox" checked="checked">
+        </div>
+    </div>
+    <div class="aiui-cell aiui-cell_switch">
+        <div class="aiui-cell__bd">是否需要除虫</div>
+        <div class="aiui-cell__ft">
+            <input class="aiui-switch" type="checkbox">
+        </div>
+    </div>
+</div>
+<div class="aiui-cells aiui-cells_form aiui-cells-mt" id="uploader">
+        <div class="aiui-cell">
+          <div class="aiui-cell__bd">
+            <div class="aiui-uploader" >
+              <div class="aiui-uploader__hd">
+                <p class="aiui-uploader__title">生长照片，请上传图片</p>
+              </div>
+              <div class="aiui-uploader__bd">
+                <ul class="aiui-uploader__files" id="uploaderFiles">
+                </ul>
+                <div class="aiui-uploader__input-box">
+                  <input id="uploaderInput" class="aiui-uploader__input" type="file" accept="image/*" multiple/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--头部导航 end-->
+{% endblock %}
+{% block footer %}
+<script src="../js/uploader.js"></script>
+{% endblock %}
