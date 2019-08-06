@@ -20,7 +20,8 @@
     </div>
     <script src="../libs/jquery.min.js"></script>
     <script src="../libs/aiui.min.js"></script>
-    <script src="../libs/common.js"></script>
+    <script src="../libs/sticky.js"></script>
+    <script src="../js/common.js"></script>
     {% block footer %}{% endblock %}
   </body>
 
