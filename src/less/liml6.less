@@ -286,23 +286,11 @@
 }
 
 .land-select {
-  padding-top: 360px;
+  padding-top: 400px;
   .lands {
     position: relative;
     display: flex;
     justify-content: center;
-  }
-  .land {
-    &.land1 {
-      transform: scale(0.8) translate(150px, -20px);
-    }
-    &.land2 {
-      transform: scale(1) translate(0, 0);
-      z-index: 10;
-    }
-    &.land3 {
-      transform: scale(0.8) translate(-150px, -20px);
-    }
   }
 
   .swiper-slide {
@@ -312,8 +300,15 @@
 
   .swiper-slide-active,
   .swiper-slide-duplicate-active {
-    transform: scale(1);
+    transform: scale(1.2);
     z-index: 1;
+  }
+
+  .swiper-slide-next {
+    transform: scale(0.7) translate(-100px, -40px);
+  }
+  .swiper-slide-prev {
+    transform: scale(0.7) translate(100px, -40px);
   }
 
   .soil {
@@ -330,7 +325,7 @@
     width: 242px;
     height: 242px;
     position: absolute;
-    top: -150px;
+    top: -180px;
     left: 50%;
     transform: translateX(-50%);
   }
