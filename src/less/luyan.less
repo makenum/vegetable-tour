@@ -273,12 +273,22 @@
         font-size: 36px;
         &::before {
             content: "";
+            mask-image: url(../svg/icon-triangle-up.svg) ;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: contain;
+            width: 38px;
+            height: 38px;
+            background-color: #fff;
             position: absolute;
+            margin-left: -19px;
             left: 50%;
             top:auto;
-            bottom:0;
+            bottom:-12px;
           }
-    }
-    
+    } 
+  }
+  .hide{
+      display: none;
   }
 

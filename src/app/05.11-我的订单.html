@@ -1,7 +1,7 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的订单{% endblock %}
 {% block content %}
-<div class="headbar-sticky">
+<div class="headbar-sticky-hook">
     <!--头部导航 start-->
     <div class="aiui-headbar aiui-headbar__default">
         <div class="aiui-headbar__item">
@@ -10,17 +10,18 @@
         </div>
         <h3 class="aiui-headbar__title">我的订单</h3>
     </div>
-</div>
+
 <!--头部导航 start-->
 <div class="order-tab" id="tabOrder">
     <div class="order-tabbar">
-        <a href="javascript:;" class="order-tabbar__item order-bar__item_on">
+        <a href="javascript:;" name="landOrder" class="order-tabbar__item order-bar__item_on">
             租地订单<span class="aiui-bar-badge">12</span>
         </a>
-        <a href="javascript:;" class="order-tabbar__item">
+        <a href="javascript:;" name="deliveryOrder" class="order-tabbar__item">
             配送订单<span class="aiui-bar-badge">8</span>
         </a>
     </div>
+</div>
     <!--搜索区域 start-->
     <div class="aiui-search-bar aiui-search-bar_focusing aiui-search-bar_gap" id="searchBar">
         <div class="arrow-select " id="selectMouthBtn">
@@ -39,15 +40,53 @@
         <button type="button"
             class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill button-thumb">搜索</button>
     </div>
-
+</div>
     <!--搜索区域 end-->
-    <div class="weui-tab__panel">
-        <div class="weui-tab__content">
+    <div class="order-tab__panel">
+        <div class="order-tab__content" id="landOrder">
             <!-- 租地订单 start -->
-
+            <div class="shop-list">
+                <div class="shop-list-status">
+                    <p>2019-07-23 17:43</p>
+                </div>
+                <div class="shop-list_item">
+                    <div class="thumb"><img src="../images/farm_tu01.png"></div>
+                    <div class="bd">
+                        <h3>鄂尔多斯农场a1096地块西红柿需浇水一次</h3>
+                        <p class="text-deep__gray">租地人：<span>钱多多</span></p>
+                        <p class="text-deep__gray">联系号码：<span>13823456666</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-list">
+                    <div class="shop-list-status">
+                        <p>2019-07-23 17:43</p>
+                    </div>
+                    <div class="shop-list_item">
+                        <div class="thumb"><img src="../images/farm_tu01.png"></div>
+                        <div class="bd">
+                            <h3>鄂尔多斯农场a1096地块西红柿需浇水一次</h3>
+                            <p class="text-deep__gray">租地人：<span>钱多多</span></p>
+                            <p class="text-deep__gray">联系号码：<span>13823456666</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-list">
+                        <div class="shop-list-status">
+                            <p>2019-07-23 17:43</p>
+                        </div>
+                        <div class="shop-list_item">
+                            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+                            <div class="bd">
+                                <h3>鄂尔多斯农场a1096地块西红柿需浇水一次</h3>
+                                <p class="text-deep__gray">租地人：<span>钱多多</span></p>
+                                <p class="text-deep__gray">联系号码：<span>13823456666</span></p>
+                            </div>
+                        </div>
+                    </div>
             <!-- 租地订单 end -->
         </div>
-        <div class="weui-tab__content">
+        <div class="order-tab__content hide" id="deliveryOrder">
             <!-- 配送订单  start -->
             <!--内容区域 start-->
             <div class="aiui-tab" id="tab">
@@ -79,7 +118,7 @@
                                 </div>
                             </div>
                             <div class="ft">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='05.12-填写物流.html'"
                                     class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</button>
                             </div>
                         </div>
@@ -130,7 +169,7 @@
                             </div>
                             <div class="ft">
                                 <button type="button" onclick="window.location.href='05.02-提交生长情况.html'"
-                                    class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交照片</button>
+                                    class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</button>
                             </div>
                         </div>
                     </div>
@@ -160,17 +199,17 @@
             <!-- 配送订单  end -->
         </div>
     </div>
-</div>
-
     {% endblock %}
     {% block footer %}
     <script src="../libs/sticky.js"></script>
     <script type="text/javascript">
         $(function () {
-            $(".headbar-sticky").sticky({ topSpacing: 0 });
+            $(".headbar-sticky-hook").sticky({ topSpacing: 0 });
             //tab
             $('#tabOrder .order-tabbar a' ).click(function(){
                 $(this).addClass('order-bar__item_on').siblings().removeClass('order-bar__item_on');
+                var _id=$(this).attr('name');
+                $('#'+_id).show().siblings().hide();
             })
             aiui.tab('#tab', {
                 defaultIndex: 0,
