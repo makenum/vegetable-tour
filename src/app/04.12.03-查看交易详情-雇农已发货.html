@@ -1,5 +1,5 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-查看交易详情-待发货{% endblock %}
+{% block title %}蔬游-查看交易详情-雇农已发货{% endblock %}
 {% block content %}
 <!--头部导航 start-->
 <div class="aiui-headbar__wrap">
@@ -15,12 +15,27 @@
 <!--状态提示 start-->
 <div class="aiui-status">
   <div class="Cell -fill">
-    <h3 class="status-title">待发货</h3>
+    <h3 class="status-title">雇农已发货</h3>
   </div>
-  <i class="icon-wait-2px"></i>
+  <i class="icon-truck-3px"></i>
 </div>
 <!--状态提示 end-->
 <div class="aiui-cells address-cells">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-truck-3px"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <p class="fz28 text-blue">由【深圳华强北集散中心】发往【某某某转运中心】</p>
+        </div>
+        <div class="bd">
+          <p class="fz28 text-deep__gray">2019-07-29 20:33:58</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="aiui-cell aiui-cell__primary">
     <div class="aiui-cell__hd">
       <i class="icon-address"></i>
@@ -80,4 +95,14 @@
 </div>
 <div class="aiui-cells__gap"></div>
 <!--内容区域 end-->
+<!--底部悬浮按钮 start-->
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn aiui-footbtn__default Grid -right">
+    <button type="button"
+      class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+    <button type="button"
+      class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
+  </div>
+</div>
+<!--底部悬浮按钮 end-->
 {% endblock %}
