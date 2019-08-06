@@ -423,3 +423,75 @@
     line-height: normal;
   }
 }
+.popup-box_thumb {
+  padding: 40px 24px;
+  &:after {
+    .setBottomLine(@aiuiBorderLineColor);
+    margin: 0 24px;
+  }
+  .shop-list_item {
+    .bd {
+      h3 {
+        margin: 0;
+      }
+      p {
+        padding-top: 10px;
+      }
+    }
+  }
+  .popup-price {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    font-size: 66px;
+    color: @aiuiColorRed;
+  }
+}
+.choose-level {
+  padding: 40px 0 18px 0;
+  position: relative;
+  &:after {
+    .setBottomLine(@aiuiBorderLineColor);
+    margin: 0 24px;
+  }
+  .choose-title {
+    font-size: 28px;
+    padding: 0 24px;
+    margin-bottom: 8px;
+  }
+  .ui-count {
+    margin: 20px 24px 12px 24px;
+  }
+}
+.choose-level-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 12px;
+  li {
+    position: relative;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 0 24px;
+    margin: 12px;
+    border-radius: 10px;
+    &.active {
+      background-color: @aiuiColorPrimary;
+      color: @aiuiColorWhite;
+      &:before {
+        display: none;
+      }
+    }
+    &:before {
+      .setFullLine(@aiuiColorDeepGray);
+      border-radius: 20px;
+    }
+  }
+}
+.popup-number {
+  padding: 20px 24px 40px 24px;
+  font-size: 28px;
+}

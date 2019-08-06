@@ -1,0 +1,48 @@
+@import "../../base/fn";
+.ui-count {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  &:after {
+    .setFullLine(@aiuiColorDeepGray);
+    border-radius: 10px * 2;
+  }
+  &_btn {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    i {
+      width: 24px;
+      height: 24px;
+      background-color: @aiuiColorGray;
+    }
+    &:disabled {
+      i {
+        opacity: 0.5;
+      }
+    }
+  }
+  &_decrease {
+    &:after {
+      .setRightLine(@aiuiColorDeepGray);
+    }
+  }
+  &_increase {
+    &:after {
+      .setLeftLine(@aiuiColorDeepGray);
+    }
+  }
+  &_number {
+    background-color: transparent;
+    border: 0;
+    width: 110px;
+    text-align: center;
+    line-height: normal;
+    outline: none;
+  }
+}
