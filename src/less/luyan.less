@@ -253,4 +253,42 @@
         }
     }
 }
+.order-tabbar {
+    display: flex;
+    position: relative;
+    background-color: @aiuiColorPrimary;
+  }
+  .order-tabbar__item {
+    display: block;
+    flex: 1;
+    padding: 0px 0;
+    height: 120px;
+    line-height: 120px;
+    color: @aiuiColorWhite;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    .setTapColor();
+    &.order-bar__item_on{
+        font-size: 36px;
+        &::before {
+            content: "";
+            mask-image: url(../svg/icon-triangle-up.svg) ;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: contain;
+            width: 38px;
+            height: 38px;
+            background-color: #fff;
+            position: absolute;
+            margin-left: -19px;
+            left: 50%;
+            top:auto;
+            bottom:-12px;
+          }
+    } 
+  }
+  .hide{
+      display: none;
+  }
 

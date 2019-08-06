@@ -1,9 +1,12 @@
 /* 图片手动上传 */
-var uploadCustomFileList = [];
+var uploadCount = 0,  
+    uploadCustomFileList = [];
+
 aiui.uploader('#uploader', {
     url: 'http://' + location.hostname + ':8002/upload',
-	auto: false,
+	  auto: false,
     onBeforeQueued: function onBeforeQueued(files) {
+      var uploadCountSize=$('#uploader').data('size');
         if (["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0) {
             aiui.alert('请上传图片');
             return false;
@@ -12,6 +15,28 @@ aiui.uploader('#uploader', {
             aiui.alert('请上传不超过10M的图片');
             return false;
         }
+        // 如果图片数量上传不限制请配置false，否则配置相应的数量
+        if(uploadCountSize==false){
+          if (files.length > 5) {
+            // 防止一下子选中过多文件
+            aiui.alert('最多只能上传5张图片，请重新选择');
+            return false;
+        }
+        }else{
+          if (files.length > uploadCountSize) {
+            // 防止一下子选中过多文件
+            aiui.alert('最多只能上传'+uploadCountSize+'张图片，请重新选择');
+            return false;
+        }
+        if (uploadCount + 1 > uploadCountSize) {
+            aiui.alert('最多只能上传'+uploadCountSize+'张图片');
+            return false;
+        }
+        ++uploadCount;
+        }
+        
+      
+        
     },
     onQueued: function onQueued() {
         uploadCustomFileList.push(this);
