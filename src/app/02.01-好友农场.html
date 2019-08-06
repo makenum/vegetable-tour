@@ -1,7 +1,7 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的农场{% endblock %}
 {% block content %}
-<div class="farm-game">
+<div class="farm-header">
   <!-- user-info start -->
   <div class="user-info">
     <div class="main">
@@ -23,18 +23,24 @@
     </div>
   </div>
   <!-- user-info end -->
-  <div class="land-selection">
+  <div class="game">
     <!-- 选地 start -->
     <div class="land-select">
       <div class="lands">
-        <div class="land land1" data-index="1">
-          <div class="soil"></div>
+        <div class="land land1">
+          <div class="soil">
+            <div class="seedlings"></div>
+          </div>
         </div>
-        <div class="land land2" data-index="2">
-          <div class="soil"></div>
+        <div class="land land2">
+          <div class="soil">
+            <div class="growing_tree"></div>
+          </div>
         </div>
-        <div class="land land3" data-index="3">
-          <div class="soil"></div>
+        <div class="land land3">
+          <div class="soil">
+            <button type="button" class="land-add__btn"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -79,7 +85,31 @@
       <div class="land-operate__prev"><i class="icon-arrow-down"></i></div>
     </div>
     <!-- 日常操作工具条 end -->
+
+    <!-- 游戏操作 start -->
+    <div class="game-operate">
+      <div class="items">
+        <div class="item -green">
+          <div class="thumb"><img src="../images/site_selection.png" alt="选地"></div>
+          <div class="tag">选地</div>
+        </div>
+        <div class="item -orange">
+          <div class="thumb"><img src="../images/transaction.png" alt="交易"></div>
+          <div class="tag">交易</div>
+        </div>
+        <div class="item -yellow">
+          <div class="thumb"><img src="../images/task_management.png" alt="任务"></div>
+          <div class="tag">任务</div>
+        </div>
+      </div>
+      <div class="item -blue">
+        <div class="thumb"><img src="../images/buddy_farm.png" alt="好友农场"></div>
+        <div class="tag">好友农场</div>
+      </div>
+    </div>
+    <!-- 游戏操作 end -->
   </div>
+
 </div>
 <div class="farm-info">
   <!-- 消息栏 start -->
