@@ -542,8 +542,7 @@
 }
 
 // 地址列表
-.address-list {
-}
+
 .address {
   .hd {
     display: flex;
@@ -553,7 +552,6 @@
       margin-right: 24px;
     }
     .phone {
-      flex: 1;
       color: #999;
       font-size: 30px;
     }
@@ -567,10 +565,95 @@
   }
 }
 
-.aiui-cell {
+.address-cells {
   .icon-address {
     width: 68px;
     height: 68px;
     background-color: #999;
+  }
+}
+.address-edit__btn {
+  color: #999;
+  position: relative;
+  padding-left: 24px;
+  line-height: 1;
+  &:before {
+    .setLeftLine(@aiuiLineColorLight);
+  }
+}
+.edit-address__cells {
+  .aiui-cell {
+    &:before {
+      left: 204px;
+    }
+    .aiui-cell__hd {
+      width: 180px;
+      margin-right: 0;
+    }
+  }
+}
+
+// 我的阳光值
+.sunshine-value {
+  position: relative;
+  .inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .total {
+    font-size: 68px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+}
+.sunshine-bar {
+  padding: 25px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .desc {
+    display: flex;
+    align-items: center;
+    .icon-tips-circle {
+      width: 38px;
+      height: 38px;
+      background-color: @aiuiColorDeepGray;
+      margin-left: 10px;
+    }
+  }
+}
+.arrow-select {
+  display: flex;
+  align-items: center;
+  .arrow {
+    width: 28px;
+    height: 28px;
+    margin-left: 20px;
+    &:before {
+      content: "";
+      .icon-arrow-down;
+      width: 100%;
+      height: 100%;
+      background-color: @aiuiColorDeepGray;
+    }
+  }
+}
+
+.sunshine-record__cells {
+  .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 }

@@ -69,6 +69,19 @@
     background-color: @aiuiBtnDisabledBg;
   }
 }
+
+.aiui-btn__gray {
+  color: @aiuiBtnGrayFontColor;
+  background-color: @aiuiBtnGrayBg;
+  &:active {
+    background-color: @aiuiBtnGrayActiveBg;
+  }
+  &:disabled {
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+
 //brown
 .aiui-btn_brown {
   background-color: @aiuiColorBrown;
@@ -124,4 +137,25 @@
       border-color: @aiuiBtnPlainPrimaryBorderColor;
     }
   }
+}
+
+
+// cell btn
+.aiui-btn__cell{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    padding:@aiuiCellGapV @aiuiCellGapH;
+    .setTapColor();
+    overflow: hidden;
+    background-color:#FFFFFF;
+    &:active{
+      background-color:@aiuiBgColorActive;
+    }
+}
+
+.aiui-btn__cell-warn{
+  color:@aiuiColorRed;
 }
