@@ -1,9 +1,5 @@
 $(".land:nth-child(1)").on("click", function() {
   if ($(this).hasClass("land1")) {
-    $(this)
-      .siblings()
-      .css("z-index", "0");
-    $(this).css("z-index", 10);
     landOne(1, 2, 3);
     $(this).removeClass("land1");
     $(this).addClass("land2");
@@ -20,10 +16,6 @@ $(".land:nth-child(1)").on("click", function() {
 });
 $(".land:nth-child(3)").on("click", function() {
   if ($(this).hasClass("land1")) {
-    $(this)
-      .siblings()
-      .css("z-index", 0);
-    $(this).css("z-index", 10);
     landTwo(1, 2, 3);
     $(this).removeClass("land1");
     $(this).addClass("land2");
@@ -41,10 +33,6 @@ $(".land:nth-child(3)").on("click", function() {
 
 $(".land:nth-child(2)").on("click", function() {
   if ($(this).hasClass("land1")) {
-    $(this)
-      .siblings()
-      .css("z-index", 0);
-    $(this).css("z-index", 10);
     landThree(1, 2, 3);
     $(this).removeClass("land1");
     $(this).addClass("land2");
@@ -79,7 +67,7 @@ var landOne = function(index1, index2, index3) {
         targets: ".land" + index2,
         scale: 0.8,
         translateX: "2.6rem",
-        translateY: "-0.2rem"
+        translateY: "-0.2rem",
       },
       "-=600"
     ) // relative offset
