@@ -288,26 +288,25 @@
 .land-select {
   padding-top: 360px;
   .lands {
+    position: relative;
     display: flex;
+    justify-content: center;
   }
   .land {
-    width: 318px;
-    height: 83px;
-    background: url("../images/land.png") no-repeat;
-    background-size: contain;
+    &.land1 {
+      transform: scale(0.8) translate(150px, -20px);
+    }
+    &.land2 {
+      transform: scale(1) translate(0, 0);
+      z-index: 10;
+    }
+    &.land3 {
+      transform: scale(0.8) translate(-150px, -20px);
+    }
   }
-  .land1 {
-    transform: scale(0.8) translate(150px, -20px);
-  }
-  .land2 {
-    z-index: 1;
-  }
-  .land3 {
-    transform: scale(0.8) translate(-150px, -20px);
-  }
+
   .swiper-slide {
     display: flex;
-    // transition: 300ms;
     transform: scale(0.7);
   }
 
@@ -318,12 +317,12 @@
   }
 
   .soil {
-    width: 285px;
-    height: 130px;
-    background: url("../images/land2.png") no-repeat;
+    width: 318px;
+    height: 83px;
+    background: url("../images/land.png") no-repeat;
     background-size: contain;
     text-align: center;
-    line-height: 130px;
+    line-height: 80px;
     font-size: 40px;
     font-weight: 700;
   }
@@ -675,6 +674,16 @@
   }
   .chose-list {
     padding-bottom: 40px;
+    &__item {
+      h3 {
+        font-size: 40px;
+        font-weight: normal;
+      }
+      p {
+        font-size: 28px;
+        color: @aiuiColorDeepGray;
+      }
+    }
   }
   .icon-alipay {
     width: 70px;

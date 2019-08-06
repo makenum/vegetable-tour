@@ -92,6 +92,11 @@
 {% endblock %}
 {% block footer %}
 <script>
+  // 选择支付档次
+  $(".chose-list__item").on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
   // 阳光值说明弹窗
   $("#sunshineValueDescBtn").bind("click", function () {
     var descText = "说明文案描述，不限字数，超过固定高度往下滑。"
@@ -108,7 +113,7 @@
   // 充值确认弹窗
   $("#submitPayBtn").bind("click", function () {
     var descText = '<p>您需为您的订单支付：</p>';
-    var price = '<h3 class="price">¥368<span>.00</span></h3>';
+    var price = '<h3 class="dialog-price">¥368<span>.00</span></h3>';
     var alertContent = descText + price;
     aiui.confirm(alertContent,
       {
