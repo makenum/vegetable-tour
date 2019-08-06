@@ -28,6 +28,7 @@
       text-align: center;
       border-radius: 10px;
       text-align: center;
+      line-height: 1.4;
       &:after {
         .setFullLine(@aiuiColorDeepGray, 10px);
       }
@@ -36,6 +37,9 @@
       .content {
         background-color: @aiuiColorPrimary;
         color: @aiuiColorWhite;
+        * {
+          color: @aiuiColorWhite;
+        }
         &:after {
           border-color: transparent;
         }
