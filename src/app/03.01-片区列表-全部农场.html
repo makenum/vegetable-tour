@@ -143,6 +143,8 @@
 {% block footer %}
 <script type="text/javascript">
   $(function () {
+    //头部导航固定
+    $(".headbar-sticky").sticky({ topSpacing: 0 });
     //tab
     aiui.tab('#tab', {
       defaultIndex: 0,

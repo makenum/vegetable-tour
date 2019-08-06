@@ -48,6 +48,21 @@
     justify-content: center;
     align-items: center;
     padding: 20px 24px;
+    .aiui-btn {
+      margin-left: -1px; /*no*/
+      &:not(:last-child) {
+        margin: 0;
+      }
+      &:first-child {
+        &:before {
+          border-right: none;
+          border-radius: 400px 0 0 400px;
+        }
+      }
+      &:last-child {
+        border-radius: 0 400px 400px 0;
+      }
+    }
   }
 }
 .aiui-popup__hd {

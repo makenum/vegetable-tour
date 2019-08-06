@@ -11,9 +11,10 @@
 
 .aiui-cells__title {
   padding: @aiuiCellGapV @aiuiCellGapH;
-  color: @aiuiTextColorDesc;
-  font-size: @aiuiCellTipsFontSize;
-  line-height: 1;
+  font-size: 30px;
+  &.\-primary {
+    background-color: #fff;
+  }
 }
 
 .aiui-cells__tips {
@@ -57,7 +58,10 @@
     background-color: @aiuiColorPrimary;
     margin-left: 10px;
   }
- 
+  &.\-regular {
+    height: 120px;
+    padding: 0 @aiuiCellGapH;
+  }
 }
 
 .aiui-cell__hd {

@@ -76,12 +76,32 @@
         <div class="popup-box__scroll">
           <div class="choose-level">
             <h4 class="choose-title">选择菜地：</h4>
-            <ul class="choose-level-list choose">
-              <li class="active">南瓜地</li>
-              <li>冬瓜地</li>
-              <li>丝瓜地</li>
-              <li>黄瓜地</li>
-              <li>土豆地</li>
+            <ul class="chose-list choose">
+              <li class="chose-list__item active">
+                <div class="content">
+                  <p>南瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>冬瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>丝瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>黄瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>土豆地</p>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="choose-level">
@@ -99,8 +119,10 @@
           <div class="popup-number">耕地编号(自动分配)：<span>a1069</span></div>
         </div>
         <div class="popup-box__ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
+          <a href="01.05-默认选地页.html"
+            class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__plain aiui-btn__pill">重新选择</a>
+          <a href="javascript:;" class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill"
+            id="confirmDialog">确认选择</a>
         </div>
       </div>
     </div>
@@ -165,6 +187,27 @@
       slidesPerView: 'auto',
       paginationClickable: true,
       freeMode: true
+    });
+    // 确认弹窗
+    $("#confirmDialog").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您需为您的订单支付：</p>';
+      var price = '<h3 class="dialog-price">¥368<span>.00</span></h3>';
+      var alertContent = descText + price;
+      aiui.confirm(alertContent, {
+        title: '确认支付',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '支付',
+          type: 'primary',
+          onClick: function () {
+            window.location = "03.04-买地成功.html";
+          }
+        }]
+      });
     });
   });
 </script>
