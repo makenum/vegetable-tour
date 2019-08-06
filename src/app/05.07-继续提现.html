@@ -22,7 +22,7 @@
 <div class="aiui-cells">
     <div class="aiui-cell">
         <div class="aiui-cell__bd">
-            <input class="aiui-input aiui-input__big" type="text" placeholder="可转出437，890.00元">
+            <input class="aiui-input aiui-input__big" type="text" value="437,890">
         </div>
     </div>
     <div class="aiui-cell">
@@ -37,13 +37,14 @@
             <span class="text-med__gray ">收款账户</span>
         </div>
         <div class="aiui-cell__ft">
-            <span>绑定银行卡</span>
+            <img src="../images/icon-bank.png" class="bank-img" alt="">
+            <span class="gap-left">招商银行（尾号5364）</span>
             <i class="icon-arrow-right"></i>
         </div>
     </a>
 </div>
 <div class="aiui-cell reg-btn__cell">
-    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__primary aiui-btn__pill">提现</button>
+    <button type="button" onclick="window.location.href='05.08-提现成功.html'" class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__primary aiui-btn__pill">提现</button>
 </div>
 
 {% endblock %}
