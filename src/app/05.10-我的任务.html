@@ -1,19 +1,24 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-我的地块{% endblock %}
+{% block title %}蔬游-我的任务{% endblock %}
 {% block content %}
 <div class="headbar-sticky-hook">
   <!--头部导航 start-->
   <div class="aiui-headbar aiui-headbar__default">
     <div class="aiui-headbar__item">
-      <a href="javascript:;" class="icon-return">
+      <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <h3 class="aiui-headbar__title">我的地块</h3>
+    <h3 class="aiui-headbar__title">我的任务</h3>
   </div>
   <!--头部导航 start-->
   <!--搜索区域 start-->
-  <div class="aiui-search-bar aiui-search-bar_focusing" id="searchBar">
+  <div class="aiui-search-bar aiui-search-bar_focusing aiui-search-bar_gap" id="searchBar">
+    <div class="arrow-select " id="selectMouthBtn">
+      <span class="arrow-select__value">本月</span>
+      <i class="arrow"></i>
+    </div>
     <form class="aiui-search-bar__form">
+
       <div class="aiui-search-bar__box">
         <i class="icon-search"></i>
         <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off" placeholder="搜索"
@@ -36,117 +41,107 @@
       全部(<span class="aiui-bar-badge">12</span>)
     </a>
     <a href="javascript:;" class="aiui-tabbar__item">
-      已租(<span class="aiui-bar-badge">8</span>)
+      待完成(<span class="aiui-bar-badge">8</span>)
     </a>
     <a href="javascript:;" class="aiui-tabbar__item">
-      待租(<span class="aiui-bar-badge">4</span>)
+      待验收(<span class="aiui-bar-badge">4</span>)
     </a>
     <a href="javascript:;" class="aiui-tabbar__item">
-      已下架(<span class="aiui-bar-badge">4</span>)
+      已完成(<span class="aiui-bar-badge">0</span>)
     </a>
   </div>
   <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
       <div class="shop-list">
+        <div class="shop-list-status">
+          <p>2019-07-23 17:43</p>
+          <p class="text-primary">待完成</p>
+        </div>
         <div class="shop-list_item">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-deep__gray">已下架</p>
+            <h3>鄂尔多斯农场a1096地块西红柿需浇水一次</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">恢复</button>
+          <button type="button" onclick="window.location.href='05.02-提交生长情况.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交照片</button>
         </div>
       </div>
       <div class="shop-list">
+        <div class="shop-list-status">
+          <p>2019-07-23 17:43</p>
+          <p class="text-primary">待验收</p>
+        </div>
         <div class="shop-list_item">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-warn">已租种</p>
+            <h3>鄂尔多斯农场a1096地块西红柿施肥一次</h3>
           </div>
         </div>
         <div class="ft">
           <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交生长情况</button>
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill btnCheck">提醒验收</button>
         </div>
       </div>
       <div class="shop-list">
+        <div class="shop-list-status">
+          <p>2019-07-23 17:43</p>
+          <p class="text-deep__gray">已完成</p>
+        </div>
         <div class="shop-list_item">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-primary">待租</p>
+            <h3>鄂尔多斯农场a1096地块西红柿施肥一次</h3>
           </div>
         </div>
         <div class="ft">
           <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">下架</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">编辑</button>
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill btnCheck">提醒验收</button>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
       <div class="shop-list">
+        <div class="shop-list-status">
+          <p>2019-07-23 17:43</p>
+          <p class="text-primary">待完成</p>
+        </div>
         <div class="shop-list_item">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-warn">已租种</p>
+            <h3>鄂尔多斯农场a1096地块西红柿需浇水一次</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交生长情况</button>
+          <button type="button" onclick="window.location.href='05.02-提交生长情况.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交照片</button>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
       <div class="shop-list">
+        <div class="shop-list-status">
+          <p>2019-07-23 17:43</p>
+          <p class="text-primary">待验收</p>
+        </div>
         <div class="shop-list_item">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-primary">待租</p>
+            <h3>鄂尔多斯农场a1096地块西红柿施肥一次</h3>
           </div>
         </div>
         <div class="ft">
           <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">下架</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">编辑</button>
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill btnCheck">提醒验收</button>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list_item">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块</h3>
-            <p class="text-primary">待租</p>
-          </div>
-        </div>
-        <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">下架</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">编辑</button>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 <!--内容区域 end-->
-<div class="aiui-footbtn__wrap">
-  <div class="aiui-footbtn">
-    <button type="button"
-      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">新增地块</button>
-  </div>
-</div>
 {% endblock %}
 {% block footer %}
 <script src="../libs/sticky.js"></script>
@@ -162,7 +157,39 @@
         console.log(index);
       }
     });
-
+    // 选择月份
+    $("#selectMouthBtn").bind("click", function () {
+      var $this = $(this);
+      aiui.picker([
+        {
+          label: '近3个月',
+          value: 0
+        },
+        {
+          label: '本月',
+          value: 1
+        },
+        {
+          label: '19年6月',
+          value: 3
+        },
+        {
+          label: '19年5月',
+          value: 4,
+        }
+      ], {
+          title: '请选择月份',
+          defaultValue: [1],
+          onChange: function (result) {
+            console.log(result)
+          },
+          onConfirm: function (result) {
+            console.log(result)
+            $this.find(".arrow-select__value").html(result[0].label);
+          },
+          id: 'selectMouthPicker'
+        });
+    });
     //搜索
     var $searchBar = $('#searchBar'),
       $searchInput = $('#searchInput'),
@@ -171,6 +198,10 @@
       $searchInput.val('');
       $searchInput.focus();
     });
+    // 验收
+    $('.aiui-tab__content').on('click', '.btnCheck', function () {
+      aiui.toast('提醒成功', 30000);
+    })
   });
 </script>
 {% endblock %}

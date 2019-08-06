@@ -54,7 +54,11 @@
         color: @aiuiColorMedGray
     }
 }
-
+.shop-list-status{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
 // 雇农首页
 .farmhand-bg {
     min-height: 100vh;
@@ -205,6 +209,9 @@
 .gap-left{
     padding-left: 20px;
 }
+.arrow-select-w{
+    width: 120px;
+}
 .aiui-cell__ft_tag{
    margin-left: 20px;
 }
@@ -213,5 +220,37 @@
     height: 38px;
     background-color: #999;
     margin-left: 10px;
+}
+.sunshine-value{
+    .farmhand-balance{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        .title,.price,.price small{
+            color:#fff
+        }
+        .price{
+            font-size: 68px;
+            small{
+                font-size: 30px
+            }
+        }
+    }
+}
+.aiui-search-bar_gap{
+    .arrow-select {
+        padding-right: 10px;
+    }
+    .aiui-btn {
+        min-width: 104px;
+    }
+    .aiui-search-bar__box{
+        input{
+          max-width: 280px
+        }
+    }
 }
 
