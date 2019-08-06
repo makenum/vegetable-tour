@@ -219,11 +219,13 @@
   });
   // 阳光值说明弹窗
   $("#sunshineValueDescBtn").bind("click", function () {
-    aiui.alert('说明文案描述，不限字数，超过固定高度往下滑。', {
+    var descText = "说明文案描述，不限字数，超过固定高度往下滑。"
+    aiui.alert(descText, {
       title: '阳光值说明',
       buttons: [{
         label: '好的',
         type: 'primary',
+        // 回调事件
         onClick: function () { console.log('好的') }
       }]
     });
