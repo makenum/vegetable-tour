@@ -253,4 +253,32 @@
         }
     }
 }
+.order-tabbar {
+    display: flex;
+    position: relative;
+    background-color: @aiuiColorPrimary;
+  }
+  .order-tabbar__item {
+    display: block;
+    flex: 1;
+    padding: 0px 0;
+    height: 120px;
+    line-height: 120px;
+    color: @aiuiColorWhite;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    .setTapColor();
+    &.order-bar__item_on{
+        font-size: 36px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top:auto;
+            bottom:0;
+          }
+    }
+    
+  }
 
