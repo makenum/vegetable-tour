@@ -1,0 +1,27 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-绑定成功{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">绑定成功</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<div class="aiui-msg">
+  <div class="aiui-msg__hd aiui-msg__success">
+    <i class="icon-success aiui-icon__msg"></i>
+    <h2 class="aiui-msg__title">绑定成功</h2>
+  </div>
+  <div class="aiui-msg__bd">
+    <p class="aiui-msg__desc">恭喜您成功绑定一张银行卡。</p>
+  </div>
+  <div class="aiui-msg__ft">
+        <a href="javascript:;" class="aiui-btn aiui-btn__plain aiui-btn__large aiui-btn__primary aiui-btn__pill">继续提现</a>
+    <a href="javascript:;" class="aiui-btn aiui-btn__plain aiui-btn__large aiui-btn__primary aiui-btn__pill">返回首页</a>
+  </div>
+</div>
+{% endblock %}
