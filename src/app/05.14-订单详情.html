@@ -78,76 +78,14 @@
 </div>
 
 
+<!--底部悬浮按钮 start-->
 <div class="aiui-footbtn__wrap">
-  <div class="aiui-footbtn">
-    <button type="button"
-      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">确定（您需支付0元）</button>
-  </div>
-</div>
-
-<!-- 选择配送方式弹窗 start -->
-<div class="aiui-popup__wrap" id="selectDeliveryPopup">
-  <div class="aiui-mask"></div>
-  <div class="aiui-popup">
-    <div class="aiui-popup__hd">
-      <div class="toolbar">
-        <button class="icon-close close-popup__btn">取消</button>
-        <h3 class="toolbar-title">请选择配送方式</h3>
-      </div>
-    </div>
-    <div class="aiui-popup__bd">
-      <div class="aiui-cells aiui-cells__radio">
-        <label class="aiui-cell aiui-check__label" for="x11">
-          <div class="aiui-cell__hd">
-            <span>快递</span>
-          </div>
-          <div class="aiui-cell__bd">
-            <p class="text-deep__gray">免邮</p>
-          </div>
-          <div class="aiui-cell__ft">
-            <input type="radio" class="aiui-check" name="radio1" id="x11">
-            <span class="aiui-icon-checked"></span>
-          </div>
-        </label>
-        <label class="aiui-cell aiui-check__label" for="x12">
-          <div class="aiui-cell__hd">
-            <span>冷链</span>
-          </div>
-          <div class="aiui-cell__bd">
-            <p class="text-deep__gray">20元/公斤</p>
-          </div>
-          <div class="aiui-cell__ft">
-            <input type="radio" name="radio1" class="aiui-check" id="x12" checked="checked">
-            <span class="aiui-icon-checked"></span>
-          </div>
-        </label>
-      </div>
-    </div>
-    <div class="aiui-popup__ft">
+    <div class="aiui-footbtn aiui-footbtn__default Grid -right">
       <button type="button"
-        class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
+        class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒收货</button>
     </div>
   </div>
-</div>
-<!-- 选择配送方式弹窗 end -->
+  <!--底部悬浮按钮 end-->
 
-{% endblock %}
 
-{% block footer %}
-<script>
-  $(function () {
-    // 关闭Popup操作
-    $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
-      $(".aiui-popup").removeClass("aiui-popup__toggle")
-      $(this)
-        .parents('.aiui-popup__wrap')
-        .fadeOut(200);
-    });
-    // 打开Popup操作
-    $('#selectDeliveryBtn').on('click', function () {
-      $("#selectDeliveryPopup").fadeIn(200);
-      $("#selectDeliveryPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
-    });
-  });
-</script>
 {% endblock %}
