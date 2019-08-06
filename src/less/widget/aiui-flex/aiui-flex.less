@@ -1,10 +1,45 @@
-
-
 @import "../../base/fn";
 
 .aiui-flex {
-    display: flex;
+  display: flex;
 }
-.aiui-flex__item{
-    flex: 1;
+.aiui-flex__item {
+  flex: 1;
+}
+.chose-list {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  .Grid;
+  align-items: stretch;
+  &__item {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 100%;
+      margin-left: 12px;
+      margin-right: 12px;
+      padding: 20px 24px;
+      text-align: center;
+      border-radius: 10px;
+      text-align: center;
+      &:after {
+        .setFullLine(@aiuiColorDeepGray, 10px);
+      }
+    }
+    &.active {
+      .content {
+        background-color: @aiuiColorPrimary;
+        color: @aiuiColorWhite;
+        &:after {
+          border-color: transparent;
+        }
+      }
+    }
+  }
 }
