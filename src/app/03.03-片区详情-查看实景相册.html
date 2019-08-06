@@ -99,8 +99,10 @@
           <div class="popup-number">耕地编号(自动分配)：<span>a1069</span></div>
         </div>
         <div class="popup-box__ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
+          <a href="01.05-默认选地页.html"
+            class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__plain aiui-btn__pill">重新选择</a>
+          <a href="javascript:;" class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill"
+            id="sunshineValueDescBtn">确认选择</a>
         </div>
       </div>
     </div>
@@ -165,6 +167,25 @@
       slidesPerView: 'auto',
       paginationClickable: true,
       freeMode: true
+    });
+    // 阳光值说明弹窗
+    $("#sunshineValueDescBtn").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您需为您的订单支付：</p>';
+      var price = '<h3 class="price">¥368<span>.00</span></h3>';
+      var alertContent = descText + price;
+      aiui.confirm(alertContent, {
+        title: '确认支付',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '支付',
+          type: 'primary',
+          onClick: function () { alert('支付') }
+        }]
+      });
     });
   });
 </script>
