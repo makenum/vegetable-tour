@@ -1,0 +1,153 @@
+{% extends 'app.nunjucks' %}
+{% block title %}订单详情{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">订单详情</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<!--step start-->
+<ul class="step-bar">
+  <li class="step-bar__item active">
+    <div class="number">1</div>
+    <section>已验收</section>
+  </li>
+  <li class="step-bar__item active">
+    <div class="number">2</div>
+    <section>已付款</section>
+  </li>
+  <li class="step-bar__item active">
+    <div class="number">3</div>
+    <section>已发货</section>
+  </li>
+  <li class="step-bar__item">
+    <div class="number">4</div>
+    <section>交易成功</section>
+  </li>
+</ul>
+<!--step end-->
+<div class="aiui-cells ">
+  <div class="order_tagwrap">
+    <h3><b>108.00</b>元</h3>
+    <p>交易成功后钱款将打入您的账户余额</p>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__bd">
+      <h3>已发货</h3>
+      <p class="fz28 text-deep__gray">2019-07-30 11:29:00</p>
+    </div>
+    <div class="aiui-cell__ft"><span class="fz30 text-primary">物流详情</span> </div>
+  </div>
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="Cell -2of2 shop-list_item">
+      <div class="thumb"><img src="../images/farm_tu01.png"></div>
+      <div class="bd">
+        <h3>鄂尔多斯农场a1096地块西红柿</h3>
+        <p class="fz28 text-deep__gray">总计10平方</p>
+      </div>
+      <div class="aiui-cell__ft">
+        <span class="fz30 text-primary">联系租户</span> </div>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <ul class="ordermore-list">
+      <li>
+        <span>租户名称</span>
+        <span>钱多多</span>
+      </li>
+      <li>
+        <span>联系号码</span>
+        <span>13823456666</span>
+      </li>
+      <li>
+        <span>订单编号</span>
+        <span>545454445</span>
+      </li>
+      <li>
+        <span>交易时间</span>
+        <span>2019-07-02 16:37:08</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button"
+      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">确定（您需支付0元）</button>
+  </div>
+</div>
+
+<!-- 选择配送方式弹窗 start -->
+<div class="aiui-popup__wrap" id="selectDeliveryPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup">
+    <div class="aiui-popup__hd">
+      <div class="toolbar">
+        <button class="icon-close close-popup__btn">取消</button>
+        <h3 class="toolbar-title">请选择配送方式</h3>
+      </div>
+    </div>
+    <div class="aiui-popup__bd">
+      <div class="aiui-cells aiui-cells__radio">
+        <label class="aiui-cell aiui-check__label" for="x11">
+          <div class="aiui-cell__hd">
+            <span>快递</span>
+          </div>
+          <div class="aiui-cell__bd">
+            <p class="text-deep__gray">免邮</p>
+          </div>
+          <div class="aiui-cell__ft">
+            <input type="radio" class="aiui-check" name="radio1" id="x11">
+            <span class="aiui-icon-checked"></span>
+          </div>
+        </label>
+        <label class="aiui-cell aiui-check__label" for="x12">
+          <div class="aiui-cell__hd">
+            <span>冷链</span>
+          </div>
+          <div class="aiui-cell__bd">
+            <p class="text-deep__gray">20元/公斤</p>
+          </div>
+          <div class="aiui-cell__ft">
+            <input type="radio" name="radio1" class="aiui-check" id="x12" checked="checked">
+            <span class="aiui-icon-checked"></span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="aiui-popup__ft">
+      <button type="button"
+        class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
+    </div>
+  </div>
+</div>
+<!-- 选择配送方式弹窗 end -->
+
+{% endblock %}
+
+{% block footer %}
+<script>
+  $(function () {
+    // 关闭Popup操作
+    $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
+      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(200);
+    });
+    // 打开Popup操作
+    $('#selectDeliveryBtn').on('click', function () {
+      $("#selectDeliveryPopup").fadeIn(200);
+      $("#selectDeliveryPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+    });
+  });
+</script>
+{% endblock %}
