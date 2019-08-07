@@ -11,14 +11,16 @@
         <h3 class="aiui-headbar__title">新增地块</h3>
     </div>
 </div>
-<!--头部导航 start-->        
+<!--头部导航 start-->
 <div class="aiui-cells ">
     <div class="aiui-cell">
         <div class="Cell -2of2 shop-list_item">
             <div class="thumb thumb-big add-default-img">
 
                 <p>点击添加主图</p>
-                <img src="../images/default_preview.png">
+
+                <img src="../images/default_preview.png" id="uploaderImg">
+                <input id="uploaderMainInput" class="aiui-uploader__input" type="file" accept="image/*" multiple />
             </div>
             <div class="bd edit-address__cells">
                 <div class="aiui-cell">
@@ -91,6 +93,4 @@
 
 {% block footer %}
 <script src="../js/uploader.js"></script>
-<script>
-</script>
 {% endblock %}
