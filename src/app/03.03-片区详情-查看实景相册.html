@@ -134,11 +134,9 @@
 <script src="../libs/swiper.min.js"></script>
 <script>
   $(function () {
-    //单选
-    $(".choose-list__item").on("click", function () {
-      $(this)
-        .siblings()
-        .removeClass("active");
+    //选地切换
+    $(".chose-list__item").on("click", function () {
+      $(this).siblings().removeClass("active");
       $(this).addClass("active");
     });
     // 关闭Popup操作
