@@ -53,3 +53,16 @@
 .aiui-animate-fade-out {
   animation: fadeOut ease 0.3s forwards;
 }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}

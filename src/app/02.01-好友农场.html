@@ -1,28 +1,17 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-我的农场{% endblock %}
+{% block title %}蔬游-好友农场{% endblock %}
 {% block content %}
-<div class="farm-header">
-  <!-- user-info start -->
-  <div class="user-info">
-    <div class="main">
-      <div class="sunshine">
-        <div class="thumb"><img src="../images/sunshine.png" alt="阳光" /></div>
-        <strong>3467</strong>
-      </div>
-      <h3 class="name">豆豆的农场</h3>
-      <button type="button" class="icon-setting-2px"></button>
+
+<div class="headbar-sticky">
+  <div class="aiui-headbar aiui-headbar__transparent aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
     </div>
-    <div class="level-wrap">
-      <div class="level">
-        <strong>LV.1</strong>
-        <div class="level-bar">
-          <div class="loading" style="width: 54%;"></div>
-          <div class="text"><span>54</span>/<span>90</span></div>
-        </div>
-      </div>
-    </div>
+    <h3 class="aiui-headbar__title">小石头的农场</h3>
   </div>
-  <!-- user-info end -->
+</div>
+
+<div class="farm-header">
   <div class="game">
     <!-- 选地 start -->
     <div class="land-select">
@@ -52,6 +41,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="../images/fertilization.png" alt="施肥">
+            <span class="aiui-badge aiui-badge_dot"></span>
           </div>
           <div class="swiper-slide">
             <img src="../images/watering.png" alt="浇水">
@@ -88,64 +78,20 @@
 
     <!-- 游戏操作 start -->
     <div class="game-operate">
-      <div class="items">
-        <div class="item -green">
-          <div class="thumb"><img src="../images/site_selection.png" alt="选地"></div>
-          <div class="tag">选地</div>
-        </div>
-        <div class="item -orange">
-          <div class="thumb"><img src="../images/transaction.png" alt="交易"></div>
-          <div class="tag">交易</div>
-        </div>
-        <div class="item -yellow">
-          <div class="thumb"><img src="../images/task_management.png" alt="任务"></div>
-          <div class="tag">任务</div>
-        </div>
+      <div class="Cell -fill">
+        <div class="level-signage">LV.2</div>
       </div>
-      <div class="item -blue">
-        <div class="thumb"><img src="../images/buddy_farm.png" alt="好友农场"></div>
-        <div class="tag">好友农场</div>
-      </div>
+      <a href="01.04-首页-我的农场.html" class="item -blue">
+        <div class="thumb"><img src="../images/back-farm.png" alt="回农场"></div>
+        <div class="tag">回农场</div>
+      </a>
     </div>
     <!-- 游戏操作 end -->
   </div>
 
 </div>
 <div class="farm-info">
-  <!-- 消息栏 start -->
-  <div class="farm-info__item">
-    <div class="header">
-      <h3 class="Cell -fill fz34">消息栏</h3>
-      <a href="javascript:;" class="fz26 text-deep__gray">更多</a>
-    </div>
-    <div class="message">
-      <div class="message-item">
-        <div class="thumb">
-          <img src="../images/message-thumb_01.png">
-        </div>
-        <div class="bd">
-          <h3>巴马乡片区a1096地块南瓜已浇水</h3>
-          <p>2019-07 23 17:43</p>
-        </div>
-        <div class="Grid -middle">
-          <a href="javascript:;" class="aiui-btn aiui-btn__primary aiui-btn__mini aiui-btn__pill">去验收</a>
-        </div>
-      </div>
-      <div class="message-item">
-        <div class="thumb">
-          <img src="../images/message-thumb_02.png">
-        </div>
-        <div class="bd">
-          <h3>巴马乡片区a1096地块南瓜已施肥</h3>
-          <p>2019-07 23 17:43</p>
-        </div>
-        <div class="Grid -middle">
-          <a href="javascript:;" class="aiui-btn aiui-btn__primary aiui-btn__mini aiui-btn__pill">去验收</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 消息栏 end -->
+
   <!-- 指标栏 start -->
   <div class="farm-info__item">
     <div class="header">
@@ -267,20 +213,22 @@
 <script src="../libs/anime.min.js"></script>
 <script src="../js/land.js"></script>
 <script>
-  var landSelectSwiper = new Swiper('#landSelectSwiper', {
-    slideToClickedSlide: true,
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-  });
-
+  //头部导航固定
+  $(".headbar-sticky").sticky({ topSpacing: 0 });
+  // 常用工具操作
   var landOperateSwiper = new Swiper('#landOperateSwiper', {
     direction: 'vertical',
     slidesPerView: 4,
+    preventClicksPropagation: false,
     navigation: {
       nextEl: '.land-operate__next',
       prevEl: '.land-operate__prev',
     },
+    on: {
+      click: function () {
+        alert('你点了Swiper');
+      },
+    }
   });
 </script>
 {% endblock %}

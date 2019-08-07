@@ -80,8 +80,11 @@
   background: url("../images/farm_header_bg03.png") no-repeat;
   background-size: contain;
   .user-info {
-    padding: 10px 24px;
-    .main {
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    right: 24px;
+    .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -158,6 +161,9 @@
         transform: rotateY(180deg);
       }
     }
+  }
+  .game {
+    padding-top: 520px;
   }
 }
 
@@ -286,31 +292,131 @@
 }
 
 .land-select {
-  padding-top: 400px;
   .lands {
     position: relative;
     display: flex;
     justify-content: center;
-  }
-
-  .swiper-slide {
-    display: flex;
-    transform: scale(0.7);
-  }
-
-  .swiper-slide-active,
-  .swiper-slide-duplicate-active {
-    transform: scale(1.2);
-    z-index: 1;
-  }
-
-  .swiper-slide-next {
-    transform: scale(0.7) translate(-100px, -40px);
-  }
-  .swiper-slide-prev {
-    transform: scale(0.7) translate(100px, -40px);
+    .land {
+      // 地块
+      .soil {
+        width: 318px;
+        height: 83px;
+        background: url("../images/land.png") no-repeat;
+        background-size: contain;
+        position: relative;
+        &-tips {
+          display: none;
+          font-size: 26px;
+          color: @aiuiColorBrown;
+          text-align: center;
+          position: absolute;
+          font-weight: 700;
+          left: 0;
+          width: 100%;
+          bottom: -45px;
+          line-height: 1;
+        }
+        .gofarm-btn {
+          display: none;
+          background-image: linear-gradient(180deg, #fee24b 0%, #ffb119 100%);
+          text-align: center;
+          font-size: 26px;
+          line-height: 38px;
+          width: 160px;
+          border-radius: 19px;
+          color: #fff;
+          text-shadow: 2px 2px 2px #ea9191;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -10px;
+        }
+      }
+      // 添加土地按钮
+      .land-add__btn {
+        width: 75px;
+        height: 51px;
+        background: url("../images/land-add.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      // 苗
+      .seedlings {
+        width: 76px;
+        height: 76px;
+        background: url("../images/seedlings.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .land-bubble {
+        display: none;
+        animation: flash 3000ms 600ms infinite both;
+        width: 76px;
+        height: 71px;
+        background: url("../images/bubble.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        img {
+          width: 48px;
+          height: 48px;
+          position: absolute;
+          left: 17px;
+          top: 12px;
+        }
+      }
+      .gif {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        display: none;
+      }
+      // 成长树
+      .growing_tree {
+        width: 242px;
+        height: 242px;
+        background: url("../images/growing_tree.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -170px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      // 树开花
+      .flowering_tree {
+        width: 242px;
+        height: 242px;
+        background: url("../images/flowering_tree.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -170px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.land2 {
+        .land-bubble {
+          display: block;
+        }
+        .soil-tips {
+          display: block;
+        }
+        .gofarm-btn {
+          display: block;
+        }
+      }
+    }
   }
 }
+
 .game-operate {
   display: flex;
   position: absolute;
@@ -397,58 +503,17 @@
       .text_wrap;
     }
   }
-}
-// 地块
-.soil {
-  width: 318px;
-  height: 83px;
-  background: url("../images/land.png") no-repeat;
-  background-size: contain;
-  position: relative;
-}
-// 添加土地按钮
-.land-add__btn {
-  width: 75px;
-  height: 51px;
-  background: url("../images/land-add.png") no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-// 苗
-.seedlings {
-  width: 76px;
-  height: 76px;
-  background: url("../images/seedlings.png") no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-// 成长树
-.growing_tree {
-  width: 242px;
-  height: 242px;
-  background: url("../images/growing_tree.png") no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -170px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-// 树开花
-.flowering_tree {
-  width: 242px;
-  height: 242px;
-  background: url("../images/flowering_tree.png") no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -170px;
-  left: 50%;
-  transform: translateX(-50%);
+  .level-signage {
+    margin-left: 32px;
+    width: 72px;
+    height: 89px;
+    background: url("../images/level-signage.png") no-repeat;
+    background-size: contain;
+    font-size: 22px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+  }
 }
 // 土地操作滑块
 .land-operate__wrap {
@@ -472,6 +537,11 @@
     img {
       width: 60px;
       height: 60px;
+    }
+    .aiui-badge {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
   &__next,
