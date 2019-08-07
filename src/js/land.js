@@ -30,32 +30,33 @@ function initLand() {
 }
 // 遍历土地点击事件
 $(".land").each(function(index) {
-  $(this).on("click", function() {
+  var $this = $(this);
+  $this.bind("click", function() {
     // 第一个元素点击
     if (index === 0) {
-      if ($(this).hasClass("land1")) {
+      if ($this.hasClass("land1")) {
         landLeftOne();
-        $(this).removeClass("land1");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land1");
+        $this.addClass("land2");
+        $this
           .next()
           .removeClass("land2")
           .addClass("land3");
-        $(this)
+        $this
           .next()
           .next()
           .removeClass("land3")
           .addClass("land1");
       }
-      if ($(this).hasClass("land3")) {
+      if ($this.hasClass("land3")) {
         landRightOne();
-        $(this).removeClass("land3");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land3");
+        $this.addClass("land2");
+        $this
           .next()
           .removeClass("land1")
           .addClass("land3");
-        $(this)
+        $this
           .next()
           .next()
           .removeClass("land2")
@@ -64,28 +65,28 @@ $(".land").each(function(index) {
     }
     // 第二个元素点击
     if (index === 1) {
-      if ($(this).hasClass("land1")) {
+      if ($this.hasClass("land1")) {
         landLeftTwo();
-        $(this).removeClass("land1");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land1");
+        $this.addClass("land2");
+        $this
           .next()
           .removeClass("land2")
           .addClass("land3");
-        $(this)
+        $this
           .prev()
           .removeClass("land3")
           .addClass("land1");
       }
-      if ($(this).hasClass("land3")) {
+      if ($this.hasClass("land3")) {
         landRightTwo();
-        $(this).removeClass("land3");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land3");
+        $this.addClass("land2");
+        $this
           .next()
           .removeClass("land1")
           .addClass("land3");
-        $(this)
+        $this
           .prev()
           .removeClass("land2")
           .addClass("land1");
@@ -93,29 +94,29 @@ $(".land").each(function(index) {
     }
     // 第三个元素点击
     if (index === 2) {
-      if ($(this).hasClass("land1")) {
+      if ($this.hasClass("land1")) {
         landLeftThree();
-        $(this).removeClass("land1");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land1");
+        $this.addClass("land2");
+        $this
           .prev()
           .removeClass("land3")
           .addClass("land1");
-        $(this)
+        $this
           .prev()
           .prev()
           .removeClass("land2")
           .addClass("land3");
       }
-      if ($(this).hasClass("land3")) {
+      if ($this.hasClass("land3")) {
         landRightThree();
-        $(this).removeClass("land3");
-        $(this).addClass("land2");
-        $(this)
+        $this.removeClass("land3");
+        $this.addClass("land2");
+        $this
           .prev()
           .removeClass("land2")
           .addClass("land1");
-        $(this)
+        $this
           .prev()
           .prev()
           .removeClass("land1")
@@ -390,3 +391,82 @@ function landRightThree() {
       "-=600"
     );
 }
+
+// 常用操作工具条swiper
+var landOperateSwiper = new Swiper("#landOperateSwiper", {
+  direction: "vertical",
+  slidesPerView: 4,
+  preventClicksPropagation: false,
+  navigation: {
+    nextEl: ".land-operate__next",
+    prevEl: ".land-operate__prev"
+  }
+});
+// 浇水动作
+$("#wateringBtn").on("click", function() {
+  $(this).attr("disabled", true);
+  $(this)
+    .siblings(".aiui-badge")
+    .hide();
+  $(".watering-bubble").hide();
+  showGif("watering");
+});
+// 铲除动画
+$("#eradicateBtn").on("click", function() {
+  $(this).attr("disabled", true);
+  $(this)
+    .siblings(".aiui-badge")
+    .hide();
+  $(".eradicate-bubble").hide();
+  showGif("eradicate");
+  $(".land2")
+    .find(".tree-wrap")
+    .delay(3000)
+    .hide("fast", addBtn);
+  // 显示添加按钮
+  function addBtn() {
+    var btnEl = "<button type='button' class='land-add__btn'></button>";
+    var soil = $(".land2").find(".soil");
+    $(btnEl)
+      .appendTo(soil)
+      .delay(1000)
+      .fadeIn();
+  }
+});
+// 显示动画
+function showGif(el) {
+  $(".land2")
+    .find("." + el + "-gif")
+    .show()
+    .delay(2000)
+    .fadeOut();
+}
+// 切换地块显示元素
+$(".land").each(function() {
+  var $this = $(this);
+  $this.bind("click", function() {
+    // 显示动作提示元素
+    $(".land-bubble").hide();
+    $this.find(".land-bubble").show();
+    // 清除按钮禁用状态
+    $(".land-operate .swiper-slide")
+      .find("button")
+      .attr("disabled", false);
+    // 显示红点
+    $(".land-operate .swiper-slide")
+      .find(".aiui-badge")
+      .show();
+  });
+});
+
+$(".land-operate .swiper-slide").each(function(index) {
+  var $this = $(this);
+  if ($this.find("button")) {
+    $this.find("button").attr("disabled", false);
+  } else {
+    $this.find("button").attr("disabled", true);
+  }
+  $this.bind("click", function() {
+    console.log("执行动画");
+  });
+});
