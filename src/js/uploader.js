@@ -3,9 +3,17 @@ var uploadCount = 0,
     uploadCustomFileList = [];
 
 aiui.uploader('#uploader', {
-    url: 'http://' + location.hostname + ':8002/upload',
-	  auto: false,
+    url: 'http://' + location.hostname + ':8002/upload', //你要上传的url地址
+    auto: false,
+    type: 'file',
+    fileVal: 'fileVal',  //文件上传域的name，后台通过该name拿到传输的文件
+    // 上传图片压缩
+    compress: { 
+      width: 800,
+      quality: .8
+  },
     onBeforeQueued: function onBeforeQueued(files) {
+      //上传前，对上传的情况做以下多个判断，保证合法性，可自行删改
       var uploadCountSize=$('#uploader').data('size');
         if (["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0) {
             aiui.alert('请上传图片');
@@ -21,21 +29,21 @@ aiui.uploader('#uploader', {
             // 防止一下子选中过多文件
             aiui.alert('最多只能上传5张图片，请重新选择');
             return false;
-        }
+         }
         }else{
           if (files.length > uploadCountSize) {
             // 防止一下子选中过多文件
             aiui.alert('最多只能上传'+uploadCountSize+'张图片，请重新选择');
             return false;
-        }
-        if (uploadCount + 1 > uploadCountSize) {
-            aiui.alert('最多只能上传'+uploadCountSize+'张图片');
-            return false;
-        }
-        ++uploadCount;
+          }
+          if (uploadCount + 1 > uploadCountSize) {
+              aiui.alert('最多只能上传'+uploadCountSize+'张图片');
+              return false;
+          }
+          ++uploadCount;
         }
         
-      
+        
         
     },
     onQueued: function onQueued() {
