@@ -67,7 +67,7 @@
 <div class="aiui-cells aiui-cells__gap">
   <div class="aiui-cell">
     <div class="aiui-cell__col">
-      <span>订单备注</span>
+      <span>支付详情</span>
     </div>
     <div class="aiui-cell__bd Grid -between">
       <span class="text-med__gray">运费</span>
@@ -98,11 +98,34 @@
 <!--底部悬浮按钮 start-->
 <div class="aiui-footbtn__wrap">
   <div class="aiui-footbtn aiui-footbtn__default Grid -right">
-    <button type="button"
+    <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
       class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
-    <button type="button"
-      class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
+    <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+      id="confirmDialog">确认收货</button>
   </div>
 </div>
 <!--底部悬浮按钮 end-->
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    //确认弹窗
+    $("#confirmDialog").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您的蔬菜已配送成功，确定收货请点确认按钮。</p>';
+      aiui.confirm(descText, {
+        title: '提示',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '确认',
+          type: 'primary',
+          onClick: function () { alert('确认') }
+        }]
+      });
+    });
+  });
+</script>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-查看交易记录{% endblock %}
+{% block title %}蔬游-任务管理{% endblock %}
 {% block content %}
 <div class="headbar-sticky-hook">
   <!--头部导航 start-->
@@ -8,7 +8,7 @@
       <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <h3 class="aiui-headbar__title">交易记录</h3>
+    <h3 class="aiui-headbar__title">任务管理</h3>
   </div>
   <!--头部导航 start-->
   <!--搜索区域 start-->
@@ -33,8 +33,8 @@
 <div class="aiui-tab" id="tab">
   <div class="aiui-tabbar">
     <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待发货</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待收货</a>
+    <a href="javascript:;" class="aiui-tabbar__item">待完成</a>
+    <a href="javascript:;" class="aiui-tabbar__item">待验收</a>
     <a href="javascript:;" class="aiui-tabbar__item">待评价</a>
   </div>
   <div class="aiui-tab__panel">
@@ -42,35 +42,33 @@
       <div class="shop-list">
         <div class="shop-list-status">
           <p>2019-07-23 17:43</p>
-          <p class="text-warn">待发货</p>
+          <p class="text-primary">待完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
         </div>
       </div>
       <div class="shop-list">
         <div class="shop-list-status">
           <p>2019-07-23 17:43</p>
-          <p class="text-primary">雇农已发货</p>
+          <p class="text-primary">雇农已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
           <button type="button"
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
         </div>
@@ -80,16 +78,15 @@
           <p>2019-07-23 17:43</p>
           <p class="text-deep__gray">已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
           <button type="button"
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
         </div>
@@ -99,18 +96,17 @@
       <div class="shop-list">
         <div class="shop-list-status">
           <p>2019-07-23 17:43</p>
-          <p class="text-warn">待发货</p>
+          <p class="text-primary">待完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
         </div>
       </div>
     </div>
@@ -118,18 +114,17 @@
       <div class="shop-list">
         <div class="shop-list-status">
           <p>2019-07-23 17:43</p>
-          <p class="text-primary">雇农已发货</p>
+          <p class="text-primary">雇农已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
           <button type="button"
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
         </div>
@@ -141,16 +136,15 @@
           <p>2019-07-23 17:43</p>
           <p class="text-deep__gray">已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.12.03-查看交易详情-雇农已发货.html'">
+        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿</h3>
-            <p class="text-deep__gray">总计10平方</p>
+            <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
           </div>
         </div>
         <div class="ft">
-          <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
           <button type="button"
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
         </div>
