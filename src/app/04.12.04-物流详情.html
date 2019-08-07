@@ -1,0 +1,75 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-物流详情{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">物流详情</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<div class="aiui-logistics">
+  <div class="aiui-logistics__title text-warn">运输中</div>
+  <ul class="logistics-list">
+    <li class="logistics-list__item active">
+      <span class="circle"></span>
+      <div class="aside-time">
+        <span class="mouth">07-23</span>
+        <span class="time">16:14</span>
+      </div>
+      <div class="aside-box">
+        <div class="aside-title">运输中</div>
+        <div class="aside-info">【某某分部】已收入，运送下一站</div>
+      </div>
+    </li>
+    <li class="logistics-list__item">
+      <span class="circle"></span>
+      <div class="aside-time">
+        <span class="mouth">07-22</span>
+        <span class="time">16:14</span>
+      </div>
+      <div class="aside-box">
+        <div class="aside-title">运输中</div>
+        <div class="aside-info">【某某分部】已收入，运送下一站</div>
+      </div>
+    </li>
+    <li class="logistics-list__item">
+      <span class="circle"></span>
+      <div class="aside-time">
+        <span class="mouth">07-22</span>
+        <span class="time">16:14</span>
+      </div>
+      <div class="aside-box">
+        <div class="aside-title">运输中</div>
+        <div class="aside-info">【某某分部】已收入，运送下一站</div>
+      </div>
+    </li>
+    <li class="logistics-list__item">
+      <span class="circle"></span>
+      <div class="aside-time">
+        <span class="mouth">07-22</span>
+        <span class="time">16:14</span>
+      </div>
+      <div class="aside-box">
+        <div class="aside-title">运输中</div>
+        <div class="aside-info">【某某分部】已收入，运送下一站</div>
+      </div>
+    </li>
+  </ul>
+</div>
+<!--底部悬浮按钮 start-->
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn aiui-footbtn__default Grid -right">
+    <a href="javascript:;" class="footbtn-customer">
+      <i class="icon-customer"></i>
+      <span class="footbtn-customer__txt">物流客服</span>
+    </a>
+  </div>
+</div>
+<!--底部悬浮按钮 end-->
+<!--内容区域 end-->
+{% endblock %}
