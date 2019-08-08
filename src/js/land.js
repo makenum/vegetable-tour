@@ -404,6 +404,7 @@ var landOperateSwiper = new Swiper("#landOperateSwiper", {
 });
 // 浇水动作
 $("#wateringBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
   var $this = $(this);
   $this.attr("disabled", true);
   $this.siblings(".aiui-badge").remove();
@@ -412,14 +413,40 @@ $("#wateringBtn").bind("click", function() {
 });
 // 施肥动作
 $("#fertilizationBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
   var $this = $(this);
   $this.attr("disabled", true);
   $this.siblings(".aiui-badge").remove();
   $(".land2 .fertilization").remove();
   showGif("fertilization", 3500);
 });
+
+// 松土动作
+$("#looseningBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .loosening").remove();
+  showGif("loosening", 3000);
+});
+
+// 播种动作
+$("#sowingBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .sowing").remove();
+  showGif("sowing", 3200);
+  $(".land2")
+    .find(".seedlings")
+    .delay(3500)
+    .fadeIn();
+});
 // 铲除动画
 $("#eradicateBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
   var $this = $(this);
   $this.attr("disabled", true);
   $this.siblings(".aiui-badge").remove();
@@ -429,6 +456,26 @@ $("#eradicateBtn").bind("click", function() {
     .find(".tree-wrap")
     .delay(3000)
     .hide("fast", addBtn);
+});
+
+// 杀虫动作
+$("#dewormingBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .deworming").remove();
+  showGif("deworming", 3000);
+});
+
+// 除草动作
+$("#weedingBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .weeding").remove();
+  showGif("weeding", 3000);
 });
 
 // 显示动画
@@ -447,6 +494,15 @@ function removeEl() {
   $(".land2")
     .find(".land-bubble")
     .remove();
+  // 清除虫子
+  $(".land2")
+    .find(".insect")
+    .remove();
+  // 清除草
+  $(".land2")
+    .find(".grass")
+    .remove();
+  $(".land").attr("disabled", false);
 }
 // 显示添加按钮
 function addBtn() {

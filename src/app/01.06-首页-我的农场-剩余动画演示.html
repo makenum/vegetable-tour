@@ -51,12 +51,12 @@
             <div class="tree-wrap">
               <img src="../images/flowering_tree.png" alt="开花中的树" class="tree">
 
-              <div class="land-bubble land-bubble__top watering">
-                <img src="../images/watering.png" alt="浇水">
+              <div class="land-bubble land-bubble__middle loosening">
+                <img src="../images/loose_soil.png" alt="松土">
               </div>
 
-              <div class="gif gif-top watering-gif">
-                <img src="../images/gif/watering.gif" alt="浇水动画">
+              <div class="gif gif-middle loosening-gif">
+                <img src="../images/gif/loosening.gif" alt="松土动画">
               </div>
 
             </div>
@@ -66,8 +66,15 @@
         </button>
         <button type="button" class="land land3">
           <div class="soil">
-            <!-- 新增土地 -->
-            <a href="01.05-默认选地页.html" class="land-add__btn"></a>
+            <div class="land-bubble sowing">
+              <img src="../images/sowing.png" alt="播种">
+            </div>
+            <div class="gif sowing-gif">
+              <img src="../images/gif/sowing.gif" alt="播种动画">
+            </div>
+            <div class="seedlings" style="display: none;">
+              <img src="../images/seedlings.png" alt="树苗">
+            </div>
           </div>
         </button>
       </div>
@@ -300,185 +307,10 @@
   <!-- 好友动态 end -->
 </div>
 
-<!-- 好友农场排行榜 start-->
-<div class="aiui-popup__wrap" id="friendFarmRanking">
-  <div class="aiui-mask"></div>
-  <div class="aiui-popup friend-farm__ranking">
-    <div class="header">
-      <div class="info">
-        <div class="avatar">
-          <img src="../images/avatar-friend-demo.png">
-        </div>
-        <h3 class="title">好友农场排行榜</h3>
-      </div>
-      <button type="button" class="icon-close-outline aiui-popup__close"></button>
-    </div>
-    <div class="popup-box__scroll">
-      <div class="tips">
-        <p>和好友互动赚更多阳光值</p>
-      </div>
-      <div class="ranking">
-        <h4 class="ranking-title">我的好友</h4>
-        <div class="ranking-list">
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">1</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>小石头</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.6</p>
-              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可浇水</span>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">2</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>瓜子脸美女</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.4</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">3</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>刘老师的农场</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.3</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">4</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>刘老师的农场</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可除草</span>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">5</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">6</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">7</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">8</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">9</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-          <a href="02.01-好友农场.html" class="ranking-list__item">
-            <div class="number">10</div>
-            <div class="avatar">
-              <img src="../images/avatar.png">
-            </div>
-            <div class="Cell -fill">
-              <span>隔壁一枝花</span>
-            </div>
-            <div class="info">
-              <p class="level">LV.2</p>
-              <p class="fz24 text-deep__gray">农场等级</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-<!-- 好友农场排行榜 end -->
 
 {% endblock %} {% block footer %}
 <script src="../libs/swiper.min.js"></script>
 <script src="../libs/anime.min.js"></script>
 <script src="../js/land.js"></script>
-<script>
-  $(function () {
-    var $friendFarmRanking = $('#friendFarmRanking');
-    // 关闭Popup弹窗
-    $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
-      $(".aiui-popup").removeClass("aiui-popup__toggle")
-      $(this)
-        .parents('.aiui-popup__wrap')
-        .fadeOut(200);
-    });
-    // 打开Popup弹窗
-    $('#showfriendFarmRanking').on('click', function () {
-      $friendFarmRanking.fadeIn();
-      $friendFarmRanking
-        .find(".aiui-popup")
-        .addClass("aiui-popup__toggle");
-    });
-  });
-</script>
+
 {% endblock %}

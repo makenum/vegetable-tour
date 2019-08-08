@@ -296,8 +296,15 @@
     position: relative;
     display: flex;
     justify-content: center;
-    .land:nth-child(1){
-      
+    // 初始化设置,页面加载抖动
+    .land:nth-child(1) {
+      transform: scale(0.7) translate(150px, -20px);
+    }
+    .land:nth-child(2) {
+      z-index: 1;
+    }
+    .land:nth-child(3) {
+      transform: scale(0.7) translate(-150px, -20px);
     }
     .land {
       // 地块
@@ -363,6 +370,7 @@
           right: -50px;
         }
       }
+      // 土地气泡提示
       .land-bubble {
         display: none;
         animation: flash 3000ms 600ms infinite both;
@@ -379,6 +387,7 @@
           top: 12px;
         }
       }
+      // 动画
       .gif {
         width: 120px;
         height: 120px;
@@ -414,6 +423,63 @@
           bottom: 0px;
           right: 20px;
         }
+        .land-bubble__middle {
+          bottom: 30px;
+          right: 20px;
+        }
+        .gif-middle {
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+      .sowing {
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+      }
+      .sowing-gif {
+        position: absolute;
+        left: 40%;
+        top: -60px;
+      }
+      // 虫子
+      .insect {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+      }
+      .insect1 {
+        top: 120px;
+        left: 20px;
+      }
+      .insect2 {
+        top: 90px;
+        right: 70px;
+      }
+      // 草
+      .grass {
+        width: 23px;
+        height: 13px;
+        position: absolute;
+      }
+      .grass1 {
+        left: 40%;
+        bottom: 10px;
+      }
+      .grass2 {
+        left: 60%;
+        bottom: 10px;
+      }
+      .grass3 {
+        right: 20%;
+        bottom: 50px;
+        transform: scale(0.8);
+      }
+      .grass4 {
+        left: 20%;
+        bottom: 20px;
+        transform: scale(0.9);
       }
       &.land2 {
         .land-bubble {

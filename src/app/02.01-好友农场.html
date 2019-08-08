@@ -16,15 +16,24 @@
     <!-- 选地 start -->
     <div class="land-select">
       <div class="lands">
-        <div class="land land1">
+        <button type="button" class="land land1">
           <div class="soil">
-            <div class="seedlings"></div>
             <div class="tree-wrap">
               <img src="../images/result_tree.png" alt="未成熟果实" class="tree">
+              <div class="land-bubble land-bubble__bottom weeding">
+                <img src="../images/weeding.png" alt="除草">
+              </div>
+              <div class="gif gif-bottom weeding-gif">
+                <img src="../images/gif/weeding.gif" alt="铲除动画">
+              </div>
             </div>
+            <img src="../images/grass.png" alt="草" class="grass grass1">
+            <img src="../images/grass.png" alt="草" class="grass grass2">
+            <img src="../images/grass.png" alt="草" class="grass grass3">
+            <img src="../images/grass.png" alt="草" class="grass grass4">
           </div>
-        </div>
-        <div class="land land2">
+        </button>
+        <button type="button" class="land land2">
           <div class="soil">
             <div class="tree-wrap">
               <img src="../images/eradicate_tree.png" alt="开花中的树" class="tree">
@@ -37,12 +46,22 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="land land3">
+        </button>
+        <button type="button" class="land land3">
           <div class="soil">
-            <button type="button" class="land-add__btn"></button>
+            <div class="tree-wrap">
+              <img src="../images/mature_tree.png" alt="成熟果实" class="tree">
+              <div class="land-bubble land-bubble__bottom deworming">
+                <img src="../images/deworming.png" alt="杀虫">
+              </div>
+              <div class="gif gif-bottom deworming-gif">
+                <img src="../images/gif/deworming.gif" alt="杀虫动画">
+              </div>
+              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect1">
+              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect2">
+            </div>
           </div>
-        </div>
+        </button>
       </div>
     </div>
     <!-- 选地 end -->
@@ -59,33 +78,33 @@
             <button type="button" id="wateringBtn"><img src="../images/watering.png" alt="浇水"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="rewardBtn"><img src="../images/reward.png" alt="采摘"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="eradicateBtn"><img src="../images/eradicate.png" alt="铲除"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
-        
+
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="looseningBtn"><img src="../images/loose_soil.png" alt=""></button>
             <span class="aiui-badge aiui-badge_dot"></span>
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="sowingBtn"><img src="../images/sowing.png" alt="播种"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="dewormingBtn"><img src="../images/deworming.png" alt="杀虫"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
           </div>
-        
+
           <div class="swiper-slide">
             <button type="button" id="weedingBtn"><img src="../images/weeding.png" alt="除草"></button>
             <span class="aiui-badge aiui-badge_dot"></span>
