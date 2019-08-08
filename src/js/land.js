@@ -403,70 +403,157 @@ var landOperateSwiper = new Swiper("#landOperateSwiper", {
   }
 });
 // 浇水动作
-$("#wateringBtn").on("click", function() {
-  $(this).attr("disabled", true);
-  $(this)
-    .siblings(".aiui-badge")
-    .hide();
-  $(".watering-bubble").hide();
-  showGif("watering");
+$("#wateringBtn").bind("click", function() {
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .watering").remove();
+  showGif("watering", 3500);
+});
+// 施肥动作
+$("#fertilizationBtn").bind("click", function() {
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .fertilization").remove();
+  showGif("fertilization", 3500);
 });
 // 铲除动画
-$("#eradicateBtn").on("click", function() {
-  $(this).attr("disabled", true);
-  $(this)
-    .siblings(".aiui-badge")
-    .hide();
-  $(".eradicate-bubble").hide();
-  showGif("eradicate");
+$("#eradicateBtn").bind("click", function() {
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".eradicate").hide();
+  showGif("eradicate", 3000);
   $(".land2")
     .find(".tree-wrap")
     .delay(3000)
     .hide("fast", addBtn);
-  // 显示添加按钮
-  function addBtn() {
-    var btnEl = "<button type='button' class='land-add__btn'></button>";
-    var soil = $(".land2").find(".soil");
-    $(btnEl)
-      .appendTo(soil)
-      .delay(1000)
-      .fadeIn();
-  }
 });
+
 // 显示动画
-function showGif(el) {
+function showGif(el, duration) {
   $(".land2")
     .find("." + el + "-gif")
     .show()
-    .delay(2000)
-    .fadeOut();
+    .delay(duration)
+    .fadeOut("fast", removeEl);
 }
-// 切换地块显示元素
-$(".land").each(function() {
+// 移除土地动画提醒和gif动画
+function removeEl() {
+  $(".land2")
+    .find(".gif")
+    .remove();
+  $(".land2")
+    .find(".land-bubble")
+    .remove();
+}
+// 显示添加按钮
+function addBtn() {
+  $(".land2 .soil")
+    .find(".tree-wrap")
+    .remove();
+  var btnEl = "<button type='button' class='land-add__btn'></button>";
+  var soil = $(".land2").find(".soil");
+  $(btnEl)
+    .appendTo(soil)
+    .fadeIn();
+}
+
+// 首页禁用日常操作按钮
+$(".land-operate .swiper-slide")
+  .find("button")
+  .attr("disabled", true);
+
+// 默认判断第2块地是否有操作
+var $nowLand = $(".land2").find(".land-bubble");
+if ($nowLand.length > 0) {
+  hasOperate($nowLand);
+}
+// 切换地块显示与隐藏元素
+$(".land").each(function(index) {
   var $this = $(this);
   $this.bind("click", function() {
     // 显示动作提示元素
-    $(".land-bubble").hide();
-    $this.find(".land-bubble").show();
+    var bubble = $this.find(".land-bubble");
+    if (bubble.length === 1) {
+      bubble.show();
+      hasOperate(bubble);
+    } else {
+      $(".land-operate .swiper-slide")
+        .find(".aiui-badge")
+        .hide();
+      $(".land-operate .swiper-slide")
+        .find("button")
+        .attr("disabled", true);
+    }
     // 清除按钮禁用状态
-    $(".land-operate .swiper-slide")
-      .find("button")
-      .attr("disabled", false);
-    // 显示红点
-    $(".land-operate .swiper-slide")
-      .find(".aiui-badge")
-      .show();
   });
 });
 
-$(".land-operate .swiper-slide").each(function(index) {
-  var $this = $(this);
-  if ($this.find("button")) {
-    $this.find("button").attr("disabled", false);
+function setDisableFalse(el) {
+  $("#" + el + "Btn").attr("disabled", false);
+  $("#" + el + "Btn")
+    .siblings(".aiui-badge")
+    .show();
+}
+function setDisableTrue(el) {
+  $("#" + el + "Btn").attr("disabled", true);
+  $("#" + el + "Btn")
+    .siblings(".aiui-badge")
+    .hide();
+}
+
+function hasOperate(el) {
+  // 如果有施肥操作
+  if (el.hasClass("fertilization")) {
+    setDisableFalse("fertilization");
   } else {
-    $this.find("button").attr("disabled", true);
+    setDisableTrue("fertilization");
   }
-  $this.bind("click", function() {
-    console.log("执行动画");
-  });
-});
+  // 如果有浇水操作
+  if (el.hasClass("watering")) {
+    setDisableFalse("watering");
+  } else {
+    setDisableTrue("watering");
+  }
+
+  // 如果有铲除操作
+  if (el.hasClass("eradicate")) {
+    setDisableFalse("eradicate");
+  } else {
+    setDisableTrue("eradicate");
+  }
+
+  // 如果有松土操作
+  if (el.hasClass("loosening")) {
+    setDisableFalse("loosening");
+  } else {
+    setDisableTrue("loosening");
+  }
+
+  // 如果有播种操作
+  if (el.hasClass("sowing")) {
+    setDisableFalse("sowing");
+  } else {
+    setDisableTrue("sowing");
+  }
+  // 如果有采摘操作
+  if (el.hasClass("reward")) {
+    setDisableFalse("reward");
+  } else {
+    setDisableTrue("reward");
+  }
+  // 如果有杀虫操作
+  if (el.hasClass("deworming")) {
+    setDisableFalse("deworming");
+  } else {
+    setDisableTrue("deworming");
+  }
+  // 如果有除草操作
+  if (el.hasClass("weeding")) {
+    setDisableFalse("weeding");
+  } else {
+    setDisableTrue("weeding");
+  }
+}

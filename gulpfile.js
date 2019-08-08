@@ -214,8 +214,8 @@ gulp.task("watch", function(done) {
   );
   gulp.watch(paths.libs.src + "/**/*", gulp.parallel("copy-libs"));
   gulp.watch(paths.scripts.src + "/*.js", gulp.parallel("copy-js"));
-  gulp.watch(paths.images.src + "/*.*", gulp.parallel("copy-img"));
-  gulp.watch(paths.images.src + "/*.*", gulp.parallel("copy-example-img"));
+  gulp.watch(paths.images.src + "/**/*", gulp.parallel("copy-img"));
+  gulp.watch(paths.example.images.src + "/**/*", gulp.parallel("copy-example-img"));
   gulp.watch(paths.fonts.src + "/*.*", gulp.parallel("copy-fonts"));
   gulp.watch(paths.svg.src + "/*.svg", gulp.parallel("copy-svg"));
   gulp.watch("dist/**/*").on("change", browserSync.reload);

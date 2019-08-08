@@ -296,6 +296,9 @@
     position: relative;
     display: flex;
     justify-content: center;
+    .land:nth-child(1){
+      
+    }
     .land {
       // 地块
       .soil {
@@ -552,6 +555,7 @@
       position: absolute;
       right: 10px;
       top: 0;
+      display: none;
     }
   }
   &__next,
@@ -581,7 +585,8 @@
 
 // 好友农场列表
 .friend-farm__ranking {
-  .hd {
+  .header {
+    flex-shrink: 0;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     height: 130px;
@@ -617,10 +622,9 @@
       margin-top: -24px;
     }
   }
-  .bd {
+  .popup-box__scroll {
     background-color: @aiuiBgColorDefault;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px 24px;
     .tips {
       padding: 30px 0;
       color: @aiuiColorMedGray;
@@ -662,10 +666,11 @@
           text-indent: -9999em;
         }
       }
-      &:after {
-        .setBottomLine(@aiuiCellBorderColor);
-        left: 0;
-        z-index: 2;
+      &:not(:last-child) {
+        &:after {
+          .setBottomLine(@aiuiCellBorderColor);
+          left: 0;
+        }
       }
       .number {
         width: 48px;
@@ -839,7 +844,7 @@
   .arrow {
     width: 28px;
     height: 28px;
-    margin-left: 20px;
+    margin-left: 15px;
     &:before {
       content: "";
       .icon-arrow-down;
@@ -889,4 +894,7 @@
     height: 70px;
     background-color: #56d345;
   }
+}
+.swiper-container {
+  .setTapColor();
 }
