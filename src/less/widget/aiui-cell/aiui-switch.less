@@ -1,0 +1,68 @@
+
+
+@import '../../base/fn';
+
+.aiui-cell_switch {
+  padding-top: (@aiuiCellHeight - @aiuiSwitchHeight) / 2;
+  padding-bottom: (@aiuiCellHeight - @aiuiSwitchHeight) / 2;
+}
+.aiui-switch {
+  appearance: none;
+  transform: scale(0.8) 
+}
+.aiui-switch,
+.aiui-switch-cp__box {
+  position: relative;
+  width: 104px;
+  height: @aiuiSwitchHeight;
+  border: 1PX solid @aiuiLineColorLight;
+  outline: 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  background-color: @aiuiLineColorLight;
+  transition: background-color 0.1s, border 0.1s;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 1PX;
+    right: 1PX;
+    bottom: 1PX;
+    left: 0;
+    border-radius: 30px;
+    background-color: #fdfdfd;
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  }
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: @aiuiSwitchHeight - 2;
+    height: @aiuiSwitchHeight - 2;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+  }
+}
+.aiui-switch:checked,
+.aiui-switch-cp__input:checked ~ .aiui-switch-cp__box {
+  border-color: @aiuiColorPrimary;
+  background-color: @aiuiColorPrimary;
+  &:before {
+    transform: scale(0);
+  }
+  &:after {
+    transform: translateX(40px);
+  }
+}
+
+// 兼容IE Edge的版本
+.aiui-switch-cp__input {
+  position: absolute;
+  left: -9999px;
+}
+.aiui-switch-cp__box {
+  display: block;
+}

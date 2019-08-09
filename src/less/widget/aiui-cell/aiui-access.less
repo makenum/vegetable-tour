@@ -1,0 +1,19 @@
+@import "../../base/fn";
+
+.aiui-cell_access {
+  .setTapColor();
+  &:active {
+    background-color: @aiuiBgColorActive;
+  }
+
+}
+.aiui-cell_link {
+  color: @aiuiLinkColorDefault;
+  font-size: 34px;
+
+  &:first-child {
+    &:before {
+      display: block;
+    }
+  }
+}

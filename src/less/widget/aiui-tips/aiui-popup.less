@@ -1,0 +1,101 @@
+@import "../../base/fn";
+
+.aiui-popup__wrap {
+  display: none;
+  position: relative;
+  z-index: 5000;
+}
+.aiui-popup {
+  position: fixed;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  width: 100%;
+  max-width: @maxWidth;
+  margin: auto;
+  transform: translate(0, 100%);
+  max-height: 75%;
+  z-index: 5000;
+  line-height: 1.4;
+  background-color: #ffffff;
+  border-top-left-radius: @aiuiDialogRadius;
+  border-top-right-radius: @aiuiDialogRadius;
+  padding: 0 constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  //slide up animation
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.aiui-popup__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+.popup-box__scroll {
+  flex: 1;
+  overflow: auto;
+}
+.popup-box__ft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+  .aiui-btn {
+    margin-left: -1px; /*no*/
+    &:not(:last-child) {
+      margin: 0;
+    }
+    &:first-child {
+      &:before {
+        border-right: none;
+        border-radius: 400px 0 0 400px;
+      }
+    }
+    &:last-child {
+      border-radius: 0 400px 400px 0;
+    }
+  }
+}
+.aiui-popup__hd {
+  position: relative;
+  &:after {
+    .setBottomLine(@aiuiLineColorLight);
+  }
+  .toolbar {
+    padding: 30px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &-title {
+      font-size: 32px;
+    }
+    .icon-close {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      margin-top: -24px;
+      width: 48px;
+      height: 48px;
+      background-color: @aiuiColorGray;
+    }
+  }
+}
+
+.aiui-popup__bd {
+  .hyphens();
+  overflow-y: auto;
+}
+
+.aiui-popup__ft {
+  padding: 30px 24px;
+}
+
+//actionSheet aniamtion
+.aiui-popup__toggle {
+  transform: translate(0, 0);
+}

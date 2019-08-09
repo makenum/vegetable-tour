@@ -1,0 +1,79 @@
+{% extends 'example.nunjucks' %}
+{% block title %}ActionSheet{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="page__hd">
+      <h1 class="page__title">ActionSheet</h1>
+      <p class="page__desc">弹出式菜单</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showIOSActionSheet">iOS ActionSheet</a>
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showAndroidActionSheet">Android ActionSheet</a>
+    </div>
+    <!--BEGIN actionSheet-->
+    <div>
+      <div class="aiui-mask" id="iosMask" style="display: none"></div>
+      <div class="aiui-actionsheet" id="iosActionsheet">
+        <div class="aiui-actionsheet__title">
+          <p class="aiui-actionsheet__title-text">这是一个标题，可以为一行或者两行。</p>
+        </div>
+        <div class="aiui-actionsheet__menu">
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+        </div>
+        <div class="aiui-actionsheet__action">
+          <div class="aiui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aiui-skin_android" id="androidActionsheet" style="display: none">
+      <div class="aiui-mask"></div>
+      <div class="aiui-actionsheet">
+        <div class="aiui-actionsheet__menu">
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+          <div class="aiui-actionsheet__cell">示例菜单</div>
+        </div>
+      </div>
+    </div>
+    <!--END actionSheet-->
+
+  </div>
+{% endblock %}
+{% block footer %}
+  <script type="text/javascript">
+    // ios
+    $(function () {
+      var $iosActionsheet = $('#iosActionsheet');
+      var $iosMask = $('#iosMask');
+
+      function hideActionSheet() {
+        $iosActionsheet.removeClass('aiui-actionsheet_toggle');
+        $iosMask.fadeOut(200);
+      }
+
+      $iosMask.on('click', hideActionSheet);
+      $('#iosActionsheetCancel').on('click', hideActionSheet);
+      $("#showIOSActionSheet").on("click", function () {
+        $iosActionsheet.addClass('aiui-actionsheet_toggle');
+        $iosMask.fadeIn(200);
+      });
+    });
+
+    // android
+    $(function () {
+      var $androidActionSheet = $('#androidActionsheet');
+      var $androidMask = $androidActionSheet.find('.aiui-mask');
+
+      $("#showAndroidActionSheet").on('click', function () {
+        $androidActionSheet.fadeIn(200);
+        $androidMask.on('click', function () {
+          $androidActionSheet.fadeOut(200);
+        });
+      });
+    });
+  </script>
+{% endblock %}

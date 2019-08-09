@@ -1,0 +1,44 @@
+{% extends 'example.nunjucks' %}
+{% block title %}Button{% endblock %}
+{% block content %}
+  <div class="page button">
+    <div class="page__hd">
+      <h1 class="page__title">Button</h1>
+      <p class="page__desc">按钮</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+
+      <div class="button-sp-area">
+        <p>颜色</p>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__default">默认</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary">主要</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__disabled">禁用</button>
+      </div>
+
+      <div class="button-sp-area">
+        <p>圆角</p>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__default">正常</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__rounded">小圆角</button>
+        <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__disabled aiui-btn__pill">大圆角</button>
+      </div>
+
+      <div class="button-sp-area">
+        <p>尺寸</p>
+        <button type="button" class="aiui-btn aiui-btn__tiny aiui-btn__primary aiui-btn__rounded">迷你</button>
+        <button type="button" class="aiui-btn aiui-btn__small aiui-btn__primary aiui-btn__rounded">小</button>
+        <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__rounded">中等</button>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__rounded">大</button>
+        <button type="button" class="aiui-btn aiui-btn__giant aiui-btn__primary aiui-btn__rounded">巨大</button>
+      </div>
+
+      <div class="button-sp-area">
+        <p>线条</p>
+        <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__default aiui-btn__pill">默认</button>
+        <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">主要</button>
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

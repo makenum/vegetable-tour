@@ -1,0 +1,183 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-好友农场列表{% endblock %}
+{% block content %}
+<!-- 好友农场排行榜 start-->
+<div class="aiui-popup__wrap" id="friendFarmRanking">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup friend-farm__ranking">
+    <div class="header">
+      <div class="info">
+        <div class="avatar">
+          <img src="../images/avatar-friend-demo.png">
+        </div>
+        <h3 class="title">好友农场排行榜</h3>
+      </div>
+      <button type="button" class="icon-close-outline aiui-popup__close"></button>
+    </div>
+    <div class="popup-box__scroll">
+      <div class="tips">
+        <p>和好友互动赚更多阳光值</p>
+      </div>
+      <div class="ranking">
+        <h4 class="ranking-title">我的好友</h4>
+        <div class="ranking-list">
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">1</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>小石头</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.6</p>
+              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可浇水</span>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">2</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>瓜子脸美女</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.4</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">3</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>刘老师的农场</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.3</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">4</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>刘老师的农场</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可除草</span>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">5</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">6</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">7</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">8</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">9</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">10</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- 好友农场排行榜 end -->
+{% endblock %}
+
+{% block footer %}
+<script>
+  $(function () {
+    var $friendFarmRanking = $('#friendFarmRanking');
+    // 关闭Popup弹窗
+    $('.aiui-popup__wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(200);
+    });
+    // 打开Popup弹窗
+    $('#showfriendFarmRanking').on('click', function () {
+      $friendFarmRanking.fadeIn();
+      $friendFarmRanking
+        .find(".aiui-popup")
+        .addClass("aiui-popup__toggle");
+    });
+  });
+</script>
+{% endblock %}

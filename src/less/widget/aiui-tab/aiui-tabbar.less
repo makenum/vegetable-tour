@@ -1,0 +1,32 @@
+@import "../../base/fn";
+
+.aiui-tabbar {
+  display: flex;
+  position: relative;
+  background-color: @aiuiColorWhite;
+}
+
+.aiui-tabbar__item {
+  display: block;
+  flex: 1;
+  padding: 0px 0;
+  height: 80px;
+  line-height: 80px;
+  color: @aiuiTextColorDesc;
+  text-align: center;
+  position: relative;
+  .setTapColor();
+
+  &.aiui-bar__item_on::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 56px;
+    height: 8px;
+    background: @aiuiColorPrimary;
+    border-radius: 8px;
+  }
+}

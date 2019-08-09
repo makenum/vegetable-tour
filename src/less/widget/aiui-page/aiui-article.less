@@ -1,0 +1,40 @@
+
+
+@import "../../base/fn";
+
+.aiui-article {
+    padding: 48px 32px;
+    padding:48px calc(32px ~"+ constant(safe-area-inset-right)") calc(48px ~"+ constant(safe-area-inset-bottom)") calc(32px ~"+ constant(safe-area-inset-left)");
+    padding:48px calc(32px ~"+ env(safe-area-inset-right)") calc(48px ~"+ env(safe-area-inset-bottom)") calc(32px ~"+ env(safe-area-inset-left)");
+    font-size: 17px;
+    color:rgba(0,0,0,.9);
+    section {
+        margin-bottom: 48px;
+    }
+    h1 {
+        font-size: 44px;
+        font-weight:700;
+        margin-bottom: 28px;
+        line-height:1.4;
+    }
+    h2 {
+        font-size: 34px;
+        font-weight:700;
+        margin-bottom: 10px;
+        line-height:1.4;
+    }
+    h3 {
+        font-weight:700;
+        font-size: 30px;
+        margin-bottom: 10px;
+        line-height:1.4;
+    }
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+    p {
+        margin: 0 0 24px;
+    }
+}

@@ -1,0 +1,78 @@
+{% extends 'app.nunjucks' %}
+{% block title %}选择配送地址{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">配送地址</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<div class="aiui-cells__title">当前配送至：</div>
+<div class="aiui-cells address-cells">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-address"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">钱多多</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells__title">从我的收货地址选择：</div>
+
+<div class="aiui-cells">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">王老板</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+    <div class="aiui-cell__ft">
+      <a href="04.02.03-编辑地址.html" class="address-edit__btn">编辑</a>
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">李三</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+    <div class="aiui-cell__ft">
+      <a href="04.02.03-编辑地址.html" class="address-edit__btn">编辑</a>
+    </div>
+  </div>
+</div>
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <a href="04.02.04-新增地址.html" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">新增其他地址</a>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+@import "../../base/fn";
+
+.aiui-cells {
+  background-color: @aiuiCellBg;
+  font-size: @aiuiCellFontSize;
+  overflow: hidden;
+}
+.aiui-cells__gap {
+  margin-top: 20px;
+}
+
+.aiui-cells__title {
+  padding: @aiuiCellGapV @aiuiCellGapH;
+  font-size: 30px;
+  &.\-primary {
+    background-color: #fff;
+  }
+}
+
+.aiui-cells__tips {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  &.\-primary {
+    background-color: #fff;
+  }
+}
+
+.aiui-cell__col {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.aiui-cell {
+  padding: @aiuiCellGapV @aiuiCellGapH;
+  position: relative;
+  .Grid;
+  align-items: center;
+  &:before {
+    .setTopLine(@aiuiCellBorderColor);
+    left: @aiuiCellGapH;
+    z-index: 1;
+  }
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+  .icon-arrow-right {
+    width: 38px;
+    height: 38px;
+    background-color: #999;
+    margin-left: 10px;
+  }
+  .icon-camera {
+    width: 48px;
+    height: 48px;
+    background-color: @aiuiColorPrimary;
+    margin-left: 10px;
+  }
+  .icon-scan-3px {
+    width: 52px;
+    height: 52px;
+    background-color: @aiuiColorDeepGray;
+    margin-left: 10px;
+  }
+  &.\-regular {
+    height: 120px;
+    padding: 0 @aiuiCellGapH;
+  }
+}
+
+.aiui-cell__hd {
+  margin-right: 24px;
+}
+.aiui-cell__bd {
+  flex: 1;
+}
+.aiui-cell__primary {
+  align-items: flex-start;
+}
+.aiui-cell__ft {
+  position: relative;
+  display: flex;
+  align-items: center;
+}

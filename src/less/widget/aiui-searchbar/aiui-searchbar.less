@@ -1,0 +1,111 @@
+@aiuiSearchInputHeight: 64px;
+
+@import "../../base/fn";
+.aiui-search-bar {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  box-sizing: border-box;
+  background-color: @aiuiBgColorDefault;
+  -webkit-text-size-adjust: 100%;
+  align-items: center;
+  &.aiui-search-bar_focusing {
+    .aiui-search-bar__cancel-btn {
+      display: block;
+    }
+    .aiui-search-bar__label {
+      display: none;
+    }
+  }
+}
+.aiui-search-bar__form {
+  position: relative;
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 35px;
+}
+.aiui-search-bar__box {
+  position: relative;
+  padding-left: 64px;
+  padding-right: 64px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  .aiui-search-bar__input {
+    padding: 16px;
+    width: 100%;
+    height: @aiuiSearchInputHeight;
+    border: 0;
+    line-height: normal;
+    font-size: 28px;
+    background: transparent;
+    caret-color: @aiuiColorPrimary;
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px;
+    width: 38px;
+    height: 38px;
+    background-color: @aiuiColorGray;
+  }
+  .icon-close-fill {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    width: 38px;
+    height: 38px;
+    background-color: @aiuiColorLightGray;
+  }
+}
+.aiui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 0;
+  border-radius: 35px;
+  line-height: 64px;
+  text-align: center;
+  color: @aiuiTextColorDesc;
+  background: #ffffff;
+  span {
+    display: inline-block;
+    font-size: 28px;
+    vertical-align: middle;
+  }
+  .icon-search {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background-color: @aiuiColorGray;
+    margin-right: 8px;
+  }
+}
+.aiui-search-bar__cancel-btn {
+  display: none;
+  margin-left: 16px;
+  line-height: 56px;
+  color: @aiuiLinkColorDefault;
+  white-space: nowrap;
+}
+.aiui-search-bar__input:not(:valid) ~ .icon-close-fill {
+  display: none;
+}
+
+//干掉input[search]默认的clear button
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

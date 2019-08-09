@@ -1,0 +1,91 @@
+{% extends 'app.nunjucks' %}
+{% block title %}订单详情{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">订单详情</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<!--step start-->
+<ul class="step-bar">
+  <li class="step-bar__item active">
+    <div class="number">1</div>
+    <section>已验收</section>
+  </li>
+  <li class="step-bar__item active">
+    <div class="number">2</div>
+    <section>已付款</section>
+  </li>
+  <li class="step-bar__item active">
+    <div class="number">3</div>
+    <section>已发货</section>
+  </li>
+  <li class="step-bar__item">
+    <div class="number">4</div>
+    <section>交易成功</section>
+  </li>
+</ul>
+<!--step end-->
+<div class="aiui-cells ">
+  <div class="order_tagwrap">
+    <h3><b>108.00</b>元</h3>
+    <p>交易成功后钱款将打入您的账户余额</p>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__bd">
+      <h3>已发货</h3>
+      <p class="fz28 text-deep__gray">2019-07-30 11:29:00</p>
+    </div>
+    <div class="aiui-cell__ft"><span class="fz30 text-primary">物流详情</span> </div>
+  </div>
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="Cell -2of2 shop-list_item">
+      <div class="thumb"><img src="../images/farm_tu01.png"></div>
+      <div class="bd">
+        <h3>鄂尔多斯农场a1096地块西红柿</h3>
+        <p class="fz28 text-deep__gray">总计10平方</p>
+      </div>
+      <div class="aiui-cell__ft">
+        <span class="fz30 text-primary">联系租户</span> </div>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <ul class="ordermore-list">
+      <li>
+        <span>租户名称</span>
+        <span>钱多多</span>
+      </li>
+      <li>
+        <span>联系号码</span>
+        <span>13823456666</span>
+      </li>
+      <li>
+        <span>订单编号</span>
+        <span>545454445</span>
+      </li>
+      <li>
+        <span>交易时间</span>
+        <span>2019-07-02 16:37:08</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--底部悬浮按钮 start-->
+<div class="aiui-footbtn__wrap">
+    <div class="aiui-footbtn aiui-footbtn__default Grid -right">
+      <button type="button"
+        class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒收货</button>
+    </div>
+  </div>
+  <!--底部悬浮按钮 end-->
+
+
+{% endblock %}

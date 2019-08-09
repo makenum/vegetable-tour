@@ -1,0 +1,65 @@
+{% extends 'example.nunjucks' %}
+{% block title %}Dialog{% endblock %}
+{% block content %}
+  <div class="page">
+    <div class="page__hd">
+      <h1 class="page__title">Dialog</h1>
+      <p class="page__desc">对话框</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showDialog1">Dialog样式一</a>
+      <a href="javascript:;" class="aiui-btn aiui-btn_default" id="showDialog2">Dialog样式二</a>
+    </div>
+
+    <div id="dialogs">
+      <!--BEGIN dialog1-->
+      <div class="js_dialog" id="Dialog1" style="display: none;">
+        <div class="aiui-mask"></div>
+        <div class="aiui-dialog">
+          <div class="aiui-dialog__hd">
+            <strong class="aiui-dialog__title">弹窗标题</strong>
+          </div>
+          <div class="aiui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+          <div class="aiui-dialog__ft">
+            <a href="javascript:;" class="aiui-dialog__btn aiui-dialog__btn_default">辅助操作</a>
+            <a href="javascript:;" class="aiui-dialog__btn aiui-dialog__btn_primary">主操作</a>
+          </div>
+        </div>
+      </div>
+      <!--END dialog1-->
+      <!--BEGIN dialog2-->
+      <div class="js_dialog" id="Dialog2" style="display: none;">
+        <div class="aiui-mask"></div>
+        <div class="aiui-dialog">
+          <div class="aiui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+          <div class="aiui-dialog__ft">
+            <a href="javascript:;" class="aiui-dialog__btn aiui-dialog__btn_primary">知道了</a>
+          </div>
+        </div>
+      </div>
+      <!--END dialog2-->
+      
+    </div>
+  </div>
+{% endblock %}
+{% block footer %}
+  <script type="text/javascript">
+    $(function () {
+      var $Dialog1 = $('#Dialog1'),
+        $Dialog2 = $('#Dialog2');
+
+      $('#dialogs').on('click', '.aiui-dialog__btn', function () {
+        $(this)
+          .parents('.js_dialog')
+          .fadeOut(200);
+      });
+
+      $('#showDialog1').on('click', function () {
+        $Dialog1.fadeIn(200);
+      });
+      $('#showDialog2').on('click', function () {
+        $Dialog2.fadeIn(200);
+      });
+    });
+  </script>
+{% endblock %}

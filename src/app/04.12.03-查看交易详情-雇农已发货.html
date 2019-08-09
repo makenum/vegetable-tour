@@ -1,0 +1,131 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-查看交易详情-雇农已发货{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">交易详情</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<!--状态提示 start-->
+<div class="aiui-status">
+  <div class="Cell -fill">
+    <h3 class="status-title">雇农已发货</h3>
+  </div>
+  <i class="icon-truck-3px"></i>
+</div>
+<!--状态提示 end-->
+<div class="aiui-cells address-cells">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-truck-3px"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <p class="fz28 text-blue">由【深圳华强北集散中心】发往【某某某转运中心】</p>
+        </div>
+        <div class="bd">
+          <p class="fz28 text-deep__gray">2019-07-29 20:33:58</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-address"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">钱多多</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="Cell -2of2 shop-list_item">
+      <div class="thumb"><img src="../images/farm_tu01.png"></div>
+      <div class="bd">
+        <h3>鄂尔多斯农场a1096地块西红柿</h3>
+        <p class="fz28 text-deep__gray">总计10平方</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell">
+    <div class="aiui-cell__col">
+      <span>支付详情</span>
+    </div>
+    <div class="aiui-cell__bd Grid -between">
+      <span class="text-med__gray">运费</span>
+      <span>¥108.00</span>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__bd Grid -right">
+      <div class="fz36">已支付：<span class="text-red font-weight">¥108.00</span></div>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span>配送信息：冷链物流</span>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="order-info">
+      <p>订单编号：119099999</p>
+      <p>下单时间：2019-07-23 17:43</p>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells__gap"></div>
+<!--内容区域 end-->
+<!--底部悬浮按钮 start-->
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn aiui-footbtn__default Grid -right">
+    <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
+      class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+    <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+      id="confirmDialog">确认收货</button>
+  </div>
+</div>
+<!--底部悬浮按钮 end-->
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    //确认弹窗
+    $("#confirmDialog").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您的蔬菜已配送成功，确定收货请点确认按钮。</p>';
+      aiui.confirm(descText, {
+        title: '提示',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '确认',
+          type: 'primary',
+          onClick: function () { alert('确认') }
+        }]
+      });
+    });
+  });
+</script>
+{% endblock %}

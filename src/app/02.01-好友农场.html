@@ -1,0 +1,262 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-好友农场{% endblock %}
+{% block content %}
+
+<div class="headbar-sticky">
+  <div class="aiui-headbar aiui-headbar__fixed aiui-headbar__transparent">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">小石头的农场</h3>
+  </div>
+</div>
+
+<div class="farm-header">
+  <div class="game">
+    <!-- 选地 start -->
+    <div class="land-select">
+      <div class="lands">
+        <button type="button" class="land land1">
+          <div class="soil">
+            <div class="tree-wrap">
+              <img src="../images/mature-tree.png" alt="未成熟的树" class="tree">
+              <img src="../images/immature.png" alt="西红柿" class="mature mature-large">
+              <img src="../images/immature.png" alt="西红柿" class="mature mature-mini">
+              <div class="land-bubble land-bubble__bottom weeding">
+                <img src="../images/weeding.png" alt="除草">
+              </div>
+              <div class="gif gif-bottom weeding-gif">
+                <img src="../images/gif/weeding.gif" alt="铲除动画">
+              </div>
+            </div>
+            <img src="../images/grass.png" alt="草" class="grass grass1">
+            <img src="../images/grass.png" alt="草" class="grass grass2">
+            <img src="../images/grass.png" alt="草" class="grass grass3">
+            <img src="../images/grass.png" alt="草" class="grass grass4">
+          </div>
+        </button>
+        <button type="button" class="land land2">
+          <div class="soil">
+            <div class="tree-wrap">
+              <img src="../images/eradicate_tree.png" alt="开花中的树" class="tree">
+
+              <div class="land-bubble land-bubble__bottom eradicate">
+                <img src="../images/eradicate.png" alt="铲除">
+              </div>
+              <div class="gif gif-bottom eradicate-gif">
+                <img src="../images/gif/eradicate.gif" alt="铲除动画">
+              </div>
+            </div>
+          </div>
+        </button>
+        <button type="button" class="land land3">
+          <div class="soil">
+            <div class="tree-wrap">
+              <img src="../images/mature-tree.png" alt="可采摘的树" class="tree">
+              <img src="../images/mature.png" alt="西红柿" class="mature mature-large">
+              <img src="../images/mature.png" alt="西红柿" class="mature mature-mini">
+              <div class="land-bubble land-bubble__bottom deworming">
+                <img src="../images/deworming.png" alt="杀虫">
+              </div>
+              <div class="gif gif-bottom deworming-gif">
+                <img src="../images/gif/deworming.gif" alt="杀虫动画">
+              </div>
+              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect1">
+              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect2">
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <!-- 选地 end -->
+    <!-- 日常操作工具条 start -->
+    <div class="land-operate__wrap">
+      <div class="land-operate__next"><i class="icon-arrow-up"></i></div>
+      <div class="swiper-container land-operate" id="landOperateSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <button type="button" id="fertilizationBtn"><img src="../images/fertilization.png" alt="施肥"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" id="wateringBtn"><img src="../images/watering.png" alt="浇水"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="rewardBtn"><img src="../images/reward.png" alt="采摘"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="eradicateBtn"><img src="../images/eradicate.png" alt="铲除"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="looseningBtn"><img src="../images/loose_soil.png" alt=""></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="sowingBtn"><img src="../images/sowing.png" alt="播种"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="dewormingBtn"><img src="../images/deworming.png" alt="杀虫"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="weedingBtn"><img src="../images/weeding.png" alt="除草"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="land-operate__prev"><i class="icon-arrow-down"></i></div>
+    </div>
+    <!-- 日常操作工具条 end -->
+
+    <!-- 游戏操作 start -->
+    <div class="game-operate">
+      <div class="Cell -fill">
+        <div class="level-signage">LV.2</div>
+      </div>
+      <a href="01.04-首页-我的农场.html" class="item -blue">
+        <div class="thumb"><img src="../images/back-farm.png" alt="回农场"></div>
+        <div class="tag">回农场</div>
+      </a>
+    </div>
+    <!-- 游戏操作 end -->
+  </div>
+
+</div>
+<div class="farm-info">
+
+  <!-- 指标栏 start -->
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="Cell -fill fz34">指标栏</h3>
+      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+    </div>
+    <div class="indicator">
+      <div class="info">
+        <div class="info-bd">
+          <p>下午6:36</p>
+          <h3>巴马乡片区</h3>
+        </div>
+        <div class="info-icon">
+          <img src="../images/icon-sunny.png" alt="晴天">
+        </div>
+      </div>
+      <div class="weather">
+        <div class="weather-item">
+          <ul>
+            <li>大气湿度</li>
+            <li>相对湿度</li>
+            <li>气压</li>
+            <li>风向</li>
+          </ul>
+          <ul>
+            <li>-20℃</li>
+            <li>-10℃</li>
+            <li>1239hpa</li>
+            <li>320º</li>
+          </ul>
+        </div>
+        <div class="weather-item">
+          <ul>
+            <li>风速</li>
+            <li>降水量</li>
+            <li>光照强度</li>
+            <li>土壤温度</li>
+          </ul>
+          <ul>
+            <li>-75m/s</li>
+            <li>2mm/min</li>
+            <li>188000Lux</li>
+            <li>78℃</li>
+          </ul>
+        </div>
+        <div class="weather-item">
+          <ul>
+            <li>土壤湿度</li>
+            <li>太阳辐射</li>
+            <li>日照时数</li>
+          </ul>
+          <ul>
+            <li>20%</li>
+            <li>1567W/m²</li>
+            <li>24h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 指标栏 end -->
+  <!-- 好友动态 start -->
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="Cell -fill fz34">好友动态</h3>
+      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+    </div>
+    <ul class="friend-updates">
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+    </ul>
+  </div>
+  <!-- 好友动态 end -->
+</div>
+{% endblock %} {% block footer %}
+<script src="../libs/swiper.min.js"></script>
+<script src="../libs/anime.min.js"></script>
+<script src="../js/land.js"></script>
+<script>
+  //头部导航固定
+  $(".headbar-sticky").sticky({ topSpacing: 0 });
+</script>
+{% endblock %}

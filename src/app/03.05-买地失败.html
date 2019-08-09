@@ -1,0 +1,26 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-买地失败{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">支付失败</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<div class="aiui-msg">
+  <div class="aiui-msg__hd aiui-msg__warn">
+    <i class="icon-warn aiui-icon__msg"></i>
+    <h2 class="aiui-msg__title">支付失败</h2>
+  </div>
+  <div class="aiui-msg__bd">
+    <p class="aiui-msg__desc">失败描述文案</p>
+  </div>
+  <div class="aiui-msg__ft">
+    <a href="javascript:;" class="aiui-btn aiui-btn__plain aiui-btn__large aiui-btn__primary aiui-btn__pill">重新购买</a>
+  </div>
+</div>
+{% endblock %}

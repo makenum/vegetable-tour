@@ -1,0 +1,60 @@
+
+
+@import "../../base/fn";
+
+.aiui-grids {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        .setTopLine(@aiuiGridBorderColor);
+    }
+    &:after {
+        .setLeftLine(@aiuiGridBorderColor);
+    }
+}
+
+.aiui-grid {
+    position: relative;
+    float: left;
+    padding: 40px 20px;
+    width: 100% / @aiuiGridColumnCount;
+    box-sizing: border-box;
+
+    &:before {
+        .setRightLine(@aiuiGridBorderColor);
+    }
+    &:after {
+        .setBottomLine(@aiuiGridBorderColor);
+    }
+
+    &:active {
+        background-color: @aiuiBgColorActive;
+    }
+}
+
+.aiui-grid__icon {
+    width: @aiuiGridIconSize;
+    height: @aiuiGridIconSize;
+    margin: 0 auto;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    & + .aiui-grid__label{
+        margin-top: 8px;
+    }
+}
+
+.aiui-grid__label {
+    display: block;
+    text-align: center;
+    color: @aiuiTextColorTitle;
+    font-size: @aiuiGridFontSize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

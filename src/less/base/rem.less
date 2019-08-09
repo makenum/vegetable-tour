@@ -1,0 +1,89 @@
+@vwFontsize: 100;
+@vwDesign: 750;
+// prettier-ignore
+@maxWidth: 768PX;
+
+/* 1rem = 100px */
+html {
+  @remV: @vwFontsize / @vwDesign * 100vw;
+  font-size: @remV;
+
+  @media screen and (max-width: 320px) {
+    // prettier-ignore
+    font-size: 42.667PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 321px) and (max-width: 360px) {
+    // prettier-ignore
+    font-size: 48PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 361px) and (max-width: 375px) {
+    // prettier-ignore
+    font-size: 50PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 393px) {
+    // prettier-ignore
+    font-size: 52.4PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 394px) and (max-width: 412px) {
+    // prettier-ignore
+    font-size: 54.93PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 413px) and (max-width: 414px) {
+    // prettier-ignore
+    font-size: 55.2PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 415px) and (max-width: 480px) {
+    // prettier-ignore
+    font-size: 64PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) {
+    // prettier-ignore
+    font-size: 72PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 640px) {
+    // prettier-ignore
+    font-size: 85.33PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 720px) {
+    // prettier-ignore
+    font-size: 96PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 721px) and (max-width: 768px) {
+    // prettier-ignore
+    font-size: 102.4PX;
+    font-size: @remV;
+  }
+
+  @media screen and (min-width: 769px) {
+    // prettier-ignore
+    font-size: 102.4PX;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .app-container {
+    max-width: @maxWidth;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

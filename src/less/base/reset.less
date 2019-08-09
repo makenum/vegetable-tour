@@ -1,0 +1,74 @@
+@import "fn";
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: @aiuiFontDefault;
+  color: @aiuiTextColorTitle;
+  font-size: @aiuiFontDefaultSize;
+  background-color: @aiuiBgColorDefault;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  .setTapColor();
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+input,
+textarea {
+  caret-color: @aiuiColorPrimary;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+a,
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  .placeholder;
+}
+ul,
+li {
+  list-style: none;
+}

@@ -1,0 +1,43 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-雇农首页{% endblock %}
+{% block content %}
+<div class="farmhand-bg">
+    <div class="farmhand-index">
+        <div class="user-bg">
+            <img src="../images/default_avatar.png" alt="">
+        </div>
+        <h3 class="user-name">鄂尔多斯农场主</h3>
+    </div>
+    <div class="farmhand-balance">
+        <div class="md">
+            <p class="title">余额（元）</p>
+            <p class="price">437,890<small>.00</small></p>
+        </div>
+        <div>
+            <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__pill" onclick="window.location.href='05.04-提现.html'">立即提现</button>
+        </div>
+    </div>
+    <div class=" farmhand-list">
+                <a href="05.10-我的任务.html">
+                    <div class="icon-img"><img src="../images/icon-task.png" alt=""></div>
+                    <p class="title text-red">我的任务</p>
+                    <div class="aiui-btn aiui-btn__plain aiui-btn__small  aiui-btn__pill">8</div>
+                </a>
+                <a href="05.11-我的订单.html">
+                    <div class="icon-img"><img src="../images/icon-order.png" alt=""></div>
+                    <p class="title text-warn">我的订单</p>
+                    <div class="aiui-btn aiui-btn__plain aiui-btn__small  aiui-btn__pill">12</div>
+                </a>
+                <a href="05.09-我的账户.html">
+                    <div class="icon-img"><img src="../images/icon-account.png"  alt=""></div>
+                    <p class="title text-blue">我的账户</p>
+                    <div class="aiui-btn aiui-btn__plain aiui-btn__small  aiui-btn__pill">4377890</div>
+                </a>
+                <a href="05.01-我的地块.html">
+                    <div class="icon-img"><img src="../images/icon-plot.png" class="icon-task" alt=""></div>
+                    <p class="title text-primary">我的地块</p>
+                    <div class="aiui-btn aiui-btn__plain aiui-btn__small  aiui-btn__primary aiui-btn__pill">23</div>
+                </a>
+        </div>
+    </div>
+    {% endblock %}

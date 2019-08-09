@@ -1,0 +1,139 @@
+{% extends 'app.nunjucks' %}
+{% block title %}充值阳光值{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">充值</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<div class="aiui-cells__title -primary">充值</div>
+<div class="aiui-cells sunshine-pay__cells">
+  <ul class="chose-list">
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>50点</h3>
+        <p>¥5元</p>
+      </div>
+    </li>
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>210点</h3>
+        <p>¥30元</p>
+      </div>
+    </li>
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>686点</h3>
+        <p>¥98元</p>
+      </div>
+    </li>
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>2086点</h3>
+        <p>¥298元</p>
+      </div>
+    </li>
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>4116点</h3>
+        <p>¥588元</p>
+      </div>
+    </li>
+    <li class="chose-list__item Cell -1of3">
+      <div class="content">
+        <h3>11186点</h3>
+        <p>¥1598元</p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="aiui-cells__title aiui-cells__gap -primary">选择支付方式</div>
+<div class="aiui-cells sunshine-pay__cells aiui-cells__radio">
+  <label class="aiui-cell -regular aiui-check__label" for="s20">
+    <div class="aiui-cell__hd">
+      <i class="icon-alipay"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <span>支付宝支付</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <input type="radio" class="aiui-check" name="radio1" id="s20">
+      <i class="aiui-icon-checked"></i>
+    </div>
+  </label>
+  <label class="aiui-cell -regular aiui-check__label" for="s21">
+    <div class="aiui-cell__hd">
+      <i class="icon-wechat"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <span>微信支付</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <input type="radio" class="aiui-check" name="radio1" id="s21">
+      <i class="aiui-icon-checked"></i>
+    </div>
+  </label>
+</div>
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button" id="submitPayBtn"
+      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">确认充值</button>
+  </div>
+</div>
+
+
+{% endblock %}
+{% block footer %}
+<script>
+  // 选择支付档次
+  $(".chose-list__item").on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
+  // 阳光值说明弹窗
+  $("#sunshineValueDescBtn").bind("click", function () {
+    var descText = "说明文案描述，不限字数，超过固定高度往下滑。"
+    aiui.alert(descText, {
+      title: '阳光值说明',
+      buttons: [{
+        label: '好的',
+        type: 'primary',
+        // 回调事件
+        onClick: function () { console.log('好的') }
+      }]
+    });
+  });
+  // 充值确认弹窗
+  $("#submitPayBtn").bind("click", function () {
+    var descText = '<p>您需为您的订单支付：</p>';
+    var price = '<h3 class="dialog-price">¥368<span>.00</span></h3>';
+    var alertContent = descText + price;
+    aiui.confirm(alertContent,
+      {
+        title: '确认支付',
+        buttons: [
+          {
+            label: '取消',
+            type: 'default',
+            onClick: function () {
+              console.log('取消');
+            }
+          },
+          {
+            label: '支付',
+            type: 'primary',
+            onClick: function () {
+              console.log('支付');
+            }
+          }]
+      });
+  });
+</script>
+{% endblock %}

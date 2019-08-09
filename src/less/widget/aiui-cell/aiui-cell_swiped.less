@@ -1,0 +1,33 @@
+
+
+@import "../../base/fn";
+
+.aiui-cell_swiped {
+    display: block;
+    padding: 0;
+    > .aiui-cell__bd {
+        position: relative;
+        z-index: 1;
+        background-color: #FFFFFF;
+    }
+    > .aiui-cell__ft {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        color: #FFFFFF;
+    }
+}
+.aiui-swiped-btn {
+    display: block;
+    padding: @aiuiCellGapV 32px;
+    line-height: @aiuiCellLineHeight;
+    color: inherit;
+}
+.aiui-swiped-btn_default {
+    background-color: @aiuiBgColorDefault;
+}
+.aiui-swiped-btn_warn {
+    background-color: @aiuiColorWarn;
+}

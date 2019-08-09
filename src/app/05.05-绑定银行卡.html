@@ -1,0 +1,90 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-提现{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar aiui-headbar__default">
+  <div class="aiui-headbar__item">
+    <a href="javascript:history.back();" class="icon-return">
+    </a>
+  </div>
+  <h3 class="aiui-headbar__title">提现</h3>
+</div>
+<!--头部导航 start-->
+<form>
+  <div class="aiui-cells">
+    <div class="aiui-cell">
+      <div class="aiui-cell__bd">
+        <p class="fz48">请绑定一张<span class="text-blue">你的银行卡</span></p>
+      </div>
+    </div>
+    <div class="aiui-cells__title">
+      <span>李三的银行卡号</span>
+    </div>
+  </div>
+  <div class="aiui-cells">
+    <div class="aiui-cell">
+      <div class="aiui-cell__bd">
+        <input class="aiui-input aiui-input__big" type="text" value="6225 8888 8888 8888">
+      </div>
+      <div class="aiui-cell__ft">
+        <span class="icon-camera"></span>
+      </div>
+    </div>
+    <div class="aiui-cell">
+      <div class="aiui-cell__hd"> <img src="../images/icon-bank.png" class="bank-img" alt=""> </div>
+      <div class="aiui-cell__bd">
+
+        <span>招商银行</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="aiui-cells">
+    <div class="aiui-cell__ft aiui-cell__ft_tag" id="phontDetailBtn">
+      <span class="text-deep__gray">银行预留手机号</span>
+      <i class="icon-tips-circle"></i>
+    </div>
+  </div>
+  <div class="aiui-cells">
+    <div class="aiui-cell">
+      <div class="aiui-cell__bd">
+        <input class="aiui-input aiui-input__big" type="text" value="138 8888 8888">
+      </div>
+    </div>
+  </div>
+  <div class="aiui-cells__checkbox">
+    <label class="aiui-cell aiui-check__label" for="s12">
+      <div class="aiui-cell__hd">
+        <input type="checkbox" name="checkbox1" class="aiui-check" id="s12" checked="checked">
+        <i class="aiui-icon-checked"></i>
+      </div>
+      <div class="aiui-cell__bd">
+        <div class="text-deep__gray">同意 <a class="text-primary fz28"> 《绑定银行卡协议》</a></div>
+      </div>
+    </label>
+  </div>
+  <div class="aiui-footbtn__wrap">
+    <div class="aiui-footbtn">
+      <button type="button" onclick="window.location.href='05.06-绑定成功.html'"
+        class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">下一步</button>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}
+{% block footer %}
+<script>
+  // 预留手机号码说明弹窗
+  $("#phontDetailBtn").bind("click", function () {
+    aiui.alert('说明文案描述，不限字数，超过固定高度往下滑。', {
+      title: '预留手机号码说明',
+      buttons: [{
+        label: '好的',
+        type: 'primary',
+        onClick: function () { console.log('好的') }
+      }]
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-查看照片{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">查看照片</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<div class="aiui-cells edit-address__cells">
+  <div class="aiui-cell">
+    <div class="aiui-cell__col">
+      <span>生长情况</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="aiui-textarea__group aiui-textarea__disabled">
+        <textarea class="aiui-textarea" placeholder="生长状况良好，等待成熟。" rows="3" readonly></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell clell-preview">
+    <div class="aiui-cell__col">
+      <span>生长照片</span>
+    </div>
+    <!--原始图片 start-->
+    <div class="aiui-preview" id="swiperPreview">
+      <div class="preview">
+        <img src="../images/preview.png" />
+        <img src="../images/farm_header_bg02.png" />
+        <img src="../images/farm_tu01.png" />
+        <img src="../images/area_bg.png" />
+      </div>
+    </div>
+    <!--原始图片 end-->
+    <!--图片预览区域 start-->
+    <div class="preview-box">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!--图片预览区域 end-->
+  </div>
+</div>
+<!--内容区域 end-->
+{% endblock %}
+{% block footer %}
+<script src="../libs/swiper.min.js"></script>
+<script>
+  $(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      observer: true,
+      observeParents: true,
+    });
+    $("#swiperPreview").on("click", ".preview img", function () {
+      var imgBox = $(this).parents(".preview").find("img");
+      var i = $(imgBox).index(this);
+      $(".preview-box .swiper-wrapper").html("")
+      for (var a = 0, b = imgBox.length; a < b; a++) {
+        $(".preview-box .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
+      }
+      $(".preview-box").css({
+        "z-index": 1001,
+        "opacity": "1"
+      });
+      mySwiper.slideTo(i, 0, false);
+      return false;
+    });
+    $(".preview-box").on("click", function () {
+      $(this).css({
+        "z-index": "-1",
+        "opacity": "0"
+      });
+    });
+  });
+</script>
+{% endblock %}

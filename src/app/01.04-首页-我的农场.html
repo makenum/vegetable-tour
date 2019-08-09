@@ -1,0 +1,484 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-我的农场{% endblock %}
+{% block content %}
+<div class="farm-header">
+  <!-- user-info start -->
+  <div class="user-info">
+    <div class="header">
+      <a class="sunshine" href="04.03.01-我的阳光值.html">
+        <div class="thumb"><img src="../images/sunshine.png" alt="阳光" /></div>
+        <strong>3467</strong>
+      </a>
+      <h3 class="name">豆豆的农场</h3>
+      <a href="03.01-片区列表-全部农场.html" class="icon-setting-2px"></a>
+    </div>
+    <div class="level-wrap">
+      <div class="level">
+        <strong>LV.1</strong>
+        <div class="level-bar">
+          <div class="loading" style="width: 54%;"></div>
+          <div class="text"><span>54</span>/<span>90</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- user-info end -->
+  <div class="game">
+    <!-- 选地 start -->
+    <div class="land-select">
+      <div class="lands">
+        <button type="button" class="land land1">
+          <div class="soil">
+            <!-- 小苗 -->
+            <div class="seedlings">
+              <img src="../images/seedlings.png" alt="树苗">
+              <div class="land-bubble land-bubble__top fertilization">
+                <img src="../images/fertilization.png" alt="施肥">
+              </div>
+
+              <div class="gif fertilization-gif">
+                <img src="../images/gif/fertilization.gif" alt="松地动画">
+              </div>
+
+            </div>
+            <div class="soil-tips">巴马乡片区2号土地</div>
+            <a href="03.03-片区详情-查看实景相册.html" class="gofarm-btn">去农场看看</a>
+          </div>
+        </button>
+        <button type="button" class="land land2">
+          <div class="soil">
+            <!-- 成长中的树 -->
+            <div class="tree-wrap">
+              <img src="../images/flowering_tree.png" alt="开花中的树" class="tree">
+
+              <div class="land-bubble land-bubble__top watering">
+                <img src="../images/watering.png" alt="浇水">
+              </div>
+
+              <div class="gif gif-top watering-gif">
+                <img src="../images/gif/watering.gif" alt="浇水动画">
+              </div>
+
+            </div>
+            <div class="soil-tips">巴马乡片区1号土地</div>
+            <a href="03.03-片区详情-查看实景相册.html" class="gofarm-btn">去农场看看</a>
+          </div>
+        </button>
+        <button type="button" class="land land3">
+          <div class="soil">
+            <!-- 新增土地 -->
+            <a href="javascript:;" class="land-add__btn"></a>
+          </div>
+        </button>
+      </div>
+    </div>
+    <!-- 选地 end -->
+    <!-- 日常操作工具条 start -->
+    <div class="land-operate__wrap">
+      <div class="land-operate__next"><i class="icon-arrow-up"></i></div>
+      <div class="swiper-container land-operate" id="landOperateSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <button type="button" id="fertilizationBtn"><img src="../images/fertilization.png" alt="施肥"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" id="wateringBtn"><img src="../images/watering.png" alt="浇水"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="rewardBtn"><img src="../images/reward.png" alt="采摘"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="eradicateBtn"><img src="../images/eradicate.png" alt="铲除"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="looseningBtn"><img src="../images/loose_soil.png" alt=""></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="sowingBtn"><img src="../images/sowing.png" alt="播种"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="dewormingBtn"><img src="../images/deworming.png" alt="杀虫"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+
+          <div class="swiper-slide">
+            <button type="button" id="weedingBtn"><img src="../images/weeding.png" alt="除草"></button>
+            <span class="aiui-badge aiui-badge_dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="land-operate__prev"><i class="icon-arrow-down"></i></div>
+    </div>
+    <!-- 日常操作工具条 end -->
+
+    <!-- 游戏操作 start -->
+    <div class="game-operate">
+      <div class="items">
+        <a href="01.05-默认选地页.html" class="item -green">
+          <div class="thumb"><img src="../images/site_selection.png" alt="选地"></div>
+          <div class="tag">选地</div>
+        </a>
+        <a href="04.12.01-查看交易记录.html" class="item -orange">
+          <div class="thumb"><img src="../images/transaction.png" alt="交易"></div>
+          <div class="tag">交易</div>
+        </a>
+        <a href="04.13.01-任务管理.html" class="item -yellow">
+          <div class="thumb"><img src="../images/task_management.png" alt="任务"></div>
+          <div class="tag">任务</div>
+        </a>
+      </div>
+      <button type="button" class="item -blue" id="showfriendFarmRanking">
+        <div class="thumb"><img src="../images/buddy_farm.png" alt="好友农场"></div>
+        <div class="tag">好友农场</div>
+      </button>
+    </div>
+    <!-- 游戏操作 end -->
+  </div>
+
+</div>
+<div class="farm-info">
+  <!-- 消息栏 start -->
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="Cell -fill fz34">消息栏</h3>
+      <a href="04.13.01-任务管理.html" class="fz26 text-deep__gray">更多</a>
+    </div>
+    <div class="message">
+      <div class="message-item">
+        <div class="thumb">
+          <img src="../images/message-thumb_01.png">
+        </div>
+        <div class="bd">
+          <h3>巴马乡片区a1096地块南瓜已浇水</h3>
+          <p>2019-07 23 17:43</p>
+        </div>
+        <div class="Grid -middle">
+          <a href="04.13.01-任务管理.html" class="aiui-btn aiui-btn__primary aiui-btn__mini aiui-btn__pill">去验收</a>
+        </div>
+      </div>
+      <div class="message-item">
+        <div class="thumb">
+          <img src="../images/message-thumb_02.png">
+        </div>
+        <div class="bd">
+          <h3>巴马乡片区a1096地块南瓜已施肥</h3>
+          <p>2019-07 23 17:43</p>
+        </div>
+        <div class="Grid -middle">
+          <a href="04.13.01-任务管理.html" class="aiui-btn aiui-btn__primary aiui-btn__mini aiui-btn__pill">去验收</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 消息栏 end -->
+  <!-- 指标栏 start -->
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="Cell -fill fz34">指标栏</h3>
+      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+    </div>
+    <div class="indicator">
+      <div class="info">
+        <div class="info-bd">
+          <p>下午6:36</p>
+          <h3>巴马乡片区</h3>
+        </div>
+        <div class="info-icon">
+          <img src="../images/icon-sunny.png" alt="晴天">
+        </div>
+      </div>
+      <div class="weather">
+        <div class="weather-item">
+          <ul>
+            <li>大气湿度</li>
+            <li>相对湿度</li>
+            <li>气压</li>
+            <li>风向</li>
+          </ul>
+          <ul>
+            <li>-20℃</li>
+            <li>-10℃</li>
+            <li>1239hpa</li>
+            <li>320º</li>
+          </ul>
+        </div>
+        <div class="weather-item">
+          <ul>
+            <li>风速</li>
+            <li>降水量</li>
+            <li>光照强度</li>
+            <li>土壤温度</li>
+          </ul>
+          <ul>
+            <li>-75m/s</li>
+            <li>2mm/min</li>
+            <li>188000Lux</li>
+            <li>78℃</li>
+          </ul>
+        </div>
+        <div class="weather-item">
+          <ul>
+            <li>土壤湿度</li>
+            <li>太阳辐射</li>
+            <li>日照时数</li>
+          </ul>
+          <ul>
+            <li>20%</li>
+            <li>1567W/m²</li>
+            <li>24h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 指标栏 end -->
+  <!-- 好友动态 start -->
+  <div class="farm-info__item">
+    <div class="header">
+      <h3 class="Cell -fill fz34">好友动态</h3>
+      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+    </div>
+    <ul class="friend-updates">
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+      <li class="friend-updates__item">
+        <div class="ripple"></div>
+        <div class="avatar avatar-50">
+          <img src="../images/avatar.png">
+        </div>
+        <strong class="name">小石头</strong>
+        <div class="Cell -fill">
+          <p class="text-deep__gray">帮你浇水了</p>
+        </div>
+        <span class="fz24 text-deep__gray">06-15</span>
+      </li>
+    </ul>
+  </div>
+  <!-- 好友动态 end -->
+</div>
+
+<!-- 好友农场排行榜 start-->
+<div class="aiui-popup__wrap" id="friendFarmRanking">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup friend-farm__ranking">
+    <div class="header">
+      <div class="info">
+        <div class="avatar">
+          <img src="../images/avatar-friend-demo.png">
+        </div>
+        <h3 class="title">好友农场排行榜</h3>
+      </div>
+      <button type="button" class="icon-close-outline aiui-popup__close"></button>
+    </div>
+    <div class="popup-box__scroll">
+      <div class="tips">
+        <p>和好友互动赚更多阳光值</p>
+      </div>
+      <div class="ranking">
+        <h4 class="ranking-title">我的好友</h4>
+        <div class="ranking-list">
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">1</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>小石头</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.6</p>
+              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可浇水</span>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">2</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>瓜子脸美女</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.4</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">3</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>刘老师的农场</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.3</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">4</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>刘老师的农场</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">可除草</span>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">5</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">6</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">7</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">8</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">9</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+          <a href="02.01-好友农场.html" class="ranking-list__item">
+            <div class="number">10</div>
+            <div class="avatar">
+              <img src="../images/avatar.png">
+            </div>
+            <div class="Cell -fill">
+              <span>隔壁一枝花</span>
+            </div>
+            <div class="info">
+              <p class="level">LV.2</p>
+              <p class="fz24 text-deep__gray">农场等级</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- 好友农场排行榜 end -->
+
+{% endblock %} {% block footer %}
+<script src="../libs/swiper.min.js"></script>
+<script src="../libs/anime.min.js"></script>
+<script src="../js/land.js"></script>
+<script>
+  $(function () {
+    var $friendFarmRanking = $('#friendFarmRanking');
+    // 关闭Popup弹窗
+    $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(200);
+    });
+    // 打开Popup弹窗
+    $('#showfriendFarmRanking').on('click', function () {
+      $friendFarmRanking.fadeIn();
+      $friendFarmRanking
+        .find(".aiui-popup")
+        .addClass("aiui-popup__toggle");
+    });
+  });
+</script>
+{% endblock %}

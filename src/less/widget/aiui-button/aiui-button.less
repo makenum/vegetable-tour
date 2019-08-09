@@ -1,0 +1,161 @@
+@import "../../base/fn";
+
+.aiui-btn {
+  position: relative;
+  display: inline-block;
+  padding-left: @aiuiBtnDefaultGap;
+  padding-right: @aiuiBtnDefaultGap;
+  text-align: center;
+  text-decoration: none;
+  .setTapColor();
+}
+
+.aiui-btn__block {
+  display: block;
+  width: 100%;
+}
+// size
+.aiui-btn__tiny {
+  line-height: 40px;
+  font-size: 24px;
+}
+.aiui-btn__small {
+  line-height: 54px;
+  font-size: 26px;
+}
+.aiui-btn__medium {
+  line-height: 70px;
+  font-size: 28px;
+}
+.aiui-btn__large {
+  line-height: 80px;
+  font-size: 30px;
+}
+.aiui-btn__giant {
+  line-height: 98px;
+  font-size: 40px;
+}
+// default
+.aiui-btn__default {
+  color: @aiuiBtnDefaultFontColor;
+  background-color: @aiuiBtnDefaultBg;
+  &:active {
+    background-color: @aiuiBtnDefaultActiveBg;
+  }
+  &:disabled {
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+.aiui-btn__light-blue {
+  color: @aiuiColorBlue;
+  background-color: @aiuiBgColorDefault;
+  &:disabled {
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+// primary
+.aiui-btn__primary {
+  background-image: @aiuiBtnPrimaryBgi;
+  color: @aiuiBtnPrimaryFontColor;
+  &:active {
+    background-image: none;
+    background-color: @aiuiBtnPrimaryActiveBg;
+  }
+  &:disabled {
+    background-image: none;
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+
+.aiui-btn__gray {
+  color: @aiuiBtnGrayFontColor;
+  background-color: @aiuiBtnGrayBg;
+  &:active {
+    background-color: @aiuiBtnGrayActiveBg;
+  }
+  &:disabled {
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+
+//brown
+.aiui-btn_brown {
+  background-color: @aiuiColorBrown;
+  color: @aiuiBtnPrimaryFontColor;
+  &:active {
+    background-color: @aiuiBtnBrownActiveBg;
+  }
+  &:disabled {
+    color: @aiuiBtnDisabledFontColor;
+    background-color: @aiuiBtnDisabledBg;
+  }
+}
+// disabled
+.aiui-btn__disabled {
+  color: @aiuiBtnDisabledFontColor;
+  background-color: @aiuiBtnDisabledBg;
+}
+// 小圆角
+.aiui-btn__rounded {
+  border-radius: 10px;
+  &.aiui-btn__plain {
+    &:before {
+      border-radius: 20px;
+    }
+  }
+}
+// 大圆角
+.aiui-btn__pill {
+  border-radius: 200px;
+  &.aiui-btn__plain {
+    &:before {
+      border-radius: 400px;
+    }
+  }
+}
+// plain
+.aiui-btn__plain {
+  &:before {
+    .setFullLine();
+  }
+  &.aiui-btn__default {
+    background-color: transparent;
+    color: @aiuiBtnPlainDefaultFontColor;
+    &:before {
+      border-color: @aiuiBtnPlainDefaultBorderColor;
+    }
+  }
+  &.aiui-btn__primary {
+    background-image: none;
+    background-color: transparent;
+    color: @aiuiBtnPlainPrimaryFontColor;
+    &:before {
+      border-color: @aiuiBtnPlainPrimaryBorderColor;
+    }
+  }
+}
+
+
+// cell btn
+.aiui-btn__cell{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    padding:@aiuiCellGapV @aiuiCellGapH;
+    .setTapColor();
+    overflow: hidden;
+    background-color:#FFFFFF;
+    &:active{
+      background-color:@aiuiBgColorActive;
+    }
+}
+
+.aiui-btn__cell-warn{
+  color:@aiuiColorRed;
+}

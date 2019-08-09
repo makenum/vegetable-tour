@@ -1,0 +1,17 @@
+{% extends 'example.nunjucks' %}
+{% block title %}msg-success{% endblock %}
+{% block content %}
+<div class="aiui-msg">
+  <div class="aiui-msg__hd aiui-msg__success">
+    <i class="icon-success aiui-icon__msg"></i>
+    <h2 class="aiui-msg__title">操作成功</h2>
+  </div>
+  <div class="aiui-msg__bd">
+    <p class="aiui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现</p>
+  </div>
+  <div class="aiui-msg__ft">
+    <a href="javascript:;" class="aiui-btn aiui-btn__plain aiui-btn__large aiui-btn__primary aiui-btn__pill">操作按钮1</a>
+    <a href="javascript:;" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">操作按钮2</a>
+  </div>
+</div>
+{% endblock %}
