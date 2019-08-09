@@ -444,6 +444,16 @@ $("#sowingBtn").bind("click", function() {
     .delay(3500)
     .fadeIn();
 });
+
+// 采摘动作
+$("#rewardBtn").bind("click", function() {
+  $(".land").attr("disabled", true);
+  var $this = $(this);
+  $this.attr("disabled", true);
+  $this.siblings(".aiui-badge").remove();
+  $(".land2 .reward").remove();
+  showGif("reward", 2000);
+});
 // 铲除动画
 $("#eradicateBtn").bind("click", function() {
   $(".land").attr("disabled", true);
@@ -503,6 +513,11 @@ function removeEl() {
     .find(".grass")
     .remove();
   $(".land").attr("disabled", false);
+
+  // 采摘后把果实变暗
+  $(".land2")
+    .find(".mature")
+    .addClass("picking");
 }
 // 显示添加按钮
 function addBtn() {

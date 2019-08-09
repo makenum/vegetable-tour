@@ -443,6 +443,25 @@
         left: 40%;
         top: -60px;
       }
+      // 果实
+      .mature {
+        position: absolute;
+        &.picking {
+          filter: brightness(60%);
+        }
+      }
+      .mature-large {
+        width: 98px;
+        height: 98px;
+        top: 52px;
+        right: 30px;
+      }
+      .mature-mini {
+        width: 56px;
+        height: 56px;
+        bottom: 53px;
+        left: 50px;
+      }
       // 虫子
       .insect {
         width: 30px;
@@ -963,4 +982,75 @@
 }
 .swiper-container {
   .setTapColor();
+}
+
+// 查看视频
+.see-video {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.remote {
+  .fixed-default;
+  bottom: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 120px 0 100px;
+  .top-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .top-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid #dddddd;
+      i {
+        width: 68px;
+        height: 68px;
+        background-color: #999999;
+      }
+      &:not(:last-child) {
+        margin-right: 135px;
+      }
+      &:nth-child(2) {
+        margin-top: -60px;
+      }
+    }
+  }
+  .remote-control {
+    width: 324px;
+    height: 324px;
+    margin: auto;
+    position: relative;
+    &__btn {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      &.\-top {
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.\-bottom {
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.\-left {
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.\-right {
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
