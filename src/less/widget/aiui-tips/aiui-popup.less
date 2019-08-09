@@ -34,34 +34,29 @@
   flex: 1;
   overflow: auto;
 }
-.popup-box {
-  height: 100%;
+.popup-box__scroll {
+  flex: 1;
+  overflow: auto;
+}
+.popup-box__ft {
   display: flex;
-  flex-direction: column;
-  &__scroll {
-    flex: 1;
-    overflow: auto;
-  }
-  &__ft {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 24px;
-    .aiui-btn {
-      margin-left: -1px; /*no*/
-      &:not(:last-child) {
-        margin: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+  .aiui-btn {
+    margin-left: -1px; /*no*/
+    &:not(:last-child) {
+      margin: 0;
+    }
+    &:first-child {
+      &:before {
+        border-right: none;
+        border-radius: 400px 0 0 400px;
       }
-      &:first-child {
-        &:before {
-          border-right: none;
-          border-radius: 400px 0 0 400px;
-        }
-      }
-      &:last-child {
-        border-radius: 0 400px 400px 0;
-      }
+    }
+    &:last-child {
+      border-radius: 0 400px 400px 0;
     }
   }
 }
