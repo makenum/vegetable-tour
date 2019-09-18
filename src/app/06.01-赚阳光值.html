@@ -1,0 +1,173 @@
+{% extends 'app.nunjucks' %}
+{% block title %}赚阳光值{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="headbar-sticky">
+  <div class="aiui-headbar aiui-headbar__transparent aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+      <a class="sunshine" href="04.03.01-我的阳光值.html">
+        <div class="thumb"><img src="../images/sunshine.png" alt="阳光" /></div>
+        <strong>3467</strong>
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">赚阳光值</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<div class="checkin">
+  <div class="checkin-card">
+    <div class="header">
+      <h3>签到领阳光值</h3>
+      <p>已连续签到 <span>2天</span></p>
+    </div>
+    <ul class="checkin-list">
+      <li class="checkin-list__item active">
+        <div class="digital">+2</div>
+        <p class="desc">第1天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item active">
+        <div class="digital">+2</div>
+        <p class="desc">第2天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item invalid">
+        <div class="digital">+2</div>
+        <p class="desc">未签到</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item">
+        <div class="digital">+2</div>
+        <p class="desc">第4天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item">
+        <div class="digital">+2</div>
+        <p class="desc">第5天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item">
+        <div class="digital">+2</div>
+        <p class="desc">第6天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+      <li class="checkin-list__item">
+        <div class="digital">+2</div>
+        <p class="desc">第7天</p>
+        <div class="check-icon">
+          <i class="icon-checkbox-on"></i>
+        </div>
+      </li>
+    </ul>
+    <div class="checkin-btn">
+      <button class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__pill" id="checkInBtn">立即签到</button>
+    </div>
+  </div>
+
+  <div class="checkin-card">
+    <div class="header">
+      <h3>做任务赚阳光值</h3>
+      <p>共 <span>5条</span> 任务更新</p>
+    </div>
+    <ul class="task-list">
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-llhd.png" alt="阳光">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>浏览活动得阳光值</h3>
+            <p class="fz26 text-deep__gray">每日浏览活动可得5阳光值/次，已完成1/5次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-gmsp.png" alt="购买商品">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>购买商城商品</h3>
+            <p class="fz26 text-deep__gray">购买商品可得5阳光值/次，限完成1次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-yqhy.png" alt="邀请好友">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>邀请好友</h3>
+            <p class="fz26 text-deep__gray">分享可得5阳光值/次，已完成1/10次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-llhd.png" alt="阳光">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>浏览活动得阳光值</h3>
+            <p class="fz26 text-deep__gray">每日浏览活动可得5阳光值/次，已完成1/5次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-gmsp.png" alt="购买商品">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>购买商城商品</h3>
+            <p class="fz26 text-deep__gray">购买商品可得5阳光值/次，限完成1次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+      <li class="task-list__item">
+        <div class="material-icon -large">
+          <img src="../images/icon-yqhy.png" alt="邀请好友">
+        </div>
+        <div class="content">
+          <div class="Cell -fill">
+            <h3>邀请好友</h3>
+            <p class="fz26 text-deep__gray">分享可得5阳光值/次，已完成1/10次</p>
+          </div>
+          <button class="aiui-btn aiui-btn__primary aiui-btn__plain aiui-btn__medium aiui-btn__pill">+5阳光值</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+  $(function () {
+    //头部导航固定
+    $(".headbar-sticky").sticky({ topSpacing: 0 });
+    $("#checkInBtn").bind("click", function () {
+      aiui.toast("签到成功！<br>获得2个阳光值", 3000);
+    });
+  });
+</script>
+{% endblock %}

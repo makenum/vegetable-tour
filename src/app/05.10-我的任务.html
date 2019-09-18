@@ -178,17 +178,17 @@
           value: 4,
         }
       ], {
-          title: '请选择月份',
-          defaultValue: [1],
-          onChange: function (result) {
-            console.log(result)
-          },
-          onConfirm: function (result) {
-            console.log(result)
-            $this.find(".arrow-select__value").html(result[0].label);
-          },
-          id: 'selectMouthPicker'
-        });
+        title: '请选择月份',
+        defaultValue: [1],
+        onChange: function (result) {
+          console.log(result)
+        },
+        onConfirm: function (result) {
+          console.log(result)
+          $this.find(".arrow-select__value").html(result[0].label);
+        },
+        id: 'selectMouthPicker'
+      });
     });
     //搜索
     var $searchBar = $('#searchBar'),
@@ -200,7 +200,7 @@
     });
     // 验收
     $('.aiui-tab__content').on('click', '.btnCheck', function () {
-      aiui.toast('提醒成功', 30000);
+      aiui.toast('提醒成功', 3000);
     })
   });
 </script>

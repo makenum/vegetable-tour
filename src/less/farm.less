@@ -1,0 +1,228 @@
+.hot-event {
+  width: 128px;
+  height: 111px;
+  background: url("../images/hot-event.png") no-repeat;
+  background-size: contain;
+  position: fixed;
+  right: 10px;
+  top: 240px;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .text {
+    color: @aiuiColorWhite;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+}
+.farm-container {
+  background: #5ad17d url("../images/farm-bg.png") no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  .farm-info {
+    margin-top: 0;
+  }
+  .game-operate {
+    bottom: 20px;
+  }
+}
+.farm-game {
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 80px;
+}
+// 滚动消息栏
+.scroll-notice {
+  position: absolute;
+  top: 154px;
+  left: 24px;
+  height: 90px;
+  .swiper-slide {
+    height: 40px;
+    transition: 500ms;
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+  .swiper-slide-active,
+  .swiper-slide-duplicate-active {
+    opacity: 0.5;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 276px;
+    padding-right: 4px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: fade(@aiuiColorBlack, 20);
+    &:after {
+      content: "";
+      .icon-arrow-right;
+      width: 28px;
+      height: 28px;
+      background-color: @aiuiColorWhite;
+    }
+    .avatar {
+      margin-right: 6px;
+      border: 2px solid @aiuiColorWhite;
+    }
+    .content-text {
+      .Cell.\-fill;
+
+      font-size: 20px;
+      color: @aiuiColorWhite;
+    }
+  }
+}
+
+.land-bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &:before {
+    content: "";
+    background: url("../images/land-bg-top.png") no-repeat center top;
+    height: 276px;
+    background-size: cover;
+  }
+  &__add {
+    background: url("../images/land-bg-middle.png") no-repeat center top;
+    height: 192px;
+    background-size: cover;
+  }
+  &:after {
+    content: "";
+    background: url("../images/land-bg-bottom.png") no-repeat center top;
+    height: 262px;
+    background-size: cover;
+  }
+}
+
+.land-groups {
+  position: absolute;
+  top: 102px;
+  width: 100%;
+  left: 0;
+}
+.land-group {
+  display: flex;
+  justify-content: center;
+  &__top {
+    padding-top: 96px;
+  }
+  &__middle {
+    margin-top: -52px;
+    padding-top: 96px;
+  }
+  &__bottom {
+    margin-top: -52px;
+  }
+  .land {
+    width: 228px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:nth-child(2) {
+      margin-top: -96px;
+      margin-left: -61px;
+      margin-right: -61px;
+    }
+  }
+  // 未解锁
+  .land-lock {
+    background-image: url("../images/land-lock.png");
+  }
+  .land-unplanted,
+  .land-pool {
+    display: flex;
+    justify-content: center;
+  }
+  // 未种植陆产
+  .land-unplanted {
+    background-image: url("../images/land-unplanted.png");
+  }
+  // 未种植水产产
+  .land-pool {
+    background-image: url("../images/land-pool.png");
+  }
+
+  .terrestrial-add__btn,
+  .pool-add__btn {
+    margin-top: 30px;
+    width: 76px;
+    height: 76px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  // 陆产新增按钮
+  .terrestrial-add__btn {
+    background-image: url("../images/icon-terrestrial-add.png");
+  }
+  // 水产新增按钮
+  .pool-add__btn {
+    background-image: url("../images/icon-pool-add.png");
+  }
+}
+
+// 装饰
+.decoration-group {
+  position: absolute;
+  top: 270px;
+  left: 0;
+  display: flex;
+  .decoration-grass {
+    margin-left: 27px;
+    margin-top: 4px;
+  }
+  .decoration-flower {
+    margin-left: 40px;
+    margin-top: 4px;
+  }
+}
+.decoration-mushroom {
+  background: url("../images/decoration-mushroom.png") no-repeat;
+  background-size: contain;
+  &.\-small {
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+  }
+  &.\-medium {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: 65px;
+    bottom: 140px;
+  }
+}
+.decoration-grass {
+  width: 39px;
+  height: 30px;
+  background: url("../images/decoration-grass.png") no-repeat;
+  background-size: contain;
+}
+.decoration-flower {
+  background: url("../images/decoration-flower.png") no-repeat;
+  background-size: contain;
+  &.\-small {
+    width: 22px;
+    height: 22px;
+    opacity: 0.62;
+    position: absolute;
+    top: 300px;
+    right: 90px;
+  }
+  &.\-medium {
+    width: 39px;
+    height: 39px;
+    opacity: 0.65;
+  }
+  &.\-large {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 111px;
+    bottom: 90px;
+  }
+}

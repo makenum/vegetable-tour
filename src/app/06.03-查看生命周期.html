@@ -1,0 +1,70 @@
+{% extends 'app.nunjucks' %}
+{% block title %}查看生命周期{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="headbar-sticky">
+  <div class="aiui-headbar aiui-headbar__transparent aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-headbar__title">养殖详情</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+
+<!-- 步骤条 start -->
+<ul class="aiui-steps">
+  <li class="aiui-steps__item active">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">播种</p>
+  </li>
+  <li class="aiui-steps__item active">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">开花</p>
+  </li>
+  <li class="aiui-steps__item active">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">结果</p>
+  </li>
+  <li class="aiui-steps__item">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">采摘</p>
+  </li>
+  <li class="aiui-steps__item">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">配送</p>
+  </li>
+  <li class="aiui-steps__item">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">收货</p>
+  </li>
+  <li class="aiui-steps__item">
+    <div class="icons">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <p class="desc">评价</p>
+  </li>
+</ul>
+<!-- 步骤条 end -->
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    //头部导航固定
+    $(".headbar-sticky").sticky({ topSpacing: 0 });
+  });
+</script>
+{% endblock %}

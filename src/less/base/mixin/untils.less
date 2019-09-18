@@ -1,15 +1,6 @@
 // prettier-ignore
 @maxWidth:768PX;
 
-.fixed-default {
-  position: fixed;
-  left: auto;
-  right: auto;
-  width: 100%;
-  max-width: @maxWidth;
-  margin: auto;
-}
-
 // align
 .text-center {
   text-align: center !important;
@@ -81,13 +72,6 @@
 .response-img {
   width: 100%;
 }
-.img-percentage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 //font-weight
 .font-weight {
   font-weight: bolder;
@@ -96,10 +80,66 @@
 .pt30 {
   padding-top: 30px;
 }
-.htmltagwrap{
+.htmltagwrap {
   padding: 30px 24px;
 }
-.abs-center {
+
+.img-percentage() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.avatar-32 {
+  width: 32px;
+  height: 32px;
+}
+.avatar-38 {
+  width: 38px;
+  height: 38px;
+}
+.avatar-40 {
+  width: 40px;
+  height: 40px;
+}
+.avatar-45 {
+  width: 45px;
+  height: 45px;
+}
+.avatar-50 {
+  width: 50px;
+  height: 50px;
+}
+.avatar-180 {
+  width: 180px;
+  height: 180px;
+}
+
+// mixins
+
+.fixed-default() {
+  position: fixed;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: @maxWidth;
+  margin: auto;
+}
+
+.abs-center() {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,34 +158,4 @@
   &:-ms-input-placeholder {
     color: @color;
   }
-}
-.avatar {
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-.avatar-38 {
-  width: 38px;
-  height: 38px;
-}
-.avatar-45 {
-  width: 45px;
-  height: 45px;
-}
-.avatar-50 {
-  width: 50px;
-  height: 50px;
-}
-.avatar-180 {
-  width: 180px;
-  height: 180px;
-}
-.avatar-32 {
-  width: 32px;
-  height: 32px;
 }
