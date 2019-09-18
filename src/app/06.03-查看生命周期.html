@@ -13,58 +13,138 @@
 </div>
 <!--头部导航 start-->
 
-<!-- 步骤条 start -->
-<ul class="aiui-steps">
-  <li class="aiui-steps__item active">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
+<div class="land-details">
+  <div class="introduce">
+    <div class="text">您租种的a001号地块西红柿已经结果，预计2019年9月30日可采摘第一批。</div>
+    <div class="thumb"><img src="../images/farm-details-img.png" alt="西红柿种植"></div>
+    <button class="icon-qr-code" id="showQrcodeDialogBtn"></button>
+  </div>
+  <!-- 步骤条 start -->
+  <ul class="aiui-steps">
+    <li class="aiui-steps__item active">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">播种</p>
+    </li>
+    <li class="aiui-steps__item active">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">开花</p>
+    </li>
+    <li class="aiui-steps__item active">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">结果</p>
+    </li>
+    <li class="aiui-steps__item">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">采摘</p>
+    </li>
+    <li class="aiui-steps__item">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">配送</p>
+    </li>
+    <li class="aiui-steps__item">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">收货</p>
+    </li>
+    <li class="aiui-steps__item">
+      <div class="icons">
+        <i class="icon-checkbox-on"></i>
+      </div>
+      <p class="desc">评价</p>
+    </li>
+  </ul>
+  <!-- 步骤条 end -->
+</div>
+
+<!--原始图片 start-->
+<div class="aiui-preview" id="swiperPreview">
+  <div class="preview -small">
+    <img src="../images/preview.png" />
+    <img src="../images/farm_header_bg02.png" />
+    <img src="../images/farm_tu01.png" />
+    <img src="../images/area_bg.png" />
+  </div>
+</div>
+<!--原始图片 end-->
+<!--图片预览区域 start-->
+<div class="preview-box">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
     </div>
-    <p class="desc">播种</p>
-  </li>
-  <li class="aiui-steps__item active">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">开花</p>
-  </li>
-  <li class="aiui-steps__item active">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">结果</p>
-  </li>
-  <li class="aiui-steps__item">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">采摘</p>
-  </li>
-  <li class="aiui-steps__item">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">配送</p>
-  </li>
-  <li class="aiui-steps__item">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">收货</p>
-  </li>
-  <li class="aiui-steps__item">
-    <div class="icons">
-      <i class="icon-checkbox-on"></i>
-    </div>
-    <p class="desc">评价</p>
-  </li>
-</ul>
-<!-- 步骤条 end -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<!--图片预览区域 end-->
+
+<!--BEGIN dialog2-->
+<div class="aiui-dialog__wrap" id="qrcodeDialog">
+  <div class="aiui-mask"></div>
+  <div class="aiui-dialog__custom">
+    <div class="qrcode-img"><img src="../images/qrcode-img.png" alt="微厅二维码"></div>
+  </div>
+</div>
+<!--END dialog2-->
+
 {% endblock %}
+
 {% block footer %}
+<script src="../libs/swiper.min.js"></script>
 <script>
   $(function () {
     //头部导航固定
     $(".headbar-sticky").sticky({ topSpacing: 0 });
+    var $Dialog1 = $('#qrcodeDialog')
+    // 关闭弹窗操作
+    $(document).on('click', '.aiui-mask,.qrcode-img', function () {
+      $(this)
+        .parents('.aiui-dialog__wrap')
+        .fadeOut(200);
+    });
+    // 打开弹窗操作
+    $('#showQrcodeDialogBtn').on('click', function () {
+      $Dialog1.fadeIn(200);
+    });
+
+    var mySwiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      observer: true,
+      observeParents: true,
+    });
+    // 相册预览
+    $("#swiperPreview").on("click", ".preview img", function () {
+      var imgBox = $(this).parents(".preview").find("img");
+      var i = $(imgBox).index(this);
+      $(".preview-box .swiper-wrapper").html("")
+      for (var a = 0, b = imgBox.length; a < b; a++) {
+        $(".preview-box .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
+      }
+      $(".preview-box").css({
+        "z-index": 1001,
+        "opacity": "1"
+      });
+      mySwiper.slideTo(i, 0, false);
+      return false;
+    });
+    $(".preview-box").on("click", function () {
+      $(this).css({
+        "z-index": "-1",
+        "opacity": "0"
+      });
+    });
   });
 </script>
 {% endblock %}

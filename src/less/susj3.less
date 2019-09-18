@@ -619,6 +619,14 @@
   }
 }
 
+.cell-preview {
+  padding: 30px 12px;
+  .aiui-cell__col {
+    padding: 0 12px;
+    margin-bottom: 18px;
+  }
+}
+
 //查看照片
 .preview-box {
   position: fixed;
@@ -630,12 +638,29 @@
   top: 0;
   left: 0;
 }
-.clell-preview {
-  padding: 30px 12px;
-  .aiui-cell__col {
-    padding: 0 12px;
-    margin-bottom: 18px;
+
+.aiui-preview {
+  .preview {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &.\-small {
+      img {
+        width: 142px;
+        height: 142px;
+        padding: 6px;
+      }
+    }
+    img {
+      width: 50%;
+      height: 339px;
+      padding: 12px;
+      object-fit: cover;
+    }
   }
+}
+
+.preview-box {
   .swiper-container {
     width: 100%;
     height: 100%;
@@ -658,27 +683,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: @aiuiColorBlack;
+    background-color: fade(@aiuiColorBlack, 70);
     color: @aiuiColorWhite;
-    width: 120px;
-    height: 50px;
+    width: 90px;
+    height: 48px;
     border-radius: 28px;
     left: 50%;
     transform: translateX(-50%);
     bottom: 60px;
-    font-size: 36px;
+    font-size: 28px;
     z-index: 1005;
-  }
-}
-.aiui-preview {
-  .preview {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    img {
-      width: 50%;
-      height: 339px;
-      padding: 12px;
-    }
   }
 }

@@ -53,15 +53,26 @@
   &__item {
     flex: 1;
     position: relative;
+    &:not(:first-child):before,
+    &:not(:last-child):after {
+      content: " ";
+      height: 10px;
+      position: absolute;
+      top: 14px;
+      background-color: #358e66;
+    }
+
+    &:not(:first-child) {
+      &:before {
+        left: 0;
+        right: 50%;
+      }
+    }
+
     &:not(:last-child) {
       &:after {
-        content: "";
-        height: 10px;
-        background-color: #358e66;
-        position: absolute;
-        right: -2px;
-        left: 2px;
-        top: 14px;
+        right: 0;
+        left: 50%;
       }
     }
     .icons {
@@ -71,6 +82,7 @@
       border-radius: 50%;
       position: relative;
       z-index: 1;
+      margin: 0 auto 24px;
       i {
         opacity: 0;
         width: 100%;
@@ -82,9 +94,11 @@
       font-size: 22px;
       color: @aiuiColorWhite;
       text-align: center;
+      opacity: 0.4;
     }
     &.active {
-      &:after {
+      &:after,
+      &:before {
         background-color: @aiuiColorWhite;
       }
       .icons {
@@ -92,6 +106,9 @@
         i {
           opacity: 1;
         }
+      }
+      .desc {
+        opacity: 1;
       }
     }
   }

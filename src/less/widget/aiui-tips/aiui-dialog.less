@@ -4,6 +4,13 @@
   position: relative;
   z-index: 5000;
 }
+.aiui-dialog__custom {
+  position: fixed;
+  z-index: 5000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .aiui-dialog {
   position: fixed;
   z-index: 5000;
@@ -75,13 +82,3 @@
   color: @aiuiColorPrimary;
 }
 
-
-
-.aiui-dialog__custom {
-  position: fixed;
-  z-index: 5000;
-  top: 50%;
-  left: 50%;
-  width: @aiuiDialogWidth;
-  transform: translate(-50%, -50%);
-}
