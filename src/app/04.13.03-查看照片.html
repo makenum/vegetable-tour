@@ -30,17 +30,19 @@
       <span>生长照片</span>
     </div>
     <!--原始图片 start-->
-    <div class="aiui-preview" id="swiperPreview">
-      <div class="preview">
-        <img src="../images/preview.png" />
-        <img src="../images/farm_header_bg02.png" />
-        <img src="../images/farm_tu01.png" />
-        <img src="../images/area_bg.png" />
+    <div class="aiui-photo__thumb" id="swiperPreview">
+      <div class="thumb-list">
+        <ul class="list -large">
+          <li><img src="../images/preview.png" /></li>
+          <li><img src="../images/farm_header_bg02.png" /></li>
+          <li><img src="../images/farm_tu01.png" /></li>
+          <li><img src="../images/area_bg.png" /></li>
+        </ul>
       </div>
     </div>
     <!--原始图片 end-->
     <!--图片预览区域 start-->
-    <div class="preview-box">
+    <div class="aiui-photo__preview">
       <div class="swiper-container">
         <div class="swiper-wrapper">
         </div>
@@ -57,6 +59,7 @@
 <script>
   $(function () {
     var mySwiper = new Swiper('.swiper-container', {
+      loop: false,
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -64,21 +67,21 @@
       observer: true,
       observeParents: true,
     });
-    $("#swiperPreview").on("click", ".preview img", function () {
-      var imgBox = $(this).parents(".preview").find("img");
+    $("#swiperPreview").on("click", ".list img", function () {
+      var imgBox = $(this).parents(".list").find("img");
       var i = $(imgBox).index(this);
-      $(".preview-box .swiper-wrapper").html("")
+      $(".aiui-photo__preview .swiper-wrapper").html("")
       for (var a = 0, b = imgBox.length; a < b; a++) {
-        $(".preview-box .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
+        $(".aiui-photo__preview .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
       }
-      $(".preview-box").css({
-        "z-index": 1001,
+      $(".aiui-photo__preview").css({
+        "z-index": 1000,
         "opacity": "1"
       });
       mySwiper.slideTo(i, 0, false);
       return false;
     });
-    $(".preview-box").on("click", function () {
+    $(".aiui-photo__preview").on("click", function () {
       $(this).css({
         "z-index": "-1",
         "opacity": "0"

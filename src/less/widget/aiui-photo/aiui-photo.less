@@ -1,0 +1,75 @@
+.cell-preview {
+  .aiui-cell__col {
+    margin-bottom: 18px;
+  }
+}
+.aiui-cell {
+  .aiui-photo__thumb {
+    margin: 0 -12px;
+  }
+}
+//查看照片
+.aiui-photo__preview {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  background-color: fade(@aiuiColorBlack, 70%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.aiui-photo__thumb {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    &.\-large li {
+      width: 50%;
+      height: 340px;
+      padding: 12px;
+    }
+    li {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.aiui-photo__preview {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    display: table;
+    img {
+      max-width: 90%;
+      max-height: 80%;
+      margin: auto;
+    }
+  }
+  .item-list {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: fade(@aiuiColorBlack, 70%);
+    color: @aiuiColorWhite;
+    width: 90px;
+    height: 48px;
+    border-radius: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    font-size: 28px;
+    z-index: 1005;
+  }
+}
