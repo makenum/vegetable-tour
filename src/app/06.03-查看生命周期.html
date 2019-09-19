@@ -13,8 +13,9 @@
 </div>
 <!--头部导航 start-->
 
-<div class="land-details">
-  <div class="introduce">
+<!-- 生命周期详情 start -->
+<div class="lifecycle-introduce">
+  <div class="content">
     <div class="text">您租种的a001号地块西红柿已经结果，预计2019年9月30日可采摘第一批。</div>
     <div class="thumb"><img src="../images/farm-details-img.png" alt="西红柿种植"></div>
     <button class="icon-qr-code" id="showQrcodeDialogBtn"></button>
@@ -66,19 +67,270 @@
   </ul>
   <!-- 步骤条 end -->
 </div>
+<!-- 生命周期详情 end -->
 
-<!--原始图片 start-->
-<div class="aiui-preview" id="swiperPreview">
-  <div class="preview -small">
-    <img src="../images/preview.png" />
-    <img src="../images/farm_header_bg02.png" />
-    <img src="../images/farm_tu01.png" />
-    <img src="../images/area_bg.png" />
+<!-- 生命周期时间轴 start -->
+<ul class="aiui-timeline">
+  <li class="aiui-timeline__item">
+    <div class="timeline-bar">
+      <i class="icon-clock"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="toggle-panel__desc">待采摘</p>
+      <div class="toggle-panel open">
+        <div class="toggle-panel__handle -primary">
+          <h3 class="title">预计2019年9月30日可采摘第一批</h3>
+          <div class="toggle-arrow"></div>
+        </div>
+        <div class="toggle-panel__content">
+          <ul class="record-list">
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功浇水</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好，预计2019年9月30日可采摘第一批。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                  <li><img src="../images/farm_header_bg02.png" /></li>
+                  <li><img src="../images/farm_tu01.png" /></li>
+                  <li><img src="../images/area_bg.png" /></li>
+                </ul>
+              </div>
+              <div class="link-btn__wrap">
+                <a href="javascript:;" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__pill">查看实景</a>
+              </div>
+            </li>
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-shifei.png" alt="施肥">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功施肥</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                </ul>
+              </div>
+            </li>
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chucao.png" alt="除草">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功除草</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="aiui-timeline__item">
+    <div class="timeline-bar">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="toggle-panel__desc">结果</p>
+      <div class="toggle-panel">
+        <div class="toggle-panel__handle -gray">
+          <h3 class="title">2019年9月1日已结果</h3>
+          <div class="toggle-arrow"></div>
+        </div>
+        <div class="toggle-panel__content">
+          <ul class="record-list">
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chuchong.png" alt="捉虫"">
+                </div>
+                <p class=" tips-text">2019-08-12 12:30 成功捉虫</p>
+                </div>
+                <div class="desc-text">西红柿成长状况良好，顺利结果。</div>
+                <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                  <ul class="thumb-list">
+                    <li><img src="../images/preview.png" /></li>
+                  </ul>
+                </div>
+            </li>
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chucao.png" alt="除草">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功除草</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="aiui-timeline__item">
+    <div class="timeline-bar">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="toggle-panel__desc">开花</p>
+      <div class="toggle-panel">
+        <div class="toggle-panel__handle -gray">
+          <h3 class="title">2019年8月20日已开花</h3>
+          <div class="toggle-arrow"></div>
+        </div>
+        <div class="toggle-panel__content">
+          <ul class="record-list">
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chuchong.png" alt="捉虫"">
+                </div>
+                <p class=" tips-text">2019-08-12 12:30 成功捉虫</p>
+                </div>
+                <div class="desc-text">西红柿成长状况良好，顺利结果。</div>
+                <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                  <ul class="thumb-list">
+                    <li><img src="../images/preview.png" /></li>
+                  </ul>
+                </div>
+            </li>
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chucao.png" alt="除草">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功除草</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="aiui-timeline__item">
+    <div class="timeline-bar">
+      <i class="icon-checkbox-on"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="toggle-panel__desc">播种</p>
+      <div class="toggle-panel">
+        <div class="toggle-panel__handle -gray">
+          <h3 class="title">2019年8月1日已播种</h3>
+          <div class="toggle-arrow"></div>
+        </div>
+        <div class="toggle-panel__content">
+          <ul class="record-list">
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chuchong.png" alt="捉虫"">
+                </div>
+                <p class=" tips-text">2019-08-12 12:30 成功捉虫</p>
+                </div>
+                <div class="desc-text">西红柿成长状况良好，顺利结果。</div>
+                <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                  <ul class="thumb-list">
+                    <li><img src="../images/preview.png" /></li>
+                  </ul>
+                </div>
+            </li>
+            <li class="record-list__item">
+              <div class="header">
+                <div class="material-icon">
+                  <img src="../images/icon-chucao.png" alt="除草">
+                </div>
+                <p class="tips-text">2019-08-12 12:30 成功除草</p>
+              </div>
+              <div class="desc-text">西红柿成长状况良好。</div>
+              <div class="aiui-photo__thumb lifecycle-photo__thumb">
+                <ul class="thumb-list">
+                  <li><img src="../images/preview.png" /></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- 生命周期时间轴 end -->
+
+<div class="lifecycle-statistics open">
+  <div class="lifecycle-statistics__handle">
+    <h3 class="fz30">养殖统计</h3>
+    <div class="toggle-arrow"></div>
   </div>
+  <ul class="lifecycle-statistics__list">
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-chucao.png" alt="除草">
+      </div>
+      <div class="bd">浇水</div>
+      <div class="ft"><span>35</span>次</div>
+    </li>
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-shifei.png" alt="施肥">
+      </div>
+      <div class="bd">施肥</div>
+      <div class="ft"><span>20</span>次</div>
+    </li>
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-chucao.png" alt="除草">
+      </div>
+      <div class="bd">除草</div>
+      <div class="ft"><span>12</span>次</div>
+    </li>
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-chuchong.png" alt="除虫">
+      </div>
+      <div class="bd">除虫</div>
+      <div class="ft"><span>12</span>次</div>
+    </li>
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-songtu.png" alt="松土">
+      </div>
+      <div class="bd">松土</div>
+      <div class="ft"><span>3</span>次</div>
+    </li>
+    <li>
+      <div class="material-icon">
+        <img src="../images/icon-shouhuo.png" alt="采摘">
+      </div>
+      <div class="bd">采摘</div>
+      <div class="ft"><span>1</span>次</div>
+    </li>
+  </ul>
 </div>
-<!--原始图片 end-->
+
 <!--图片预览区域 start-->
-<div class="preview-box">
+<div class="aiui-photo__preview">
   <div class="swiper-container">
     <div class="swiper-wrapper">
     </div>
@@ -87,19 +339,18 @@
 </div>
 <!--图片预览区域 end-->
 
-<!--BEGIN dialog2-->
+<!-- 二维码弹窗 start-->
 <div class="aiui-dialog__wrap" id="qrcodeDialog">
   <div class="aiui-mask"></div>
   <div class="aiui-dialog__custom">
     <div class="qrcode-img"><img src="../images/qrcode-img.png" alt="微厅二维码"></div>
   </div>
 </div>
-<!--END dialog2-->
+<!-- 二维码弹窗 end -->
 
 {% endblock %}
 
 {% block footer %}
-<script src="../libs/swiper.min.js"></script>
 <script>
   $(function () {
     //头部导航固定
@@ -115,35 +366,12 @@
     $('#showQrcodeDialogBtn').on('click', function () {
       $Dialog1.fadeIn(200);
     });
-
-    var mySwiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      observer: true,
-      observeParents: true,
+    // 面板切换
+    $(".toggle-panel__handle").bind("click", function (e) {
+      $(this).parent(".toggle-panel").toggleClass("open");
     });
-    // 相册预览
-    $("#swiperPreview").on("click", ".preview img", function () {
-      var imgBox = $(this).parents(".preview").find("img");
-      var i = $(imgBox).index(this);
-      $(".preview-box .swiper-wrapper").html("")
-      for (var a = 0, b = imgBox.length; a < b; a++) {
-        $(".preview-box .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
-      }
-      $(".preview-box").css({
-        "z-index": 1001,
-        "opacity": "1"
-      });
-      mySwiper.slideTo(i, 0, false);
-      return false;
-    });
-    $(".preview-box").on("click", function () {
-      $(this).css({
-        "z-index": "-1",
-        "opacity": "0"
-      });
+    $(".lifecycle-statistics__handle").bind("click", function (e) {
+      $(this).parent(".lifecycle-statistics").toggleClass("open");
     });
   });
 </script>
