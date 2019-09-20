@@ -1,0 +1,160 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-农场等级{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">农场等级</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<!--等级明细 start-->
+<div class="level-detail">
+  <div class="avatar avatar-130"><img src="../images/avatar.png" /></div>
+  <div class="level-detail__title">
+    <h4 class="title">豆豆的农场</h4>
+    <span class="ml24">LV.1</span>
+  </div>
+  <div class="level-detail__grade">
+    <div class="grade-bar">
+      <div class="integral-box" style="left:18%;">1345</div>
+      <div class="level level-1" style="left:12%;">LV.1</div>
+      <div class="grade-bar__item" style="width:30%;"></div>
+      <div class="level level-2">LV.2</div>
+    </div>
+    <div class="grade-txt">1345/9999</div>
+  </div>
+  <div class="grade-desc">消耗阳光值越多等级越高哦</div>
+</div>
+<!--等级明细 end-->
+<div class="sunshine-bar level-bar">
+  <h4 class="title">成长值明细</h4>
+  <div class="arrow-select" id="selectMouthBtn">
+    <span class="arrow-select__value">本月</span>
+    <i class="arrow"></i>
+  </div>
+  <a href="javascript:;" class="desc" id="growthValueRuleBtn"><span>成长值规则</span><i class="icon-tips-circle"></i></a>
+</div>
+<div class="aiui-cells level-detail__cells">
+  <div class="aiui-cell">
+    <div class="material-icon">
+      <img src="../images/message-thumb_01.png" alt="浇水">
+    </div>
+    <div class="Cell -fill">
+      <h3 class="title">浇水消耗10点阳光值</h3>
+      <p class="fz24 text-deep__gray">2019-04-22 10:35:11</p>
+    </div>
+    <div class="text-right">
+      <span class="text-warn">+2</span>
+      <p class="fz24 text-deep__gray">3647</p>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="material-icon">
+      <img src="../images/message-thumb_02.png" alt="施肥">
+    </div>
+    <div class="Cell -fill">
+      <h3 class="title">施肥消耗10点阳光值</h3>
+      <p class="fz24 text-deep__gray">2019-04-22 10:35:11</p>
+    </div>
+    <div class="text-right">
+      <span class="text-warn">+2</span>
+      <p class="fz24 text-deep__gray">3647</p>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="material-icon">
+      <img src="../images/icon-chucao.png" alt="除草">
+    </div>
+    <div class="Cell -fill">
+      <h3 class="title">除草消耗10点阳光值</h3>
+      <p class="fz24 text-deep__gray">2019-04-22 10:35:11</p>
+    </div>
+    <div class="text-right">
+      <span class="text-warn">+2</span>
+      <p class="fz24 text-deep__gray">3647</p>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="material-icon">
+      <img src="../images/icon-chuchong.png" alt="除虫">
+    </div>
+    <div class="Cell -fill">
+      <h3 class="title">除虫消耗10点阳光值</h3>
+      <p class="fz24 text-deep__gray">2019-04-22 10:35:11</p>
+    </div>
+    <div class="text-right">
+      <span class="text-warn">+2</span>
+      <p class="fz24 text-deep__gray">3647</p>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="material-icon">
+      <img src="../images/icon-songtu.png" alt="松土">
+    </div>
+    <div class="Cell -fill">
+      <h3 class="title">松土消耗10点阳光值</h3>
+      <p class="fz24 text-deep__gray">2019-04-22 10:35:11</p>
+    </div>
+    <div class="text-right">
+      <span class="text-warn">+2</span>
+      <p class="fz24 text-deep__gray">3647</p>
+    </div>
+  </div>
+</div>
+<!--内容区域 end-->
+{% endblock %}
+{% block footer %}
+<script>
+  // 选择月份
+  $("#selectMouthBtn").bind("click", function () {
+    var $this = $(this);
+    aiui.picker([
+      {
+        label: '近3个月',
+        value: 0
+      },
+      {
+        label: '本月',
+        value: 1
+      },
+      {
+        label: '2019年6月',
+        value: 3
+      },
+      {
+        label: '2019年5月',
+        value: 4,
+      }
+    ], {
+      title: '请选择月份',
+      defaultValue: [1],
+      onChange: function (result) {
+        console.log(result)
+      },
+      onConfirm: function (result) {
+        console.log(result)
+        $this.find(".arrow-select__value").html(result[0].label);
+      },
+      id: 'selectMouthPicker'
+    });
+  });
+  // 成长值规则弹窗
+  $("#growthValueRuleBtn").bind("click", function () {
+    var descText = "说明文案描述，不限字数，超过固定高度往下滑。"
+    aiui.alert(descText, {
+      title: '成长值规则',
+      buttons: [{
+        label: '好的',
+        type: 'primary',
+        // 回调事件
+        onClick: function () { console.log('好的') }
+      }]
+    });
+  });
+</script>
+{% endblock %}
