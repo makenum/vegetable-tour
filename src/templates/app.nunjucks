@@ -19,6 +19,7 @@
       {% block content %}{% endblock %}
     </div>
     <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/swiper.min.js"></script>
     <script src="../libs/aiui.min.js"></script>
     <script src="../libs/sticky.js"></script>
     <script src="../js/common.js"></script>

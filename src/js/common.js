@@ -50,3 +50,38 @@ $(function() {
     $("html,body").animate({ scrollTop: 0 }, 300);
   });
 });
+
+// 查看相册
+$(function() {
+  var mySwiper = new Swiper(".swiper-container", {
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction"
+    },
+    observer: true,
+    observeParents: true
+  });
+  $(".aiui-photo__thumb").on("click", ".thumb-list img", function() {
+    var imgBox = $(this)
+      .parents(".thumb-list")
+      .find("img");
+    var i = $(imgBox).index(this);
+    $(".aiui-photo__preview .swiper-wrapper").html("");
+    for (var a = 0, b = imgBox.length; a < b; a++) {
+      $(".aiui-photo__preview .swiper-wrapper").append('<div class="swiper-slide"><div class="item-list"><img src="' + imgBox.eq(a).attr("src") + '" / ></div></div>');
+    }
+    $(".aiui-photo__preview").css({
+      "z-index": 1000,
+      opacity: "1"
+    });
+    mySwiper.slideTo(i, 0, false);
+    return false;
+  });
+  $(".aiui-photo__preview").on("click", function() {
+    $(this).css({
+      "z-index": "-1",
+      opacity: "0"
+    });
+  });
+});
