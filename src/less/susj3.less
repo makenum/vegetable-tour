@@ -308,12 +308,6 @@
       margin: 0 48px;
     }
     .bd {
-      .title {
-        font-size: 36px;
-        font-weight: bolder;
-        display: flex;
-        align-items: center;
-      }
       .txt {
         font-size: 28px;
         color: @aiuiColorDeepGray;
@@ -323,6 +317,16 @@
             margin-right: 18px;
           }
         }
+      }
+    }
+    .optional-box {
+      display: inline-flex;
+      align-items: center;
+      .title {
+        font-size: 36px;
+        font-weight: bolder;
+        flex: 1;
+        .ellipsisLn(1);
       }
     }
     .ft {
@@ -349,16 +353,32 @@
     }
   }
 }
+.mark {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
 .mark-tips {
-  background-color: @aiuiBgColorDefault;
   border-radius: 5px;
   font-size: 22px;
   display: flex;
   align-items: center;
-  color: @aiuiColorWarn;
-  margin-left: 10px;
-  height: 30px;
+  line-height: 32px;
   padding: 0 10px;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__org {
+    color: @aiuiColorWarn;
+    background-color: @aiuiBgColorDefault;
+  }
+  &__plain {
+    color: @aiuiColorPrimary;
+    &:before {
+      .setFullLine(@aiuiColorPrimary, 5px);
+    }
+  }
   .icon-checkbox-on {
     background-color: @aiuiColorWarn;
     width: 32px;
@@ -451,8 +471,11 @@
   }
 }
 .choose-level {
-  padding: 40px 0 18px 0;
+  padding:30px 0;
   position: relative;
+  .content{
+    min-width:130px;
+  }
   &:after {
     .setBottomLine(@aiuiBorderLineColor);
     margin: 0 24px;
