@@ -1,0 +1,75 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-活动报名{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">活动报名</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<div class="activity-box">
+  <div class="activity-form">
+    <!--图案修饰 start-->
+    <span class="pattern-01"></span>
+    <span class="pattern-02"></span>
+    <span class="pattern-03"></span>
+    <span class="pattern-04"></span>
+    <!--图案修饰 end-->
+    <h3 class="form-title">填写活动报名资料</h3>
+    <div class="form-list"><input type="text" class="aiui-input" placeholder="请输入您的姓名" /></div>
+    <div class="form-list"><input type="tel" class="aiui-input" maxlength="11" placeholder="请输入您的手机号码" /></div>
+    <p class="form-date">报名截止日期：4月21日晚24:00</p>
+  </div>
+  <div class="activity-bd"><a href="javascript:;" class="activity-btn" id="showDialog1"><span
+        class="btn-txt">提交报名</span></a></div>
+  <div class="activity-ft">
+    <p class="desc">温馨提示：本活动仅针对蔬游用户（仅限40位）</p>
+    <div class="logo"><img src="../images/logo.png" alt="蔬游"></div>
+  </div>
+</div>
+<!--内容区域 end-->
+<!-- 提交成功弹窗 start -->
+<div class="aiui-dialog__wrap" id="Dialog1">
+  <div class="aiui-mask"></div>
+  <div class="aiui-dialog__custom farm-tips__dialog">
+    <div class="hd">
+      <div class="thumb">
+        <img src="../images/icon-success.png" alt="成功">
+      </div>
+    </div>
+    <div class="bd">
+      <div class="content">
+        <div class="desc">您的信息已提交成功</div>
+      </div>
+
+      <div class="btns btns-one">
+        <button type="button"
+          class="aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary close-dialog__btn">好的</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 提交成功弹窗 end -->
+{% endblock %}
+{% block footer %}
+<script type="text/javascript">
+  $(function () {
+    var $Dialog1 = $('#Dialog1');
+    // 关闭弹窗操作
+    $(document).on('click', '.aiui-mask,.close-dialog__btn', function () {
+      $(this)
+        .parents('.aiui-dialog__wrap')
+        .fadeOut(200);
+    });
+    // 打开弹窗操作
+    $('#showDialog1').on('click', function () {
+      $Dialog1.fadeIn(200);
+    });
+  });
+</script>
+{% endblock %}

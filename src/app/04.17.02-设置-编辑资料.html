@@ -1,0 +1,108 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-设置-编辑资料{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="text-deep__gray">取消</a>
+    </div>
+    <h3 class="aiui-headbar__title">编辑资料</h3>
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="text-primary">完成</a>
+    </div>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<div class="aiui-avatar__edit">
+  <div class="avatar avatar-100"><img src="../images/avatar.png" /></div>
+  <button type="button" class="edit-btn" id="selectEditBtn">更换头像</button>
+</div>
+<div class="aiui-cells edit-address__cells">
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">昵称</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="豆豆的农场">
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">手机号码</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="tel" placeholder="13834562222" readonly>
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell_access" id="selectGenderBtn">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">性别</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="女" readonly>
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
+    </div>
+  </div>
+</div>
+<!--内容区域 end-->
+<!-- 头像编辑弹窗 start -->
+<div class="aiui-popup__wrap" id="selectEditPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup">
+    <div class="aiui-popup__content">
+      <div class="popup-box__scroll">
+        <div class="popup-avatar__edit">
+          <button type="button" class="edit-btn text-blue">从相册选择</button>
+          <button type="button" class="edit-btn text-deep__gray close-popup__btn">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 头像编辑弹窗 end -->
+{% endblock %}
+{% block footer %}
+<script>
+  // 选择性别
+  $('#selectGenderBtn').bind('click', function () {
+    var $this = $(this);
+    aiui.picker([
+      {
+        label: '女',
+        value: 0
+      },
+      {
+        label: '男',
+        value: 1
+      }
+    ], {
+      title: '选择性别',
+      defaultValue: [0],
+      onChange: function (result) {
+        console.log(result)
+      },
+      onConfirm: function (result) {
+        console.log(result)
+        $this.find(".aiui-input").val(result[0].label);
+      },
+      id: 'selectGenderPicker'
+    });
+  });
+  // 关闭Popup操作
+  $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
+    $(".aiui-popup").removeClass("aiui-popup__toggle")
+    $(this)
+      .parents('.aiui-popup__wrap')
+      .fadeOut(200);
+  });
+  // 打开Popup操作
+  $('#selectEditBtn').on('click', function () {
+    $("#selectEditPopup").fadeIn(200);
+    $("#selectEditPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+  });
+</script>
+{% endblock %}

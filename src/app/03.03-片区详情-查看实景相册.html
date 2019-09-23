@@ -14,7 +14,7 @@
   <div class="album-box">
     <!--查看视频 start-->
     <div class="Grid -right">
-      <a href="javascript:;" class="view-box">
+      <a href="03.06-片区详情-查看视频.html" class="view-box">
         <div class="view-box__hd"><i class="icon-map"></i></div>
         <div class="view-box__ft">查看视频</div>
       </a>
@@ -51,8 +51,8 @@
       <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn_brown aiui-btn__pill"
         id="cityPickerHook">到这里去</button>
       <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill"
-        id="selectLandBtn">我要租种</button>
-      <!--已租种把class aiui-btn__primary改为aiui-btn__disabled-->
+        id="selectLandBtn">我要养殖</button>
+      <!--已养殖把class aiui-btn__primary改为aiui-btn__disabled-->
     </div>
   </div>
 </div>
@@ -96,9 +96,19 @@
                 <p>黄瓜地</p>
               </div>
             </li>
+          </ul>
+        </div>
+        <div class="choose-level">
+          <h4 class="choose-title">选择养殖方式：</h4>
+          <ul class="chose-list choose">
+            <li class="chose-list__item active">
+              <div class="content">
+                <p>包种</p>
+              </div>
+            </li>
             <li class="chose-list__item">
               <div class="content">
-                <p>土豆地</p>
+                <p>租种</p>
               </div>
             </li>
           </ul>
@@ -119,7 +129,7 @@
       </div>
       <div class="popup-box__ft">
         <a href="01.05-默认选地页.html"
-          class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__plain aiui-btn__pill">重新选择</a>
+          class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__plain aiui-btn__pill">重选片区</a>
         <a href="javascript:;" class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill"
           id="confirmDialog">确认选择</a>
       </div>
@@ -168,14 +178,14 @@
           value: 4
         }
       ], {
-          onChange: function (result) {
-            console.log(result);
-          },
-          onConfirm: function (result) {
-            console.log(result);
-          },
-          title: '选择地区'
-        });
+        onChange: function (result) {
+          console.log(result);
+        },
+        onConfirm: function (result) {
+          console.log(result);
+        },
+        title: '选择地区'
+      });
     });
     //swiper相册浏览器
     var albumSwiper = new Swiper('#albumSwiper', {

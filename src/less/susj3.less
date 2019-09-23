@@ -64,6 +64,7 @@
       width: 257px;
     }
     .ground-txt {
+      padding-top: 10px;
       color: @aiuitextcolortxt;
       font-size: 30px;
       width: 160px;
@@ -307,12 +308,6 @@
       margin: 0 48px;
     }
     .bd {
-      .title {
-        font-size: 36px;
-        font-weight: bolder;
-        display: flex;
-        align-items: center;
-      }
       .txt {
         font-size: 28px;
         color: @aiuiColorDeepGray;
@@ -322,6 +317,16 @@
             margin-right: 18px;
           }
         }
+      }
+    }
+    .optional-box {
+      display: inline-flex;
+      align-items: center;
+      .title {
+        font-size: 36px;
+        font-weight: bolder;
+        flex: 1;
+        .ellipsisLn(1);
       }
     }
     .ft {
@@ -348,16 +353,32 @@
     }
   }
 }
+.mark {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
 .mark-tips {
-  background-color: @aiuiBgColorDefault;
   border-radius: 5px;
   font-size: 22px;
   display: flex;
   align-items: center;
-  color: @aiuiColorWarn;
-  margin-left: 10px;
-  height: 30px;
+  line-height: 32px;
   padding: 0 10px;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__org {
+    color: @aiuiColorWarn;
+    background-color: @aiuiBgColorDefault;
+  }
+  &__plain {
+    color: @aiuiColorPrimary;
+    &:before {
+      .setFullLine(@aiuiColorPrimary, 5px);
+    }
+  }
   .icon-checkbox-on {
     background-color: @aiuiColorWarn;
     width: 32px;
@@ -450,8 +471,11 @@
   }
 }
 .choose-level {
-  padding: 40px 0 18px 0;
+  padding:30px 0;
   position: relative;
+  .content{
+    min-width:130px;
+  }
   &:after {
     .setBottomLine(@aiuiBorderLineColor);
     margin: 0 24px;
@@ -616,5 +640,308 @@
     padding-top: 5px;
     font-size: 28px;
     font-weight: bolder;
+  }
+}
+//农场等级
+.level-detail__cells {
+  .material-icon {
+    width: 68px;
+    height: 68px;
+    margin-right: 24px;
+  }
+  .title {
+    font-weight: normal;
+    .ellipsis();
+  }
+}
+.level-bar {
+  .title {
+    font-size: 30px;
+    margin-right: 50px;
+  }
+  .arrow-select {
+    flex: 1;
+  }
+}
+.level-detail {
+  background-image: linear-gradient(90deg, #2de080 5%, rgba(25, 207, 119, 0.99) 100%);
+  border-radius: 28px;
+  margin: 80px 48px 20px 48px;
+  padding: 60px 24px 40px 24px;
+  position: relative;
+  .level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 26px;
+    border-radius: 15px;
+    background-color: @aiuiGradeBarColor;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &.level-1 {
+      background-color: @aiuiGradeItemColor;
+      color: @aiuiGradeBarColor;
+      left: 0;
+    }
+    &.level-2 {
+      right: 0;
+    }
+  }
+  .avatar {
+    border: 2px solid @aiuiColorWhite;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__title {
+    color: @aiuiColorWhite;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    .title {
+      font-weight: normal;
+    }
+  }
+  &__grade {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    color: @aiuiColorWhite;
+    font-size: 24px;
+    .grade-txt {
+      padding-left: 24px;
+    }
+  }
+}
+.grade-bar {
+  width: 320px;
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  background-color: @aiuiGradeBarColor;
+  &__item {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 10px;
+    border-radius: 10px;
+    background-color: @aiuiGradeItemColor;
+  }
+}
+.integral-box {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 15px;
+  padding: 0 10px;
+  background-color: @aiuiGradeItemColor;
+  color: @aiuiGradeBarColor;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: @aiuiGradeItemColor;
+    height: 50px;
+    z-index: 0;
+  }
+}
+.grade-desc {
+  padding-top: 24px;
+  font-size: 26px;
+  color: @aiuiGradeItemColor;
+}
+//活动报名
+.pattern-01 {
+  background: url("../images/pattern_tu01.png") no-repeat;
+  width: 157px;
+  height: 112px;
+  background-size: contain;
+  position: absolute;
+  top: -58px;
+  right: -20px;
+}
+.pattern-02 {
+  background: url("../images/pattern_tu02.png") no-repeat;
+  width: 169px;
+  height: 145px;
+  background-size: contain;
+  position: absolute;
+  bottom: -45px;
+  left: -45px;
+}
+.pattern-03 {
+  background: url("../images/pattern_tu03.png") no-repeat;
+  width: 47px;
+  height: 98px;
+  background-size: contain;
+  position: absolute;
+  bottom: -74px;
+  left: 160px;
+}
+.pattern-04 {
+  background: url("../images/pattern_tu04.png") no-repeat;
+  width: 172px;
+  height: 181px;
+  background-size: contain;
+  position: absolute;
+  bottom: -86px;
+  right: -35px;
+}
+.activity-box {
+  background: @aiuiActivityBgColor url("../images/activity_bg.png") no-repeat;
+  width: 100%;
+  min-height: ~"calc(100vh - 88px)";
+  background-size: 100%;
+  padding: 470px 45px 0 45px;
+}
+.activity-form {
+  background-color: @aiuiColorWhite;
+  border-radius: 28px;
+  padding: 40px 90px;
+  position: relative;
+  .form-title {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .form-list {
+    background-color: @aiuiActivityFormBgColor;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    height: 80px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+  .form-date {
+    font-size: 28px;
+    text-align: center;
+    color: @aiuiActivityFormColor;
+  }
+}
+.activity-bd {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 50px 0;
+  .activity-btn {
+    width: 300px;
+    height: 88px;
+    font-size: 36px;
+    font-weight: 700;
+    color: @aiuiActivityFormColor;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+    }
+    &:before {
+      position: absolute;
+      border-radius: 49px;
+      background-image: linear-gradient(126deg, #fee048 0%, #ffb119 98%);
+      z-index: 1;
+    }
+    &:after {
+      position: absolute;
+      background-image: linear-gradient(-90deg, #c09b12 0%, #bbd038 98%);
+      border-radius: 49px;
+      bottom: -10px;
+      box-shadow: 0 20px 40px #14794e;
+    }
+  }
+  .btn-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+.activity-ft {
+  text-align: center;
+  padding: 0 24px;
+  .desc {
+    font-size: 28px;
+    color: @aiuiColorWhite;
+    padding-bottom: 10px;
+  }
+  .logo {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+.btns-one {
+  justify-content: center;
+  .aiui-btn {
+    width: 255px;
+    flex: inherit !important;
+  }
+}
+//设置
+.aiui-cells__set {
+  .aiui-cell {
+    &__bd {
+      .title {
+        font-size: 34px;
+        font-weight: normal;
+        .ellipsis();
+      }
+      .txt {
+        padding-top: 4px;
+        font-size: 24px;
+        color: @aiuiColorDeepGray;
+      }
+    }
+  }
+}
+.aiui-avatar__edit {
+  background-color: @aiuiColorWhite;
+  position: relative;
+  padding: 74px 24px 40px 24px;
+  text-align: center;
+  &:after {
+    .setBottomLine(@aiuiCellBorderColor);
+    z-index: 1;
+  }
+  .avatar {
+    margin: 0 auto;
+  }
+  .edit-btn {
+    padding-top: 70px;
+    font-size: 28px;
+    color: @aiuiColorPrimary;
+  }
+}
+.popup-avatar__edit {
+  background-color: @aiuiBgColorDefault;
+  .edit-btn {
+    background-color: @aiuiColorWhite;
+    display: block;
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+    height: 120px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
