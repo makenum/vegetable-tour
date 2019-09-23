@@ -1,6 +1,6 @@
 @import "../../base/fn";
 
-@pickerItemHeight: 96px;
+@pickerItemHeight: 48PX;
 .aiui-picker {
   position: fixed;
   width: 100%;
@@ -11,8 +11,8 @@
   background-color: #fff;
   border-top-left-radius: @aiuiDialogRadius;
   border-top-right-radius: @aiuiDialogRadius;
-  padding-bottom: calc(100px ~"+ constant(safe-area-inset-bottom)");
-  padding-bottom: calc(100px ~"+ env(safe-area-inset-bottom)");
+  padding-bottom:constant(safe-area-inset-bottom);
+  padding-bottom:env(safe-area-inset-bottom);
   backface-visibility: hidden;
   transform: translate(0, 100%);
   //slide up animation
@@ -23,10 +23,6 @@
   display: flex;
   align-items: center;
   padding: 25px;
-  padding: 25px calc(25px ~"+ constant(safe-area-inset-right)") 25px
-    calc(25px ~"+ constant(safe-area-inset-left)");
-  padding: 25px calc(25px ~"+ env(safe-area-inset-right)") 25px
-    calc(25px ~"+ env(safe-area-inset-left)");
   position: relative;
   text-align: center;
   font-size: 34px;
@@ -68,7 +64,7 @@
   display: flex;
   position: relative;
   background-color: #fff;
-  height: 480px;
+  height: 240PX;
   overflow: hidden;
 }
 
@@ -106,7 +102,7 @@
     ),
     linear-gradient(0deg, hsla(0, 0%, 100%, 0.95), hsla(0, 0%, 100%, 0.6));
   background-position: top, bottom;
-  background-size: 100% 192px;
+  background-size: 100% 96PX;
   background-repeat: no-repeat;
   transform: translateZ(0);
 }
@@ -116,7 +112,7 @@
   height: @pickerItemHeight;
   position: absolute;
   left: 0;
-  top: 192px;
+  top: 96PX;
   z-index: 3;
   &:before {
     .setTopLine(@aiuiLineColorLight);
