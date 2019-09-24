@@ -471,10 +471,23 @@
   }
 }
 .choose-level {
-  padding:30px 0;
+  padding: 30px 0;
   position: relative;
-  .content{
-    min-width:130px;
+  .content {
+    min-width: 130px;
+  }
+  .aiui-cells__checkbox {
+    .aiui-cell {
+      padding: 20px 24px 10px 24px;
+      &__hd {
+        margin-right: 20px;
+      }
+    }
+    .aiui-icon-checked {
+      &:before {
+        font-size: 36px;
+      }
+    }
   }
   &:after {
     .setBottomLine(@aiuiBorderLineColor);
