@@ -94,7 +94,7 @@
   });
   // 关闭Popup操作
   $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
-    $(".aiui-popup").removeClass("aiui-popup__toggle")
+    $(".aiui-popup").removeClass("toggle")
     $(this)
       .parents('.aiui-popup__wrap')
       .fadeOut(200);
@@ -102,7 +102,7 @@
   // 打开Popup操作
   $('#selectEditBtn').on('click', function () {
     $("#selectEditPopup").fadeIn(200);
-    $("#selectEditPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+    $("#selectEditPopup").find(".aiui-popup").addClass("toggle");;
   });
 </script>
 {% endblock %}

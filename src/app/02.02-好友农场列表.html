@@ -166,7 +166,7 @@
     var $friendFarmRanking = $('#friendFarmRanking');
     // 关闭Popup弹窗
     $('.aiui-popup__wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
-      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(".aiui-popup").removeClass("toggle")
       $(this)
         .parents('.aiui-popup__wrap')
         .fadeOut(200);
@@ -176,7 +176,7 @@
       $friendFarmRanking.fadeIn();
       $friendFarmRanking
         .find(".aiui-popup")
-        .addClass("aiui-popup__toggle");
+        .addClass("toggle");
     });
   });
 </script>
