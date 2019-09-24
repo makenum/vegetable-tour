@@ -3,90 +3,87 @@
 {% block content %}
 <!--头部导航 start-->
 <div class="aiui-headbar__wrap">
-    <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
-        <div class="aiui-headbar__item">
-            <a href="javascript:history.back();" class="icon-return">
-            </a>
-        </div>
-        <h3 class="aiui-headbar__title">新增地块</h3>
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
     </div>
+    <h3 class="aiui-headbar__title">新增地块</h3>
+  </div>
 </div>
 <!--头部导航 start-->
 <div class="aiui-cells ">
-    <div class="aiui-cell">
-        <div class="Cell -2of2 shop-list_item">
-            <div class="thumb thumb-big add-default-img">
-
-                <p>点击添加主图</p>
-
-                <img src="../images/default_preview.png" id="uploaderImg">
-                <input id="uploaderMainInput" class="aiui-uploader__input" type="file" accept="image/*" multiple />
-            </div>
-            <div class="bd edit-address__cells">
-                <div class="aiui-cell">
-                    <div class="aiui-cell__hd">
-                        <span class="text-med__gray">名称<b class="required-tips">*</b></span>
-                    </div>
-                    <div class="aiui-cell__bd">
-                        <input class="aiui-input text-right" type="text" placeholder="必填">
-                    </div>
-                </div>
-                <div class="aiui-cell aiui-cell_access">
-                    <div class="aiui-cell__hd">
-                        <span class="text-med__gray">蔬菜名<b class="required-tips">*</b></span>
-                    </div>
-                    <div class="aiui-cell__bd">
-                        <input class="aiui-input text-right" type="text" placeholder="必填">
-                    </div>
-                </div>
-            </div>
-
+  <div class="aiui-cell">
+    <div class="Cell -2of2 goods-list__item">
+      <div class="thumb thumb-big add-default-img">
+        <p>点击添加主图</p>
+        <img src="../images/default_preview.png" id="uploaderImg">
+        <input id="uploaderMainInput" class="aiui-uploader__input" type="file" accept="image/*" multiple />
+      </div>
+      <div class="Cell -fill edit-address__cells">
+        <div class="aiui-cell">
+          <div class="aiui-cell__hd">
+            <span class="text-med__gray">名称<b class="required-tips">*</b></span>
+          </div>
+          <div class="aiui-cell__bd">
+            <input class="aiui-input text-right" type="text" placeholder="必填">
+          </div>
         </div>
+        <div class="aiui-cell">
+          <div class="aiui-cell__hd">
+            <span class="text-med__gray">蔬菜名<b class="required-tips">*</b></span>
+          </div>
+          <div class="aiui-cell__bd">
+            <input class="aiui-input text-right" type="text" placeholder="必填">
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
 </div>
 
 <div class="aiui-cells edit-address__cells aiui-cells__gap">
-    <div class="aiui-cell">
-        <div class="aiui-cell__hd">
-            <span class="text-med__gray">面积<b class="required-tips">*</b></span>
-        </div>
-        <div class="aiui-cell__bd">
-            <input class="aiui-input text-right" type="text" placeholder="必填">
-        </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">面积<b class="required-tips">*</b></span>
     </div>
-    <div class="aiui-cell aiui-cell_access">
-        <div class="aiui-cell__hd">
-            <span class="text-med__gray">数量（块）<b class="required-tips">*</b></span>
-        </div>
-        <div class="aiui-cell__bd">
-            <input class="aiui-input text-right" type="text" placeholder="必填">
-        </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input text-right" type="text" placeholder="必填">
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">数量（块）<b class="required-tips">*</b></span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input text-right" type="text" placeholder="必填">
+    </div>
 
-    </div>
+  </div>
 </div>
 <div class="aiui-cells aiui-cells_form  aiui-cells__gap" id="uploader" data-size="false">
-    <div class="aiui-cell">
-        <div class="aiui-cell__bd">
-            <div class="aiui-uploader">
-                <div class="aiui-uploader__hd">
-                    <p class="aiui-uploader__title">其他照片</p>
-                </div>
-                <div class="aiui-uploader__bd"></div>
-                <ul class="aiui-uploader__files" id="uploaderFiles">
-                </ul>
-                <div class="aiui-uploader__input-box">
-                    <input id="uploaderInput" class="aiui-uploader__input" type="file" accept="image/*" multiple />
-                </div>
-            </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__bd">
+      <div class="aiui-uploader">
+        <div class="aiui-uploader__hd">
+          <p class="aiui-uploader__title">其他照片</p>
         </div>
+        <div class="aiui-uploader__bd"></div>
+        <ul class="aiui-uploader__files" id="uploaderFiles">
+        </ul>
+        <div class="aiui-uploader__input-box">
+          <input id="uploaderInput" class="aiui-uploader__input" type="file" accept="image/*" multiple />
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <div class="aiui-footbtn__wrap">
-    <div class="aiui-footbtn">
-        <button type="button"
-            class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">提交</button>
-    </div>
+  <div class="aiui-footbtn">
+    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">提交</button>
+  </div>
 </div>
 
 {% endblock %}

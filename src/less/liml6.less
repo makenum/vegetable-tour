@@ -1446,3 +1446,104 @@
     }
   }
 }
+
+// 商品列表
+.goods-list {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+  background-color: @aiuiColorWhite;
+  &--card {
+    border-radius: 28px;
+    margin: 24px;
+  }
+  &__ft {
+    margin-top: @aiuiCellInnerGapH;
+    .aiui-btn {
+      margin-left: @aiuiCellInnerGapH;
+    }
+    .remuneration {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    .thumb {
+      width: 180px;
+      height: 180px;
+      margin-right: 24px;
+    }
+    .thumb-big {
+      width: 200px;
+      height: 200px;
+    }
+
+    .bd {
+      .flex-grow();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 5px;
+        .ellipsisLn(2);
+      }
+
+      .operate-tips {
+        display: flex;
+        align-items: center;
+        .material-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+  &__status {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    .user-enter {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      .avatar {
+        margin-right: 10px;
+      }
+      .name {
+        font-size: 26px;
+      }
+      .icon-arrow-right {
+        width: 38px;
+        height: 38px;
+
+        margin-left: 20px;
+      }
+      &--normal {
+        .name {
+          color: @aiuiColorMedGray;
+        }
+        .icon-arrow-right {
+          background-color: @aiuiColorDeepGray;
+        }
+      }
+      &--disabled {
+        .avatar {
+          opacity: 0.5;
+        }
+        .name {
+          color: @aiuiColorDisabledGray;
+        }
+        .icon-arrow-right {
+          background-color: @aiuiColorDisabledGray;
+        }
+      }
+    }
+  }
+}

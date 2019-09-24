@@ -72,6 +72,11 @@
 .response-img {
   width: 100%;
 }
+.price {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
 //font-weight
 .font-weight {
   font-weight: bolder;
@@ -98,12 +103,20 @@
   width: 100%;
   height: 100%;
 }
-.thumb{
+.thumb {
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+.thumb-180 {
+  width: 180px;
+  height: 180px;
+}
+.thumb-200 {
+  width: 200px;
+  height: 200px;
 }
 .avatar {
   border-radius: 50%;
@@ -150,7 +163,7 @@
 }
 
 // mixins
-.flex-grow(){
+.flex-grow() {
   width: 0;
   min-width: 0;
   flex-grow: 1;
