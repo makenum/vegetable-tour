@@ -326,6 +326,7 @@
         font-size: 36px;
         font-weight: bolder;
         flex: 1;
+        padding-right: 24px;
         .ellipsisLn(1);
       }
     }
@@ -356,7 +357,6 @@
 .mark {
   display: flex;
   align-items: center;
-  margin-left: 24px;
 }
 .mark-tips {
   border-radius: 5px;
@@ -476,6 +476,19 @@
   .content {
     min-width: 130px;
   }
+  .aiui-cells__checkbox {
+    .aiui-cell {
+      padding: 20px 24px 10px 24px;
+      &__hd {
+        margin-right: 20px;
+      }
+    }
+    .aiui-icon-checked {
+      &:before {
+        font-size: 36px;
+      }
+    }
+  }
   &:after {
     .setBottomLine(@aiuiBorderLineColor);
     margin: 0 24px;
@@ -501,6 +514,11 @@
   span {
     font-size: 28px;
   }
+}
+.popup-agreement {
+  font-size: 28px;
+  color: @aiuiColorMedGray;
+  padding: 48px;
 }
 //查看交易详情
 .aiui-status {

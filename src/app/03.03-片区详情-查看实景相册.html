@@ -56,9 +56,9 @@
     </div>
   </div>
 </div>
-<!-- 租种土地弹窗 start -->
+<!-- 点击我要养殖弹窗 start -->
 <div class="aiui-popup__wrap" id="selectLandPopup">
-  <div class="aiui-mask"></div>
+  <div class="aiui-mask" id="aiui-mask"></div>
   <div class="aiui-popup">
     <div class="aiui-popup__content">
       <div class="aiui-cell popup-box_thumb">
@@ -112,6 +112,17 @@
               </div>
             </li>
           </ul>
+          <div class="aiui-cells__checkbox" id="agreementBtn">
+            <label class="aiui-cell aiui-check__label" for="s12">
+              <div class="aiui-cell__hd">
+                <input type="checkbox" name="checkbox1" class="aiui-check" id="s12">
+                <i class="aiui-icon-checked"></i>
+              </div>
+              <div class="aiui-cell__bd">
+                <div class="text-deep__gray">我同意 <a class="text-blue fz28"> 蔬游平台《包种协议》</a></div>
+              </div>
+            </label>
+          </div>
         </div>
         <div class="choose-level">
           <h4 class="choose-title">选择数量(块)：</h4>
@@ -136,7 +147,31 @@
     </div>
   </div>
 </div>
-<!-- 租种土地弹窗 end -->
+<!-- 点击我要养殖弹窗 end -->
+<!--协议弹框 start-->
+<div class="aiui-popup__wrap" id="agreementPopup">
+  <div class="aiui-mask" id="agreement-mask"></div>
+  <div class="aiui-popup">
+    <div class="aiui-popup__content">
+      <div class="aiui-popup__hd">
+        <div class="toolbar">
+          <button class="icon-close close-popup__btn02">取消</button>
+          <h3 class="toolbar-title">包种协议</h3>
+        </div>
+      </div>
+      <div class="popup-box__scroll">
+        <div class="popup-agreement">
+          <p>包种协议文字描述内容文本描述，不限制字数</p>
+        </div>
+      </div>
+      <div class="aiui-popup__ft">
+        <button type="button"
+          class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill close-popup__btn02">好的</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--协议弹框 end-->
 {% endblock %}
 {% block footer %}
 <script>
@@ -147,16 +182,22 @@
       $(this).addClass("active");
     });
     // 关闭Popup操作
-    $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
+    $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
       $(".aiui-popup").removeClass("aiui-popup__toggle")
-      $(this)
-        .parents('.aiui-popup__wrap')
-        .fadeOut(200);
+      $(this).parents('.aiui-popup__wrap').fadeOut(200);
+    });
+    $(document).on('click', '#agreement-mask,.close-popup__btn02', function () {
+      $("#selectLandPopup").fadeIn(200);
+      $("#agreementPopup").fadeOut(200);
     });
     // 打开Popup操作
     $('#selectLandBtn').on('click', function () {
       $("#selectLandPopup").fadeIn(200);
       $("#selectLandPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+    });
+    $('#agreementBtn').on('click', function () {
+      $("#agreementPopup").fadeIn(200);
+      $("#agreementPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
     });
     // 选择地区
     $('#cityPickerHook').on('click', function () {
