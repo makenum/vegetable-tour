@@ -40,132 +40,290 @@
   </div>
   <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-primary">待完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待完成</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                </div>
+                <p class="desc">浇水1次</p>
+              </div>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+            </div>
           </div>
         </div>
-        <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待验收</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-songtu.png" alt="松土">
+                </div>
+                <p class="desc">松土1次</p>
+              </div>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">查看照片</button>
+              <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill"
+                id="confirmDialog">确认验收</button>
+            </div>
+          </div>
+        </div>
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-deep__gray">已完成</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-songtu.png" alt="松土">
+                </div>
+                <p class="desc">松土1次</p>
+              </div>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">查看照片</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">评价</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-primary">雇农已完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
+
+    </div>
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待发起</p>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
-        </div>
-      </div>
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-deep__gray">已完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                </div>
+                <p class="desc">浇水1次</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-primary">待完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待完成</p>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                </div>
+                <p class="desc">浇水1次</p>
+              </div>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-primary">待完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待验收</p>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-songtu.png" alt="松土">
+                </div>
+                <p class="desc">松土1次</p>
+              </div>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">查看照片</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">确认验收</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-primary">雇农已完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-deep__gray">已完成</p>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
-        </div>
-      </div>
-    </div>
-    <div class="aiui-tab__content">
-      <div class="goods-list goods-list--card">
-        <div class="goods-list__status">
-          <p>2019-07-23 17:43</p>
-          <p class="text-deep__gray">已完成</p>
-        </div>
-        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
-          <div class="thumb"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">10平方</p>
+              </div>
+              <div class="content-tips">
+                <div class="material-icon">
+                  <img src="../images/icon-songtu.png" alt="松土">
+                </div>
+                <p class="desc">松土1次</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="ft">
-          <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
-          <button type="button"
-            class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">支付阳光值：</p>
+              <p class="fz26"><span class="fz36">50</span>点</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">查看照片</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">评价</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -228,6 +386,27 @@
       $searchInput.val('');
       $searchInput.focus();
     });
+    //确认弹窗
+    $("#confirmDialog").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您已完成验收，确定收货请点确认按钮。</p>';
+      aiui.confirm(descText, {
+        title: '提示',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '确认',
+          type: 'primary',
+          onClick: function () { alert('确认') }
+        }]
+      });
+    });
+    // 提醒验收
+    $('.aiui-tab__content').on('click', '.btnCheck', function () {
+      aiui.toast('提醒成功', 3000);
+    })
   });
 </script>
 {% endblock %}
