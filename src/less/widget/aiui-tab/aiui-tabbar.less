@@ -30,3 +30,40 @@
     border-radius: 8px;
   }
 }
+
+// 分段控制器
+.aiui-headbar {
+  .aiui-segmented-control {
+    .abs-center();
+  }
+}
+.aiui-segmented-control {
+  position: relative;
+  display: flex;
+  &:after {
+    .setFullLine(@aiuiColorPrimary, 32px);
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &__item {
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 64px;
+    font-size: 28px;
+    color: @aiuiColorPrimary;
+    &:first-child {
+      border-top-left-radius: 27px;
+      border-bottom-left-radius: 27px;
+    }
+    &:last-child {
+      border-top-right-radius: 27px;
+      border-bottom-right-radius: 27px;
+    }
+    &.active {
+      background-color: @aiuiColorPrimary;
+      color: @aiuiColorWhite;
+    }
+  }
+}

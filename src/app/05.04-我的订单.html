@@ -8,7 +8,10 @@
       <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <h3 class="aiui-headbar__title">我的订单</h3>
+    <div class="aiui-segmented-control">
+      <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
+      <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
+    </div>
   </div>
   <!--头部导航 start-->
 </div>
@@ -18,13 +21,13 @@
       租地订单<span>（2）</span>
     </a>
     <a href="javascript:;" class="aiui-tabbar__item">
-      配送订单<span>（2）</span>
+      配送订单<span>（3）</span>
     </a>
   </div>
   <div class="aiui-tab__panel">
     <!--搜索区域 start-->
     <div class="aiui-search-bar aiui-search-bar_focusing aiui-search-bar_gap" id="searchBar">
-      <div class="arrow-select" id="selectMouthBtn">
+      <div class="arrow-select" id="openFilterPopup">
         <span class="arrow-select__value">本月</span>
         <i class="arrow"></i>
       </div>
@@ -45,7 +48,6 @@
     </div>
     <!--搜索区域 end-->
     <div class="aiui-tab__content">
-
       <div class="goods-group goods-group--normal">
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
@@ -116,6 +118,153 @@
       </div>
 
     </div>
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--normal">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待配送</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="desc">3公斤</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <a href="javascript:;"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</a>
+            </div>
+          </div>
+        </div>
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待收货</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="desc">3公斤</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <a href="javascript:;"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</a>
+              <a href="javascript:;"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</a>
+            </div>
+          </div>
+        </div>
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-deep__gray">已完成</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="desc">3公斤</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <a href="javascript:;"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看详情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="aiui-popup__wrap" id="filterPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup--right">
+    <div class="popup-filter">
+      <div class="popup-filter__bd">
+        <div class="select-list">
+          <div class="select-list__item">
+            <p class="desc">创建日期</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">本月</button></li>
+              <li class="select-item"><button class="select-item__btn">近三月</button></li>
+              <li class="select-item"><button class="select-item__btn">全部</button></li>
+            </ul>
+          </div>
+          <div class="select-list__item">
+            <p class="desc">状态</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">代配送</button></li>
+              <li class="select-item"><button class="select-item__btn">待收货</button></li>
+              <li class="select-item"><button class="select-item__btn">已完成</button></li>
+              <li class="select-item"><button class="select-item__btn">全部</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup-filter__ft">
+        <div class="aiui-segmented-control">
+          <a href="javascript:;" class="aiui-segmented-control__item" id="resetPopupFilterBtn">重置</a>
+          <a href="javascript:;" class="aiui-segmented-control__item active" id="submitPopupFilterBtn">确定</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
@@ -140,6 +289,31 @@
     $searchClear.on('click', function () {
       $searchInput.val('');
       $searchInput.focus();
+    });
+
+    var $filterPopup = $('#filterPopup');
+    // 关闭Popup弹窗
+    $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup--right").removeClass("toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(300);
+    });
+    // 打开Popup弹窗
+    $('#openFilterPopup').on('click', function () {
+      $filterPopup.fadeIn(300);
+      $filterPopup
+        .find(".aiui-popup--right")
+        .addClass("toggle");
+    });
+
+    // 筛选列表高亮
+    $(".select-item").bind("click", function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    $("#resetPopupFilterBtn").bind("click", function () {
+      $(".select-item").removeClass("active");
     });
 
   });

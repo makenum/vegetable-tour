@@ -183,7 +183,7 @@
     });
     // 关闭Popup操作
     $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
-      $(".aiui-popup").removeClass("aiui-popup__toggle")
+      $(".aiui-popup").removeClass("toggle")
       $(this).parents('.aiui-popup__wrap').fadeOut(200);
     });
     $(document).on('click', '#agreement-mask,.close-popup__btn02', function () {
@@ -193,11 +193,11 @@
     // 打开Popup操作
     $('#selectLandBtn').on('click', function () {
       $("#selectLandPopup").fadeIn(200);
-      $("#selectLandPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+      $("#selectLandPopup").find(".aiui-popup").addClass("toggle");;
     });
     $('#agreementBtn').on('click', function () {
       $("#agreementPopup").fadeIn(200);
-      $("#agreementPopup").find(".aiui-popup").addClass("aiui-popup__toggle");;
+      $("#agreementPopup").find(".aiui-popup").addClass("toggle");;
     });
     // 选择地区
     $('#cityPickerHook').on('click', function () {

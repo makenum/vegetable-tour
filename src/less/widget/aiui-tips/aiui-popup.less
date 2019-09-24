@@ -20,12 +20,13 @@
   background-color: #ffffff;
   border-top-left-radius: @aiuiDialogRadius;
   border-top-right-radius: @aiuiDialogRadius;
-  padding: 0 constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
-  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   //slide up animation
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
+  &.toggle {
+    transform: translate(0, 0);
+  }
 }
 .aiui-popup__content {
   height: 100%;
@@ -95,7 +96,17 @@
   padding: 30px 24px;
 }
 
-//actionSheet aniamtion
-.aiui-popup__toggle {
-  transform: translate(0, 0);
+.aiui-popup--right {
+  z-index: 5000;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transform: translate(100%, 0);
+  transition: transform 0.3s;
+  &.toggle {
+    transform: translate(0, 0);
+  }
 }
+
+
