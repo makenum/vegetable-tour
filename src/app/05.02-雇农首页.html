@@ -1,0 +1,78 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-雇农首页{% endblock %}
+{% block content %}
+<div class="farmer">
+  <div class="farmer-header">
+    <div class="avatar avatar-180">
+      <img src="../images/avatar.png" alt="头像">
+    </div>
+    <h3 class="farmer-header__name">鄂尔多斯农场主</h3>
+    <button class="icon-setting-2px"></button>
+  </div>
+  <div class="farmer-info">
+    <i class="icon-money-fill"></i>
+    <div class="farmer-info__content">
+      <p class="title">余额（元）</p>
+      <p class="price">437,890<small>.00</small></p>
+    </div>
+    <a href="05.04-提现.html" class="aiui-btn aiui-btn__medium aiui-btn__primary aiui-btn__pill">立即提现</a>
+  </div>
+  <div class="farmer-list">
+    <a href="05.10-我的任务.html" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-01.png" alt="我的任务">
+      </div>
+      <div class="content">
+        <h3 class="name">我的任务</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+    <a href="05.11-我的订单.html" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-02.png" alt="我的订单">
+      </div>
+      <div class="content">
+        <h3 class="name">我的订单</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+    <a href="05.01-我的地块.html" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-03.png" alt="我的地块">
+      </div>
+      <div class="content">
+        <h3 class="name">我的地块</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+    <a href="javascript:;" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-04.png" alt="我的店员">
+      </div>
+      <div class="content">
+        <h3 class="name">我的店员</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+    <a href="javascript:;" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-05.png" alt="线下采摘">
+      </div>
+      <div class="content">
+        <h3 class="name">线下采摘</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+    <a href="05.09-我的账户.html" class="farmer-list__item">
+      <div class="thumb">
+        <img src="../images/farmer-list-icon-06.png" alt="我的账户">
+      </div>
+      <div class="content">
+        <h3 class="name">我的账户</h3>
+        <p class="desc">25434</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+{% endblock %}

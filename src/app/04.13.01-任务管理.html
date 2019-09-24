@@ -40,12 +40,12 @@
   </div>
   <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-primary">待完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
@@ -56,12 +56,12 @@
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">提醒完成</button>
         </div>
       </div>
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-primary">雇农已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
@@ -74,12 +74,12 @@
             class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认收货</button>
         </div>
       </div>
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-deep__gray">已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
@@ -94,12 +94,12 @@
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-primary">待完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
@@ -112,12 +112,12 @@
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-primary">待完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿需浇水</h3>
@@ -130,12 +130,12 @@
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-primary">雇农已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿已松土</h3>
@@ -150,12 +150,12 @@
       </div>
     </div>
     <div class="aiui-tab__content">
-      <div class="shop-list">
-        <div class="shop-list-status">
+      <div class="goods-list goods-list--card">
+        <div class="goods-list__status">
           <p>2019-07-23 17:43</p>
           <p class="text-deep__gray">已完成</p>
         </div>
-        <div class="shop-list_item" onclick="window.location.href='04.13.02-任务详情.html'">
+        <div class="goods-list__item" onclick="window.location.href='04.13.02-任务详情.html'">
           <div class="thumb"><img src="../images/farm_tu01.png"></div>
           <div class="bd">
             <h3>鄂尔多斯农场a1096地块西红柿已浇水</h3>
@@ -208,17 +208,17 @@
           value: 4,
         }
       ], {
-          title: '请选择月份',
-          defaultValue: [1],
-          onChange: function (result) {
-            console.log(result)
-          },
-          onConfirm: function (result) {
-            console.log(result)
-            $this.find(".arrow-select__value").html(result[0].label);
-          },
-          id: 'selectMouthPicker'
-        });
+        title: '请选择月份',
+        defaultValue: [1],
+        onChange: function (result) {
+          console.log(result)
+        },
+        onConfirm: function (result) {
+          console.log(result)
+          $this.find(".arrow-select__value").html(result[0].label);
+        },
+        id: 'selectMouthPicker'
+      });
     });
     //搜索
     var $searchBar = $('#searchBar'),

@@ -1327,3 +1327,223 @@
     }
   }
 }
+
+// 雇农首页
+.farmer {
+  min-height: 100vh;
+  background: @aiuiColorWhite;
+}
+
+.farmer-header {
+  position: relative;
+  background: url("../images/farmer-header-bg.png") no-repeat;
+  background-size: 100% 360px;
+  min-height: 450px;
+  .avatar {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  &__name {
+    width: 100%;
+    font-size: 40px;
+    position: absolute;
+    bottom: 240px;
+    left: 0;
+    text-align: center;
+    color: @aiuiColorWhite;
+    .ellipsis();
+  }
+  .icon-setting-2px {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 68px;
+    height: 68px;
+    background-color: @aiuiColorWhite;
+  }
+}
+
+.farmer-info {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0 48px;
+  .icon-money-fill {
+    width: 100px;
+    height: 100px;
+    background-image: @aiuiGradientYellow;
+    margin-right: 24px;
+  }
+  &__content {
+    flex: 1;
+    .title {
+      font-size: @aiuiCellTipsFontSize;
+      color: @aiuiColorMedGray;
+    }
+    .price {
+      font-size: 60px;
+      color: @aiuiColorGray;
+      small {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 30px;
+        color: @aiuiColorMedGray;
+      }
+    }
+  }
+}
+
+.farmer-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12px;
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 339px;
+    margin: 20px 12px;
+    padding: 26px 30px;
+    color: @aiuiColorWhite;
+    border-radius: 28px;
+    &:nth-child(1) {
+      background-image: linear-gradient(270deg, #67ddfe 0%, #42b5fe 97%);
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(270deg, #c6acfd 0%, #a495ff 97%);
+    }
+    &:nth-child(3) {
+      background-image: linear-gradient(270deg, #6eecaf 0%, #59d99b 97%);
+    }
+    &:nth-child(4) {
+      background-image: linear-gradient(270deg, #ffda63 0%, #fec469 97%);
+    }
+    &:nth-child(5) {
+      background-image: linear-gradient(270deg, #ffcecd 0%, #ffadab 96%);
+    }
+    &:nth-child(6) {
+      background-image: linear-gradient(270deg, #ffcdf3 0%, #faa1d8 97%);
+    }
+    .thumb {
+      width: 88px;
+      height: 88px;
+      margin-right: 24px;
+    }
+    .content {
+      .flex-grow();
+      line-height: 1;
+      .name {
+        font-size: 30px;
+        margin-bottom: 20px;
+        .ellipsis();
+      }
+      .desc {
+        .ellipsis();
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+// 商品列表
+.goods-list {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+  background-color: @aiuiColorWhite;
+  &--card {
+    border-radius: 28px;
+    margin: 24px;
+  }
+  &__ft {
+    margin-top: @aiuiCellInnerGapH;
+    .aiui-btn {
+      margin-left: @aiuiCellInnerGapH;
+    }
+    .remuneration {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    .thumb {
+      width: 180px;
+      height: 180px;
+      margin-right: 24px;
+    }
+    .thumb-big {
+      width: 200px;
+      height: 200px;
+    }
+
+    .bd {
+      .flex-grow();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 5px;
+        .ellipsisLn(2);
+      }
+
+      .operate-tips {
+        display: flex;
+        align-items: center;
+        .material-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+  &__status {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    .user-enter {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      .avatar {
+        margin-right: 10px;
+      }
+      .name {
+        font-size: 26px;
+      }
+      .icon-arrow-right {
+        width: 38px;
+        height: 38px;
+
+        margin-left: 20px;
+      }
+      &--normal {
+        .name {
+          color: @aiuiColorMedGray;
+        }
+        .icon-arrow-right {
+          background-color: @aiuiColorDeepGray;
+        }
+      }
+      &--disabled {
+        .avatar {
+          opacity: 0.5;
+        }
+        .name {
+          color: @aiuiColorDisabledGray;
+        }
+        .icon-arrow-right {
+          background-color: @aiuiColorDisabledGray;
+        }
+      }
+    }
+  }
+}

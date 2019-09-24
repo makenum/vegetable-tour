@@ -68,15 +68,14 @@
     height: @aiuiUploaderSize;
     box-sizing:border-box;
     border-radius: 10px;
-    border:@aiuiUploaderBorderWidth solid  @aiuiBgColorDefault;
-    // background-color:@aiuiBgColorDefault;
+    border:@aiuiUploaderBorderWidth solid  @aiuiUploaderBorderColor;
     &:before, &:after{
         content: " ";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: @aiuiBgColorDefault;
+        background-color: @aiuiUploaderBorderColor;
     }
     &:before{
         width: @aiuiUploaderBorderWidth + 1;
@@ -85,12 +84,6 @@
     &:after{
         width: @aiuiUploaderSize / 3;
         height: @aiuiUploaderBorderWidth + 1;
-    }
-    &:active{
-        border-color: @aiuiUploaderActiveBorderColor;
-        &:before, &:after{
-            background-color: @aiuiUploaderActiveBorderColor;
-        }
     }
 }
 .aiui-uploader__input{
