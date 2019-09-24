@@ -1448,6 +1448,26 @@
 }
 
 // 商品列表
+.goods-group {
+  display: flex;
+  flex-direction: column;
+  &--primary {
+    padding: 20px 24px;
+    .goods-list {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &--normal {
+    padding: 0 24px;
+    .goods-list {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 .goods-list {
   display: flex;
   flex-direction: column;
@@ -1455,14 +1475,13 @@
   background-color: @aiuiColorWhite;
   &--card {
     border-radius: 28px;
-    margin: 24px;
   }
   &__ft {
     margin-top: @aiuiCellInnerGapH;
     .aiui-btn {
       margin-left: @aiuiCellInnerGapH;
     }
-    .remuneration {
+    .price-group {
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -1482,25 +1501,35 @@
       height: 200px;
     }
 
-    .bd {
+    .content {
       .flex-grow();
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      h3 {
-        font-size: 26px;
-        font-weight: normal;
-        margin-bottom: 5px;
-        .ellipsisLn(2);
+      &-text {
+        .name {
+          font-size: 26px;
+          font-weight: normal;
+          margin-bottom: 10px;
+          .ellipsisLn(2);
+        }
+        .desc {
+          font-size: 24px;
+          color: @aiuiColorDeepGray;
+        }
       }
 
-      .operate-tips {
+      &-tips {
         display: flex;
         align-items: center;
         .material-icon {
           width: 40px;
           height: 40px;
           margin-right: 24px;
+        }
+        .desc {
+          font-size: 26px;
+          color: @aiuiColorMedGray;
         }
       }
     }

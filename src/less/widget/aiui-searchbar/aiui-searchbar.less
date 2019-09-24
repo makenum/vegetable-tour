@@ -1,4 +1,4 @@
-@aiuiSearchInputHeight: 64px;
+@aiuiSearchInputHeight: 70px;
 
 @import "../../base/fn";
 .aiui-search-bar {
@@ -22,19 +22,16 @@
   position: relative;
   flex: 1;
   background-color: #ffffff;
-  border-radius: 35px;
+  border-radius: @aiuiSearchInputHeight / 2;
 }
 .aiui-search-bar__box {
-  position: relative;
-  padding-left: 64px;
-  padding-right: 64px;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
   .aiui-search-bar__input {
-    padding: 16px;
-    width: 100%;
+    padding: 0 10px;
+    .flex-grow();
     height: @aiuiSearchInputHeight;
     border: 0;
     line-height: normal;
@@ -46,22 +43,14 @@
     }
   }
   .icon-search {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 24px;
     width: 38px;
     height: 38px;
-    background-color: @aiuiColorGray;
+    background-color: @aiuiColorDeepGray;
   }
   .icon-close-fill {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 24px;
     width: 38px;
     height: 38px;
-    background-color: @aiuiColorLightGray;
+    background-color: @aiuiColorDisabledGray;
   }
 }
 .aiui-search-bar__label {
