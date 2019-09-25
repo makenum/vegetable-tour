@@ -8,29 +8,31 @@
       <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <div class="aiui-segmented-control">
+    <div class="aiui-segmented-control aiui-segmented-control--small aiui-segmented-control--primary">
       <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
       <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
     </div>
   </div>
   <!--头部导航 start-->
   <!--搜索区域 start-->
-  <div class="aiui-search-bar" id="searchBar">
-    <div class="arrow-select " id="selectMouthBtn">
+  <div class="filter-bar">
+    <div class="arrow-select" id="openFilterPopup">
       <span class="arrow-select__value">本月</span>
       <i class="arrow"></i>
     </div>
-    <form class="aiui-search-bar__form">
-      <div class="aiui-search-bar__box">
-        <i class="icon-search"></i>
-        <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off" placeholder="搜索">
-        <a href="javascript:" class="icon-close-fill" id="searchClear"></a>
-      </div>
-    </form>
-    <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill">搜索</button>
+    <div class="aiui-search-bar" id="searchBar">
+      <form class="aiui-search-bar__form" action="#">
+        <div class="aiui-search-bar__box">
+          <i class="icon-search"></i>
+          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+        </div>
+      </form>
+      <button class="aiui-search-bar__cancel-btn">取消</button>
+    </div>
   </div>
+  <!--搜索区域 end-->
 </div>
-<!--搜索区域 end-->
 <!--内容区域 start-->
 <div class="aiui-tab" id="tab">
   <div class="aiui-tabbar">
@@ -315,6 +317,42 @@
   </div>
 </div>
 <!--内容区域 end-->
+<!--筛选 start-->
+<div class="aiui-popup__wrap" id="filterPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup--right">
+    <div class="popup-filter">
+      <div class="popup-filter__bd">
+        <div class="select-list">
+          <div class="select-list__item">
+            <p class="desc">创建日期</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">本月</button></li>
+              <li class="select-item"><button class="select-item__btn">近三月</button></li>
+              <li class="select-item"><button class="select-item__btn">全部</button></li>
+            </ul>
+          </div>
+          <div class="select-list__item">
+            <p class="desc">状态</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">代配送</button></li>
+              <li class="select-item"><button class="select-item__btn">待收货</button></li>
+              <li class="select-item"><button class="select-item__btn">已完成</button></li>
+              <li class="select-item"><button class="select-item__btn">全部</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup-filter__ft">
+        <div class="aiui-segmented-control aiui-segmented-control--medium aiui-segmented-control--primary">
+          <a href="javascript:;" class="aiui-segmented-control__item" id="resetPopupFilterBtn">重置</a>
+          <a href="javascript:;" class="aiui-segmented-control__item active" id="submitPopupFilterBtn">确定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--筛选 end-->
 {% endblock %}
 {% block footer %}
 <script src="../libs/sticky.js"></script>
@@ -330,46 +368,32 @@
         console.log(index);
       }
     });
-    // 选择月份
-    $("#selectMouthBtn").bind("click", function () {
-      var $this = $(this);
-      aiui.picker([
-        {
-          label: '近3个月',
-          value: 0
-        },
-        {
-          label: '本月',
-          value: 1
-        },
-        {
-          label: '19年6月',
-          value: 3
-        },
-        {
-          label: '19年5月',
-          value: 4,
-        }
-      ], {
-        title: '请选择月份',
-        defaultValue: [1],
-        onChange: function (result) {
-          console.log(result)
-        },
-        onConfirm: function (result) {
-          console.log(result)
-          $this.find(".arrow-select__value").html(result[0].label);
-        },
-        id: 'selectMouthPicker'
-      });
-    });
     //搜索
-    var $searchBar = $('#searchBar'),
-      $searchInput = $('#searchInput'),
-      $searchClear = $('#searchClear')
-    $searchClear.on('click', function () {
-      $searchInput.val('');
-      $searchInput.focus();
+    aiui.searchBar('#searchBar');
+    //筛选
+    var $filterPopup = $('#filterPopup');
+    // 关闭Popup弹窗
+    $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup--right").removeClass("toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(300);
+    });
+    // 打开Popup弹窗
+    $('#openFilterPopup').on('click', function () {
+      $filterPopup.fadeIn(300);
+      $filterPopup
+        .find(".aiui-popup--right")
+        .addClass("toggle");
+    });
+
+    // 筛选列表高亮
+    $(".select-item").bind("click", function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    $("#resetPopupFilterBtn").bind("click", function () {
+      $(".select-item").removeClass("active");
     });
   });
 </script>
