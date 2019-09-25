@@ -1,43 +1,43 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-任务管理{% endblock %}
 {% block content %}
-<div class="headbar-sticky-hook">
-  <!--头部导航 start-->
-  <div class="aiui-headbar aiui-headbar__default">
-    <div class="aiui-headbar__item">
-      <a href="javascript:history.back();" class="icon-return">
-      </a>
-    </div>
-    <h3 class="aiui-headbar__title">任务管理</h3>
-  </div>
-  <!--头部导航 start-->
-  <!--搜索区域 start-->
-  <div class="filter-bar">
-    <div class="arrow-select" id="openFilterPopup">
-      <span class="arrow-select__value">本月</span>
-      <i class="arrow"></i>
-    </div>
-    <div class="aiui-search-bar" id="searchBar">
-      <form class="aiui-search-bar__form" action="#">
-        <div class="aiui-search-bar__box">
-          <i class="icon-search"></i>
-          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
-          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
-        </div>
-      </form>
-      <button class="aiui-search-bar__cancel-btn">取消</button>
-    </div>
-  </div>
-  <!--搜索区域 end-->
-</div>
 <!--内容区域 start-->
 <div class="aiui-tab" id="tab">
-  <div class="aiui-tabbar">
-    <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待发起</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待完成</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待验收</a>
-    <a href="javascript:;" class="aiui-tabbar__item">待评价</a>
+  <div class="header-sticky-hook">
+    <!--头部导航 start-->
+    <div class="aiui-headbar aiui-headbar__default">
+      <div class="aiui-headbar__item">
+        <a href="javascript:history.back();" class="icon-return">
+        </a>
+      </div>
+      <h3 class="aiui-headbar__title">任务管理</h3>
+    </div>
+    <!--头部导航 start-->
+    <!--搜索区域 start-->
+    <div class="filter-bar">
+      <div class="arrow-select" id="openFilterPopup">
+        <span class="arrow-select__value">本月</span>
+        <i class="arrow"></i>
+      </div>
+      <div class="aiui-search-bar" id="searchBar">
+        <form class="aiui-search-bar__form" action="#">
+          <div class="aiui-search-bar__box">
+            <i class="icon-search"></i>
+            <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+          </div>
+        </form>
+        <button class="aiui-search-bar__cancel-btn">取消</button>
+      </div>
+    </div>
+    <!--搜索区域 end-->
+    <div class="aiui-tabbar">
+      <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待发起</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待完成</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待验收</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待评价</a>
+    </div>
   </div>
   <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
@@ -371,9 +371,7 @@
 <script src="../libs/sticky.js"></script>
 <script type="text/javascript">
   $(function () {
-    $(".headbar-sticky-hook").sticky({ topSpacing: 0 });
-    var topSpacing = $('.aiui-headbar').innerHeight() + $('.aiui-search-bar').innerHeight();
-    $(".aiui-tabbar").sticky({ topSpacing: topSpacing });
+    $(".header-sticky-hook").sticky({ topSpacing: 0 });
     //tab
     aiui.tab('#tab', {
       defaultIndex: 0,
