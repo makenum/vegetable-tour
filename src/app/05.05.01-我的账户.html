@@ -12,17 +12,16 @@
   </div>
 </div>
 <!--头部导航 start-->
-<div class="sunshine-value">
+
+<div class="my-account">
   <img src="../images/my-account_bg.png" alt="阳光值" class="response-img">
-  <div class="farmhand-balance">
-        <div class="md">
-            <p class="title">余额（元）</p>
-            <p class="price">437,890<small>.00</small></p>
-        </div>
-        <div>
-            <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__default aiui-btn__pill" onclick="window.location.href='05.07-继续提现.html'">立即提现</button>
-        </div>
+  <div class="content">
+    <div class="Cell -fill">
+      <p>余额（元）</p>
+      <p class="price"><span class="fz68">437,890</span><small class="fz30">.00</small></p>
     </div>
+    <a href="05.05.02-我的账户-提现.html" class="aiui-btn aiui-btn__medium aiui-btn__default aiui-btn__pill">立即提现</a>
+  </div>
 </div>
 <div id="sunshineTab">
   <div class="aiui-tabbar">
@@ -210,17 +209,17 @@
         value: 4,
       }
     ], {
-        title: '请选择月份',
-        defaultValue: [1],
-        onChange: function (result) {
-          console.log(result)
-        },
-        onConfirm: function (result) {
-          console.log(result)
-          $this.find(".arrow-select__value").html(result[0].label);
-        },
-        id: 'selectMouthPicker'
-      });
+      title: '请选择月份',
+      defaultValue: [1],
+      onChange: function (result) {
+        console.log(result)
+      },
+      onConfirm: function (result) {
+        console.log(result)
+        $this.find(".arrow-select__value").html(result[0].label);
+      },
+      id: 'selectMouthPicker'
+    });
   });
   // 资产说明弹窗
   $("#sunshineValueDescBtn").bind("click", function () {

@@ -945,6 +945,10 @@
   }
 }
 .arrow-select {
+  &__value {
+    max-width: 120px;
+    .ellipsis;
+  }
   display: flex;
   align-items: center;
   .arrow {
@@ -968,6 +972,9 @@
     align-items: center;
     &:not(:first-child) {
       margin-top: 10px;
+    }
+    h3{
+      font-weight: normal;
     }
   }
 }
@@ -1620,5 +1627,17 @@
     padding: 20px;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+.filter-bar {
+  background-color: @aiuiBgColorDefault;
+  display: flex;
+  align-items: center;
+  .arrow-select {
+    margin-left: 24px;
+  }
+  .aiui-search-bar {
+    .flex-grow();
   }
 }

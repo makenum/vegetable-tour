@@ -45,29 +45,17 @@
   }
 }
 
-.farmhand-balance {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  padding: 0 72px;
-  .md {
-    .title {
-      font-size: @aiuiCellTipsFontSize;
-      color: @aiuiColorMedGray;
-    }
-
-    .price {
-      font-size: 60px;
-      color: @aiuiColorGray;
-
-      small {
-        display: inline-block;
-        margin-left: 10px;
-        font-size: 30px;
-        color: @aiuiColorMedGray;
-      }
-    }
+.my-account {
+  position: relative;
+  .content {
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: @aiuiColorWhite;
   }
 }
 
@@ -146,21 +134,8 @@
   border-radius: 28px;
   margin: @aiuiCellInnerGapH 24px;
   padding: 48px;
-  .price {
-    font-size: 60px;
-    small {
-      display: inline-block;
-      margin-left: 10px;
-      font-size: 30px;
-    }
-  }
 }
-.aiui-input__big {
-  font-size: 48px;
-  &::placeholder {
-    font-size: 48px;
-  }
-}
+
 .bank-img {
   width: 36px;
 }
@@ -179,27 +154,7 @@
   background-color: #999;
   margin-left: 10px;
 }
-.sunshine-value {
-  .farmhand-balance {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: 0px;
-    .title,
-    .price,
-    .price small {
-      color: #fff;
-    }
-    .price {
-      font-size: 68px;
-      small {
-        font-size: 30px;
-      }
-    }
-  }
-}
+
 .order-tabbar {
   display: flex;
   position: relative;

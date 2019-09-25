@@ -1,0 +1,57 @@
+@import "../../base/fn";
+.aiui-headbar {
+  .aiui-segmented-control {
+    .abs-center();
+  }
+}
+.aiui-segmented-control {
+  position: relative;
+  display: flex;
+  &:after {
+    .setFullLine();
+    border-radius: 10em;
+  }
+  &--small {
+    .aiui-segmented-control__item {
+      padding-left: 30px;
+      padding-right: 30px;
+      line-height: 64px;
+      font-size: 28px;
+    }
+  }
+  &--medium {
+    .aiui-segmented-control__item {
+      padding-left: 55px;
+      padding-right: 55px;
+      line-height: 80px;
+      font-size: 34px;
+    }
+  }
+  &--primary {
+    &:after {
+      border-color: @aiuiColorPrimary;
+    }
+    .aiui-segmented-control__item {
+      color: @aiuiColorPrimary;
+      &.active {
+        background-color: @aiuiColorPrimary;
+        color: @aiuiColorWhite;
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &__item {
+    &:first-child {
+      border-top-left-radius: 10em;
+      border-bottom-left-radius: 10em;
+    }
+    &:last-child {
+      border-top-right-radius: 10em;
+      border-bottom-right-radius: 10em;
+    }
+  }
+}

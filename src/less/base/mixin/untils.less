@@ -32,43 +32,7 @@
 .text-med__gray {
   color: @aiuiColorMedGray;
 }
-// font-size
-.fz22 {
-  font-size: 22px;
-}
-.fz24 {
-  font-size: 24px;
-}
-.fz26 {
-  font-size: 26px;
-}
-.fz28 {
-  font-size: 28px;
-}
-.fz30 {
-  font-size: 30px;
-}
-.fz32 {
-  font-size: 32px;
-}
-.fz34 {
-  font-size: 34px;
-}
-.fz36 {
-  font-size: 36px;
-}
-.fz38 {
-  font-size: 38px;
-}
-.fz40 {
-  font-size: 40px;
-}
-.fz48 {
-  font-size: 48px;
-}
-.fz60 {
-  font-size: 40px;
-}
+
 .response-img {
   width: 100%;
 }
@@ -77,17 +41,7 @@
 .font-weight {
   font-weight: bolder;
 }
-//padding
-.pt30 {
-  padding-top: 30px;
-}
-//margin
-.ml24 {
-  margin-left: 24px;
-}
-.mr24 {
-  margin-right: 24px;
-}
+
 .htmltagwrap {
   padding: 30px 24px;
 }
@@ -193,3 +147,58 @@
     color: @color;
   }
 }
+
+//margin
+
+.ml24 {
+  margin-left: 24px;
+}
+.mr24 {
+  margin-right: 24px;
+}
+
+.Margin(@Number, @i: 5) when (@i =< @Number) {
+  .mt@{i} {
+    margin-top: @i * 1px;
+  }
+  .mr@{i} {
+    margin-right: @i * 1px;
+  }
+  .mb@{i} {
+    margin-bottom: @i * 1px;
+  }
+  .ml@{i} {
+    margin-left: @i * 1px;
+  }
+  .Margin(@Number, (@i + 5));
+}
+.Margin(30);
+
+// padding
+
+.Padding(@Number, @i: 5) when (@i =< @Number) {
+  .pt@{i} {
+    padding-top: @i * 1px;
+  }
+  .pr@{i} {
+    padding-right: @i * 1px;
+  }
+  .pb@{i} {
+    padding-bottom: @i * 1px;
+  }
+  .pl@{i} {
+    padding-left: @i * 1px;
+  }
+  .Padding(@Number, (@i + 5));
+}
+.Padding(30);
+
+// font-size
+.FontSize(@Number, @i: 20) when (@i =< @Number) {
+  .fz@{i} {
+    font-size: @i * 1px;
+  }
+  .FontSize(@Number, (@i + 2));
+}
+
+.FontSize(70);

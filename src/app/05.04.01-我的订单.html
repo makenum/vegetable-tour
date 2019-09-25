@@ -8,7 +8,7 @@
       <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <div class="aiui-segmented-control">
+    <div class="aiui-segmented-control aiui-segmented-control--small aiui-segmented-control--primary">
       <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
       <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
     </div>
@@ -26,20 +26,21 @@
   </div>
   <div class="aiui-tab__panel">
     <!--搜索区域 start-->
-    <div class="arrow-select" id="openFilterPopup">
-      <span class="arrow-select__value">本月</span>
-      <i class="arrow"></i>
-    </div>
-
-    <div class="aiui-search-bar" id="searchBar">
-      <form class="aiui-search-bar__form" action="#">
-        <div class="aiui-search-bar__box">
-          <i class="icon-search"></i>
-          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
-          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
-        </div>
-      </form>
-      <button class="aiui-search-bar__cancel-btn">取消</button>
+    <div class="filter-bar">
+      <div class="arrow-select" id="openFilterPopup">
+        <span class="arrow-select__value">本月</span>
+        <i class="arrow"></i>
+      </div>
+      <div class="aiui-search-bar" id="searchBar">
+        <form class="aiui-search-bar__form" action="#">
+          <div class="aiui-search-bar__box">
+            <i class="icon-search"></i>
+            <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+          </div>
+        </form>
+        <button class="aiui-search-bar__cancel-btn">取消</button>
+      </div>
     </div>
 
     <!--搜索区域 end-->
@@ -255,7 +256,7 @@
         </div>
       </div>
       <div class="popup-filter__ft">
-        <div class="aiui-segmented-control">
+        <div class="aiui-segmented-control aiui-segmented-control--medium aiui-segmented-control--primary">
           <a href="javascript:;" class="aiui-segmented-control__item" id="resetPopupFilterBtn">重置</a>
           <a href="javascript:;" class="aiui-segmented-control__item active" id="submitPopupFilterBtn">确定</a>
         </div>
