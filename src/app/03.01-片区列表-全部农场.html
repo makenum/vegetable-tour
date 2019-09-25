@@ -24,17 +24,148 @@
 <div class="aiui-tabbar">
   <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
   <a href="javascript:;" class="aiui-tabbar__item">按距离</a>
-  <a href="javascript:;" class="aiui-tabbar__item">筛选</a>
+  <a href="javascript:;" class="aiui-tabbar__item aiui-tabbar__item--flex" id="openFilterPopup">筛选<i
+      class="icon-filter"></i></a>
 </div>
 <div class="area-list">
   <a href="03.02-片区详情.html" class="area-list__item">
     <div class="thumb thumb-180"><img src="../images/farm_tu02.png"></div>
-    <div class="area-list__box">
-      <h3 class="title">洛阳波辉农场</h3>
+    <div class="content">
+      <h3 class="name">洛阳波辉农场</h3>
+      <div class="mark">
+        <div class="mark-tips mark-tips__plain">租种</div>
+        <div class="mark-tips mark-tips__plain">包种</div>
+      </div>
+      <div class="label"><span>西红柿</span><span>西瓜</span><span>鸡</span><span>鱼</span><span>辣椒</span><span>茶园</span></div>
+      <div class="distance">
+        <i class="icon-address"></i>
+        <span>1236km</span>
+      </div>
+    </div>
+  </a>
+  <a href="03.02-片区详情.html" class="area-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu02.png"></div>
+    <div class="content">
+      <h3 class="name">福建创业新区农场</h3>
+      <div class="mark">
+        <div class="mark-tips mark-tips__plain">租种</div>
+        <div class="mark-tips mark-tips__plain">包种</div>
+      </div>
+      <div class="label"><span>西红柿</span><span>西瓜</span><span>鸡</span><span>鱼</span><span>辣椒</span><span>茶园</span></div>
+      <div class="distance">
+        <i class="icon-address"></i>
+        <span>1236km</span>
+      </div>
+    </div>
+  </a>
+  <a href="03.02-片区详情.html" class="area-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu02.png"></div>
+    <div class="content">
+      <h3 class="name">巴拿马片区农场</h3>
+      <div class="mark">
+        <div class="mark-tips mark-tips__plain">租种</div>
+        <div class="mark-tips mark-tips__plain">包种</div>
+      </div>
+      <div class="label"><span>西红柿</span><span>西瓜</span><span>鸡</span><span>鱼</span><span>辣椒</span><span>茶园</span></div>
+      <div class="distance">
+        <i class="icon-address"></i>
+        <span>1236km</span>
+      </div>
+    </div>
+  </a>
+  <a href="03.02-片区详情.html" class="area-list__item">
+    <div class="thumb thumb-180"><img src="../images/default_preview.png"></div>
+    <div class="content">
+      <h3 class="name">洛阳波辉农场</h3>
+      <div class="mark">
+        <div class="mark-tips mark-tips__plain">租种</div>
+        <div class="mark-tips mark-tips__plain">包种</div>
+      </div>
+      <div class="label"><span>西红柿</span><span>西瓜</span><span>鸡</span><span>鱼</span><span>辣椒</span><span>茶园</span></div>
+      <div class="distance">
+        <i class="icon-address"></i>
+        <span>1236km</span>
+      </div>
+    </div>
+  </a>
+  <a href="03.02-片区详情.html" class="area-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu02.png"></div>
+    <div class="content">
+      <h3 class="name">巴拿马片区农场</h3>
+      <div class="mark">
+        <div class="mark-tips mark-tips__plain">租种</div>
+        <div class="mark-tips mark-tips__plain">包种</div>
+      </div>
+      <div class="label"><span>西红柿</span><span>西瓜</span><span>鸡</span><span>鱼</span><span>辣椒</span><span>茶园</span></div>
+      <div class="distance">
+        <i class="icon-address"></i>
+        <span>1236km</span>
+      </div>
     </div>
   </a>
 </div>
 <!--内容区域 end-->
+<!--筛选 start-->
+<div class="aiui-popup__wrap" id="filterPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup--right">
+    <div class="popup-filter">
+      <div class="popup-filter__bd">
+        <div class="select-list">
+          <div class="select-list__item">
+            <p class="desc">养殖类型</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">租种</button></li>
+              <li class="select-item"><button class="select-item__btn">包种</button></li>
+            </ul>
+          </div>
+          <div class="select-list__item">
+            <p class="desc">养殖种类</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">西红柿</button></li>
+              <li class="select-item"><button class="select-item__btn">西瓜</button></li>
+              <li class="select-item"><button class="select-item__btn">丝瓜</button></li>
+              <li class="select-item"><button class="select-item__btn">辣椒</button></li>
+              <li class="select-item"><button class="select-item__btn">茶树</button></li>
+            </ul>
+          </div>
+          <div class="select-list__item">
+            <p class="desc">所在地</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn"><i class="icon-address"></i>广东</button>
+              </li>
+              <li class="select-item"><button class="select-item__btn"><i class="icon-refresh"></i>定位</button></li>
+            </ul>
+          </div>
+          <div class="select-list__item">
+            <p class="desc">城市</p>
+            <ul class="select">
+              <li class="select-item active"><button class="select-item__btn">广东</button></li>
+              <li class="select-item"><button class="select-item__btn">北京</button></li>
+              <li class="select-item"><button class="select-item__btn">上海</button></li>
+              <li class="select-item"><button class="select-item__btn">深圳</button></li>
+              <li class="select-item"><button class="select-item__btn">杭州</button></li>
+              <li class="select-item"><button class="select-item__btn">温州</button></li>
+              <li class="select-item"><button class="select-item__btn">宁波</button></li>
+              <li class="select-item"><button class="select-item__btn">南京</button></li>
+              <li class="select-item"><button class="select-item__btn">苏州</button></li>
+              <li class="select-item"><button class="select-item__btn">济南</button></li>
+              <li class="select-item"><button class="select-item__btn">青岛</button></li>
+              <li class="select-item"><button class="select-item__btn">大连</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup-filter__ft">
+        <div class="aiui-segmented-control aiui-segmented-control--medium aiui-segmented-control--primary">
+          <a href="javascript:;" class="aiui-segmented-control__item" id="resetPopupFilterBtn">重置</a>
+          <a href="javascript:;" class="aiui-segmented-control__item active" id="submitPopupFilterBtn">确定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--筛选 end-->
 {% endblock %}
 {% block footer %}
 <script type="text/javascript">
@@ -45,6 +176,31 @@
     $(".aiui-tabbar").sticky({ topSpacing: topSpacing });
     //搜索
     aiui.searchBar('#searchBar');
+    //筛选
+    var $filterPopup = $('#filterPopup');
+    // 关闭Popup弹窗
+    $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup--right").removeClass("toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(300);
+    });
+    // 打开Popup弹窗
+    $('#openFilterPopup').on('click', function () {
+      $filterPopup.fadeIn(300);
+      $filterPopup
+        .find(".aiui-popup--right")
+        .addClass("toggle");
+    });
+
+    // 筛选列表高亮
+    $(".select-item").bind("click", function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    $("#resetPopupFilterBtn").bind("click", function () {
+      $(".select-item").removeClass("active");
+    });
   });
 </script>
 {% endblock %}
