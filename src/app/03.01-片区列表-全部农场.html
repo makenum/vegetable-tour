@@ -1,157 +1,48 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-片区列表-全部农场{% endblock %}
 {% block content %}
-<div class="app-area">
-  <!--头部导航 start-->
-  <div class="headbar-sticky">
-    <div class="aiui-headbar aiui-headbar__fixed aiui-headbar__transparent">
-      <div class="aiui-headbar__item">
-        <a href="javascript:history.back();" class="icon-return"></a>
-      </div>
-      <div class="aiui-search-bar" id="searchBar">
-        <form class="aiui-search-bar__form" action="#">
-          <div class="aiui-search-bar__box">
-            <i class="icon-search"></i>
-            <input type="search" class="aiui-search-bar__input" autocomplete="off"
-              placeholder="请输入关键字搜索" />
-            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
-          </div>
-        </form>
-        <button class="aiui-search-bar__cancel-btn">取消</button>
-      </div>
+<!--头部导航 start-->
+<div class="headbar-sticky-hook">
+  <div class="aiui-headbar aiui-headbar__default">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <div class="aiui-search-bar" id="searchBar">
+      <form class="aiui-search-bar__form" action="#">
+        <div class="aiui-search-bar__box">
+          <i class="icon-search"></i>
+          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+        </div>
+      </form>
+      <button class="aiui-search-bar__cancel-btn">取消</button>
     </div>
   </div>
-  <!--头部导航 end-->
-  <!--内容区域 start-->
-  <div class="aiui-tab area-box" id="tab">
-    <div class="aiui-navbar">
-      <div class="aiui-navbar__item aiui-bar__item_on">全部</div>
-      <div class="aiui-navbar__item">附近农场</div>
-    </div>
-    <div class="aiui-tab__panel">
-      <div class="aiui-tab__content">
-        <div class="area-list">
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">洛阳波辉农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1236km</span></div>
-          </a>
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">福建创业新区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1.23km</span></div>
-          </a>
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">巴拿马片区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">4.5km</span></div>
-          </a>
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/default_preview.png"></div>
-            <div class="bd">
-              <h3 class="title">福建创业新区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1.23km</span></div>
-          </a>
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">洛阳波辉农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1236km</span></div>
-          </a>
-          <a href="03.02-片区详情.html" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">湖南新心天然有机农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">4.5km</span></div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="aiui-tab__panel">
-      <div class="aiui-tab__content">
-        <div class="area-list">
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">洛阳波辉农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1236km</span></div>
-          </a>
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">福建创业新区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1.23km</span></div>
-          </a>
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">巴拿马片区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">4.5km</span></div>
-          </a>
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/default_preview.png"></div>
-            <div class="bd">
-              <h3 class="title">福建创业新区农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1.23km</span></div>
-          </a>
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">洛阳波辉农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">1236km</span></div>
-          </a>
-          <a href="javascript:;" class="area-list__item">
-            <div class="thumb"><img src="../images/farm_tu02.png"></div>
-            <div class="bd">
-              <h3 class="title">湖南新心天然有机农场</h3>
-              <p class="txt">农场介绍文字描述示范，允许换行的情况是这样的，多的字符</p>
-            </div>
-            <div class="Grid -top"><span class="distance">4.5km</span></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--内容区域 end-->
 </div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+<div class="aiui-tabbar">
+  <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
+  <a href="javascript:;" class="aiui-tabbar__item">按距离</a>
+  <a href="javascript:;" class="aiui-tabbar__item">筛选</a>
+</div>
+<div class="area-list">
+  <a href="03.02-片区详情.html" class="area-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu02.png"></div>
+    <div class="area-list__box">
+      <h3 class="title">洛阳波辉农场</h3>
+    </div>
+  </a>
+</div>
+<!--内容区域 end-->
 {% endblock %}
 {% block footer %}
 <script type="text/javascript">
   $(function () {
     //头部导航固定
-    $(".headbar-sticky").sticky({ topSpacing: 0 });
-    //tab
-    aiui.tab('#tab', {
-      defaultIndex: 0,
-      onChange: function (index) {
-        console.log(index);
-      }
-    });
+    $(".headbar-sticky-hook").sticky({ topSpacing: 0 });
+    var topSpacing = $('.aiui-headbar').innerHeight();
+    $(".aiui-tabbar").sticky({ topSpacing: topSpacing });
     //搜索
     aiui.searchBar('#searchBar');
   });
