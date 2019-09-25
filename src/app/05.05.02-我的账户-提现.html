@@ -3,47 +3,46 @@
 {% block content %}
 <!--头部导航 start-->
 <div class="aiui-headbar aiui-headbar__default">
-    <div class="aiui-headbar__item">
-        <a href="javascript:history.back();" class="icon-return">
-        </a>
-    </div>
-    <h3 class="aiui-headbar__title">提现</h3>
+  <div class="aiui-headbar__item">
+    <a href="javascript:history.back();" class="icon-return">
+    </a>
+  </div>
+  <h3 class="aiui-headbar__title">提现</h3>
 </div>
 <!--头部导航 start-->
 <div class="aiui-cells">
-    <div class="cash-out__item">
-        <p>账户余额(元)</p>
-        <p class="price">437,890<small>.00</small></p>
-    </div>
+  <div class="cash-out__item">
+    <p>账户余额(元)</p>
+    <p class="price"><span class="fz68">437,890</span><small class="fz30">.00</small></p>
+  </div>
 </div>
 <div class="aiui-cells">
-    <div class="aiui-cells__title fz30">金额（元）</div>
-</div>
-<div class="aiui-cells">
-    <div class="aiui-cell">
-        <div class="aiui-cell__bd">
-            <input class="aiui-input aiui-input__big" type="text" placeholder="可转出437，890.00元">
-        </div>
+  <div class="aiui-cell">
+    <div class="Cell -2of2 mb20">
+      <p class="fz30">金额（元）</p>
     </div>
-    <div class="aiui-cell">
-        <div class="aiui-cell__bd">
-            <p class="text-deep__gray">0手续费，预计实时到账，具体到账时间以对方银行为准</p>
-        </div>
+    <div class="Cell -2of2 fz48"><input class="aiui-input" type="text" placeholder="可转出437,890.00元"></div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__bd">
+      <p class="text-deep__gray">0手续费，预计实时到账，具体到账时间以对方银行为准</p>
     </div>
+  </div>
 </div>
-<div class="aiui-cells  aiui-cells__gap">
-    <a class="aiui-cell aiui-cell_access" href="05.05-绑定银行卡.html">
-        <div class="aiui-cell__bd">
-            <span class="text-med__gray ">收款账户</span>
-        </div>
-        <div class="aiui-cell__ft">
-            <span>绑定银行卡</span>
-            <i class="icon-arrow-right"></i>
-        </div>
-    </a>
+<div class="aiui-cells aiui-cells__gap">
+  <a class="aiui-cell aiui-cell_access" href="05.05.03-我的账户-绑定银行卡.html">
+    <div class="aiui-cell__bd">
+      <span class="text-med__gray ">收款账户</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <span>绑定银行卡</span>
+      <i class="icon-arrow-right"></i>
+    </div>
+  </a>
 </div>
-<div class="aiui-cell reg-btn__cell">
-    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__disabled aiui-btn__pill" disabled="disabled" >提现</button>
+<div class="aiui-cell -normal">
+  <button type="button" class="aiui-btn aiui-btn__block aiui-btn__giant aiui-btn__disabled aiui-btn__pill"
+    disabled="disabled">提现</button>
 </div>
 
 {% endblock %}
