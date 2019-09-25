@@ -1,30 +1,28 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的任务{% endblock %}
 {% block content %}
-<div class="headbar-sticky-hook">
-  <!--头部导航 start-->
-  <div class="aiui-headbar aiui-headbar__default">
-    <div class="aiui-headbar__item">
-      <a href="javascript:history.back();" class="icon-return">
+<div class="aiui-tab" id="tab">
+  <div class="header-sticky-hook">
+    <!--头部导航 start-->
+    <div class="aiui-headbar aiui-headbar__default">
+      <div class="aiui-headbar__item">
+        <a href="javascript:history.back();" class="icon-return">
+        </a>
+      </div>
+      <div class="aiui-segmented-control aiui-segmented-control--small aiui-segmented-control--primary">
+        <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
+        <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
+      </div>
+    </div>
+    <!--头部导航 start-->
+    <div class="aiui-tabbar">
+      <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
+        租地订单<span>（2）</span>
+      </a>
+      <a href="javascript:;" class="aiui-tabbar__item">
+        配送订单<span>（3）</span>
       </a>
     </div>
-    <div class="aiui-segmented-control aiui-segmented-control--small aiui-segmented-control--primary">
-      <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
-      <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
-    </div>
-  </div>
-  <!--头部导航 start-->
-</div>
-<div class="aiui-tab" id="tab">
-  <div class="aiui-tabbar">
-    <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
-      租地订单<span>（2）</span>
-    </a>
-    <a href="javascript:;" class="aiui-tabbar__item">
-      配送订单<span>（3）</span>
-    </a>
-  </div>
-  <div class="aiui-tab__panel">
     <!--搜索区域 start-->
     <div class="filter-bar">
       <div class="arrow-select" id="openFilterPopup">
@@ -42,8 +40,11 @@
         <button class="aiui-search-bar__cancel-btn">取消</button>
       </div>
     </div>
-
     <!--搜索区域 end-->
+
+  </div>
+
+  <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
       <div class="goods-group goods-group--normal">
         <div class="goods-list goods-list--card">
@@ -271,7 +272,7 @@
 <script src="../libs/sticky.js"></script>
 <script>
   $(function () {
-    $(".headbar-sticky-hook").sticky({ topSpacing: 0 });
+    $(".header-sticky-hook").sticky({ topSpacing: 0 });
     //tab
     aiui.tab('#tab', {
       defaultIndex: 0,

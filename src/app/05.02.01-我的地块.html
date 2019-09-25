@@ -1,90 +1,85 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-我的任务{% endblock %}
+{% block title %}蔬游-我的地块{% endblock %}
 {% block content %}
+
 <!--内容区域 start-->
 <div class="aiui-tab" id="tab">
   <div class="header-sticky-hook">
     <!--头部导航 start-->
     <div class="aiui-headbar aiui-headbar__default">
       <div class="aiui-headbar__item">
-        <a href="javascript:history.back();" class="icon-return">
+        <a href="javascript:;" class="icon-return">
         </a>
       </div>
-      <h3 class="aiui-headbar__title">我的任务</h3>
+      <h3 class="aiui-headbar__title">我的地块</h3>
     </div>
     <!--头部导航 start-->
     <!--搜索区域 start-->
-    <div class="filter-bar">
-      <div class="arrow-select" id="selectMouthBtn">
-        <span class="arrow-select__value">本月</span>
-        <i class="arrow"></i>
-      </div>
-      <div class="aiui-search-bar" id="searchBar">
-        <form class="aiui-search-bar__form" action="#">
-          <div class="aiui-search-bar__box">
-            <i class="icon-search"></i>
-            <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
-            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
-          </div>
-        </form>
-        <button class="aiui-search-bar__cancel-btn">取消</button>
-      </div>
+    <div class="aiui-search-bar" id="searchBar">
+      <form class="aiui-search-bar__form" action="#">
+        <div class="aiui-search-bar__box">
+          <i class="icon-search"></i>
+          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+        </div>
+      </form>
+      <button class="aiui-search-bar__cancel-btn">取消</button>
     </div>
     <!--搜索区域 end-->
-    <!-- tab菜单 start -->
     <div class="aiui-tabbar">
       <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
-        全部(<span class="aiui-bar-badge">3</span>)
+        全部(3)
       </a>
       <a href="javascript:;" class="aiui-tabbar__item">
-        待完成(<span class="aiui-bar-badge">1</span>)
+        已租(1)
       </a>
       <a href="javascript:;" class="aiui-tabbar__item">
-        待验收(<span class="aiui-bar-badge">1</span>)
+        待租(1)
       </a>
       <a href="javascript:;" class="aiui-tabbar__item">
-        已完成(<span class="aiui-bar-badge">1</span>)
+        已下架(1)
       </a>
     </div>
-    <!-- tab菜单 end -->
   </div>
+
   <div class="aiui-tab__panel">
     <div class="aiui-tab__content">
       <div class="goods-group goods-group--primary">
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
+            <button class="user-enter user-enter--disabled">
               <div class="avatar avatar-38">
                 <img src="../images/avatar.png" alt="头像">
               </div>
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-warn">待完成</p>
+            <p class="text-deep__gray">已下架</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
                 </div>
-                <p class="desc">浇水1次</p>
+                <div class="desc">10平方</div>
               </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
             </div>
           </div>
           <div class="goods-list__ft">
             <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
-              <button type="button" onclick="window.location.href='05.03.02-提交照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交照片</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">恢复上架</button>
             </div>
           </div>
         </div>
@@ -97,76 +92,82 @@
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-warn">待验收</p>
+            <p class="text-warn">已租种</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-shifei.png" alt="施肥">
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
                 </div>
-                <p class="desc">施肥1次</p>
+                <div class="desc">10平方</div>
               </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
             </div>
           </div>
           <div class="goods-list__ft">
             <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill btnCheck">提醒验收</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交生长情况</button>
             </div>
           </div>
         </div>
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
+            <button class="user-enter user-enter--disabled">
               <div class="avatar avatar-38">
                 <img src="../images/avatar.png" alt="头像">
               </div>
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-deep__gray">已完成</p>
+            <p class="text-warn">待养殖</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-shifei.png" alt="施肥">
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
                 </div>
-                <p class="desc">施肥1次</p>
+                <div class="desc">10平方</div>
               </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
             </div>
           </div>
           <div class="goods-list__ft">
             <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看收入</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">下架</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">编辑</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </div>
+    
     <div class="aiui-tab__content">
       <div class="goods-group goods-group--primary">
+        
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
             <button class="user-enter user-enter--normal">
@@ -176,72 +177,77 @@
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-warn">待完成</p>
+            <p class="text-warn">已租种</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-jiaoshui.png" alt="浇水">
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
                 </div>
-                <p class="desc">浇水1次</p>
+                <div class="desc">10平方</div>
               </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
             </div>
           </div>
           <div class="goods-list__ft">
             <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
-            </div>
-            <div class="Grid -right">
-              <button type="button" onclick="window.location.href='05.03.02-提交照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交照片</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="aiui-tab__content">
-      <div class="goods-group goods-group--primary">
-        <div class="goods-list goods-list--card">
-          <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
-              <div class="avatar avatar-38">
-                <img src="../images/avatar.png" alt="头像">
-              </div>
-              <p class="name">这是租户名字</p>
-              <i class="icon-arrow-right"></i>
-            </button>
-            <p class="text-warn">待验收</p>
-          </div>
-          <div class="goods-list__item">
-            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
-            <div class="content">
-              <div class="content-text">
-                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-shifei.png" alt="施肥">
-                </div>
-                <p class="desc">施肥1次</p>
-              </div>
-            </div>
-          </div>
-          <div class="goods-list__ft">
-            <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill btnCheck">提醒验收</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提交生长情况</button>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--disabled">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待养殖</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
+                </div>
+                <div class="desc">10平方</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">下架</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">编辑</button>
             </div>
           </div>
         </div>
@@ -251,50 +257,57 @@
       <div class="goods-group goods-group--primary">
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
+            <button class="user-enter user-enter--disabled">
               <div class="avatar avatar-38">
                 <img src="../images/avatar.png" alt="头像">
               </div>
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-deep__gray">已完成</p>
+            <p class="text-deep__gray">已下架</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <p class="desc">10平方</p>
-              </div>
-              <div class="content-tips">
-                <div class="material-icon">
-                  <img src="../images/icon-shifei.png" alt="施肥">
+                <div class="mark mb10">
+                  <div class="mark-tips mark-tips__plain">租种</div>
                 </div>
-                <p class="desc">施肥1次</p>
+                <div class="desc">10平方</div>
               </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
             </div>
           </div>
           <div class="goods-list__ft">
             <div class="price-group">
-              <p class="text-med__gray fz26">酬金：</p>
-              <p class="fz26">¥<span class="fz36">10</span>.00</p>
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看收入</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">恢复上架</button>
             </div>
           </div>
         </div>
+    
       </div>
     </div>
+
+
   </div>
+
+</div>
 </div>
 <!--内容区域 end-->
+
 {% endblock %}
 {% block footer %}
 <script src="../libs/sticky.js"></script>
-<script type="text/javascript">
+<script>
   $(function () {
     $(".header-sticky-hook").sticky({ topSpacing: 0 });
     //tab
@@ -304,45 +317,9 @@
         console.log(index);
       }
     });
-    // 选择月份
-    $("#selectMouthBtn").bind("click", function () {
-      var $this = $(this);
-      aiui.picker([
-        {
-          label: '近3个月',
-          value: 0
-        },
-        {
-          label: '本月',
-          value: 1
-        },
-        {
-          label: '19年6月',
-          value: 3
-        },
-        {
-          label: '19年5月',
-          value: 4,
-        }
-      ], {
-        title: '请选择月份',
-        defaultValue: [1],
-        onChange: function (result) {
-          console.log(result)
-        },
-        onConfirm: function (result) {
-          console.log(result)
-          $this.find(".arrow-select__value").html(result[0].label);
-        },
-        id: 'selectMouthPicker'
-      });
-    });
+
     //搜索
     aiui.searchBar('#searchBar');
-    // 验收
-    $('.aiui-tab__content').on('click', '.btnCheck', function () {
-      aiui.toast('提醒成功', 3000);
-    })
   });
 </script>
 {% endblock %}
