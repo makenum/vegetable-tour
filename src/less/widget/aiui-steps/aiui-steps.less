@@ -1,45 +1,46 @@
 @import "../../base/fn";
+@stepsBarNumberSize: 68px;
+@stepsBarLineHeight: 4px;
 .step-bar {
   background-image: linear-gradient(90deg, #2de080 3%, rgba(25, 207, 119, 0.99) 100%);
-  height: 150px;
   display: flex;
-  align-items: center;
-  padding: 0 24px;
+  padding: 20px 24px;
 
   &__item {
     color: @aiuiColorWhite;
-    flex-flow: column;
     flex: 1;
     display: flex;
     align-items: center;
+    flex-direction: column;
     position: relative;
     &:not(:last-child):after {
       content: "";
-      height: 4px;
+      height: @stepsBarLineHeight;
       background-color: @aiuiColorWhite;
       display: flex;
-      width: 114px;
       position: absolute;
-      top: 20px;
-      left: 120px;
+      top: (@stepsBarNumberSize - @stepsBarLineHeight) / 2;
+      left: calc(50% + @stepsBarNumberSize / 2);
+      right: calc(-50% + @stepsBarNumberSize / 2);
     }
     &.active {
       .number {
+        opacity: 1;
         mask-image: url(../svg/icon-checkbox-on.svg);
       }
     }
     .number {
-      width: 45px;
-      height: 45px;
-      text-align: center;
+      width: @stepsBarNumberSize;
+      height: @stepsBarNumberSize;
       display: inline-block;
       mask-repeat: no-repeat;
       mask-position: center center;
       mask-size: contain;
       background-color: @aiuiColorWhite;
       mask-image: url(../svg/icon-radio-normal.svg);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       text-indent: -9999em;
+      opacity: 0.4;
     }
 
     section {

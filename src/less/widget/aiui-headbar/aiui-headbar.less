@@ -37,6 +37,11 @@
     padding: 0 24px;
     color: @aiuiColorPrimary;
   }
+  .aiui-search-bar {
+    flex: 1;
+    padding: 0;
+    margin-left: 24px;
+  }
 }
 .aiui-headbar__fixed {
   .fixed-default();
@@ -73,7 +78,6 @@
   }
   .aiui-search-bar {
     background-color: transparent;
-    flex: 1;
     color: @aiuiColorGray;
     &__form {
       background-color: fade(@aiuiColorWhite, 20%);
@@ -84,6 +88,9 @@
     }
     .icon-search {
       background-color: @aiuiColorWhite;
+    }
+    .aiui-search-bar__cancel-btn {
+      color: @aiuiColorWhite;
     }
   }
 }

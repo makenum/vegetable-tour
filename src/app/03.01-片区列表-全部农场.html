@@ -9,16 +9,16 @@
         <a href="javascript:history.back();" class="icon-return"></a>
       </div>
       <div class="aiui-search-bar" id="searchBar">
-        <form class="aiui-search-bar__form">
+        <form class="aiui-search-bar__form" action="#">
           <div class="aiui-search-bar__box">
             <i class="icon-search"></i>
-            <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off"
-              placeholder="请输入关键字搜索" required />
-            <a href="javascript:" class="icon-close-fill" id="searchClear"></a>
+            <input type="search" class="aiui-search-bar__input" autocomplete="off"
+              placeholder="请输入关键字搜索" />
+            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
           </div>
         </form>
+        <button class="aiui-search-bar__cancel-btn">取消</button>
       </div>
-      <div class="aiui-headbar__item"><a href="javascript:;" class="search-text">搜索</a></div>
     </div>
   </div>
   <!--头部导航 end-->
@@ -153,13 +153,7 @@
       }
     });
     //搜索
-    var $searchBar = $('#searchBar'),
-      $searchInput = $('#searchInput'),
-      $searchClear = $('#searchClear')
-    $searchClear.on('click', function () {
-      $searchInput.val('');
-      $searchInput.focus();
-    });
+    aiui.searchBar('#searchBar');
   });
 </script>
 {% endblock %}

@@ -26,26 +26,22 @@
   </div>
   <div class="aiui-tab__panel">
     <!--搜索区域 start-->
-    <div class="aiui-search-bar aiui-search-bar_focusing aiui-search-bar_gap" id="searchBar">
-      <div class="arrow-select" id="openFilterPopup">
-        <span class="arrow-select__value">本月</span>
-        <i class="arrow"></i>
-      </div>
-      <form class="aiui-search-bar__form">
+    <div class="arrow-select" id="openFilterPopup">
+      <span class="arrow-select__value">本月</span>
+      <i class="arrow"></i>
+    </div>
 
+    <div class="aiui-search-bar" id="searchBar">
+      <form class="aiui-search-bar__form" action="#">
         <div class="aiui-search-bar__box">
           <i class="icon-search"></i>
-          <input type="search" class="aiui-search-bar__input" id="searchInput" autocomplete="off" placeholder="请输入关键字搜索"
-            required="">
-          <button type="button" class="icon-close-fill" id="searchClear"></button>
+          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
         </div>
-        <label class="aiui-search-bar__label" id="searchText">
-          <i class="icon-search"></i>
-          <span>搜索</span>
-        </label>
       </form>
-      <button type="button" class="aiui-btn aiui-btn__medium aiui-btn__primary  aiui-btn__pill button-thumb">搜索</button>
+      <button class="aiui-search-bar__cancel-btn">取消</button>
     </div>
+
     <!--搜索区域 end-->
     <div class="aiui-tab__content">
       <div class="goods-group goods-group--normal">
@@ -61,7 +57,7 @@
             <p class="text-warn">被租</p>
           </div>
           <div class="goods-list__item">
-            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
@@ -94,7 +90,7 @@
             <p class="text-warn">被包</p>
           </div>
           <div class="goods-list__item">
-            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
@@ -132,7 +128,7 @@
             <p class="text-warn">待配送</p>
           </div>
           <div class="goods-list__item">
-            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
@@ -167,7 +163,7 @@
             <p class="text-warn">待收货</p>
           </div>
           <div class="goods-list__item">
-            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
@@ -204,7 +200,7 @@
             <p class="text-deep__gray">已完成</p>
           </div>
           <div class="goods-list__item">
-            <div class="thumb"><img src="../images/farm_tu01.png"></div>
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
@@ -283,13 +279,7 @@
       }
     });
     //搜索
-    var $searchBar = $('#searchBar'),
-      $searchInput = $('#searchInput'),
-      $searchClear = $('#searchClear')
-    $searchClear.on('click', function () {
-      $searchInput.val('');
-      $searchInput.focus();
-    });
+    aiui.searchBar('#searchBar');
 
     var $filterPopup = $('#filterPopup');
     // 关闭Popup弹窗
