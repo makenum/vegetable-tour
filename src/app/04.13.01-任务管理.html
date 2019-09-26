@@ -425,7 +425,10 @@
     });
     // 提醒验收
     $('.aiui-tab__content').on('click', '.btnCheck', function () {
-      aiui.toast('提醒成功', 3000);
+      aiui.toast('提醒成功', {
+        duration: 3000,
+        className: 'aiui-toast--success'
+      });
     })
   });
 </script>

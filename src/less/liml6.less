@@ -945,23 +945,18 @@
   }
 }
 .arrow-select {
-  &__value {
-    max-width: 120px;
-    .ellipsis;
-  }
+  width: 150px;
   display: flex;
   align-items: center;
+  &__value {
+    flex: 1;
+    .ellipsis;
+  }
   .arrow {
     width: 28px;
     height: 28px;
-    margin-left: 15px;
-    &:before {
-      content: "";
-      .icon-arrow-down;
-      width: 100%;
-      height: 100%;
-      background-color: @aiuiColorDeepGray;
-    }
+    .icon-arrow-down;
+    background-color: @aiuiColorDeepGray;
   }
 }
 
@@ -973,7 +968,7 @@
     &:not(:first-child) {
       margin-top: 10px;
     }
-    h3{
+    h3 {
       font-weight: normal;
     }
   }
@@ -1475,6 +1470,7 @@
     }
   }
 }
+
 .goods-list {
   display: flex;
   flex-direction: column;
@@ -1498,6 +1494,7 @@
   }
   &__item {
     display: flex;
+    margin-top: 30px;
     .thumb {
       margin-right: 24px;
     }
@@ -1537,7 +1534,6 @@
   &__status {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 30px;
     .user-enter {
       display: flex;
       align-items: center;
@@ -1590,12 +1586,12 @@
       padding-bottom: 20px;
       &__item {
         position: relative;
-        padding: 15px;
+        padding: 15px 14px;
         &:after {
           .setBottomLine(@aiuiCellBorderColor);
         }
         .desc {
-          padding: 15px 5px;
+          padding: 15px 10px;
           font-size: 28px;
           color: @aiuiColorMedGray;
         }
@@ -1603,7 +1599,7 @@
           display: flex;
           flex-wrap: wrap;
           &-item {
-            padding: 5px;
+            padding: 10px;
             width: percentage(1/3);
             &.active {
               .select-item__btn {
@@ -1612,10 +1608,10 @@
               }
             }
             &__btn {
-              font-size: 28px;
+              font-size: 26px;
               width: 100%;
               background-color: @aiuiBgColorDefault;
-              line-height: 88px;
+              line-height: 70px;
               border-radius: 10px;
             }
           }
@@ -1639,5 +1635,91 @@
   }
   .aiui-search-bar {
     .flex-grow();
+  }
+}
+
+// 扫码录入列表
+.scan-entry-cells {
+  .aiui-cell {
+    .thumb {
+      margin-right: 24px;
+    }
+    .content {
+      min-height: 120px;
+      .flex-grow();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 20px;
+      .name {
+        font-size: 26px;
+        color: @aiuiColorMedGray;
+        .ellipsisLn(2);
+      }
+      .scan-details {
+        display: flex;
+        align-items: center;
+        .avatar {
+          margin-right: 10px;
+        }
+        .desc {
+          font-size: 24px;
+          color: @aiuiColorDeepGray;
+          :first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 店员列表
+.clerk {
+  background-color: @aiuiColorWhite;
+  border-radius: 28px 28px 0 0;
+  padding: 20px 24px;
+  height: calc(100vh - 318px);
+  overflow: auto;
+}
+.clerk-list {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .avatar {
+      margin-right: 24px;
+    }
+    .content {
+      .flex-grow();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .phone {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: @aiuiColorDeepGray;
+        .icon-telephone-outline {
+          width: 38px;
+          height: 38px;
+          background-color: @aiuiColorDeepGray;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+.clerk-add-cells {
+  .aiui-cell {
+    &__hd {
+      width: 164px;
+    }
+    &:before {
+      left: 212px;
+    }
   }
 }

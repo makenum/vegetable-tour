@@ -26,7 +26,10 @@
     var timer = setInterval(function () {
       if (t <= 1) {
         clearInterval(timer);
-        aiui.toast("浏览成功！<br>获得2个阳光值", 3000);
+        aiui.toast('浏览成功！<br>获得2个阳光值', {
+          duration: 3000,
+          className: 'aiui-toast--success'
+        });
         $(".browse-tips").fadeOut(300);
       } else {
         t--;

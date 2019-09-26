@@ -1,5 +1,5 @@
 @import "../../base/fn";
-.ui-count {
+.aiui-count {
   display: inline-flex;
   align-items: center;
   border-radius: 10px;
@@ -8,7 +8,7 @@
     .setFullLine(@aiuiColorDeepGray);
     border-radius: 10px * 2;
   }
-  &_btn {
+  &__btn {
     height: 70px;
     width: 70px;
     position: relative;
@@ -27,17 +27,17 @@
       }
     }
   }
-  &_decrease {
+  &__decrease {
     &:after {
       .setRightLine(@aiuiColorDeepGray);
     }
   }
-  &_increase {
+  &__increase {
     &:after {
       .setLeftLine(@aiuiColorDeepGray);
     }
   }
-  &_number {
+  &__number {
     background-color: transparent;
     border: 0;
     width: 110px;

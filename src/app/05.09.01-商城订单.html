@@ -1,5 +1,5 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-我的任务{% endblock %}
+{% block title %}蔬游-商城订单{% endblock %}
 {% block content %}
 <div class="aiui-tab" id="tab">
   <div class="header-sticky-hook">
@@ -10,19 +10,11 @@
         </a>
       </div>
       <div class="aiui-segmented-control aiui-segmented-control--small aiui-segmented-control--primary">
-        <a href="javascript:;" class="aiui-segmented-control__item active">农场订单</a>
-        <a href="javascript:;" class="aiui-segmented-control__item">商城订单</a>
+        <a href="05.04.01-农场订单.html" class="aiui-segmented-control__item">农场订单</a>
+        <a href="05.09.01-商城订单.html" class="aiui-segmented-control__item active">商城订单</a>
       </div>
     </div>
     <!--头部导航 start-->
-    <div class="aiui-tabbar">
-      <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
-        租地订单<span>（2）</span>
-      </a>
-      <a href="javascript:;" class="aiui-tabbar__item">
-        配送订单<span>（3）</span>
-      </a>
-    </div>
     <!--搜索区域 start-->
     <div class="filter-bar">
       <div class="arrow-select" id="openFilterPopup">
@@ -41,12 +33,55 @@
       </div>
     </div>
     <!--搜索区域 end-->
+    <div class="aiui-tabbar">
+      <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">全部</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待付款</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待发货</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待收货</a>
+      <a href="javascript:;" class="aiui-tabbar__item">待评价</a>
+    </div>
 
   </div>
 
   <div class="aiui-tab__panel">
+    <!-- 全部 -->
     <div class="aiui-tab__content">
-      <div class="goods-group goods-group--normal">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card" onclick="window.location.href='05.09.02-商城订单-订单详情.html'">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待发货</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">3公斤</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='05.04.02-农场订单-填写物流.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">填写物流</button>
+            </div>
+          </div>
+        </div>
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
             <button class="user-enter user-enter--normal">
@@ -56,7 +91,7 @@
               <p class="name">这是租户名字</p>
               <i class="icon-arrow-right"></i>
             </button>
-            <p class="text-warn">被租</p>
+            <p class="text-warn">已发货</p>
           </div>
           <div class="goods-list__item">
             <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
@@ -78,115 +113,11 @@
               <p class="text-med__gray fz26">共1件商品 合计：</p>
               <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
-          </div>
-        </div>
-        <div class="goods-list goods-list--card">
-          <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
-              <div class="avatar avatar-38">
-                <img src="../images/avatar.png" alt="头像">
-              </div>
-              <p class="name">这是租户名字</p>
-              <i class="icon-arrow-right"></i>
-            </button>
-            <p class="text-warn">被包</p>
-          </div>
-          <div class="goods-list__item">
-            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
-            <div class="content">
-              <div class="content-text">
-                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <div class="mark">
-                  <div class="mark-tips mark-tips__plain">租种</div>
-                </div>
-              </div>
-            </div>
-            <div class="text-right">
-              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
-              <p class="fz22 text-deep__gray">x1</p>
-            </div>
-          </div>
-          <div class="goods-list__ft">
-            <div class="price-group">
-              <p class="text-med__gray fz26">共1件商品 合计：</p>
-              <p class="fz26">¥<span class="fz36">108</span>.00</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="aiui-tab__content">
-      <div class="goods-group goods-group--normal">
-        <div class="goods-list goods-list--card">
-          <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
-              <div class="avatar avatar-38">
-                <img src="../images/avatar.png" alt="头像">
-              </div>
-              <p class="name">这是租户名字</p>
-              <i class="icon-arrow-right"></i>
-            </button>
-            <p class="text-warn">待配送</p>
-          </div>
-          <div class="goods-list__item">
-            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
-            <div class="content">
-              <div class="content-text">
-                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <div class="desc">3公斤</div>
-              </div>
-            </div>
-            <div class="text-right">
-              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
-              <p class="fz22 text-deep__gray">x1</p>
-            </div>
-          </div>
-          <div class="goods-list__ft">
-            <div class="price-group">
-              <p class="text-med__gray fz26">共1件商品 合计：</p>
-              <p class="fz26">¥<span class="fz36">108</span>.00</p>
-            </div>
             <div class="Grid -right">
-              <a href="javascript:;"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</a>
-            </div>
-          </div>
-        </div>
-        <div class="goods-list goods-list--card">
-          <div class="goods-list__status">
-            <button class="user-enter user-enter--normal">
-              <div class="avatar avatar-38">
-                <img src="../images/avatar.png" alt="头像">
-              </div>
-              <p class="name">这是租户名字</p>
-              <i class="icon-arrow-right"></i>
-            </button>
-            <p class="text-warn">待收货</p>
-          </div>
-          <div class="goods-list__item">
-            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
-            <div class="content">
-              <div class="content-text">
-                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <div class="desc">3公斤</div>
-              </div>
-            </div>
-            <div class="text-right">
-              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
-              <p class="fz22 text-deep__gray">x1</p>
-            </div>
-          </div>
-          <div class="goods-list__ft">
-            <div class="price-group">
-              <p class="text-med__gray fz26">共1件商品 合计：</p>
-              <p class="fz26">¥<span class="fz36">108</span>.00</p>
-            </div>
-            <div class="Grid -right">
-              <a href="javascript:;"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</a>
-              <a href="javascript:;"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</a>
+              <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+              <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+                id="reminderBtn">提醒收货</button>
             </div>
           </div>
         </div>
@@ -206,7 +137,66 @@
             <div class="content">
               <div class="content-text">
                 <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
-                <div class="desc">3公斤</div>
+                <div class="mark">
+                  <div class="mark-tips mark-tips__plain">租种</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="mark">
+                  <div class="mark-tips mark-tips__plain">租种</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共2件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">216</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒评价</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 待付款 -->
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待付款</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">3公斤</p>
               </div>
             </div>
             <div class="text-right">
@@ -220,13 +210,152 @@
               <p class="fz26">¥<span class="fz36">108</span>.00</p>
             </div>
             <div class="Grid -right">
-              <a href="javascript:;"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看详情</a>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">去付款</button>
             </div>
           </div>
         </div>
       </div>
-
+    </div>
+    <!-- 待发货 -->
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">待发货</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">3公斤</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='05.04.02-农场订单-填写物流.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">填写物流</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 待收货 -->
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-warn">已发货</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <p class="desc">3公斤</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共1件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">108</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='05.04.02-农场订单-填写物流.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+              <button class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒收货</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 待评价 -->
+    <div class="aiui-tab__content">
+      <div class="goods-group goods-group--primary">
+        <div class="goods-list goods-list--card">
+          <div class="goods-list__status">
+            <button class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/avatar.png" alt="头像">
+              </div>
+              <p class="name">这是租户名字</p>
+              <i class="icon-arrow-right"></i>
+            </button>
+            <p class="text-deep__gray">已完成</p>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="mark">
+                  <div class="mark-tips mark-tips__plain">租种</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__item">
+            <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+            <div class="content">
+              <div class="content-text">
+                <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+                <div class="mark">
+                  <div class="mark-tips mark-tips__plain">租种</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+              <p class="fz22 text-deep__gray">x1</p>
+            </div>
+          </div>
+          <div class="goods-list__ft">
+            <div class="price-group">
+              <p class="text-med__gray fz26">共2件商品 合计：</p>
+              <p class="fz26">¥<span class="fz36">216</span>.00</p>
+            </div>
+            <div class="Grid -right">
+              <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+              <button type="button"
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒评价</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -282,7 +411,7 @@
     });
     //搜索
     aiui.searchBar('#searchBar');
-
+    // 筛选弹窗
     var $filterPopup = $('#filterPopup');
     // 关闭Popup弹窗
     $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
@@ -303,11 +432,18 @@
     $(".select-item").bind("click", function () {
       $(this).addClass("active").siblings().removeClass("active");
     });
-
+    // 重置按钮
     $("#resetPopupFilterBtn").bind("click", function () {
       $(".select-item").removeClass("active");
     });
 
+    // 提示Toast演示
+    $("#reminderBtn").bind("click", function () {
+      aiui.toast('提醒成功', {
+        duration: 3000,
+        className: 'aiui-toast--success'
+      });
+    });
   });
 </script>
 {% endblock %}

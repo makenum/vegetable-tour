@@ -1,8 +1,6 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-我的地块{% endblock %}
 {% block content %}
-
-<!--内容区域 start-->
 <div class="aiui-tab" id="tab">
   <div class="header-sticky-hook">
     <!--头部导航 start-->
@@ -164,10 +162,10 @@
       </div>
     </div>
 
-    
+
     <div class="aiui-tab__content">
       <div class="goods-group goods-group--primary">
-        
+
         <div class="goods-list goods-list--card">
           <div class="goods-list__status">
             <button class="user-enter user-enter--normal">
@@ -206,7 +204,7 @@
             </div>
           </div>
         </div>
-       
+
       </div>
     </div>
     <div class="aiui-tab__content">
@@ -293,7 +291,7 @@
             </div>
           </div>
         </div>
-    
+
       </div>
     </div>
 
@@ -301,8 +299,13 @@
   </div>
 
 </div>
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button" onclick="window.location.href=('05.02.04-我的地块-新增地块.html')"
+      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">新增地块</button>
+  </div>
 </div>
-<!--内容区域 end-->
 
 {% endblock %}
 {% block footer %}

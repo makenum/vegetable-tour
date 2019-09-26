@@ -1,0 +1,65 @@
+{% extends 'app.nunjucks' %}
+{% block title %}线下采摘-扫码录入填写{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">线下采摘录入</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<div class="goods-list">
+  <div class="goods-list__status">
+    <button class="user-enter user-enter--normal">
+      <div class="avatar avatar-38">
+        <img src="../images/avatar.png" alt="头像">
+      </div>
+      <p class="name">这是租户名字</p>
+      <i class="icon-arrow-right"></i>
+    </button>
+  </div>
+  <div class="goods-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+    <div class="content">
+      <div class="content-text">
+        <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+        <div class="mark">
+          <div class="mark-tips mark-tips__plain">租种</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="aiui-cells mt20">
+  <div class="aiui-cell">
+    <div class="Cell -2of2">
+      <p>采摘数量：</p>
+      <div class="Grid -middle mt10 mb10">
+        <div class="aiui-count">
+          <button type="button" class="aiui-count__btn aiui-count__decrease">
+            <i class="icon-decrease"></i>
+          </button>
+          <input type="number" class="aiui-count__number" value="1" readonly>
+          <button type="button" class="aiui-count__btn aiui-count__increase">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+        <div class="Cell -fill ml20"><span class="text-deep__gray">斤</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">提交</button>
+  </div>
+</div>
+
+
+{% endblock %}
