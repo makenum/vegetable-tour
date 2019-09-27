@@ -24,6 +24,11 @@
 .aiui-textarea__group {
   position: relative;
   padding: 20px 24px;
+  &--normal {
+    &:before {
+      display: none;
+    }
+  }
   &:before {
     .setFullLine(@aiuiCellBorderColor, 10px);
   }
