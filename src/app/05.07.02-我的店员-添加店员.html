@@ -1,0 +1,112 @@
+{% extends 'app.nunjucks' %}
+{% block title %}我的店员-添加店员{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-headbar__wrap">
+  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
+    <div class="aiui-headbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-headbar__title">添加店员</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+
+<!-- 店员添加列表 start -->
+<div class="aiui-cells clerk-add-cells">
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">手机号码</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="tel" placeholder="填写号码">
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">实名认证</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="实名认证" readonly value="去认证">
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
+    </div>
+  </div>
+
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">真是姓名</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="实名认证后回填" readonly>
+    </div>
+  </div>
+
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">身份证号码</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="tel" placeholder="实名认证后回填" readonly>
+    </div>
+  </div>
+
+  <div class="aiui-cell" id="cityPickerBtn">
+    <div class="aiui-cell__hd">
+      <span class="text-med__gray">地市所属</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <input class="aiui-input" type="text" placeholder="请选择地区" readonly>
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
+    </div>
+  </div>
+</div>
+<!-- 店员添加列表 end -->
+
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn">
+    <button type="button" class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill"
+      id="submitBtn">提交</button>
+  </div>
+</div>
+
+
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    // 省市区选择
+    $("#cityPickerBtn").bind("click", function () {
+      var $input = $(this).find(".aiui-input");
+      aiui.picker(provinceCityDistrictData, {
+        defaultValue: [0, 0, 0],
+        onChange: function (result) {
+          console.log(result);
+        },
+        onConfirm: function (result) {
+          console.log(result);
+          $input.val(result[0].label + result[1].label + result[2].label)
+        },
+        id: 'cityPicker',
+        title: '请选择地市',
+      });
+    });
+    // 提交按钮弹窗
+    $("#submitBtn").bind("click", function () {
+      var descText = "您的新员工提交成功，可以返回员工列表进行查看"
+      aiui.alert(descText, {
+        title: '提交成功',
+        buttons: [{
+          label: '好的',
+          type: 'primary',
+          // 回调事件
+          onClick: function () { console.log('好的') }
+        }]
+      });
+    });
+  });
+</script>
+{% endblock %}

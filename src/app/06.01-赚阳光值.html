@@ -166,7 +166,10 @@
     //头部导航固定
     $(".headbar-sticky").sticky({ topSpacing: 0 });
     $("#checkInBtn").bind("click", function () {
-      aiui.toast("签到成功！<br>获得2个阳光值", 3000);
+      aiui.toast('浏览成功！<br>获得2个阳光值', {
+        duration: 3000,
+        className: 'aiui-toast--success'
+      });
     });
   });
 </script>
