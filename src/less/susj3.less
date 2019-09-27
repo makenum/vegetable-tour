@@ -994,3 +994,70 @@
     }
   }
 }
+//评价订单
+.label-tips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 19px;
+  &__item {
+    padding: 5px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    line-height: 64px;
+    padding: 0 28px;
+    position: relative;
+    .setTapColor();
+    &:before {
+      .setFullLine(@aiuiBtnPlainDefaultBorderColor, 32px);
+    }
+    &--active {
+      background-color: @aiuiColorPrimary;
+      border-radius: 32px;
+      color: @aiuiColorWhite;
+      &:before {
+        border-color: @aiuiColorPrimary;
+      }
+    }
+  }
+}
+.textarea-box {
+  width: 100%;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 10px 24px;
+}
+.aiui-uploader--multiple {
+  padding: 24px 24px 0 24px;
+  overflow: hidden;
+  .aiui-uploader__file {
+    width: 160px;
+    height: 160px;
+  }
+  .aiui-uploader__box {
+    float: left;
+    margin: 0 24px 24px 0;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px dashed @aiuiColorDisabledGray;
+    font-size: 28px;
+    color: @aiuiColorDeepGray;
+    position: relative;
+  }
+  .icon-camera,
+  .icon-video {
+    width: 68px;
+    height: 68px;
+    background-color: @aiuiColorDisabledGray;
+  }
+}

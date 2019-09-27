@@ -15,6 +15,61 @@
 </div>
 <!--头部导航 end-->
 <!--内容区域 start-->
-
+<div class="aiui-cells">
+  <div class="goods-list">
+    <div class="goods-list__item">
+      <div class="thumb thumb-100"><img src="../images/farm_tu01.png"></div>
+      <div class="content">
+        <div class="content-text">
+          <h3 class="name">巴马乡片区A1096地块南瓜</h3>
+          <p class="desc">总计10平方</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="label-tips">
+    <div class="label-tips__item"><span class="label-tips__btn label-tips__btn--active">快递物流</span></div>
+    <div class="label-tips__item"><span class="label-tips__btn">日常服务</span></div>
+    <div class="label-tips__item"><span class="label-tips__btn">到货感受</span></div>
+    <div class="label-tips__item"><span class="label-tips__btn">食用体验</span></div>
+  </div>
+  <textarea rows="3" class="textarea-box" placeholder="点击上方标签，从不同角度给订单更全面的评价，可以帮助到更多小伙伴哦！"></textarea>
+  <div class="aiui-uploader aiui-uploader--multiple">
+    <div class="aiui-uploader__item">
+      <ul class="aiui-uploader__files" style="display:none;">
+        <li class="aiui-uploader__file"></li>
+      </ul>
+      <div class="aiui-uploader__box">
+        <i class="icon-camera"></i>
+        <p>添加图片</p>
+        <input type="file" accept="image/*" capture="camera" class="aiui-uploader__input" />
+      </div>
+    </div>
+    <div class="aiui-uploader__item">
+      <ul class="aiui-uploader__files" style="display:none;">
+        <li class="aiui-uploader__file"></li>
+      </ul>
+      <div class="aiui-uploader__box">
+        <i class="icon-video"></i>
+        <p>添加视频</p>
+        <input type="file" accept="video/*" capture="camcorder" class="aiui-uploader__input" />
+      </div>
+    </div>
+  </div>
+  <div class="aiui-cells aiui-cells__checkbox">
+    <label class="aiui-cell" for="s12">
+      <div class="aiui-cell__hd">
+        <input type="checkbox" name="checkbox1" class="aiui-check" id="s12">
+        <i class="aiui-icon-checked"></i>
+      </div>
+      <div class="aiui-cell__bd">
+        <p>匿名</p>
+      </div>
+      <div class="aiui-cell__ft">
+        <p>你写的评价会以匿名的形式展现</p>
+      </div>
+    </label>
+  </div>
+</div>
 <!--内容区域 end-->
 {% endblock %}
