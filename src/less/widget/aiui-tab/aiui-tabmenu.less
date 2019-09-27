@@ -1,12 +1,12 @@
 @import "../../base/fn";
 
-.aiui-tabbar {
+.aiui-tabmenu {
   display: flex;
   position: relative;
   background-color: @aiuiColorWhite;
 }
 
-.aiui-tabbar__item {
+.aiui-tabmenu__item {
   display: block;
   flex: 1;
   padding: 0px 0;
@@ -17,7 +17,7 @@
   position: relative;
   .setTapColor();
 
-  &.aiui-bar__item_on::before {
+  &--on::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -38,4 +38,3 @@
     }
   }
 }
-

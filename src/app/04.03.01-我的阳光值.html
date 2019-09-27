@@ -2,13 +2,13 @@
 {% block title %}我的阳光值{% endblock %}
 {% block content %}
 <!--头部导航 start-->
-<div class="aiui-headbar__wrap">
-  <div class="aiui-headbar aiui-headbar__default aiui-headbar__fixed">
-    <div class="aiui-headbar__item">
+<div class="aiui-navbar__wrap">
+  <div class="aiui-navbar aiui-navbar__default aiui-navbar__fixed">
+    <div class="aiui-navbar__item">
       <a href="javascript:history.back();" class="icon-return">
       </a>
     </div>
-    <h3 class="aiui-headbar__title">我的阳光值</h3>
+    <h3 class="aiui-navbar__title">我的阳光值</h3>
   </div>
 </div>
 <!--头部导航 start-->
@@ -20,9 +20,9 @@
   </div>
 </div>
 <div id="sunshineTab">
-  <div class="aiui-tabbar">
-    <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">充值记录</a>
-    <a href="javascript:;" class="aiui-tabbar__item">使用记录</a>
+  <div class="aiui-tabmenu">
+    <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">充值记录</a>
+    <a href="javascript:;" class="aiui-tabmenu__item">使用记录</a>
   </div>
   <div class="sunshine-bar">
     <div class="arrow-select" id="selectMouthBtn">
@@ -205,17 +205,17 @@
         value: 4,
       }
     ], {
-        title: '请选择月份',
-        defaultValue: [1],
-        onChange: function (result) {
-          console.log(result)
-        },
-        onConfirm: function (result) {
-          console.log(result)
-          $this.find(".arrow-select__value").html(result[0].label);
-        },
-        id: 'selectMouthPicker'
-      });
+      title: '请选择月份',
+      defaultValue: [1],
+      onChange: function (result) {
+        console.log(result)
+      },
+      onConfirm: function (result) {
+        console.log(result)
+        $this.find(".arrow-select__value").html(result[0].label);
+      },
+      id: 'selectMouthPicker'
+    });
   });
   // 阳光值说明弹窗
   $("#sunshineValueDescBtn").bind("click", function () {
