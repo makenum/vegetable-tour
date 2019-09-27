@@ -74,8 +74,8 @@
               <p class="fz26"><span class="fz36">50</span>点</p>
             </div>
             <div class="Grid -right">
-              <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+              <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+                id="reminderBtn">提醒完成</button>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒完成</button>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill btnCheck">提醒完成</button>
+                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒完成</button>
             </div>
           </div>
         </div>
@@ -423,13 +423,13 @@
         }]
       });
     });
-    // 提醒验收
-    $('.aiui-tab__content').on('click', '.btnCheck', function () {
+    // 提示Toast演示
+    $("#reminderBtn").bind("click", function () {
       aiui.toast('提醒成功', {
         duration: 3000,
         className: 'aiui-toast--success'
       });
-    })
+    });
   });
 </script>
 {% endblock %}

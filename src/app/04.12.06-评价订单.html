@@ -9,13 +9,14 @@
     </div>
     <h3 class="aiui-navbar__title">评价订单</h3>
     <div class="aiui-navbar__item">
-      <a href="javascript:history.back();" class="text-primary">发布</a>
+      <a href="javascript:;" class="text-primary" id="releaseBtn">发布</a>
     </div>
   </div>
 </div>
 <!--头部导航 end-->
 <!--内容区域 start-->
-<div class="aiui-cells">
+<div class="aiui-cells aiui-score--whole">
+  <!--农场信息 start-->
   <div class="goods-list">
     <div class="goods-list__item">
       <div class="thumb thumb-100"><img src="../images/farm_tu01.png"></div>
@@ -27,13 +28,32 @@
       </div>
     </div>
   </div>
-  <div class="label-tips">
-    <div class="label-tips__item"><span class="label-tips__btn label-tips__btn--active">快递物流</span></div>
-    <div class="label-tips__item"><span class="label-tips__btn">日常服务</span></div>
-    <div class="label-tips__item"><span class="label-tips__btn">到货感受</span></div>
-    <div class="label-tips__item"><span class="label-tips__btn">食用体验</span></div>
+  <!--农场信息 end-->
+  <!--评分 start-->
+  <div class="aiui-score aiui-score--line">
+    <span class="aiui-score__label font-weight fz30 mr24">整体评价</span>
+    <div class="aiui-star">
+      <ul class="aiui-star__box star" score="0">
+        <li class="aiui-star__item icon-star"><a href="javascript:;">1</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">2</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">3</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">4</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">5</a></li>
+      </ul>
+      <span class="star-result"></span>
+    </div>
   </div>
-  <textarea rows="3" class="textarea-box" placeholder="点击上方标签，从不同角度给订单更全面的评价，可以帮助到更多小伙伴哦！"></textarea>
+  <!--评分 end-->
+  <!--录入信息 start-->
+  <div class="aiui-tips">
+    <div class="aiui-tips__item"><span class="aiui-tips__btn">快递物流</span></div>
+    <div class="aiui-tips__item"><span class="aiui-tips__btn">日常服务</span></div>
+    <div class="aiui-tips__item"><span class="aiui-tips__btn">到货感受</span></div>
+    <div class="aiui-tips__item"><span class="aiui-tips__btn">食用体验</span></div>
+  </div>
+  <div class="aiui-textarea__group aiui-textarea__group--normal">
+    <textarea class="aiui-textarea" placeholder="点击上方标签，从不同角度给订单更全面的评价，可以帮助到更多小伙伴哦！" rows="3"></textarea>
+  </div>
   <div class="aiui-uploader aiui-uploader--multiple">
     <div class="aiui-uploader__item">
       <ul class="aiui-uploader__files" style="display:none;">
@@ -56,20 +76,68 @@
       </div>
     </div>
   </div>
-  <div class="aiui-cells aiui-cells__checkbox">
+  <div class="aiui-cells__checkbox aiui-cells__checkbox--line">
     <label class="aiui-cell" for="s12">
       <div class="aiui-cell__hd">
-        <input type="checkbox" name="checkbox1" class="aiui-check" id="s12">
+        <input type="checkbox" name="checkbox1" class="aiui-check" checked id="s12">
         <i class="aiui-icon-checked"></i>
       </div>
       <div class="aiui-cell__bd">
         <p>匿名</p>
       </div>
       <div class="aiui-cell__ft">
-        <p>你写的评价会以匿名的形式展现</p>
+        <p class="text-deep__gray">你写的评价会以匿名的形式展现</p>
       </div>
     </label>
   </div>
+  <!--录入信息 end-->
+</div>
+<div class="aiui-cells aiui-score--other mt20">
+  <h3 class="score-title">农场评价</h3>
+  <div class="aiui-score">
+    <span class="aiui-score__label fz28 mr24">物流服务</span>
+    <div class="aiui-star">
+      <ul class="aiui-star__box star" score="0">
+        <li class="aiui-star__item icon-star"><a href="javascript:;">1</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">2</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">3</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">4</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">5</a></li>
+      </ul>
+      <span class="star-result"></span>
+    </div>
+  </div>
+  <div class="aiui-score">
+    <span class="aiui-score__label fz28 mr24">服务态度</span>
+    <div class="aiui-star">
+      <ul class="aiui-star__box star" score="0">
+        <li class="aiui-star__item icon-star"><a href="javascript:;">1</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">2</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">3</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">4</a></li>
+        <li class="aiui-star__item icon-star"><a href="javascript:;">5</a></li>
+      </ul>
+      <span class="star-result"></span>
+    </div>
+  </div>
 </div>
 <!--内容区域 end-->
+{% endblock %}
+{% block footer %}
+<script src="../js/star.js"></script>
+<script>
+  $(function () {
+    $(".aiui-tips__item").on("click", function () {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+    });
+    // 提示Toast演示
+    $("#releaseBtn").bind("click", function () {
+      aiui.toast('发布成功', {
+        duration: 3000,
+        className: 'aiui-toast--success'
+      });
+    });
+  });
+</script>
 {% endblock %}
