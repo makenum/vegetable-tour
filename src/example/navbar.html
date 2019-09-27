@@ -1,34 +1,11 @@
 {% extends 'example.nunjucks' %}
-{% block title %}navbar{% endblock %}
+{% block title %}Headbar{% endblock %}
 {% block content %}
-  <div class="page">
-    <div class="page__bd" style="height: 100%;">
-      <div class="aiui-tab">
-        <div class="aiui-navbar">
-          <div class="aiui-navbar__item aiui-bar__item_on">
-                    选项一
-                </div>
-          <div class="aiui-navbar__item">
-                    选项二
-                </div>
-          <div class="aiui-navbar__item">
-                    选项三
-                </div>
-        </div>
-        <div class="aiui-tab__panel"></div>
-      </div>
-    </div>
+<div class="aiui-navbar aiui-navbar__default">
+  <div class="aiui-navbar__item">
+    <a href="javascript:;" class="icon-return">
+    </a>
   </div>
-{% endblock %}
-{% block footer %}
-  <script type="text/javascript">
-    $(function () {
-      $('.aiui-navbar__item').on('click', function () {
-        $(this)
-          .addClass('aiui-bar__item_on')
-          .siblings('.aiui-bar__item_on')
-          .removeClass('aiui-bar__item_on');
-      });
-    });
-  </script>
+  <h3 class="aiui-navbar__title">标题</h3>
+</div>
 {% endblock %}

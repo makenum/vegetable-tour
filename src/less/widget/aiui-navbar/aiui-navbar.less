@@ -1,9 +1,9 @@
 @import "../../base/fn";
 
-.aiui-headbar__wrap {
+.aiui-navbar__wrap {
   height: 88px;
 }
-.aiui-headbar {
+.aiui-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,11 +39,11 @@
     padding: 0 24px;
   }
 }
-.aiui-headbar__fixed {
+.aiui-navbar__fixed {
   .fixed-default();
   z-index: 9;
 }
-.aiui-headbar__default {
+.aiui-navbar__default {
   background-color: @aiuiColorWhite;
   &:after {
     .setBottomLine(@aiuiLineColorLight);
@@ -66,7 +66,7 @@
     color: @aiuiColorGray;
   }
 }
-.aiui-headbar__transparent {
+.aiui-navbar__transparent {
   background-color: transparent;
   color: @aiuiColorWhite;
   [class^="icon-"] {
@@ -92,7 +92,7 @@
 }
 
 .sticky-wrapper {
-  .aiui-headbar__fixed {
+  .aiui-navbar__fixed {
     position: absolute;
     top: 0;
     left: auto;

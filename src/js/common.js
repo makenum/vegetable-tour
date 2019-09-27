@@ -1,17 +1,17 @@
 $(function() {
   // 头部导航固定
   $(".headbar-sticky").on("sticky-start", function() {
-    if ($(".aiui-headbar").hasClass("aiui-headbar__transparent")) {
-      $(".aiui-headbar")
-        .removeClass("aiui-headbar__transparent")
-        .addClass("aiui-headbar__default");
+    if ($(".aiui-navbar").hasClass("aiui-navbar__transparent")) {
+      $(".aiui-navbar")
+        .removeClass("aiui-navbar__transparent")
+        .addClass("aiui-navbar__default");
     }
   });
   $(".headbar-sticky").on("sticky-end", function() {
-    if ($(".aiui-headbar").hasClass("aiui-headbar__default")) {
-      $(".aiui-headbar")
-        .removeClass("aiui-headbar__default")
-        .addClass("aiui-headbar__transparent");
+    if ($(".aiui-navbar").hasClass("aiui-navbar__default")) {
+      $(".aiui-navbar")
+        .removeClass("aiui-navbar__default")
+        .addClass("aiui-navbar__transparent");
     }
   });
   // 数字增减器

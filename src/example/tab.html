@@ -1,0 +1,46 @@
+{% extends 'example.nunjucks' %}
+{% block title %}TabBar{% endblock %}
+{% block content %}
+<div class="page">
+  <div class="page__hd">
+    <h1 class="page__title">TabBar</h1>
+  </div>
+  <div class="page__bd" style="height: 100%;">
+    <div class="aiui-tab" id="tab">
+      <div class="aiui-tabmenu">
+        <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">
+          选项一
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项二
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项三
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项四
+        </a>
+      </div>
+      <div class="aiui-tab__panel">
+        <div class="aiui-tab__content">我是第一个</div>
+        <div class="aiui-tab__content">我是第二个</div>
+        <div class="aiui-tab__content">我是第三个</div>
+        <div class="aiui-tab__content">我是第四个</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    //tab
+    aiui.tab('#tab', {
+      defaultIndex: 0,
+      onChange: function (index) {
+        console.log(index);
+      }
+    });
+  });
+</script>
+{% endblock %}

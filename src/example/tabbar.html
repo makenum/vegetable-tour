@@ -1,45 +1,37 @@
 {% extends 'example.nunjucks' %}
-{% block title %}TabBar{% endblock %}
+{% block title %}Headbar{% endblock %}
 {% block content %}
-  <div class="page">
-    <div class="page__hd">
-      <h1 class="page__title">TabBar</h1>
-    </div>
-    <div class="page__bd" style="height: 100%;">
-      <div class="aiui-tab">
-          <div class="weui-tab__panel">
-              <div id="c0" class="weui-tab__content" style="opacity: 1; display: none;">我是第一个0</div>
-              <div id="c1" class="weui-tab__content" style="opacity: 1; display: none;">我是第2个1</div>
-              <div id="c2" class="weui-tab__content" style="display: block; opacity: 1;">美国</div>
-              <div id="c3" class="weui-tab__content" style="opacity: 1; display: none;">法国</div>
-          </div>
-        <div class="aiui-tabbar">
-          <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
-             选项一<span class="aiui-bar-badge">8</span>
-          </a>
-          <a href="javascript:;" class="aiui-tabbar__item">
-             选项二<span class="aiui-bar-badge">8</span>
-          </a>
-          <a href="javascript:;" class="aiui-tabbar__item">
-             选项三<span class="aiui-bar-badge">8</span>
-          </a>
-          <a href="javascript:;" class="aiui-tabbar__item">
-             选项四<span class="aiui-bar-badge">8</span>
-          </a>
-        </div>
-      </div>
+<div class="page">
+  <div class="page__hd">
+    <h1 class="page__title">Tabbar</h1>
+    <p class="page__desc">底部导航</p>
+  </div>
+  <div class="page__bd">
+    <div class="aiui-tabbar">
+      <a href="javascript:;" class="aiui-tabbar__item aiui-bar__item_on">
+        <span style="display: inline-block;position: relative;">
+          <img src="./images/icon_tabbar.png" alt="" class="aiui-tabbar__icon">
+          <span class="aiui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+        </span>
+        <p class="aiui-tabbar__label">微信</p>
+      </a>
+      <a href="javascript:;" class="aiui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="aiui-tabbar__icon">
+        <p class="aiui-tabbar__label">通讯录</p>
+      </a>
+      <a href="javascript:;" class="aiui-tabbar__item">
+        <span style="display: inline-block;position: relative;">
+          <img src="./images/icon_tabbar.png" alt="" class="aiui-tabbar__icon">
+          <span class="aiui-badge aiui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+        </span>
+        <p class="aiui-tabbar__label">发现</p>
+      </a>
+      <a href="javascript:;" class="aiui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="aiui-tabbar__icon">
+        <p class="aiui-tabbar__label">我</p>
+      </a>
     </div>
   </div>
-{% endblock %}
-{% block footer %}
-  <script type="text/javascript">
-    $(function () {
-      $('.aiui-tabbar__item').on('click', function () {
-        $(this)
-          .addClass('aiui-bar__item_on')
-          .siblings('.aiui-bar__item_on')
-          .removeClass('aiui-bar__item_on');
-      });
-    });
-  </script>
+
+</div>
 {% endblock %}
