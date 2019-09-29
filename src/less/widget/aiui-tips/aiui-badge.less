@@ -1,18 +1,27 @@
 @import "../../base/fn";
 
+@aiuiBadgeSize: 24px;
+@aiuiBadgeColor: @aiuiColorWhite;
+@aiuiBadgePadding: 0 6px;
+@aiuiBadgeFontSize: 18px;
+@aiuiBadgeBgColor: @aiuiColorOrange;
+@aiuiBadgeDotSize: 16px;
+
 .aiui-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  min-width: 16px;
-  border-radius: 36px;
-  background-color: @aiuiColorRed;
-  color: #ffffff;
-  line-height: 1.2;
+  padding: @aiuiBadgePadding;
+  min-width: @aiuiBadgeSize;
+  line-height: @aiuiBadgeSize;
+  border-radius: @aiuiBadgeFontSize;
+  background-color: @aiuiBadgeBgColor;
+  color: @aiuiBadgeColor;
+  font-weight: normal;
   text-align: center;
-  font-size: 24px;
-  vertical-align: middle;
+  font-size: @aiuiBadgeFontSize;
 }
-.aiui-badge_dot {
-  padding: 8px;
+.aiui-badge--dot {
+  width: @aiuiBadgeDotSize;
   min-width: 0;
+  height: @aiuiBadgeDotSize;
+  background-color: @aiuiBadgeBgColor;
+  border-radius: 100%;
 }

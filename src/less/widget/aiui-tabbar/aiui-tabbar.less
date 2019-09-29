@@ -11,33 +11,43 @@
   &:before {
     .setTopLine(@aiuiLineColorLight);
   }
-}
 
-.aiui-tabbar__item {
-  flex: 1;
-  color: @aiuiTextColorDesc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: @aiuiTabbarHeight;
-
-  &.aiui-bar__item_on {
+  &__icon {
+    width: @aiuiTabbarIconSize;
+    height: @aiuiTabbarIconSize;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .aiui-badge {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(100%);
+      transform-origin: 100%;
+    }
   }
-}
 
-.aiui-tabbar__icon {
-  width: @aiuiTabbarIconSize;
-  height: @aiuiTabbarIconSize;
-  position: relative;
-  img {
-    width: 100%;
-    height: 100%;
+  &__label {
+    color: @aiuiTextColorTitle;
+    font-size: 20px;
+    line-height: 20px;
   }
-}
 
-.aiui-tabbar__label {
-  color: @aiuiTextColorTitle;
-  font-size: 20px;
-  line-height: 1.4;
+  &__item {
+    flex: 1;
+    color: @aiuiTextColorDesc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: @aiuiTabbarHeight;
+
+    &--on {
+      .aiui-tabbar__label {
+        color: @aiuiColorPrimary;
+      }
+    }
+  }
 }
