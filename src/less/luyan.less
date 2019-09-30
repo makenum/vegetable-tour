@@ -236,6 +236,183 @@
   vertical-align: middle;
   font-size: 28px;
 }
+// 蔬游商城
+.mall-container{
+  background: #fff;
+  background-image: linear-gradient(180deg, #FF7664 0%, #FF9393 98%);
+  background-size: 100% 350px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  &__content{
+    margin-top: 88px;
+    padding: 0 @aiuiCellGapH @aiuiCellGapV;
+  }
+}
+.swiper-index_ad{
+  border-radius: 10px;
+  .swiper-slide{
+    img{
+      object-fit: cover;
+    }
+  }
+  .swiper-pagination-fraction{
+    display: inline-block;
+    background: rgba(0,0,0,0.40);
+    border-radius: 18px;
+    width: auto;
+    padding:0 @aiuiCellGapH/2;
+    left:auto;
+    right:@aiuiCellGapH;
+    color:@aiuiColorWhite;
+  }
+}
+.swiper-index_ad_small{
+  margin: @aiuiCellInnerGapH*2   @aiuiCellGapH  0;
+  height: 180px;
+  .swiper-pagination{
+    bottom:0;
+  }
+  .swiper-pagination-bullet-active{
+    background: #333;
+  }
+}
+.mall-list{
+  margin-top: @aiuiCellInnerGapH*2;
+  &__img{
+    display: block;
+    margin: 0 auto;
+    width: 104px;
+  }
+  .title{
+    text-align: center;
+    color:@aiuiColorMedGray;
+    margin-top: @aiuiCellGapH;
+    .ellipsis() 
+  }
+}
+.mall-news{
+  display: flex;
+  margin: @aiuiCellInnerGapH*2   @aiuiCellGapH  0;
+  align-items: center;
+  &__title{
+    background: url("../images/mall-notice.png") no-repeat left center;
+    background-size:120px 30px ;
+    width: 120px; 
+    height: 40px;
+    margin-right: @aiuiCellInnerGapH*2;
+  }
+}
+.link__more{
+  color:@aiuiColorDeepGray;
+  position: relative;
+  padding-left: @aiuiCellGapH;
+  margin-left: @aiuiCellGapH;
+  height: 28px;
+  .setTapColor();
+  display: flex;
+  align-items: center;
+  &::before{
+    .setLeftLine(#C7C7C7)
+
+  }
+}
+.mall-mews__swiper{
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width:0;
+  .swiper-wrapper{
+    height: 40px;
+  }
+}
+.mall-floor{
+  background: #fff;
+  margin-top:@aiuiCellInnerGapH;
+  &__hd{
+    padding:@aiuiCellGapV @aiuiCellGapH;
+    display: flex;
+    align-items: baseline;
+  }
+}
+.swiper-index__product{
+  height: 340px;
+  .swiper-slide{
+    width: 300px;
+    position: relative;
+    box-sizing: border-box;
+    padding:@aiuiCellGapV @aiuiCellGapH;
+    &:not(:last-child)::before{
+      .setRightLine(#EDEDED)
+    }
+  }
+  
+}
+.mall-product__item{
+  .setTapColor();
+  .title{
+    .ellipsis()
+  }
+  .desc{
+    margin-top: @aiuiCellGapH/2;
+    margin-bottom:@aiuiCellGapH/2 ;
+    .ellipsis()
+  }
+  .thumb{
+    margin: 0 auto;
+  }
+}
+.thumb-hot-recommend{
+  display: block;
+  margin:0  @aiuiCellGapH  @aiuiCellInnerGapH;
+}
+.hot-recoment{
+  position: relative;
+  display: flex;
+  &::before{
+    .setTopLine(#EDEDED)
+  }
+  .mall-product__item{
+    display: block;
+    position: relative;
+    padding: 20px 24px;
+    &::before{
+      .setLeftLine(#EDEDED)
+    }
+
+  }
+}
+.stores{
+  padding: 0 24px;
+  &__item{
+    &:not(:last-child)::before{
+      .setBottomLine(#EDEDED)
+    }
+    &__hd{
+      display: flex;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+    &__bd{
+      display: flex;
+      align-items: center;
+    }
+    &__link{
+      display: block;
+      position: relative;
+      margin-bottom: 30px;
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+      .desc{
+        background: rgba(0,0,0,0.60);
+        border-radius: 0 0 10px 10px;
+        color:#fff;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
 .hide {
   display: none;
 }
