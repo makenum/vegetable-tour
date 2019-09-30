@@ -66,3 +66,79 @@
     opacity: 0;
   }
 }
+
+// tree
+@keyframes tree {
+  0% {
+    transform: scaleY(0.95);
+  }
+
+  15% {
+    transform: scaleY(1);
+  }
+}
+// chicken
+@keyframes chicken {
+  0%,
+  100% {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate3d(0, 0, 1, 3deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+}
+
+@keyframes fish {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-15%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes spinner-bubble {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
