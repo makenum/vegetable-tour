@@ -27,11 +27,193 @@
     bottom: 20px;
   }
 }
+
 .farm-game {
   position: relative;
   padding-top: 260px;
   padding-bottom: 80px;
+  // 装饰
+  .decoration-group {
+    position: absolute;
+    top: 270px;
+    left: 0;
+    display: flex;
+    .decoration-grass {
+      margin-left: 27px;
+      margin-top: 4px;
+    }
+    .decoration-flower {
+      margin-left: 40px;
+      margin-top: 4px;
+    }
+  }
+  .decoration-mushroom {
+    background: url("../images/decoration-mushroom.png") no-repeat;
+    background-size: contain;
+    &.\-small {
+      width: 22px;
+      height: 22px;
+      opacity: 0.5;
+    }
+    &.\-medium {
+      width: 27px;
+      height: 27px;
+      position: absolute;
+      left: 65px;
+      bottom: 140px;
+    }
+  }
+  .decoration-grass {
+    width: 39px;
+    height: 30px;
+    background: url("../images/decoration-grass.png") no-repeat;
+    background-size: contain;
+  }
+  .decoration-flower {
+    background: url("../images/decoration-flower.png") no-repeat;
+    background-size: contain;
+    &.\-small {
+      width: 22px;
+      height: 22px;
+      opacity: 0.62;
+      position: absolute;
+      top: 300px;
+      right: 90px;
+    }
+    &.\-medium {
+      width: 39px;
+      height: 39px;
+      opacity: 0.65;
+    }
+    &.\-large {
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      right: 111px;
+      bottom: 90px;
+    }
+  }
 }
+// 底部操作
+.game-operate {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  left: 24px;
+  right: 24px;
+  .items {
+    flex: 1;
+    display: flex;
+    .item {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.\-green {
+      .thumb {
+        background-color: #fedd85;
+        border-color: #2ea03a;
+      }
+      .tag {
+        background-color: #2ea03a;
+      }
+    }
+    &.\-orange {
+      .thumb {
+        background-color: #f9c7d8;
+        border-color: #ff6d00;
+      }
+      .tag {
+        background-color: #ff6d00;
+      }
+    }
+    &.\-yellow {
+      .thumb {
+        background-color: #fff6dd;
+        border-color: #ff9f17;
+      }
+      .tag {
+        background-color: #ff9f17;
+      }
+    }
+    &.\-blue {
+      .thumb {
+        background-color: #ffffff;
+        border-color: #3aa0ed;
+      }
+      .tag {
+        background-color: #3aa0ed;
+      }
+    }
+    &.\-red {
+      .thumb {
+        background-color: #fff6dd;
+        border-color: #f95f5f;
+      }
+      .tag {
+        background-color: #f95f5f;
+      }
+    }
+    &.\-purple {
+      .thumb {
+        background-color: #ffffff;
+        border-color: #c13aed;
+      }
+      .tag {
+        background-color: #c13aed;
+      }
+    }
+    .thumb {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-width: 4px;
+      border-style: solid;
+      border-radius: 50%;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .tag {
+      position: relative;
+      margin-top: -34px;
+      min-width: 92px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 17px;
+      background-color: @aiuiColorPrimary;
+      color: #fff;
+      font-size: 24px;
+      .text_wrap();
+    }
+  }
+  .level-signage {
+    margin-left: 32px;
+    width: 72px;
+    height: 89px;
+    background: url("../images/level-signage.png") no-repeat;
+    background-size: contain;
+    font-size: 22px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
 // 滚动消息栏
 .scroll-notice {
   position: absolute;
@@ -75,7 +257,7 @@
     }
   }
 }
-
+// 种养殖地
 .land-bg {
   position: relative;
   display: flex;
@@ -121,6 +303,7 @@
   .land {
     width: 228px;
     height: 150px;
+    position: relative;
     background-repeat: no-repeat;
     background-size: contain;
     &:nth-child(2) {
@@ -128,101 +311,236 @@
       margin-left: -61px;
       margin-right: -61px;
     }
-  }
-  // 未解锁
-  .land-lock {
-    background-image: url("../images/land-lock.png");
-  }
-  .land-unplanted,
-  .land-pool {
-    display: flex;
-    justify-content: center;
-  }
-  // 未种植陆产
-  .land-unplanted {
-    background-image: url("../images/land-unplanted.png");
-  }
-  // 未种植水产产
-  .land-pool {
-    background-image: url("../images/land-pool.png");
-  }
+    &-mark {
+      width: 23px;
+      height: 76px;
+      background: url("../images/land-mark-bg.png") no-repeat;
+      background-size: contain;
+      color: @aiuiColorWhite;
+      font-size: 18px;
+      line-height: 20px;
+      position: absolute;
+      letter-spacing: 0;
+      right: 15px;
+      top: 50%;
+      margin-top: -37px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    &-new {
+      position: absolute;
+      left: 50%;
+      bottom: 43px;
+      margin-left: -38px;
+      width: 76px;
+      height: 76px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
-  .terrestrial-add__btn,
-  .pool-add__btn {
-    margin-top: 30px;
-    width: 76px;
-    height: 76px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  // 陆产新增按钮
-  .terrestrial-add__btn {
-    background-image: url("../images/icon-terrestrial-add.png");
-  }
-  // 水产新增按钮
-  .pool-add__btn {
-    background-image: url("../images/icon-pool-add.png");
+    &-tree {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: 50%;
+      bottom: 31px;
+      margin-left: -75px;
+    }
   }
 }
+// 未解锁土地
+.land-lock {
+  background-image: url("../images/land-lock.png");
+}
+// 陆产未种植
+.land-unplanted {
+  background-image: url("../images/land-unplanted.png");
+}
+// 陆产已种植
+.land-terrestrial {
+  background-image: url("../images/land-terrestrial.png");
+}
+// 水产未养殖
+.land-pool {
+  background-image: url("../images/land-pool.png");
+}
 
-// 装饰
-.decoration-group {
+.land-tree {
+  transform-origin: bottom;
+  animation: tree 2.2s ease-in-out both infinite;
+}
+.land-fence {
   position: absolute;
-  top: 270px;
-  left: 0;
-  display: flex;
-  .decoration-grass {
-    margin-left: 27px;
-    margin-top: 4px;
-  }
-  .decoration-flower {
-    margin-left: 40px;
-    margin-top: 4px;
+  left: 50%;
+  bottom: 7px;
+  margin-left: -101px;
+  width: 202px;
+  height: 93px;
+  background: url("../images/land-fence.png") no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.chickens {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  margin-left: -75px;
+  z-index: 1;
+  .chicken {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    &:after {
+      content: "";
+      width: 60px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: #763417;
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+    }
+    img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: chicken 3000ms infinite;
+    }
+    &--left {
+      left: 6px;
+      bottom: 27px;
+      z-index: 2;
+    }
+    &--right {
+      right: 6px;
+      top: 15px;
+      transform: rotateY(180deg);
+    }
   }
 }
-.decoration-mushroom {
-  background: url("../images/decoration-mushroom.png") no-repeat;
-  background-size: contain;
-  &.\-small {
-    width: 22px;
-    height: 22px;
-    opacity: 0.5;
-  }
-  &.\-medium {
-    width: 27px;
-    height: 27px;
+
+.fishes {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  bottom: 27px;
+  margin-left: -75px;
+  z-index: 1;
+  .fish {
+    width: 53px;
+    height: 34px;
     position: absolute;
-    left: 65px;
-    bottom: 140px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: fish 2s ease-in infinite both;
+    }
+    &--left {
+      left: 25px;
+      bottom: 10px;
+      transform: rotateY(180deg);
+    }
+    &--right {
+      right: 25px;
+      bottom: 34px;
+      img {
+        animation-delay: 500ms;
+      }
+    }
   }
 }
-.decoration-grass {
-  width: 39px;
-  height: 30px;
-  background: url("../images/decoration-grass.png") no-repeat;
-  background-size: contain;
+.planting-operation-btn {
+  width: 78px;
+  height: 78px;
+  position: absolute;
+  bottom: 54px;
+  left: 70px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: floatY 800ms linear infinite both;
+  }
+  &.active {
+    &:after,
+    &:before {
+      color: #fff;
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      box-shadow: 0 0 0 2px;
+      animation: spinner-bubble 1s linear;
+      opacity: 0;
+    }
+    &:before {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    &:after {
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+    }
+  }
 }
-.decoration-flower {
-  background: url("../images/decoration-flower.png") no-repeat;
-  background-size: contain;
-  &.\-small {
-    width: 22px;
-    height: 22px;
-    opacity: 0.62;
+
+.daily-operation {
+  &__tree {
+    width: 300px;
+    height: 300px;
     position: absolute;
-    top: 300px;
-    right: 90px;
+    left: 50%;
+    top: 0;
+    margin-left: -150px;
+    z-index: 1;
   }
-  &.\-medium {
-    width: 39px;
-    height: 39px;
-    opacity: 0.65;
-  }
-  &.\-large {
-    width: 52px;
-    height: 52px;
+  &__close {
     position: absolute;
-    right: 111px;
-    bottom: 90px;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    width: 68px;
+    height: 68px;
+    .icon-default();
+    mask-image: url(../svg/icon-close-outline.svg);
+    background-color: @aiuiColorWhite;
+  }
+  &__shine {
+    width: 450px;
+    height: 450px;
+    background: url("../images/shine-bg.png") no-repeat;
+    background-size: contain;
+    opacity: 0;
+  }
+  &__info {
+    color: @aiuiColorWhite;
+    text-align: center;
+    .title {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    .desc {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    .aiui-btn {
+      width: 270px;
+    }
   }
 }

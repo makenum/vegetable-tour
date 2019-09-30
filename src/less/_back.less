@@ -1,0 +1,289 @@
+.farm-header {
+  position: relative;
+  height: 855px;
+  background: url("../images/farm_header_bg03.png") no-repeat;
+  background-size: contain;
+  .game {
+    padding-top: 520px;
+  }
+}
+
+.land-select {
+  .lands {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    // 初始化设置,页面加载抖动
+    .land:nth-child(1) {
+      transform: scale(0.7) translate(150px, -20px);
+    }
+    .land:nth-child(2) {
+      z-index: 1;
+    }
+    .land:nth-child(3) {
+      transform: scale(0.7) translate(-150px, -20px);
+    }
+    .land {
+      // 地块
+      .soil {
+        width: 318px;
+        height: 83px;
+        background: url("../images/land.png") no-repeat;
+        background-size: contain;
+        position: relative;
+        &-tips {
+          display: none;
+          font-size: 26px;
+          color: @aiuiColorBrown;
+          text-align: center;
+          position: absolute;
+          font-weight: 700;
+          left: 0;
+          width: 100%;
+          bottom: -45px;
+          line-height: 1;
+        }
+        .gofarm-btn {
+          display: none;
+          background-image: linear-gradient(180deg, #fee24b 0%, #ffb119 100%);
+          text-align: center;
+          font-size: 26px;
+          line-height: 38px;
+          width: 160px;
+          border-radius: 19px;
+          color: #fff;
+          text-shadow: 2px 2px 2px #ea9191;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -10px;
+        }
+      }
+      // 添加土地按钮
+      .land-add__btn {
+        width: 75px;
+        height: 51px;
+        background: url("../images/land-add.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      // 苗
+      .seedlings {
+        width: 76px;
+        height: 76px;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        .land-bubble {
+          top: -80px;
+          right: -50px;
+        }
+        .gif {
+          top: -80px;
+          right: -50px;
+        }
+      }
+      // 土地气泡提示
+      .land-bubble {
+        display: none;
+        animation: flash 3000ms 600ms infinite both;
+        width: 76px;
+        height: 71px;
+        background: url("../images/bubble.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        img {
+          width: 48px;
+          height: 48px;
+          position: absolute;
+          left: 17px;
+          top: 12px;
+        }
+      }
+      // 动画
+      .gif {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        display: none;
+      }
+
+      // 树容器
+      .tree-wrap {
+        width: 242px;
+        height: 242px;
+        position: absolute;
+        top: -170px;
+        left: 50%;
+        transform: translateX(-50%);
+        .tree {
+          width: 100%;
+          height: 100%;
+        }
+        .land-bubble__top {
+          top: -50px;
+          right: 0;
+        }
+        .gif-top {
+          top: -50px;
+          right: 0;
+        }
+        .land-bubble__bottom {
+          bottom: 10px;
+          right: 20px;
+        }
+        .gif-bottom {
+          bottom: 0px;
+          right: 20px;
+        }
+        .land-bubble__middle {
+          bottom: 30px;
+          right: 20px;
+        }
+        .gif-middle {
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+      .sowing {
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+      }
+      .sowing-gif {
+        position: absolute;
+        left: 40%;
+        top: -60px;
+      }
+      // 果实
+      .mature {
+        position: absolute;
+        &.picking {
+          filter: brightness(60%);
+        }
+      }
+      .mature-large {
+        width: 98px;
+        height: 98px;
+        top: 52px;
+        right: 30px;
+      }
+      .mature-mini {
+        width: 56px;
+        height: 56px;
+        bottom: 53px;
+        left: 50px;
+      }
+      // 虫子
+      .insect {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+      }
+      .insect1 {
+        top: 120px;
+        left: 20px;
+      }
+      .insect2 {
+        top: 90px;
+        right: 70px;
+      }
+      // 草
+      .grass {
+        width: 23px;
+        height: 13px;
+        position: absolute;
+      }
+      .grass1 {
+        left: 40%;
+        bottom: 10px;
+      }
+      .grass2 {
+        left: 60%;
+        bottom: 10px;
+      }
+      .grass3 {
+        right: 20%;
+        bottom: 50px;
+        transform: scale(0.8);
+      }
+      .grass4 {
+        left: 20%;
+        bottom: 20px;
+        transform: scale(0.9);
+      }
+      &.land2 {
+        .land-bubble {
+          display: block;
+        }
+        .soil-tips {
+          display: block;
+        }
+        .gofarm-btn {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+// 土地操作滑块
+.land-operate__wrap {
+  width: 100px;
+  height: 436px;
+  background-color: fade(#000, 20%);
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -218px;
+  display: flex;
+  flex-direction: column;
+}
+.land-operate {
+  flex: 1;
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 60px;
+      height: 60px;
+    }
+    .aiui-badge {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      display: none;
+    }
+  }
+  &__next,
+  &__prev {
+    outline: none;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .icon-arrow-up,
+    .icon-arrow-down {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(255, 255, 255, 1);
+    }
+    &.swiper-button-disabled {
+      .icon-arrow-up,
+      .icon-arrow-down {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
