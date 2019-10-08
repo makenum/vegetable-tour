@@ -412,7 +412,81 @@
     }
   }
 }
-
+// 商城订单
+.mall-shop{
+  min-height: 100vh;
+  background: @aiuiColorWhite;
+}
+.aiui-leftmenu {
+  position: relative;
+  .aiui-tabmenu {
+    flex-direction: column;
+    width: 140px;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+    position: fixed;
+    left:0;
+    top:88px;
+  }
+  
+  .aiui-tabmenu__item {
+    padding: 20px 40px;
+    line-height: 40px;
+    background: @aiuiUploaderBorderColor;
+    &::after{
+      content:'';
+      .setBottomLine(@aiuiColorWhite)
+    }
+    &--on{
+      background: @aiuiColorWhite;
+      &::before {
+        right: auto;
+        top:0;
+        width: 6px;
+        height: 100%;
+        background: @aiuiColorPrimary;
+        border-radius: 0px;
+      }
+     
+    }
+    
+  }
+  .aiui-tab__panel{
+    padding: 0px 48px;
+    margin-left: 140px;
+  }
+}
+.categories-title{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color:#333;
+  font-weight: 600;
+  margin-bottom:36px;
+  margin-top: 40px;
+  &::before,&::after{
+    content: '';
+    display: block;
+    background: #EDEDED;
+    width: 46px;
+    height: 2px;
+    margin: 0 6px;
+  }
+}
+.categories-list{
+  display: flex;
+  flex-wrap: wrap;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    
+  }
+}
 .hide {
   display: none;
 }

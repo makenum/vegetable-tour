@@ -1,42 +1,178 @@
 {% extends 'app.nunjucks' %}
 {% block title %}蔬游-商品分类{% endblock %}
 {% block content %}
-<div class="header-sticky-hook">
-  <!--头部导航 start-->
-  <div class="aiui-navbar aiui-navbar__default">
-    <div class="aiui-navbar__item">
-      <a href="javascript:history.back();" class="icon-return"></a>
-    </div>
-    <div class="aiui-search-bar" id="searchBar">
-      <form class="aiui-search-bar__form" action="#">
-        <div class="aiui-search-bar__box">
-          <i class="icon-search"></i>
-          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
-          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
-        </div>
-      </form>
-      <button class="aiui-search-bar__cancel-btn">取消</button>
-    </div>
-    <div class="aiui-navbar__item">
+<div class="mall-shop">
+  <div class="header-sticky-hook">
+    <!--头部导航 start-->
+    <div class="aiui-navbar aiui-navbar__default">
+      <div class="aiui-navbar__item">
+        <a href="javascript:history.back();" class="icon-return"></a>
+      </div>
+      <div class="aiui-search-bar" id="searchBar">
+        <form class="aiui-search-bar__form" action="#">
+          <div class="aiui-search-bar__box">
+            <i class="icon-search"></i>
+            <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+          </div>
+        </form>
+        <button class="aiui-search-bar__cancel-btn">取消</button>
+      </div>
+      <div class="aiui-navbar__item">
         <a href="#" class="icon-shopping-cart"></a>
       </div>
+    </div>
   </div>
   <!--头部导航 end-->
-  <!--tab start-->
-  <!--tab end-->
-</div>
-<!--内容区域 start-->
-<!--内容区域 end-->
+  <div class="aiui-tab " id="tab">
+    <div class="aiui-leftmenu">
+      <div class="aiui-tabmenu ">
+        <a href="javascript:;" class="aiui-tabmenu__item ">粮油米面</a>
+        <a href="javascript:;" class="aiui-tabmenu__item ">五谷杂粮</a>
+        <a href="javascript:;" class="aiui-tabmenu__item">生鲜蔬果</a>
+        <a href="javascript:;" class="aiui-tabmenu__item">家禽肉食</a>
+      </div>
 
+
+      <!--tab end-->
+      <!--内容区域 start-->
+      <div class="aiui-tab__panel">
+        <div class="aiui-tab__content">
+          <div class="categories-title">粮类</div>
+        </div>
+        <div class="aiui-tab__content">22</div>
+        <div class="aiui-tab__content">22</div>
+        <div class="aiui-tab__content">
+          <div class="categories-title">肉类</div>
+          <div class="categories-list">
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat01.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸡肉</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat02.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸡翅</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat03.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸭肉</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat04.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">牛排</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat05.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">牛腩</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat06.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">牛腱子</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat07.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">牛肉</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat08.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">羊腿</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat09.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">羊排</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat10.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">羊肉串</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat11.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">羊蝎子</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/meat12.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">乳鸽</p>
+            </a>
+          </div>
+          <div class="categories-title">蛋类</div>
+          <div class="categories-list">
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/egg00.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸡蛋</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/egg02.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸭蛋</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/egg05.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">鸽子蛋</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/egg01.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">皮蛋</p>
+            </a>
+            <a class="categories-list__item Cell -1of3" href="">
+              <div class="thumb thumb-128">
+                <img src="../images/mall/categories/egg03.png" alt="">
+              </div>
+              <p class="mt20 fz24 text-med__gray">咸鸭蛋</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--内容区域 end-->
+    </div>
+  </div>
+</div>
 {% endblock %}
 {% block footer %}
 <script type="text/javascript">
   $(function () {
     //头部导航固定
     $(".header-sticky-hook").sticky({ topSpacing: 0 });
+   
     //搜索
     aiui.searchBar('#searchBar');
-    //筛选
+    //tab
+    aiui.tab('#tab', {
+      defaultIndex: 3,
+      onChange: function (index) {
+        console.log(index);
+      }
+    });
 
   });
 </script>
