@@ -161,7 +161,7 @@
                         </div>
                         <div class="Cell">
                             <button type="button"
-                                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</button>
+                                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">进店逛逛</button>
                         </div>
                     </div>
                     <div class="stores__item__bd">
@@ -186,43 +186,74 @@
                     </div>
                 </div>
                 <div class="stores__item">
-                        <div class="stores__item__hd">
-                            <div class="avatar avatar-80">
-                                <img src="../images/mall/mall-img-80.png" alt="">
-                            </div>
-                            <div class="Cell -fill ml24 mr24">
-                                <p>鄂尔多斯有机农场</p>
-                                <p class="fz24  text-deep__gray"><span>销量：</span><span>97890</span><span
-                                        class="ml24">距离：</span><span>963.9km</span></p>
-                            </div>
-                            <div class="Cell">
-                                <button type="button"
-                                    class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">填写物流</button>
-                            </div>
+                    <div class="stores__item__hd">
+                        <div class="avatar avatar-80">
+                            <img src="../images/mall/mall-img-80.png" alt="">
                         </div>
-                        <div class="stores__item__bd">
-                            <a class="stores__item__link Cell -1of3" href="">
-                                <div class="thumb thumb-227">
-                                    <img src="../images/mall/mall-product-227-04.png" alt="">
-                                </div>
-                                <div class="desc">¥29.9</div>
-                            </a>
-                            <a class="stores__item__link Cell -1of3" href="">
-                                <div class="thumb thumb-227">
-                                    <img src="../images/mall/mall-product-227-05.png" alt="">
-                                </div>
-                                <div class="desc">¥29.9</div>
-                            </a>
-                            <a class="stores__item__link Cell -1of3" href="">
-                                <div class="thumb thumb-227">
-                                    <img src="../images/mall/mall-product-227-06.png" alt="">
-                                </div>
-                                <div class="desc">¥29.9</div>
-                            </a>
+                        <div class="Cell -fill ml24 mr24">
+                            <p>鄂尔多斯有机农场</p>
+                            <p class="fz24  text-deep__gray"><span>销量：</span><span>97890</span><span
+                                    class="ml24">距离：</span><span>963.9km</span></p>
+                        </div>
+                        <div class="Cell">
+                            <button type="button"
+                                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">进店逛逛</button>
                         </div>
                     </div>
+                    <div class="stores__item__bd">
+                        <a class="stores__item__link Cell -1of3" href="">
+                            <div class="thumb thumb-227">
+                                <img src="../images/mall/mall-product-227-04.png" alt="">
+                            </div>
+                            <div class="desc">¥29.9</div>
+                        </a>
+                        <a class="stores__item__link Cell -1of3" href="">
+                            <div class="thumb thumb-227">
+                                <img src="../images/mall/mall-product-227-05.png" alt="">
+                            </div>
+                            <div class="desc">¥29.9</div>
+                        </a>
+                        <a class="stores__item__link Cell -1of3" href="">
+                            <div class="thumb thumb-227">
+                                <img src="../images/mall/mall-product-227-06.png" alt="">
+                            </div>
+                            <div class="desc">¥29.9</div>
+                        </a>
+                    </div>
+                </div>
             </div>
+
         </div>
+        <div class="footbar-sticky">
+                <div class="aiui-tabbar aiui-tabbar__fixed">
+                    <a href="javascript:;" class="aiui-tabbar__item aiui-tabbar__item--on">
+                        <div class="aiui-tabbar__icon">
+                            <div class="icon-default icon-home"></div>
+                        </div>
+                        <p class="aiui-tabbar__label">首页</p>
+                    </a>
+                    <a href="javascript:;" class="aiui-tabbar__item ">
+                        <div class="aiui-tabbar__icon">
+                            <div class="icon-default icon-address-2px"></div>
+                        </div>
+                        <p class="aiui-tabbar__label">附近</p>
+                    </a>
+                    <a href="javascript:;" class="aiui-tabbar__item ">
+                        <div class="aiui-tabbar__icon">
+                            <div class="icon-default icon-shopping-cart"></div>
+                            <span class="aiui-badge">8</span>
+                        </div>
+                        <p class="aiui-tabbar__label">购物车</p>
+                    </a>
+                    <a href="javascript:;" class="aiui-tabbar__item ">
+                        <div class="aiui-tabbar__icon">
+                            <div class="icon-default icon-me-outline"></div>
+                        </div>
+                        <p class="aiui-tabbar__label">我的</p>
+                    </a>
+    
+                </div>
+            </div>
         <!-- 返回顶部 start -->
         <div class="aiui-gotop__wrap aiui-gotop-hook">
             <button class="aiui-gotop">
@@ -239,6 +270,7 @@
     <script src="../libs/swiper.min.js"></script>
     <script>
         $(".headbar-sticky").sticky({ topSpacing: 0 });
+        $(".footbar-sticky").sticky({ bottomSpacing: 0 });
         // banner
         var swiper = new Swiper('.swiperIndexAd', {
             observer: true,
