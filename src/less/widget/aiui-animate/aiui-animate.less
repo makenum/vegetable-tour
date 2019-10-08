@@ -41,6 +41,7 @@
   animation: fadeIn ease 0.3s forwards;
 }
 
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -141,4 +142,26 @@
     transform: scale(1.8);
     opacity: 0;
   }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }

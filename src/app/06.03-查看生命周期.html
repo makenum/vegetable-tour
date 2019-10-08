@@ -15,10 +15,21 @@
 
 <!-- 生命周期详情 start -->
 <div class="lifecycle-introduce">
+  <button class="user-enter user-enter--white">
+    <div class="avatar avatar-38">
+      <img src="../images/farm_tu02.png" alt="农场">
+    </div>
+    <p class="name">这是农场名字</p>
+    <i class="icon-arrow-right"></i>
+  </button>
   <div class="content">
     <div class="text">您租种的a001号地块西红柿已经结果，预计2019年9月30日可采摘第一批。</div>
-    <div class="thumb"><img src="../images/farm-details-img.png" alt="西红柿种植"></div>
+    <div class="img-preview">
+      <img src="../images/tomato-tree-mature.png" alt="西红柿树" class="tree">
+      <img src="../images/land-terrestrial.png" alt="土地" class="land">
+    </div>
     <button class="icon-qr-code" id="showQrcodeDialogBtn"></button>
+    <button class="tips-btn" id="showTipsDialogBtn">租种</button>
   </div>
   <!-- 步骤条 start -->
   <ul class="aiui-steps">
@@ -321,7 +332,7 @@
     </li>
     <li>
       <div class="material-icon">
-        <img src="../images/icon-shouhuo.png" alt="采摘">
+        <img src="../images/icon-caizhai.png" alt="采摘">
       </div>
       <div class="bd">采摘</div>
       <div class="ft"><span>1</span>次</div>
@@ -404,6 +415,19 @@
     });
     $(".lifecycle-statistics__handle").bind("click", function (e) {
       $(this).parent(".lifecycle-statistics").toggleClass("open");
+    });
+    // 租种说明弹窗
+    $("#showTipsDialogBtn").bind("click", function () {
+      var descText = "说明文案描述，不限字数，超过固定高度往下滑。"
+      aiui.alert(descText, {
+        title: '租种说明',
+        buttons: [{
+          label: '好的',
+          type: 'primary',
+          // 回调事件
+          onClick: function () { console.log('好的') }
+        }]
+      });
     });
   });
 </script>

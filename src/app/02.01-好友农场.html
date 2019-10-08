@@ -11,251 +11,522 @@
   </div>
 </div>
 
-<div class="farm-header">
-  <div class="game">
-    <!-- 选地 start -->
-    <div class="land-select">
-      <div class="lands">
-        <button type="button" class="land land1">
-          <div class="soil">
-            <div class="tree-wrap">
-              <img src="../images/mature-tree.png" alt="未成熟的树" class="tree">
-              <img src="../images/immature.png" alt="西红柿" class="mature mature-large">
-              <img src="../images/immature.png" alt="西红柿" class="mature mature-mini">
-              <div class="land-bubble land-bubble__bottom weeding">
-                <img src="../images/weeding.png" alt="除草">
-              </div>
-              <div class="gif gif-bottom weeding-gif">
-                <img src="../images/gif/weeding.gif" alt="铲除动画">
-              </div>
-            </div>
-            <img src="../images/grass.png" alt="草" class="grass grass1">
-            <img src="../images/grass.png" alt="草" class="grass grass2">
-            <img src="../images/grass.png" alt="草" class="grass grass3">
-            <img src="../images/grass.png" alt="草" class="grass grass4">
-          </div>
-        </button>
-        <button type="button" class="land land2">
-          <div class="soil">
-            <div class="tree-wrap">
-              <img src="../images/eradicate_tree.png" alt="开花中的树" class="tree">
+<!-- 热门活动入口 start -->
+<a class="hot-event" href="javascript:;">
+  <p class="text">热门活动</p>
+</a>
+<!-- 热门活动入口 end -->
 
-              <div class="land-bubble land-bubble__bottom eradicate">
-                <img src="../images/eradicate.png" alt="铲除">
-              </div>
-              <div class="gif gif-bottom eradicate-gif">
-                <img src="../images/gif/eradicate.gif" alt="铲除动画">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button type="button" class="land land3">
-          <div class="soil">
-            <div class="tree-wrap">
-              <img src="../images/mature-tree.png" alt="可采摘的树" class="tree">
-              <img src="../images/mature.png" alt="西红柿" class="mature mature-large">
-              <img src="../images/mature.png" alt="西红柿" class="mature mature-mini">
-              <div class="land-bubble land-bubble__bottom deworming">
-                <img src="../images/deworming.png" alt="杀虫">
-              </div>
-              <div class="gif gif-bottom deworming-gif">
-                <img src="../images/gif/deworming.gif" alt="杀虫动画">
-              </div>
-              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect1">
-              <img src="../images/gif/insect.gif" alt="虫子" class="insect insect2">
-            </div>
-          </div>
-        </button>
-      </div>
+<div class="farm-container">
+
+  <div class="farm-game">
+    <!-- 装饰物 start -->
+    <div class="decoration-group">
+      <div class="decoration-grass"></div>
+      <div class="decoration-flower -medium"></div>
+      <div class="decoration-mushroom -small"></div>
     </div>
-    <!-- 选地 end -->
-    <!-- 日常操作工具条 start -->
-    <div class="land-operate__wrap">
-      <div class="land-operate__next"><i class="icon-arrow-up"></i></div>
-      <div class="swiper-container land-operate" id="landOperateSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <button type="button" id="fertilizationBtn"><img src="../images/fertilization.png" alt="施肥"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
-          </div>
-          <div class="swiper-slide">
-            <button type="button" id="wateringBtn"><img src="../images/watering.png" alt="浇水"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
-          </div>
+    <div class="decoration-mushroom -medium"></div>
+    <div class="decoration-flower -small"></div>
+    <div class="decoration-flower -large"></div>
+    <!-- 装饰物 end -->
 
-          <div class="swiper-slide">
-            <button type="button" id="rewardBtn"><img src="../images/reward.png" alt="采摘"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
+    <!-- 土地 start -->
+    <div class="land-bg">
+      <!-- 土地背景扩展 start -->
+      <div class="land-bg__add"></div>
+      <!-- 土地背景扩展 end -->
+
+      <!-- 地块组合 start -->
+      <div class="land-groups">
+        <div class="land-group land-group__top">
+          <div class="land land-unplanted">
+            <button type="button" class="planting-operation-btn bozhong-btn"></button>
           </div>
-
-          <div class="swiper-slide">
-            <button type="button" id="eradicateBtn"><img src="../images/eradicate.png" alt="铲除"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
-
+          <div class="land land-terrestrial">
+            <div class="land-tree">
+              <img src="../images/tomato-tree-wilt.png" alt="枯萎中的西红柿树">
+            </div>
+            <button type="button" class="planting-operation-btn chanchu-btn"></button>
           </div>
-
-          <div class="swiper-slide">
-            <button type="button" id="looseningBtn"><img src="../images/loose_soil.png" alt=""></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
+          <div class="land land-terrestrial">
+            <div class="land-tree land-tree--jump">
+              <img src="../images/seedlings-primary.png" alt="西红柿树苗">
+            </div>
+            <button type="button" class="planting-operation-btn shifei-btn"></button>
           </div>
+        </div>
 
-          <div class="swiper-slide">
-            <button type="button" id="sowingBtn"><img src="../images/sowing.png" alt="播种"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
+        <div class="land-group land-group__middle">
+          <div class="land land-terrestrial">
+            <div class="land-tree land-tree--jump">
+              <img src="../images/tomato-tree-growing.png" alt="成长中的西红柿树">
+            </div>
+            <button type="button" class="planting-operation-btn songtu-btn"></button>
+            <div class="land-mark">租种</div>
           </div>
-
-          <div class="swiper-slide">
-            <button type="button" id="dewormingBtn"><img src="../images/deworming.png" alt="杀虫"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
+          <div class="land land-terrestrial">
+            <div class="land-tree land-tree--jump">
+              <img src="../images/tomato-tree-flower.png" alt="开花中的西红柿树">
+            </div>
+            <button type="button" class="planting-operation-btn chucao-btn"></button>
+            <div class="land-mark">租种</div>
           </div>
+          <div class="land land-terrestrial">
+            <div class="land-tree land-tree--jump">
+              <img src="../images/tomato-tree-result.png" alt="结果中的西红柿树">
+            </div>
+            <button type="button" class="planting-operation-btn chuchong-btn"></button>
+            <div class="land-mark">租种</div>
+          </div>
+        </div>
 
-          <div class="swiper-slide">
-            <button type="button" id="weedingBtn"><img src="../images/weeding.png" alt="除草"></button>
-            <span class="aiui-badge aiui-badge_dot"></span>
+        <div class="land-group land-group__bottom">
+          <div class="land land-terrestrial">
+            <div class="land-tree land-tree--jump">
+              <img src="../images/tomato-tree-mature.png" alt="成熟的西红柿树">
+            </div>
+            <button type="button" class="planting-operation-btn caizhai-btn"></button>
+            <div class="land-mark">租种</div>
           </div>
         </div>
       </div>
-      <div class="land-operate__prev"><i class="icon-arrow-down"></i></div>
+      <!-- 地块组合 end -->
+
     </div>
-    <!-- 日常操作工具条 end -->
+    <!-- 土地 end -->
 
     <!-- 游戏操作 start -->
     <div class="game-operate">
-      <div class="Cell -fill">
+      <div class="items">
         <div class="level-signage">LV.2</div>
+        <a href="javascript:;" class="item -red">
+          <div class="thumb"><img src="../images/icon-mall.png" alt="商城"></div>
+          <div class="tag">商城</div>
+        </a>
+        <a href="javascript:;" class="item -purple">
+          <div class="thumb"><img src="../images/icon-zygz.png" alt="赚阳光值"></div>
+          <div class="tag">赚阳光值</div>
+        </a>
       </div>
       <a href="01.04-首页-我的农场.html" class="item -blue">
-        <div class="thumb"><img src="../images/icon-fhnc.png" alt="回农场"></div>
+        <div class="thumb"><img src="../images/icon-fhnc.png" alt="返回农场"></div>
         <div class="tag">回农场</div>
       </a>
     </div>
     <!-- 游戏操作 end -->
   </div>
 
+  <div class="farm-info">
+    <!-- 好友动态 start -->
+    <div class="farm-info__item">
+      <div class="header">
+        <h3 class="Cell -fill fz34">好友动态</h3>
+        <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+      </div>
+      <ul class="friend-updates">
+        <li class="friend-updates__item">
+          <div class="ripple"></div>
+          <div class="avatar avatar-50">
+            <img src="../images/avatar.png">
+          </div>
+          <strong class="name">小石头</strong>
+          <div class="Cell -fill">
+            <p class="text-deep__gray">帮你浇水了</p>
+          </div>
+          <span class="fz24 text-deep__gray">06-15</span>
+        </li>
+        <li class="friend-updates__item">
+          <div class="ripple"></div>
+          <div class="avatar avatar-50">
+            <img src="../images/avatar.png">
+          </div>
+          <strong class="name">小石头</strong>
+          <div class="Cell -fill">
+            <p class="text-deep__gray">帮你浇水了</p>
+          </div>
+          <span class="fz24 text-deep__gray">06-15</span>
+        </li>
+        <li class="friend-updates__item">
+          <div class="ripple"></div>
+          <div class="avatar avatar-50">
+            <img src="../images/avatar.png">
+          </div>
+          <strong class="name">小石头</strong>
+          <div class="Cell -fill">
+            <p class="text-deep__gray">帮你浇水了</p>
+          </div>
+          <span class="fz24 text-deep__gray">06-15</span>
+        </li>
+        <li class="friend-updates__item">
+          <div class="ripple"></div>
+          <div class="avatar avatar-50">
+            <img src="../images/avatar.png">
+          </div>
+          <strong class="name">小石头</strong>
+          <div class="Cell -fill">
+            <p class="text-deep__gray">帮你浇水了</p>
+          </div>
+          <span class="fz24 text-deep__gray">06-15</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 好友动态 end -->
+  </div>
 </div>
-<div class="farm-info">
 
-  <!-- 指标栏 start -->
-  <div class="farm-info__item">
-    <div class="header">
-      <h3 class="Cell -fill fz34">指标栏</h3>
-      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
-    </div>
-    <div class="indicator">
-      <div class="info">
-        <div class="info-bd">
-          <p>下午6:36</p>
-          <h3>巴马乡片区</h3>
-        </div>
-        <div class="info-icon">
-          <img src="../images/icon-sunny.png" alt="晴天">
+
+<div id="dailyOperation">
+
+  <!-- 采摘提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="caizhaiTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/tomato-mature.png" alt="西红柿">
         </div>
       </div>
-      <div class="weather">
-        <div class="weather-item">
-          <ul>
-            <li>大气湿度</li>
-            <li>相对湿度</li>
-            <li>气压</li>
-            <li>风向</li>
-          </ul>
-          <ul>
-            <li>-20℃</li>
-            <li>-10℃</li>
-            <li>1239hpa</li>
-            <li>320º</li>
-          </ul>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要采摘吗？</h3>
+          <div class="desc">采摘需要花掉200阳光值，是否现在采摘？</div>
         </div>
-        <div class="weather-item">
-          <ul>
-            <li>风速</li>
-            <li>降水量</li>
-            <li>光照强度</li>
-            <li>土壤温度</li>
-          </ul>
-          <ul>
-            <li>-75m/s</li>
-            <li>2mm/min</li>
-            <li>188000Lux</li>
-            <li>78℃</li>
-          </ul>
-        </div>
-        <div class="weather-item">
-          <ul>
-            <li>土壤湿度</li>
-            <li>太阳辐射</li>
-            <li>日照时数</li>
-          </ul>
-          <ul>
-            <li>20%</li>
-            <li>1567W/m²</li>
-            <li>24h</li>
-          </ul>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="caizhaiCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="caizhaiSubmitBtn">立即采摘</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- 指标栏 end -->
-  <!-- 好友动态 start -->
-  <div class="farm-info__item">
-    <div class="header">
-      <h3 class="Cell -fill fz34">好友动态</h3>
-      <a href="javascript:;" class="fz26 text-deep__gray">详情</a>
+  <!-- 采摘提醒弹窗 end -->
+
+  <!-- 采摘动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="caizhaiDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/tomato-tree-mature.png" alt="">
+      </div>
+      <div class="daily-operation__gif caizhai-gif">
+        <img src="../images/gif/caizhai.gif" alt="采摘">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">采摘成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地采摘任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
     </div>
-    <ul class="friend-updates">
-      <li class="friend-updates__item">
-        <div class="ripple"></div>
-        <div class="avatar avatar-50">
-          <img src="../images/avatar.png">
-        </div>
-        <strong class="name">小石头</strong>
-        <div class="Cell -fill">
-          <p class="text-deep__gray">帮你浇水了</p>
-        </div>
-        <span class="fz24 text-deep__gray">06-15</span>
-      </li>
-      <li class="friend-updates__item">
-        <div class="ripple"></div>
-        <div class="avatar avatar-50">
-          <img src="../images/avatar.png">
-        </div>
-        <strong class="name">小石头</strong>
-        <div class="Cell -fill">
-          <p class="text-deep__gray">帮你浇水了</p>
-        </div>
-        <span class="fz24 text-deep__gray">06-15</span>
-      </li>
-      <li class="friend-updates__item">
-        <div class="ripple"></div>
-        <div class="avatar avatar-50">
-          <img src="../images/avatar.png">
-        </div>
-        <strong class="name">小石头</strong>
-        <div class="Cell -fill">
-          <p class="text-deep__gray">帮你浇水了</p>
-        </div>
-        <span class="fz24 text-deep__gray">06-15</span>
-      </li>
-      <li class="friend-updates__item">
-        <div class="ripple"></div>
-        <div class="avatar avatar-50">
-          <img src="../images/avatar.png">
-        </div>
-        <strong class="name">小石头</strong>
-        <div class="Cell -fill">
-          <p class="text-deep__gray">帮你浇水了</p>
-        </div>
-        <span class="fz24 text-deep__gray">06-15</span>
-      </li>
-    </ul>
   </div>
-  <!-- 好友动态 end -->
+  <!-- 采摘动画弹窗 end -->
+
+  <!-- 施肥提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="shifeiTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-shifei.png" alt="施肥">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要施肥吗？</h3>
+          <div class="desc">施肥需要花掉200阳光值，是否现在施肥？</div>
+        </div>
+
+        <div class="btns">
+          <button type="button"
+            class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="shifeiCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="shifeiSubmitBtn">立即施肥</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 施肥提醒弹窗 end -->
+
+  <!-- 施肥动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="shifeiDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/seedlings-primary.png" alt="西红柿树苗">
+      </div>
+      <div class="daily-operation__gif shifei-gif">
+        <img src="../images/gif/shifei.gif" alt="施肥">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">施肥成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地施肥任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 施肥动画弹窗 end -->
+
+
+  <!-- 播种提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="bozhongTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-bozhong.png" alt="播种">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要播种吗？</h3>
+          <div class="desc">播种需要花掉200阳光值，是否现在播种？</div>
+        </div>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="bozhongCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="bozhongSubmitBtn">立即播种</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 播种提醒弹窗 end -->
+
+  <!-- 播种动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="bozhongDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="seedlings-tree">
+        <img src="../images/seedlings.png" alt="西红柿树苗">
+      </div>
+      <div class="seedlings-land">
+        <img src="../images/seedlings-land.png" alt="树苗土壤">
+      </div>
+      <div class="daily-operation__gif bozhong-gif">
+        <img src="../images/gif/bozhong.gif" alt="播种">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">播种成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地播种任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 播种动画弹窗 end -->
+
+  <!-- 除草提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="chucaoTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-chucao.png" alt="除草">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要除草吗？</h3>
+          <div class="desc">除草需要花掉200阳光值，是否现在除草？</div>
+        </div>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="chucaoCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="chucaoSubmitBtn">立即除草</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 除草提醒弹窗 end -->
+
+  <!-- 除草动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="chucaoDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/tomato-tree-flower.png" alt="开花中的西红柿树">
+      </div>
+      <div class="daily-operation__gif chucao-gif">
+        <img src="../images/gif/chucao.gif" alt="除草">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">除草成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地除草任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 除草动画弹窗 end -->
+
+  <!-- 除虫提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="chuchongTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-chuchong.png" alt="除虫">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要除虫吗？</h3>
+          <div class="desc">除虫需要花掉200阳光值，是否现在除虫？</div>
+        </div>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="chuchongCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="chuchongSubmitBtn">立即除虫</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 除虫提醒弹窗 end -->
+
+  <!-- 除虫动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="chuchongDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/tomato-tree-result.png" alt="结果中的西红柿树">
+      </div>
+      <div class="daily-operation__gif chuchong-gif">
+        <img src="../images/gif/chuchong.gif" alt="除虫">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">除虫成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地除虫任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 除虫动画弹窗 end -->
+
+  <!-- 松土提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="songtuTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-songtu.png" alt="松土">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要松土吗？</h3>
+          <div class="desc">松土需要花掉200阳光值，是否现在松土？</div>
+        </div>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="songtuCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="songtuSubmitBtn">立即松土</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 松土提醒弹窗 end -->
+
+  <!-- 松土动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="songtuDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/tomato-tree-growing.png" alt="成长中的西红柿树">
+      </div>
+      <div class="daily-operation__gif songtu-gif">
+        <img src="../images/gif/songtu.gif" alt="松土">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">松土成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地松土任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 松土动画弹窗 end -->
+
+  <!-- 铲除提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="chanchuTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-chanchu.png" alt="铲除">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要铲除吗？</h3>
+          <div class="desc">铲除需要花掉200阳光值，是否现在铲除？</div>
+        </div>
+  
+        <div class="btns">
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn"
+            id="chanchuCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary"
+            id="chanchuSubmitBtn">立即铲除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 铲除提醒弹窗 end -->
+
+  <!-- 铲除动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="chanchuDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree -regular">
+        <img src="../images/tomato-tree-wilt.png" alt="枯萎中的西红柿树">
+      </div>
+      <div class="daily-operation__gif chanchu-gif">
+        <img src="../images/gif/chanchu.gif" alt="铲除">
+      </div>
+
+      <div class="seedlings-land">
+        <img src="../images/seedlings-land.png" alt="树苗土壤">
+      </div>
+
+      <div class="daily-operation__info">
+        <h3 class="title">铲除成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地铲除任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 铲除动画弹窗 end -->
+
 </div>
-{% endblock %} {% block footer %}
-<script src="../libs/anime.min.js"></script>
-<script src="../js/land.js"></script>
+
+
+{% endblock %}
+{% block footer %}
+<script src="../js/farm.js"></script>
 <script>
-  //头部导航固定
-  $(".headbar-sticky").sticky({ topSpacing: 0 });
+  $(function () {
+    //头部导航固定
+    $(".headbar-sticky").sticky({ topSpacing: 0 });
+  });
 </script>
 {% endblock %}

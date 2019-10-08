@@ -55,6 +55,7 @@
           <div class="loading" style="width: 54%;"></div>
           <div class="text"><span>54</span>/<span>90</span></div>
         </div>
+        <a href="javascript:;" class="level-link">攻略<i class="icon-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -93,7 +94,7 @@
         <div class="land-group land-group__middle">
           <div class="land land-terrestrial">
             <div class="land-fence"></div>
-            <div class="chickens">
+            <div class="chickens" onclick="window.location.href='06.03-查看生命周期.html'">
               <div class="chicken chicken--left">
                 <img src="../images/chicken-growing.png" alt="成长中的鸡">
               </div>
@@ -108,7 +109,7 @@
             </button>
           </div>
           <div class="land land-pool">
-            <div class="fishes">
+            <div class="fishes" onclick="window.location.href='06.03-查看生命周期.html'">
               <div class="fish fish--left"><img src="../images/fish-seedling.png" alt="鱼幼苗"></div>
               <div class="fish fish--right"><img src="../images/fish-seedling.png" alt="鱼幼苗"></div>
             </div>
@@ -117,12 +118,10 @@
 
         <div class="land-group land-group__bottom">
           <div class="land land-terrestrial">
-            <div class="land-tree">
+            <div class="land-tree land-tree--jump">
               <img src="../images/tomato-tree-mature.png" alt="西红柿树">
             </div>
-            <button type="button" class="planting-operation-btn">
-              <img src="../images/icon-jiaoshui.png" alt="浇水">
-            </button>
+            <button type="button" class="planting-operation-btn jiaoshui-btn"></button>
             <div class="land-mark">租种</div>
           </div>
         </div>
@@ -261,25 +260,53 @@
 <!-- 返回顶部 end -->
 </div>
 
-<!-- 农场种植日常操作动画弹窗  start-->
+<div id="dailyOperation">
+  <!-- 浇水提醒弹窗 start -->
+  <div class="aiui-dialog__wrap" id="jiaoshuiTipsDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom farm-tips__dialog">
+      <div class="hd">
+        <div class="thumb">
+          <img src="../images/icon-jiaoshui.png" alt="浇水">
+        </div>
+      </div>
+      <div class="bd">
+        <div class="content">
+          <h3 class="title">您要浇水吗？</h3>
+          <div class="desc">浇水需要花掉200阳光值，是否现在浇水？</div>
+        </div>
 
-<div class="aiui-dialog__wrap" id="dailyOperationDialog">
-  <div class="aiui-mask"></div>
-  <div class="aiui-dialog__custom daily-operation">
-    <button class="daily-operation__close"></button>
-    <div class="daily-operation__shine"></div>
-    <div class="daily-operation__tree">
-      <img src="../images/tomato-tree-mature.png" alt="">
-    </div>
-    <div class="daily-operation__info">
-      <h3 class="title">浇水成功啦！</h3>
-      <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地浇水任务哦~</p>
-      <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+        <div class="btns">
+          <button type="button"
+            class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__gray close-dialog__btn" id="jiaoshuiCancelBtn">再考虑一下</button>
+          <button type="button"
+            class="aiui-btn aiui-btn aiui-btn__medium aiui-btn__pill aiui-btn__primary" id="jiaoshuiSubmitBtn">立即浇水</button>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- 浇水提醒弹窗 end -->
+  <!-- 浇水动画弹窗  start-->
+  <div class="aiui-dialog__wrap" id="jiaoshuiDialog">
+    <div class="aiui-mask"></div>
+    <div class="aiui-dialog__custom daily-operation">
+      <button class="daily-operation__close"></button>
+      <div class="daily-operation__shine"></div>
+      <div class="daily-operation__tree">
+        <img src="../images/tomato-tree-mature.png" alt="">
+      </div>
+      <div class="daily-operation__gif jiaoshui-gif">
+        <img src="../images/gif/jiaoshui.gif" alt="浇水">
+      </div>
+      <div class="daily-operation__info">
+        <h3 class="title">浇水成功啦！</h3>
+        <p class="desc">任务已提交给雇农，请督促雇农尽快完成实地浇水任务哦~</p>
+        <button type="button" class="aiui-btn aiui-btn__large aiui-btn__primary aiui-btn__pill">好的</button>
+      </div>
+    </div>
+  </div>
+  <!-- 浇水动画弹窗 end -->
 </div>
-<!-- 农场种植日常操作动画弹窗 end -->
-
 <!-- 好友农场排行榜 start-->
 <div class="aiui-popup__wrap" id="friendFarmRanking">
   <div class="aiui-mask"></div>
@@ -441,50 +468,35 @@
 
 {% endblock %}
 {% block footer %}
+<script src="../js/farm.js"></script>
 <script>
-  // 新闻滚动
-  var swiper = new Swiper('.scroll-notice', {
-    direction: 'vertical',
-    noSwiping: true,
-    autoplay: {
-      delay: 3000
-    },
-    loop: true,
-    slidesPerView: 'auto'
+  $(function () {
+    // 新闻滚动
+    var swiper = new Swiper('.scroll-notice', {
+      direction: 'vertical',
+      noSwiping: true,
+      autoplay: {
+        delay: 3000
+      },
+      loop: true,
+      slidesPerView: 'auto'
+    });
+    // 好友农场弹窗
+    var $friendFarmRanking = $('#friendFarmRanking');
+    // 关闭Popup弹窗
+    $('.aiui-popup__wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
+      $(".aiui-popup").removeClass("toggle")
+      $(this)
+        .parents('.aiui-popup__wrap')
+        .fadeOut(200);
+    });
+    // 打开好友农场弹窗
+    $('#showfriendFarmRanking').on('click', function () {
+      $friendFarmRanking.fadeIn();
+      $friendFarmRanking
+        .find(".aiui-popup")
+        .addClass("toggle");
+    });
   });
-  // 好友农场弹窗
-  var $friendFarmRanking = $('#friendFarmRanking');
-  // 关闭Popup弹窗
-  $('.aiui-popup__wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
-    $(".aiui-popup").removeClass("toggle")
-    $(this)
-      .parents('.aiui-popup__wrap')
-      .fadeOut(200);
-  });
-  // 打开Popup弹窗
-  $('#showfriendFarmRanking').on('click', function () {
-    $friendFarmRanking.fadeIn();
-    $friendFarmRanking
-      .find(".aiui-popup")
-      .addClass("toggle");
-  });
-  // 农场操作按钮交互动画
-
-  var $dailyOperationDialog = $('#dailyOperationDialog');
-
-  $(".planting-operation-btn").bind("click", function () {
-    var $this = $(this);
-    $this.addClass("active").attr("disabled", "disabled");
-    setTimeout(function () {
-      $this.removeClass("active").removeAttr("disabled");
-    }, 1000)
-    $dailyOperationDialog.fadeIn(200);
-  });
-
-  $("#dailyOperationDialog").on('click', '.daily-operation__close,.aiui-btn', function () {
-    $dailyOperationDialog.fadeOut(200);
-  });
-
-
 </script>
 {% endblock %}
