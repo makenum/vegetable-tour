@@ -1,0 +1,43 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-商品分类{% endblock %}
+{% block content %}
+<div class="header-sticky-hook">
+  <!--头部导航 start-->
+  <div class="aiui-navbar aiui-navbar__default">
+    <div class="aiui-navbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <div class="aiui-search-bar" id="searchBar">
+      <form class="aiui-search-bar__form" action="#">
+        <div class="aiui-search-bar__box">
+          <i class="icon-search"></i>
+          <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+          <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+        </div>
+      </form>
+      <button class="aiui-search-bar__cancel-btn">取消</button>
+    </div>
+    <div class="aiui-navbar__item">
+        <a href="#" class="icon-shopping-cart"></a>
+      </div>
+  </div>
+  <!--头部导航 end-->
+  <!--tab start-->
+  <!--tab end-->
+</div>
+<!--内容区域 start-->
+<!--内容区域 end-->
+
+{% endblock %}
+{% block footer %}
+<script type="text/javascript">
+  $(function () {
+    //头部导航固定
+    $(".header-sticky-hook").sticky({ topSpacing: 0 });
+    //搜索
+    aiui.searchBar('#searchBar');
+    //筛选
+
+  });
+</script>
+{% endblock %}
