@@ -230,7 +230,7 @@
 </div>
 
 <!-- 返回顶部 start -->
-<div class="aiui-gotop__wrap aiui-gotop-hook">
+<div class="aiui-gotop-wrap aiui-gotop-hook">
   <button class="aiui-gotop">
     <i class="icon-gotop"></i>
     <span class="text">回顶部</span>
@@ -241,9 +241,9 @@
 
 <div id="dailyOperation">
   <!-- 浇水提醒弹窗 start -->
-  <div class="aiui-dialog__wrap" id="jiaoshuiTipsDialog">
+  <div class="aiui-dialog-wrap" id="jiaoshuiTipsDialog">
     <div class="aiui-mask"></div>
-    <div class="aiui-dialog__custom farm-tips__dialog">
+    <div class="aiui-dialog--custom farm-tips-dialog">
       <div class="hd">
         <div class="thumb">
           <img src="../images/icon-jiaoshui.png" alt="浇水">
@@ -257,18 +257,19 @@
 
         <div class="btns">
           <button type="button"
-            class="aiui-btn aiui-btn aiui-btn--medium aiui-btn--pill aiui-btn--gray close-dialog__btn" id="jiaoshuiCancelBtn">再考虑一下</button>
-          <button type="button"
-            class="aiui-btn aiui-btn aiui-btn--medium aiui-btn--pill aiui-btn--primary" id="jiaoshuiSubmitBtn">立即浇水</button>
+            class="aiui-btn aiui-btn aiui-btn--medium aiui-btn--pill aiui-btn--gray close-dialog__btn"
+            id="jiaoshuiCancelBtn">再考虑一下</button>
+          <button type="button" class="aiui-btn aiui-btn aiui-btn--medium aiui-btn--pill aiui-btn--primary"
+            id="jiaoshuiSubmitBtn">立即浇水</button>
         </div>
       </div>
     </div>
   </div>
   <!-- 浇水提醒弹窗 end -->
   <!-- 浇水动画弹窗  start-->
-  <div class="aiui-dialog__wrap" id="jiaoshuiDialog">
+  <div class="aiui-dialog-wrap" id="jiaoshuiDialog">
     <div class="aiui-mask"></div>
-    <div class="aiui-dialog__custom daily-operation">
+    <div class="aiui-dialog--custom daily-operation">
       <button class="daily-operation__close"></button>
       <div class="daily-operation__shine"></div>
       <div class="daily-operation__tree">
@@ -287,7 +288,7 @@
   <!-- 浇水动画弹窗 end -->
 </div>
 <!-- 好友农场排行榜 start-->
-<div class="aiui-popup__wrap" id="friendFarmRanking">
+<div class="aiui-popup-wrap" id="friendFarmRanking">
   <div class="aiui-mask"></div>
   <div class="aiui-popup friend-farm__ranking">
     <div class="header">
@@ -453,10 +454,10 @@
     // 好友农场弹窗
     var $friendFarmRanking = $('#friendFarmRanking');
     // 关闭Popup弹窗
-    $('.aiui-popup__wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
+    $('.aiui-popup-wrap').on('click', '.aiui-mask, .aiui-popup__close', function () {
       $(".aiui-popup").removeClass("toggle")
       $(this)
-        .parents('.aiui-popup__wrap')
+        .parents('.aiui-popup-wrap')
         .fadeOut(200);
     });
     // 打开好友农场弹窗

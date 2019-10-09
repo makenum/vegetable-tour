@@ -46,7 +46,7 @@
     <!--swiper end-->
   </div>
   <!--内容区域 end-->
-  <div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn-wrap">
     <div class="aiui-footbtn aiui-footbtn__transparent">
       <button type="button" class="aiui-btn aiui-btn--block aiui-btn--large aiui-btn--brown aiui-btn--pill"
         id="cityPickerHook">到这里去</button>
@@ -57,7 +57,7 @@
   </div>
 </div>
 <!-- 点击我要养殖弹窗 start -->
-<div class="aiui-popup__wrap" id="selectLandPopup">
+<div class="aiui-popup-wrap" id="selectLandPopup">
   <div class="aiui-mask" id="aiui-mask"></div>
   <div class="aiui-popup">
     <div class="aiui-popup__content">
@@ -149,7 +149,7 @@
 </div>
 <!-- 点击我要养殖弹窗 end -->
 <!--协议弹框 start-->
-<div class="aiui-popup__wrap" id="agreementPopup">
+<div class="aiui-popup-wrap" id="agreementPopup">
   <div class="aiui-mask" id="agreement-mask"></div>
   <div class="aiui-popup">
     <div class="aiui-popup__content">
@@ -184,7 +184,7 @@
     // 关闭Popup操作
     $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
       $(".aiui-popup").removeClass("toggle")
-      $(this).parents('.aiui-popup__wrap').fadeOut(200);
+      $(this).parents('.aiui-popup-wrap').fadeOut(200);
     });
     $(document).on('click', '#agreement-mask,.close-popup__btn02', function () {
       $("#selectLandPopup").fadeIn(200);

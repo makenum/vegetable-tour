@@ -23,9 +23,9 @@
 </div>
 
 <!-- 浇水提醒弹窗 start -->
-<div class="aiui-dialog__wrap" id="Dialog1">
+<div class="aiui-dialog-wrap" id="Dialog1">
   <div class="aiui-mask"></div>
-  <div class="aiui-dialog__custom farm-tips__dialog">
+  <div class="aiui-dialog--custom farm-tips-dialog">
     <div class="hd">
       <div class="thumb">
         <img src="../images/icon-jiaoshui.png" alt="浇水">
@@ -47,9 +47,9 @@
 </div>
 <!-- 浇水提醒弹窗 end -->
 <!-- 未采摘提醒弹窗 start -->
-<div class="aiui-dialog__wrap" id="Dialog2">
+<div class="aiui-dialog-wrap" id="Dialog2">
   <div class="aiui-mask"></div>
-  <div class="aiui-dialog__custom farm-tips__dialog">
+  <div class="aiui-dialog--custom farm-tips-dialog">
     <div class="hd">
       <div class="thumb">
         <img src="../images/tomato-mature.png" alt="西红柿">
@@ -73,9 +73,9 @@
 <!-- 未采摘提醒弹窗 start -->
 
 <!-- 需要配送提醒弹窗 start -->
-<div class="aiui-dialog__wrap" id="Dialog3">
+<div class="aiui-dialog-wrap" id="Dialog3">
   <div class="aiui-mask"></div>
-  <div class="aiui-dialog__custom farm-tips__dialog">
+  <div class="aiui-dialog--custom farm-tips-dialog">
     <div class="hd">
       <div class="thumb">
         <img src="../images/icon-car.png" alt="配送">
@@ -111,7 +111,7 @@
     // 关闭弹窗操作
     $(document).on('click', '.aiui-mask,.close-dialog__btn', function () {
       $(this)
-        .parents('.aiui-dialog__wrap')
+        .parents('.aiui-dialog-wrap')
         .fadeOut(200);
     });
     // 打开弹窗操作

@@ -111,7 +111,7 @@
                   <li><img src="../images/area_bg.png" /></li>
                 </ul>
               </div>
-              <div class="link-btn__wrap">
+              <div class="link-btn-wrap">
                 <a href="javascript:;" class="aiui-btn aiui-btn--medium aiui-btn--primary aiui-btn--pill">查看实景</a>
               </div>
             </li>
@@ -351,9 +351,9 @@
 <!--图片预览区域 end-->
 
 <!-- 二维码弹窗 start-->
-<div class="aiui-dialog__wrap" id="qrcodeDialog">
+<div class="aiui-dialog-wrap" id="qrcodeDialog">
   <div class="aiui-mask"></div>
-  <div class="aiui-dialog__custom">
+  <div class="aiui-dialog--custom">
     <div class="qrcode-img"><img src="../images/qrcode-img.png" alt="微厅二维码"></div>
   </div>
 </div>
@@ -402,7 +402,7 @@
     // 关闭弹窗操作
     $(document).on('click', '.aiui-mask,.qrcode-img', function () {
       $(this)
-        .parents('.aiui-dialog__wrap')
+        .parents('.aiui-dialog-wrap')
         .fadeOut(200);
     });
     // 打开弹窗操作

@@ -74,7 +74,7 @@
     </div>
     <!-- 选地 end -->
     <!-- 日常操作工具条 start -->
-    <div class="land-operate__wrap">
+    <div class="land-operate-wrap">
       <div class="land-operate__next"><i class="icon-arrow-up"></i></div>
       <div class="swiper-container land-operate" id="landOperateSwiper">
         <div class="swiper-wrapper">
@@ -301,7 +301,7 @@
 </div>
 
 <!-- 好友农场排行榜 start-->
-<div class="aiui-popup__wrap" id="friendFarmRanking">
+<div class="aiui-popup-wrap" id="friendFarmRanking">
   <div class="aiui-mask"></div>
   <div class="aiui-popup friend-farm__ranking">
     <div class="header">
@@ -468,7 +468,7 @@
     $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
       $(".aiui-popup").removeClass("toggle")
       $(this)
-        .parents('.aiui-popup__wrap')
+        .parents('.aiui-popup-wrap')
         .fadeOut(200);
     });
     // 打开Popup弹窗

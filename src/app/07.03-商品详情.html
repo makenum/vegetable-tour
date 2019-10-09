@@ -2,7 +2,7 @@
 {% block title %}蔬游-商品详情{% endblock %}
 {% block content %}
 <!--头部导航 start-->
-<div class="aiui-navbar__wrap">
+<div class="aiui-navbar-wrap">
   <div class="aiui-navbar aiui-navbar--primary aiui-navbar--fixed">
     <div class="aiui-navbar__item">
       <a href="javascript:history.back();" class="icon-return"></a>
@@ -16,45 +16,48 @@
 </div>
 <!--头部导航 end-->
 <!--内容区域 start-->
- <!-- swiper begin -->
- <div class="swiper-container swiper-mallproduct_ad swiperIndexAd">
+<!-- swiper begin -->
+<div class="swiper-container swiper-mallproduct_ad swiperIndexAd">
   <div class="swiper-wrapper">
-      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
-      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+    <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+    <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
 <!-- swiper end -->
 <div class="aiui-cells ">
   <div class="aiui-cell">
-      <div class="fz34 ">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉 鸡肉营养健康瘦肉4斤简装包邮</div>
-      <div class="Cell -2of2"><span class="fz34 text-red">¥<span class="fz48">59</span><small>.00</small></span><del class="fz30 text-deep__gray ml20">¥80.00</del></div>
-      <div class="Cell -2of2"><span class="aiui-btn aiui-btn--plain aiui-btn--tiny aiui-btn--primary aiui-btn--pill">限时优惠</span><span class="aiui-btn aiui-btn--plain aiui-btn--tiny aiui-btn--primary aiui-btn--pill ml20">包邮</span></div>
+    <div class="fz34 ">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉 鸡肉营养健康瘦肉4斤简装包邮</div>
+    <div class="Cell -2of2"><span class="fz34 text-red">¥<span class="fz48">59</span><small>.00</small></span><del
+        class="fz30 text-deep__gray ml20">¥80.00</del></div>
+    <div class="Cell -2of2"><span
+        class="aiui-btn aiui-btn--plain aiui-btn--tiny aiui-btn--primary aiui-btn--pill">限时优惠</span><span
+        class="aiui-btn aiui-btn--plain aiui-btn--tiny aiui-btn--primary aiui-btn--pill ml20">包邮</span></div>
   </div>
 </div>
 <div class="aiui-cells aiui-cells__gap">
   <div class="aiui-cell">
-      <div class="aiui-cell__hd">
-          <span>配送方式</span>
-      </div>
-      <div class="aiui-cell__bd">
-          <span class="text-deep__gray">普通配送</span>
-      </div>
-      <div class="aiui-cell__ft">
-          <span>快递：免邮</span>
-          <i class="icon-arrow-right"></i>
-      </div>
+    <div class="aiui-cell__hd">
+      <span>配送方式</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <span class="text-deep__gray">普通配送</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <span>快递：免邮</span>
+      <i class="icon-arrow-right"></i>
+    </div>
   </div>
   <div class="aiui-cell">
-      <div class="aiui-cell__hd">
-          <span class="text-deep__gray">配送方式</span>
-      </div>
-      <div class="aiui-cell__bd">
-          <span >有运费险，退货最高可省25元</span>
-      </div>
-      <div class="aiui-cell__ft">
-          <i class="icon-arrow-right"></i>
-      </div>
+    <div class="aiui-cell__hd">
+      <span class="text-deep__gray">配送方式</span>
+    </div>
+    <div class="aiui-cell__bd">
+      <span>有运费险，退货最高可省25元</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
+    </div>
   </div>
 </div>
 <div class="aiui-cells aiui-cells__gap">
@@ -73,7 +76,7 @@
 <div class="aiui-cells__gap"></div>
 <!--内容区域 end-->
 <!--底部悬浮按钮 start-->
-<div class="aiui-footbtn__wrap">
+<div class="aiui-footbtn-wrap">
   <div class="aiui-footbtn aiui-footbtn__default Grid -right">
     <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
       class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看物流</button>
@@ -88,13 +91,13 @@
   $(function () {
     // banner
     var swiper = new Swiper('.swiperIndexAd', {
-            observer: true,
-            observeParents: true,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-            }
-        });
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      }
+    });
     //确认弹窗
     $("#confirmDialog").bind("click", function () {
       $("#selectLandPopup").hide();

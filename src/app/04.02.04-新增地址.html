@@ -51,7 +51,7 @@
 </div>
 
 
-<div class="aiui-footbtn__wrap">
+<div class="aiui-footbtn-wrap">
   <div class="aiui-footbtn">
     <button type="button" class="aiui-btn aiui-btn--block aiui-btn--large aiui-btn--primary aiui-btn--pill">保存</button>
   </div>
@@ -94,18 +94,18 @@
         }]
       }]
     }], {
-        depth: 3,
-        defaultValue: [0, 1, 1],
-        title: '请选择地区',
-        onChange: function (result) {
-          console.log(result);
-        },
-        onConfirm: function (result) {
-          console.log(result);
-          $('#selectAddressBtn').find(".aiui-input").val(result[0].label + result[1].label + result[2].label);
-        },
-        id: 'selectAddressPicker'
-      });
+      depth: 3,
+      defaultValue: [0, 1, 1],
+      title: '请选择地区',
+      onChange: function (result) {
+        console.log(result);
+      },
+      onConfirm: function (result) {
+        console.log(result);
+        $('#selectAddressBtn').find(".aiui-input").val(result[0].label + result[1].label + result[2].label);
+      },
+      id: 'selectAddressPicker'
+    });
   });
 </script>
 {% endblock %}

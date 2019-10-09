@@ -331,7 +331,7 @@
 </div>
 <!--内容区域 end-->
 <!--筛选 start-->
-<div class="aiui-popup__wrap" id="filterPopup">
+<div class="aiui-popup-wrap" id="filterPopup">
   <div class="aiui-mask"></div>
   <div class="aiui-popup--right">
     <div class="popup-filter">
@@ -387,7 +387,7 @@
     $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
       $(".aiui-popup--right").removeClass("toggle")
       $(this)
-        .parents('.aiui-popup__wrap')
+        .parents('.aiui-popup-wrap')
         .fadeOut(300);
     });
     // 打开Popup弹窗
