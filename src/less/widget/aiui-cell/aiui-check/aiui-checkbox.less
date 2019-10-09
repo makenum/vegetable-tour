@@ -1,11 +1,6 @@
 @import "../../../base/fn";
 
 .aiui-cells__checkbox {
-  .aiui-check__label {
-    &:before {
-      left: 110px;
-    }
-  }
   .aiui-icon-checked {
     &:before {
       content: "\EA01";
@@ -17,9 +12,7 @@
   }
 }
 
-// method2 accessbility
 .aiui-check {
-  // checkbox
   .aiui-cells__checkbox & {
     &:checked {
       & + .aiui-icon-checked {

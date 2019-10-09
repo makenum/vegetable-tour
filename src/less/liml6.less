@@ -38,39 +38,29 @@
     font-size: 64px;
     margin-bottom: 40px;
   }
-  .aiui-cell {
-    padding-left: 0;
-    padding-right: 0;
-    min-height: 130px;
+  .aiui-cells {
+    background-color: transparent;
+    .aiui-cell {
+      padding: 0;
+      min-height: 120px;
+      &:after {
+        left: 0;
+      }
+    }
+  }
 
-    &:not(.aiui-check__label) {
-      align-items: flex-end;
-    }
-    &:before {
-      left: 0;
-    }
-  }
-  .aiui-check__label {
-    font-size: 30px;
-    color: @aiuiColorMedGray;
-  }
   .tips {
     display: flex;
     justify-content: center;
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 35px;
     color: @aiuiColorMedGray;
   }
-  .app-login__btn {
-    margin-top: 56px;
+  .app-login-btn {
+    margin-top: 80px;
   }
-  .reg-btn__cell {
-    &:before {
-      display: none;
-    }
-  }
-  .login-btn__cell {
-    padding-top: 80px;
+  .app-reg-btn {
+    margin-top: 40px;
   }
 }
 

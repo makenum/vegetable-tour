@@ -3,22 +3,23 @@
 {% block content %}
 <div class="app-sign">
   <h3 class="title">登录</h3>
-  <form class="aiui-cells">
-    <div class="aiui-cell">
-      <div class="aiui-cell__bd">
-        <input class="aiui-input" type="tel" maxlength="11" placeholder="请输入手机号码" />
+  <form class="aiui-cells__form">
+    <div class="aiui-cells aiui-cells--primary">
+      <div class="aiui-cell">
+        <div class="aiui-cell__bd">
+          <input class="aiui-input" type="tel" maxlength="11" placeholder="请输入手机号码" />
+        </div>
+      </div>
+      <div class="aiui-cell">
+        <div class="aiui-cell__bd">
+          <input class="aiui-input" type="password" placeholder="请输入密码" />
+        </div>
       </div>
     </div>
-
-    <div class="aiui-cell">
-      <div class="aiui-cell__bd">
-        <input class="aiui-input" type="password" placeholder="请输入密码" />
-      </div>
-    </div>
-    <div class="aiui-cell login-btn__cell">
-      <button type="submit" class="aiui-btn aiui-btn--block aiui-btn--giant aiui-btn--primary aiui-btn--pill">登录</button>
-    </div>
+    <button type="submit"
+      class="aiui-btn aiui-btn--block aiui-btn--giant aiui-btn--primary aiui-btn--pill app-login-btn">登录</button>
+    <div class="tips"><a href="javascript:;">忘记密码</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="01.02-注册页.html"
+        class="text-primary">注册账号</a></div>
   </form>
-  <div class="tips"><a href="javascript:;">忘记密码</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="01.02-注册页.html" class="text-primary">注册账号</a></div>
 </div>
 {% endblock %}
