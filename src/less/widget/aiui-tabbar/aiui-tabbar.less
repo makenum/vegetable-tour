@@ -3,8 +3,11 @@
 @aiuiTabbarHeight: 98px;
 @aiuiTabbarIconSize: 48px;
 @aiuiTabbarBgColor: #ffffff;
-@aiuiTabbardefaultColor:#333333;
-@aiuiTabbarActiveColor:#19CF77;
+@aiuiTabbardefaultColor: #333333;
+@aiuiTabbarActiveColor: #19cf77;
+.aiui-tabbar-wrap {
+  height: @aiuiTabbarHeight;
+}
 .aiui-tabbar {
   display: flex;
   z-index: 500;
@@ -13,21 +16,20 @@
   &:before {
     .setTopLine(@aiuiLineColorLight);
   }
-  &__fixed {
+  &--fixed {
     .fixed-default();
     z-index: 9;
-    top:auto;
-    bottom:0;
+    bottom: 0;
   }
 
   &__icon {
     width: @aiuiTabbarIconSize;
     height: @aiuiTabbarIconSize;
     position: relative;
-    .icon-default{
+    .icon-default {
       display: block;
       background-color: @aiuiTabbardefaultColor;
-      width:48px;
+      width: 48px;
       height: 48px;
     }
     img {
@@ -61,21 +63,17 @@
       .aiui-tabbar__label {
         color: @aiuiTabbarActiveColor;
       }
-      .aiui-tabbar__icon{
-        .icon-default{
-          background-color:@aiuiTabbarActiveColor; 
+      .aiui-tabbar__icon {
+        .icon-default {
+          background-color: @aiuiTabbarActiveColor;
         }
-        .icon-home{
+        .icon-home {
           mask-image: url(../svg/icon-home-active.svg);
         }
-        .icon-shopping-cart{
+        .icon-shopping-cart {
           mask-image: url(../svg/icon-shopping-cart-active.svg);
         }
       }
-     
     }
   }
-}
-.footbar-sticky{
-  height:@aiuiTabbarHeight;
 }

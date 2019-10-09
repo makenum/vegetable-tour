@@ -1,0 +1,45 @@
+{% extends 'app.nunjucks' %}
+{% block title %}设置{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-navbar-wrap">
+  <div class="aiui-navbar aiui-navbar--primary aiui-navbar--fixed">
+    <div class="aiui-navbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-navbar__title">购物车(3)</h3>
+  </div>
+</div>
+<!--头部导航 end-->
+<div class="aiui-tabbar-wrap">
+  <div class="aiui-tabbar aiui-tabbar--fixed">
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon">
+        <div class="icon-default icon-home"></div>
+      </div>
+      <p class="aiui-tabbar__label">首页</p>
+    </a>
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon">
+        <div class="icon-default icon-address-2px"></div>
+      </div>
+      <p class="aiui-tabbar__label">附近</p>
+    </a>
+    <a href="javascript:;" class="aiui-tabbar__item aiui-tabbar__item--on">
+      <div class="aiui-tabbar__icon">
+        <div class="icon-default icon-shopping-cart"></div>
+        <span class="aiui-badge">4</span>
+      </div>
+      <p class="aiui-tabbar__label">购物车</p>
+    </a>
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon">
+        <div class="icon-default icon-me-outline"></div>
+      </div>
+      <p class="aiui-tabbar__label">我的</p>
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

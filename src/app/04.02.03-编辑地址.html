@@ -2,8 +2,8 @@
 {% block title %}编辑收货地址{% endblock %}
 {% block content %}
 <!--头部导航 start-->
-<div class="aiui-navbar__wrap">
-  <div class="aiui-navbar aiui-navbar__default aiui-navbar__fixed">
+<div class="aiui-navbar-wrap">
+  <div class="aiui-navbar aiui-navbar--default aiui-navbar--fixed">
     <div class="aiui-navbar__item">
       <a href="javascript:history.back();" class="icon-return">
       </a>
@@ -99,18 +99,18 @@
         }]
       }]
     }], {
-        depth: 3,
-        defaultValue: [0, 1, 1],
-        title: '请选择地区',
-        onChange: function (result) {
-          console.log(result);
-        },
-        onConfirm: function (result) {
-          console.log(result);
-          $('#selectAddressBtn').find(".aiui-input").val(result[0].label + result[1].label + result[2].label);
-        },
-        id: 'selectAddressPicker'
-      });
+      depth: 3,
+      defaultValue: [0, 1, 1],
+      title: '请选择地区',
+      onChange: function (result) {
+        console.log(result);
+      },
+      onConfirm: function (result) {
+        console.log(result);
+        $('#selectAddressBtn').find(".aiui-input").val(result[0].label + result[1].label + result[2].label);
+      },
+      id: 'selectAddressPicker'
+    });
   });
   // 删除联系人确认弹窗
   $("#deleteAddressBtn").bind("click", function () {
