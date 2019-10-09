@@ -26,15 +26,19 @@
     width: @aiuiTabbarIconSize;
     height: @aiuiTabbarIconSize;
     position: relative;
-    .icon-default {
-      display: block;
-      background-color: @aiuiTabbardefaultColor;
-      width: 48px;
-      height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &-01 {
+      background-image: url("../images/tabbar-icon-01.png");
     }
-    img {
-      width: 100%;
-      height: 100%;
+    &-02 {
+      background-image: url("../images/tabbar-icon-02.png");
+    }
+    &-03 {
+      background-image: url("../images/tabbar-icon-03.png");
+    }
+    &-04 {
+      background-image: url("../images/tabbar-icon-04.png");
     }
     .aiui-badge {
       position: absolute;
@@ -64,14 +68,17 @@
         color: @aiuiTabbarActiveColor;
       }
       .aiui-tabbar__icon {
-        .icon-default {
-          background-color: @aiuiTabbarActiveColor;
+        &-01 {
+          background-image: url("../images/tabbar-icon-01-on.png");
         }
-        .icon-home {
-          mask-image: url(../svg/icon-home-active.svg);
+        &-02 {
+          background-image: url("../images/tabbar-icon-02-on.png");
         }
-        .icon-shopping-cart {
-          mask-image: url(../svg/icon-shopping-cart-active.svg);
+        &-03 {
+          background-image: url("../images/tabbar-icon-03-on.png");
+        }
+        &-04 {
+          background-image: url("../images/tabbar-icon-04-on.png");
         }
       }
     }
