@@ -16,60 +16,51 @@
 </div>
 <!--头部导航 end-->
 <!--内容区域 start-->
- <!-- swiper begin -->
- <div class="swiper-container swiper-mallproduct_ad swiperIndexAd">
+<!-- swiper begin -->
+<div class="swiper-container swiper-mallproduct_ad swiperIndexAd">
   <div class="swiper-wrapper">
-      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
-      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+    <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+    <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
 <!-- swiper end -->
 <div class="aiui-cells ">
   <div class="aiui-cell">
-      <div class="fz34 ">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉 鸡肉营养健康瘦肉4斤简装包邮</div>
-      <div class="Cell -2of2"><span class="fz34 text-red">¥<span class="fz48">59</span><small>.00</small></span><del class="fz30 text-deep__gray ml20">¥80.00</del></div>
-      <div class="Cell -2of2"><span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">限时优惠</span><span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill ml20">包邮</span></div>
+    <div class="fz34 ">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉 鸡肉营养健康瘦肉4斤简装包邮</div>
+    <div class="Cell -2of2"><span class="fz34 text-red">¥<span class="fz48">59</span><small>.00</small></span><del
+        class="fz30 text-deep__gray ml20">¥80.00</del></div>
+    <div class="Cell -2of2 mark">
+      <div class="mark-tips mark-tips__plain">限时优惠</div>
+      <div class="mark-tips mark-tips__plain">包邮</div>
+    </div>
   </div>
 </div>
 <div class="aiui-cells aiui-cells__gap">
   <div class="aiui-cell">
-      <div class="aiui-cell__hd">
-          <span>配送方式</span>
-      </div>
-      <div class="aiui-cell__bd">
-          <span class="text-deep__gray">普通配送</span>
-      </div>
-      <div class="aiui-cell__ft">
-          <span>快递：免邮</span>
-          <i class="icon-arrow-right"></i>
-      </div>
-  </div>
-  <div class="aiui-cell">
-      <div class="aiui-cell__hd">
-          <span class="text-deep__gray">配送方式</span>
-      </div>
-      <div class="aiui-cell__bd">
-          <span >有运费险，退货最高可省25元</span>
-      </div>
-      <div class="aiui-cell__ft">
-          <i class="icon-arrow-right"></i>
-      </div>
+    <div class="Cell -2of2 aiui-flex">
+      <span class="text-deep__gray mr20">发货</span>
+      <div class=" Cell -fill"><span>山东德州</span>
+        <span>快递：0.00</span></div>
+      <span class="text-deep__gray">月销279</span>
+    </div>
   </div>
 </div>
 <div class="aiui-cells aiui-cells__gap">
+
   <div class="aiui-cell">
     <div class="aiui-cell__hd">
-      <span>配送信息：冷链物流</span>
+      <span class="text-deep__gray">服务</span>
     </div>
-  </div>
-  <div class="aiui-cell">
-    <div class="order-info">
-      <p>订单编号：119099999</p>
-      <p>下单时间：2019-07-23 17:43</p>
+    <div class="aiui-cell__bd">
+      <span>48小时内发货·坏单包赔</span>
+    </div>
+    <div class="aiui-cell__ft">
+      <i class="icon-arrow-right"></i>
     </div>
   </div>
 </div>
+
 <div class="aiui-cells__gap"></div>
 <!--内容区域 end-->
 <!--底部悬浮按钮 start-->
@@ -88,13 +79,13 @@
   $(function () {
     // banner
     var swiper = new Swiper('.swiperIndexAd', {
-            observer: true,
-            observeParents: true,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-            }
-        });
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      }
+    });
     //确认弹窗
     $("#confirmDialog").bind("click", function () {
       $("#selectLandPopup").hide();
