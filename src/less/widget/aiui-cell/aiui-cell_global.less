@@ -4,6 +4,22 @@
   background-color: @aiuiCellBg;
   font-size: @aiuiCellFontSize;
   overflow: hidden;
+  .aiui-cell {
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &--primary {
+    .aiui-cell {
+      &:last-child {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
 }
 .aiui-cells__gap {
   margin-top: 20px;
@@ -36,15 +52,10 @@
   position: relative;
   .Grid;
   align-items: center;
-  &:before {
-    .setTopLine(@aiuiCellBorderColor);
+  &:after {
+    .setBottomLine(@aiuiCellBorderColor);
     left: @aiuiCellGapH;
     z-index: 1;
-  }
-  &:first-child {
-    &:before {
-      display: none;
-    }
   }
   .icon-arrow-right {
     width: 38px;

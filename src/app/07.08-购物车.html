@@ -1,5 +1,5 @@
 {% extends 'app.nunjucks' %}
-{% block title %}设置{% endblock %}
+{% block title %}商城-购物车{% endblock %}
 {% block content %}
 <!--头部导航 start-->
 <div class="aiui-navbar-wrap">
@@ -8,9 +8,36 @@
       <a href="javascript:history.back();" class="icon-return"></a>
     </div>
     <h3 class="aiui-navbar__title">购物车(3)</h3>
+    <div class="aiui-navbar__item">
+      <button type="button">管理</button>
+    </div>
   </div>
 </div>
 <!--头部导航 end-->
+<div class="shopping-cart">
+  <div class="shopping-cart__list">
+    <div class="merchant">
+      <div class="aiui-cells__checkbox">
+        <label for="merchant" class="aiui-cell aiui-check__label">
+          <div class="aiui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="aiui-check" id="merchant" />
+            <i class="aiui-icon-checked"></i>
+          </div>
+          <div class="aiui-cell__bd">
+            <div class="user-enter user-enter--normal">
+              <div class="avatar avatar-38">
+                <img src="../images/farm_tu02.png" alt="农场">
+              </div>
+              <p class="name">这是农场名字</p>
+              <i class="icon-arrow-right"></i>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<!--tabbar start-->
 <div class="aiui-tabbar-wrap">
   <div class="aiui-tabbar aiui-tabbar--fixed">
     <a href="javascript:;" class="aiui-tabbar__item">
@@ -31,8 +58,7 @@
       <div class="aiui-tabbar__icon aiui-tabbar__icon-04"></div>
       <p class="aiui-tabbar__label">我的</p>
     </a>
-
   </div>
 </div>
-
+<!--tabbar end-->
 {% endblock %}
