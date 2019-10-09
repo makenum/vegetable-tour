@@ -21,11 +21,11 @@
     }
   }
 }
-.aiui-cells__gap {
+.aiui-cells--gap {
   margin-top: 20px;
 }
 
-.aiui-cells__title {
+.aiui-cells-title {
   padding: @aiuiCellGapV @aiuiCellGapH;
   font-size: 30px;
   &.\-primary {
@@ -33,7 +33,7 @@
   }
 }
 
-.aiui-cells__tips {
+.aiui-cells-tips {
   padding: 24px;
   display: flex;
   align-items: center;
@@ -42,10 +42,6 @@
   }
 }
 
-.aiui-cell__col {
-  width: 100%;
-  margin-bottom: 30px;
-}
 
 .aiui-cell {
   padding: @aiuiCellGapV @aiuiCellGapH;
@@ -63,7 +59,7 @@
     background-color: #999;
     margin-left: 10px;
   }
-  .icon-arrow-right--warn{
+  .icon-arrow-right--warn {
     background-color: @aiuiColorWarn;
   }
   .icon-camera {
@@ -87,6 +83,10 @@
       display: none;
     }
   }
+}
+.aiui-cell__col {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .aiui-cell__hd {
