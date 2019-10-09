@@ -400,6 +400,16 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
+  &--medium{
+    border-radius: 32px;
+    line-height: 54px;
+    padding: 0 30px;
+    font-size: 24px
+  }
+  &--default{
+    color:@aiuiColorMedGray;
+    background: #FFF3F5;
+  }
   &__org {
     color: @aiuiColorWarn;
     background-color: @aiuiBgColorDefault;
@@ -409,6 +419,7 @@
     &:before {
       .setFullLine(@aiuiColorPrimary, 5px);
     }
+  
   }
   .icon-checkbox-on {
     background-color: @aiuiColorWarn;

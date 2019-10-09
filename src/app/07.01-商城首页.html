@@ -17,7 +17,7 @@
   <!--头部导航 end-->
   <div class="mall-container__content">
     <!-- swiper begin -->
-    <div class="swiper-container swiper-index_ad swiperIndexAd">
+    <div class="swiper-container swiper-index-ad swiperIndexAd">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><a href=""><img src="../images/mall/mall-banner.png" alt=""></a></div>
         <div class="swiper-slide"><a href=""><img src="../images/mall/mall-banner.png" alt=""></a></div>
@@ -46,7 +46,7 @@
     </div>
     <!--malllist end -->
     <!-- small swiper begin -->
-    <div class="swiper-container swiper-index_ad_small swiperIndexAdSmall">
+    <div class="swiper-container swiper-index-ad--small swiperIndexAdSmall">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><a href=""><img src="../images/mall/mall-banner_small.png" alt=""></a>
         </div>
@@ -210,31 +210,24 @@
   </div>
 
 </div>
-<div class="footbar-sticky">
-  <div class="aiui-tabbar aiui-tabbar__fixed">
+<div class="aiui-tabbar-wrap">
+  <div class="aiui-tabbar aiui-tabbar--fixed">
     <a href="javascript:;" class="aiui-tabbar__item aiui-tabbar__item--on">
-      <div class="aiui-tabbar__icon">
-        <div class="icon-default icon-home"></div>
-      </div>
+      <div class="aiui-tabbar__icon aiui-tabbar__icon-01"></div>
       <p class="aiui-tabbar__label">首页</p>
     </a>
-    <a href="javascript:;" class="aiui-tabbar__item ">
-      <div class="aiui-tabbar__icon">
-        <div class="icon-default icon-address-2px"></div>
-      </div>
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon aiui-tabbar__icon-02"></div>
       <p class="aiui-tabbar__label">附近</p>
     </a>
-    <a href="javascript:;" class="aiui-tabbar__item ">
-      <div class="aiui-tabbar__icon">
-        <div class="icon-default icon-shopping-cart"></div>
-        <span class="aiui-badge">8</span>
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon aiui-tabbar__icon-03">
+        <span class="aiui-badge">4</span>
       </div>
       <p class="aiui-tabbar__label">购物车</p>
     </a>
-    <a href="javascript:;" class="aiui-tabbar__item ">
-      <div class="aiui-tabbar__icon">
-        <div class="icon-default icon-me-outline"></div>
-      </div>
+    <a href="javascript:;" class="aiui-tabbar__item">
+      <div class="aiui-tabbar__icon aiui-tabbar__icon-04"></div>
       <p class="aiui-tabbar__label">我的</p>
     </a>
 
@@ -248,12 +241,10 @@
   </button>
 </div>
 <!-- 返回顶部 end -->
-</div>
 {% endblock %}
 {% block footer %}
 <script>
   $(".headbar-sticky").sticky({ topSpacing: 0 });
-  $(".footbar-sticky").sticky({ bottomSpacing: 0 });
   // banner
   var swiper = new Swiper('.swiperIndexAd', {
     observer: true,

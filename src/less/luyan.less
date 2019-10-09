@@ -248,7 +248,7 @@
     padding: 0 @aiuiCellGapH @aiuiCellGapV;
   }
 }
-.swiper-index_ad{
+.swiper-index-ad{
   border-radius: 10px;
   .swiper-slide{
     img{
@@ -266,7 +266,7 @@
     color:@aiuiColorWhite;
   }
 }
-.swiper-index_ad_small{
+.swiper-index-ad--small{
   margin: @aiuiCellInnerGapH*2   @aiuiCellGapH  0;
   height: 180px;
   .swiper-pagination{
@@ -457,7 +457,7 @@
   }
 }
 // 商品详情
-.swiper-mallproduct_ad{
+.swiper-mallproduct-ad{
   .swiper-slide{
     img{
       object-fit: cover;
@@ -476,6 +476,27 @@
     color:@aiuiColorWhite;
   }
 }
+.address-cell--small{
+  width:38px;
+  height:38px;
+  background: #333;
+}
+.split-line{
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  &::before{
+    content: "";
+    position: absolute;
+    left:0;
+    transform: translate(0,-50%);
+    top:50%;
+    width: 2px;
+    height: 32px;
+    background: #EDEDED;
+  }
+}
+
 .hide {
   display: none;
 }
