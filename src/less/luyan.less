@@ -413,45 +413,12 @@
   }
 }
 // 商城订单
-.mall-shop{
-  min-height: 100vh;
-  background: @aiuiColorWhite;
-}
-.aiui-tabmenu__vertical{
-  flex-direction: column;
-  width: 140px;
-  max-height: calc(100vh - 88px);
-  overflow-y: auto;
-  position: absolute;
-  left:0;
-  top:1PX;
-  .aiui-tabmenu__item {
-    padding: 20px 40px;
-    line-height: 40px;
-    background: @aiuiUploaderBorderColor;
-    &::after{
-      content:'';
-      .setBottomLine(@aiuiColorWhite);
-      z-index: 2;
-    }
-    &--on{
-      background: @aiuiColorWhite;
-      &::before {
-        right: auto;
-        top:0;
-        width: 6px;
-        height: 100%;
-        background: @aiuiColorPrimary;
-        border-radius: 0px;
-      }
-     
-    }
-    
-  }
-}
+
 .aiui-tab__mall {
   position: relative;
-  height: calc(100vh - 88px);
+  height: calc(100vh - 90px);
+  margin-top: 1PX;
+  background: @aiuiColorWhite;
   .aiui-tab__panel{
     padding: 0px 48px;
     margin-left: 140px;
@@ -492,6 +459,26 @@
     align-items: center;
     margin-bottom: 30px;
     
+  }
+}
+// 商品详情
+.swiper-mallproduct_ad{
+  .swiper-slide{
+    img{
+      object-fit: cover;
+    }
+  }
+  .swiper-pagination-fraction{
+    display: inline-block;
+    background: rgba(0,0,0,0.30);
+    border-radius: 22px;
+    line-height: 44px;
+    width: auto;
+    font-size: 22px;
+    padding:0 @aiuiCellGapH;
+    left:auto;
+    right:@aiuiCellGapH;
+    color:@aiuiColorWhite;
   }
 }
 .hide {

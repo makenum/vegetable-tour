@@ -1,0 +1,170 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-商品详情{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-navbar__wrap">
+  <div class="aiui-navbar aiui-navbar__primary aiui-navbar__fixed">
+    <div class="aiui-navbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
+    </div>
+    <h3 class="aiui-navbar__title">商品详情</h3>
+    <div class="aiui-navbar__item">
+      <a href="#" class="icon-shopping-cart"></a>
+      <a href="#" class="icon-share-2px"></a>
+    </div>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容区域 start-->
+ <!-- swiper begin -->
+ <div class="swiper-container swiper-mallproduct_ad swiperIndexAd">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+      <div class="swiper-slide"><a href=""><img src="../images/mall/mall-product-big.png" alt=""></a></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<!-- swiper end -->
+<div class="aiui-cells ">
+  <div class="aiui-cell">
+      <div class="fz34 ">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉 鸡肉营养健康瘦肉4斤简装包邮</div>
+      <div class="Cell -2of2"><span class="fz34 text-red">¥<span class="fz48">59</span><small>.00</small></span><del class="fz30 text-deep__gray ml20">¥80.00</del></div>
+      <div class="Cell -2of2"><span class="aiui-btn aiui-btn__plain aiui-btn__tiny aiui-btn__primary aiui-btn__pill">限时优惠</span></div>
+  </div>
+ 
+</div>
+
+<div class="aiui-cells address-cells">
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-truck-3px"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <p class="fz28 text-blue">由【深圳华强北集散中心】发往【某某某转运中心】</p>
+        </div>
+        <div class="bd">
+          <p class="fz28 text-deep__gray">2019-07-29 20:33:58</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="aiui-cell aiui-cell__primary">
+    <div class="aiui-cell__hd">
+      <i class="icon-address"></i>
+    </div>
+    <div class="aiui-cell__bd">
+      <div class="address">
+        <div class="hd">
+          <h3 class="name">钱多多</h3>
+          <p class="phone">13823456666</p>
+        </div>
+        <div class="bd">
+          <p class="desc">广东省广州市某某区某某路123号 盛庭花园小区22栋101</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="goods-list aiui-cells__gap">
+  <div class="goods-list__status">
+    <button class="user-enter user-enter--normal">
+      <div class="avatar avatar-38">
+        <img src="../images/farm_tu02.png" alt="农场">
+      </div>
+      <p class="name">鄂尔多斯农场</p>
+      <i class="icon-arrow-right"></i>
+    </button>
+    <p class="text-warn">雇农已发货</p>
+  </div>
+  <div class="goods-list__item">
+    <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
+    <div class="content">
+      <div class="content-text">
+        <h3 class="name">鄂尔多斯农场a1096块地西红柿</h3>
+        <p class="desc">3公斤</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="price"><span class="fz24">¥</span>108.<span class="fz24">00</span></div>
+      <p class="fz22 text-deep__gray">x1</p>
+    </div>
+  </div>
+</div>
+<div class="aiui-paydetails aiui-cells__gap">
+  <div class="aiui-paydetails__hd">
+    <h3 class="title">支付详情</h3>
+  </div>
+  <div class="aiui-paydetails__bd">
+    <div class="paydetails-list Grid -between">
+      <span class="text-med__gray">运费</span>
+      <span>¥108.00</span>
+    </div>
+    <div class="paydetails-list Grid -between">
+      <span class="text-med__gray">实付款（含运费）</span>
+      <p class="fz26 text-red">¥<span class="fz36">108</span>.00</p>
+    </div>
+  </div>
+  <div class="aiui-paydetails__ft">
+    <div class="fz36 font-weight">已支付：<span class="text-red">¥108.00</span></div>
+  </div>
+</div>
+<div class="aiui-cells aiui-cells__gap">
+  <div class="aiui-cell">
+    <div class="aiui-cell__hd">
+      <span>配送信息：冷链物流</span>
+    </div>
+  </div>
+  <div class="aiui-cell">
+    <div class="order-info">
+      <p>订单编号：119099999</p>
+      <p>下单时间：2019-07-23 17:43</p>
+    </div>
+  </div>
+</div>
+<div class="aiui-cells__gap"></div>
+<!--内容区域 end-->
+<!--底部悬浮按钮 start-->
+<div class="aiui-footbtn__wrap">
+  <div class="aiui-footbtn aiui-footbtn__default Grid -right">
+    <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
+      class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看物流</button>
+    <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+      id="confirmDialog">确认收货</button>
+  </div>
+</div>
+<!--底部悬浮按钮 end-->
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+    // banner
+    var swiper = new Swiper('.swiperIndexAd', {
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            }
+        });
+    //确认弹窗
+    $("#confirmDialog").bind("click", function () {
+      $("#selectLandPopup").hide();
+      var descText = '<p>您的蔬菜已配送成功，确定收货请点确认按钮。</p>';
+      aiui.confirm(descText, {
+        title: '提示',
+        buttons: [{
+          label: '取消',
+          type: 'default',
+          onClick: function () { alert('取消') }
+        }, {
+          label: '确认',
+          type: 'primary',
+          onClick: function () { alert('确认') }
+        }]
+      });
+    });
+  });
+</script>
+{% endblock %}
