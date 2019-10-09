@@ -1,4 +1,27 @@
 $(function() {
+  var $sunshineTotal = $("#sunshineTotal");
+  var $sunshineChange = $("#sunshineChange");
+  var $sunshineToast = $("#sunshineToast");
+  var $sunshineThumb = $(".user-info").find(".thumb");
+
+  // 显示阳光值增减提示
+  function showSunshineToast(changevalue) {
+    var $sunshineTotalValue = $("#sunshineTotal").html();
+    $sunshineChange.html(changevalue);
+    $sunshineThumb.addClass("rotate");
+
+    setTimeout(function() {
+      $sunshineThumb.removeClass("rotate");
+      $sunshineTotal.html($sunshineTotalValue - changevalue);
+
+      $sunshineToast
+        .delay(300)
+        .fadeIn()
+        .delay(1500)
+        .fadeOut();
+    }, 1000);
+  }
+
   // 操作按钮点击波纹效果
   $(".planting-operation-btn").bind("click", function() {
     var $this = $(this);
@@ -36,6 +59,13 @@ $(function() {
     // 取消浇水动作，关闭提示弹窗
     $("#jiaoshuiCancelBtn").bind("click", function() {
       $(".jiaoshui-btn").removeClass("active");
+    });
+    var $spendSunshineValue = $("#jiaoshuiTipsDialog")
+      .find(".spend-sunshine")
+      .html();
+
+    $("#jiaoshuiDialog").on("click", ".daily-operation__close,.aiui-btn", function() {
+      showSunshineToast($spendSunshineValue);
     });
   });
 

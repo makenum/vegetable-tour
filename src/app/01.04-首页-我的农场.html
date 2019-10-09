@@ -8,42 +8,12 @@
 <!-- 热门活动入口 end -->
 
 <div class="farm-container">
-  <!-- 滚动消息栏 start -->
-  <div class="swiper-container scroll-notice">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide swiper-no-swiping">
-        <a href="javaScript:;" class="scroll-notice__item">
-          <div class="avatar avatar-40">
-            <img src="../images/avatar.png">
-          </div>
-          <p class="content-text">帮你浇水了</p>
-        </a>
-      </div>
-      <div class="swiper-slide swiper-no-swiping">
-        <a href="javaScript:;" class="scroll-notice__item">
-          <div class="avatar avatar-40">
-            <img src="../images/avatar.png">
-          </div>
-          <p class="content-text">帮你浇水了</p>
-        </a></div>
-      <div class="swiper-slide swiper-no-swiping">
-        <a href="javaScript:;" class="scroll-notice__item">
-          <div class="avatar avatar-40">
-            <img src="../images/avatar.png">
-          </div>
-          <p class="content-text">帮你浇水了</p>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- 滚动消息栏 end -->
-
   <!-- user-info start -->
   <div class="user-info">
     <div class="header">
       <a class="sunshine" href="04.03.01-我的阳光值.html">
         <div class="thumb"><img src="../images/sunshine.png" alt="阳光" /></div>
-        <strong>3467</strong>
+        <strong id="sunshineTotal">3467</strong>
       </a>
       <h3 class="name">豆豆的农场</h3>
       <a href="03.01-片区列表-全部农场.html" class="icon-setting-2px"></a>
@@ -60,6 +30,15 @@
     </div>
   </div>
   <!-- user-info end -->
+
+  <!-- 阳光值增减提示 start -->
+  <div class="sunshine-toast-wrap" id="sunshineToast">
+    <div class="sunshine-toast">
+      <img src="../images/sunshine.png" alt="阳光" class="sunshine-toast__icon" />
+      <div class="sunshine-toast__desc">-<span id="sunshineChange">12</span>阳光值</div>
+    </div>
+  </div>
+  <!-- 阳光值增减提示 end -->
 
   <div class="farm-game">
 
@@ -273,7 +252,7 @@
       <div class="bd">
         <div class="content">
           <h3 class="title">您要浇水吗？</h3>
-          <div class="desc">浇水需要花掉200阳光值，是否现在浇水？</div>
+          <div class="desc">浇水需要花掉<span class="spend-sunshine">20</span>阳光值，是否现在浇水？</div>
         </div>
 
         <div class="btns">
@@ -471,16 +450,6 @@
 <script src="../js/farm.js"></script>
 <script>
   $(function () {
-    // 新闻滚动
-    var swiper = new Swiper('.scroll-notice', {
-      direction: 'vertical',
-      noSwiping: true,
-      autoplay: {
-        delay: 3000
-      },
-      loop: true,
-      slidesPerView: 'auto'
-    });
     // 好友农场弹窗
     var $friendFarmRanking = $('#friendFarmRanking');
     // 关闭Popup弹窗

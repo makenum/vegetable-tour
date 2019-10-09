@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 滚动消息栏 start -->
+  <div class="swiper-container scroll-notice">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-no-swiping">
+        <a href="javaScript:;" class="scroll-notice__item">
+          <div class="avatar avatar-40">
+            <img src="../images/avatar.png">
+          </div>
+          <p class="content-text">帮你浇水了</p>
+        </a>
+      </div>
+      <div class="swiper-slide swiper-no-swiping">
+        <a href="javaScript:;" class="scroll-notice__item">
+          <div class="avatar avatar-40">
+            <img src="../images/avatar.png">
+          </div>
+          <p class="content-text">帮你浇水了</p>
+        </a></div>
+      <div class="swiper-slide swiper-no-swiping">
+        <a href="javaScript:;" class="scroll-notice__item">
+          <div class="avatar avatar-40">
+            <img src="../images/avatar.png">
+          </div>
+          <p class="content-text">帮你浇水了</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- 滚动消息栏 end -->
+
+  <script>
+    // 新闻滚动
+    var swiper = new Swiper('.scroll-notice', {
+      direction: 'vertical',
+      noSwiping: true,
+      autoplay: {
+        delay: 3000
+      },
+      loop: true,
+      slidesPerView: 'auto'
+    });
+  </script>
+</body>
+
+</html>
