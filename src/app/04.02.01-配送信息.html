@@ -89,15 +89,15 @@
 
 </div>
 
-<div class="aiui-footbtn__wrap">
+<div class="aiui-footbtn-wrap">
   <div class="aiui-footbtn">
     <button type="button"
-      class="aiui-btn aiui-btn__block aiui-btn__large aiui-btn__primary aiui-btn__pill">确定（您需支付0元）</button>
+      class="aiui-btn aiui-btn--block aiui-btn--large aiui-btn--primary aiui-btn--pill">确定（您需支付0元）</button>
   </div>
 </div>
 
 <!-- 选择配送方式弹窗 start -->
-<div class="aiui-popup__wrap" id="selectDeliveryPopup">
+<div class="aiui-popup-wrap" id="selectDeliveryPopup">
   <div class="aiui-mask"></div>
   <div class="aiui-popup">
     <div class="aiui-popup__hd">
@@ -136,7 +136,7 @@
     </div>
     <div class="aiui-popup__ft">
       <button type="button"
-        class="aiui-btn aiui-btn__block aiui-btn__primary aiui-btn__large aiui-btn__pill">确定</button>
+        class="aiui-btn aiui-btn--block aiui-btn--primary aiui-btn--large aiui-btn--pill">确定</button>
     </div>
   </div>
 </div>
@@ -151,7 +151,7 @@
     $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
       $(".aiui-popup").removeClass("toggle")
       $(this)
-        .parents('.aiui-popup__wrap')
+        .parents('.aiui-popup-wrap')
         .fadeOut(200);
     });
     // 打开Popup操作

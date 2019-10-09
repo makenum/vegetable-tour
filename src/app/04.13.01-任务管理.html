@@ -74,7 +74,7 @@
               <p class="fz26"><span class="fz36">50</span>点</p>
             </div>
             <div class="Grid -right">
-              <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+              <button type="button" class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill"
                 id="reminderBtn">提醒完成</button>
             </div>
           </div>
@@ -112,8 +112,8 @@
             </div>
             <div class="Grid -right">
               <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
-              <button type="button" class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill"
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看照片</button>
+              <button type="button" class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill"
                 id="confirmDialog">确认验收</button>
             </div>
           </div>
@@ -151,9 +151,9 @@
             </div>
             <div class="Grid -right">
               <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看照片</button>
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">评价</button>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒完成</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">提醒完成</button>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@
             </div>
             <div class="Grid -right">
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">提醒完成</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">提醒完成</button>
             </div>
           </div>
         </div>
@@ -276,9 +276,9 @@
             </div>
             <div class="Grid -right">
               <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看照片</button>
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">确认验收</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">确认验收</button>
             </div>
           </div>
         </div>
@@ -319,9 +319,9 @@
             </div>
             <div class="Grid -right">
               <button type="button" onclick="window.location.href='04.13.03-查看照片.html'"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__default aiui-btn__pill">查看照片</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看照片</button>
               <button type="button"
-                class="aiui-btn aiui-btn__plain aiui-btn__small aiui-btn__primary aiui-btn__pill">评价</button>
+                class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">评价</button>
             </div>
           </div>
         </div>
@@ -331,7 +331,7 @@
 </div>
 <!--内容区域 end-->
 <!--筛选 start-->
-<div class="aiui-popup__wrap" id="filterPopup">
+<div class="aiui-popup-wrap" id="filterPopup">
   <div class="aiui-mask"></div>
   <div class="aiui-popup--right">
     <div class="popup-filter">
@@ -387,7 +387,7 @@
     $(document).on('click', '.aiui-mask, .aiui-popup__close', function () {
       $(".aiui-popup--right").removeClass("toggle")
       $(this)
-        .parents('.aiui-popup__wrap')
+        .parents('.aiui-popup-wrap')
         .fadeOut(300);
     });
     // 打开Popup弹窗

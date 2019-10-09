@@ -298,6 +298,6 @@ $(function() {
 
   // 关闭演示动画弹窗
   $("#dailyOperation").on("click", ".daily-operation__close,.aiui-btn", function() {
-    $(".aiui-dialog__wrap").fadeOut(200);
+    $(".aiui-dialog-wrap").fadeOut(200);
   });
 });

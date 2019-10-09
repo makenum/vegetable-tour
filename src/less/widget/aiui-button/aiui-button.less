@@ -10,33 +10,33 @@
   .setTapColor();
 }
 
-.aiui-btn__block {
+.aiui-btn--block {
   display: block;
   width: 100%;
 }
 // size
-.aiui-btn__tiny {
+.aiui-btn--tiny {
   line-height: 40px;
   font-size: 24px;
 }
-.aiui-btn__small {
+.aiui-btn--small {
   line-height: 54px;
   font-size: 26px;
 }
-.aiui-btn__medium {
+.aiui-btn--medium {
   line-height: 70px;
   font-size: 28px;
 }
-.aiui-btn__large {
+.aiui-btn--large {
   line-height: 80px;
   font-size: 30px;
 }
-.aiui-btn__giant {
+.aiui-btn--giant {
   line-height: 98px;
   font-size: 40px;
 }
 // default
-.aiui-btn__default {
+.aiui-btn--default {
   color: @aiuiBtnDefaultFontColor;
   background-color: @aiuiBtnDefaultBg;
   &:active {
@@ -47,7 +47,7 @@
     background-color: @aiuiBtnDisabledBg;
   }
 }
-.aiui-btn__light-blue {
+.aiui-btn--light-blue {
   color: @aiuiColorBlue;
   background-color: @aiuiBgColorDefault;
   &:disabled {
@@ -56,7 +56,7 @@
   }
 }
 // primary
-.aiui-btn__primary {
+.aiui-btn--primary {
   background-image: @aiuiBtnPrimaryBgi;
   color: @aiuiBtnPrimaryFontColor;
   &:active {
@@ -70,7 +70,7 @@
   }
 }
 
-.aiui-btn__gray {
+.aiui-btn--gray {
   color: @aiuiBtnGrayFontColor;
   background-color: @aiuiBtnGrayBg;
   &:active {
@@ -83,7 +83,7 @@
 }
 
 //brown
-.aiui-btn_brown {
+.aiui-btn--brown {
   background-color: @aiuiColorBrown;
   color: @aiuiBtnPrimaryFontColor;
   &:active {
@@ -95,41 +95,41 @@
   }
 }
 // disabled
-.aiui-btn__disabled {
+.aiui-btn--disabled {
   color: @aiuiBtnDisabledFontColor;
   background-color: @aiuiBtnDisabledBg;
 }
 // 小圆角
-.aiui-btn__rounded {
+.aiui-btn--rounded {
   border-radius: 10px;
-  &.aiui-btn__plain {
+  &.aiui-btn--plain {
     &:before {
       border-radius: 20px;
     }
   }
 }
 // 大圆角
-.aiui-btn__pill {
+.aiui-btn--pill {
   border-radius: 200px;
-  &.aiui-btn__plain {
+  &.aiui-btn--plain {
     &:before {
       border-radius: 400px;
     }
   }
 }
 // plain
-.aiui-btn__plain {
+.aiui-btn--plain {
   &:before {
     .setFullLine();
   }
-  &.aiui-btn__default {
+  &.aiui-btn--default {
     background-color: transparent;
     color: @aiuiBtnPlainDefaultFontColor;
     &:before {
       border-color: @aiuiBtnPlainDefaultBorderColor;
     }
   }
-  &.aiui-btn__primary {
+  &.aiui-btn--primary {
     background-image: none;
     background-color: transparent;
     color: @aiuiBtnPlainPrimaryFontColor;
@@ -139,13 +139,12 @@
   }
 }
 // text-btn
-.aiui-btn__text {
-  
-  &.aiui-btn__default {
+.aiui-btn--text {
+  &.aiui-btn--default {
     background-color: transparent;
     color: @aiuiBtnPlainDefaultFontColor;
   }
-  &.aiui-btn__primary {
+  &.aiui-btn--primary {
     background-image: none;
     background-color: transparent;
     color: @aiuiBtnPlainPrimaryFontColor;
@@ -153,7 +152,7 @@
 }
 
 // cell btn
-.aiui-btn__cell {
+.aiui-btn--cell {
   position: relative;
   display: flex;
   justify-content: center;
@@ -168,6 +167,6 @@
   }
 }
 
-.aiui-btn__cell-warn {
+.aiui-btn--cell-warn {
   color: @aiuiColorRed;
 }
