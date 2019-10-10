@@ -23,4 +23,14 @@
       }
     }
   }
+  .aiui-cells--checkbox--warn & {
+    &:checked {
+      & + .aiui-icon-checked {
+        &:before {
+          content: "\EA06";
+          color:@aiuiColorWarn;
+        }
+      }
+    }
+  }
 }
