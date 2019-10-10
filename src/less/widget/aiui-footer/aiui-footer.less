@@ -28,8 +28,7 @@
     &--giant{
       line-height: 120px;
       font-size: 34px;
-      width: 212px;
-      box-sizing: border-box;
+      flex: 1;
       padding: 0;
       &:not(:last-child) {
         margin-right: 0px;
@@ -55,9 +54,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 162px;
+    width: 163px;
     height: 120px;
     position: relative;
+    font-size: 26px;
+    color: @aiuiColorMedGray;
     &:not(:last-child)::before{
      .setRightLine(#EDEDED)
     }
