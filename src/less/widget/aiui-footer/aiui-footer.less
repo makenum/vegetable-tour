@@ -18,9 +18,30 @@
   padding: 0px 24px;
   height: 120px;
   z-index: 100;
+  &--nospace{
+    padding:0
+  }
   .aiui-btn {
     &:not(:last-child) {
       margin-right: 24px;
+    }
+    &--giant{
+      line-height: 120px;
+      font-size: 34px;
+      width: 212px;
+      box-sizing: border-box;
+      padding: 0;
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
+    &--green{
+      background: #49B33A;
+      color:#fff;
+    }
+    &--lightgreen{
+      background: #56D345;;
+      color:#fff;
     }
   }
   &__default {
@@ -28,5 +49,27 @@
   }
   &__transparent {
     background-color: transparent;
+  }
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 162px;
+    height: 120px;
+    position: relative;
+    &:not(:last-child)::before{
+     .setRightLine(#EDEDED)
+    }
+    [class^="icon-"] {
+      width: 68px;
+      height:68px;
+      background-color: #999;
+    }
+    .icon-favorite-fill{
+      width: 68px;
+      height:68px;
+      background-color: @aiuiColorRed;
+    }
   }
 }
