@@ -147,7 +147,7 @@
   <div class="aiui-cell">
     <div class="Cell -2of2 Grid -middle">
       <div class="avatar avatar-100 mr20">
-        <img src="../images/mall/mall-default-80.png" alt="">
+        <img src="../images/avatar-01.png" alt="">
       </div>
       <div class="Cell -fill Grid ">
         <h3 class="Cell -2of2">鄂尔多斯农场</h3>
@@ -212,12 +212,12 @@
       <div class="icon-shop"></div>
       <p>店铺主页</p>
     </a>
-    <a href="#" class="aiui-footbtn__item">
+    <a href="javascript:;" class="aiui-footbtn__item" id="btnFavorite">
         <div class="icon-favorite"></div>
         <p>收藏</p>
       </a>
     <button type="button" class="aiui-btn  aiui-btn--giant aiui-btn--lightgreen">加入购物车</button>
-    <button type="button" class="aiui-btn  aiui-btn--giant aiui-btn--green" id="confirmDialog">立即购买</button>
+    <a href="07.04-确认订单.html" class="aiui-btn  aiui-btn--giant aiui-btn--green" >立即购买</a>
   </div>
 </div>
 <!--底部悬浮按钮 end-->
@@ -234,23 +234,18 @@
         type: 'fraction',
       }
     });
-    //确认弹窗
-    $("#confirmDialog").bind("click", function () {
-      $("#selectLandPopup").hide();
-      var descText = '<p>您的蔬菜已配送成功，确定收货请点确认按钮。</p>';
-      aiui.confirm(descText, {
-        title: '提示',
-        buttons: [{
-          label: '取消',
-          type: 'default',
-          onClick: function () { alert('取消') }
-        }, {
-          label: '确认',
-          type: 'primary',
-          onClick: function () { alert('确认') }
-        }]
-      });
-    });
+    // 收藏
+    $('#btnFavorite').click(function(){
+      var statusFavoriteBtn=$(this).find('.icon-favorite');
+      var favoriteTxt=$(this).find('p');
+      if(statusFavoriteBtn.hasClass('icon-favorite-fill')){
+        statusFavoriteBtn.removeClass('icon-favorite-fill');
+        favoriteTxt.html('收藏');
+      }else{
+        statusFavoriteBtn.addClass('icon-favorite-fill');
+        favoriteTxt.html('已收藏');
+      }
+    })
   });
 </script>
 {% endblock %}
