@@ -1,10 +1,6 @@
 @import "../../base/fn";
 
-@aiuiTabbarHeight: 98px;
-@aiuiTabbarIconSize: 48px;
-@aiuiTabbarBgColor: #ffffff;
-@aiuiTabbardefaultColor: #333333;
-@aiuiTabbarActiveColor: #19cf77;
+
 .aiui-tabbar-wrap {
   height: @aiuiTabbarHeight;
 }
@@ -12,7 +8,7 @@
   display: flex;
   z-index: 500;
   background-color: @aiuiTabbarBgColor;
-
+  position: relative;
   &:before {
     .setTopLine(@aiuiLineColorLight);
   }

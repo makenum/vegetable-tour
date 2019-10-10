@@ -1400,24 +1400,85 @@
 }
 
 //商城购物车
-.shopping-cart {
-  &__list {
-    padding: 20px 24px;
-    .item {
-      border-radius: 28px;
-      overflow: hidden;
-      .merchant-cells {
-      }
-      .commodity-cells {
-        .aiui-cell {
-          &:after {
-            display: none;
-          }
-          &:nth-child(odd) {
-            background-color: #fcfcfc;
-          }
+.shopcart-list {
+  padding: 20px 24px;
+  &__item {
+    border-radius: 28px;
+    overflow: hidden;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    .commodity-cells {
+      .aiui-cell {
+        &:after {
+          display: none;
+        }
+        &:nth-child(odd) {
+          background-color: #fcfcfc;
         }
       }
+      .aiui-cell__bd {
+        .thumb {
+          margin-right: 24px;
+        }
+        .desc {
+          display: block;
+          width: 100%;
+          font-size: 26px;
+          .ellipsisLn(2);
+          margin-bottom: 10px;
+        }
+        .renew-select {
+          background-color: @aiuiBgColorDefault;
+          border-radius: 10px;
+          font-size: 24px;
+          color: @aiuiColorDeepGray;
+          display: inline-flex;
+          align-items: center;
+          padding: 9px 10px;
+          line-height: 1;
+          margin-bottom: 10px;
+          .icon-arrow-down {
+            width: 28px;
+            height: 28px;
+            background-color: @aiuiColorDisabledGray;
+          }
+        }
+        .event-tips {
+          display: flex;
+          align-items: center;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+.shopcart-bar-wrap {
+  height: 120px;
+}
+.shopcart-bar {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  padding: 0 24px;
+  background-color: @aiuiColorWhite;
+  .fixed-default();
+  z-index: 9;
+  bottom: @aiuiTabbarHeight;
+  .content {
+    .flex-grow();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .aiui-btn {
+      min-width: 160px;
+    }
+    &-info {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .flex-grow();
+      margin-right: 20px;
     }
   }
 }

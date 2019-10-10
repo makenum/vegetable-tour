@@ -1,6 +1,7 @@
 {% extends 'app.nunjucks' %}
 {% block title %}商城-购物车{% endblock %}
 {% block content %}
+
 <!--头部导航 start-->
 <div class="aiui-navbar-wrap">
   <div class="aiui-navbar aiui-navbar--primary aiui-navbar--fixed">
@@ -14,52 +15,206 @@
   </div>
 </div>
 <!--头部导航 end-->
-<div class="shopping-cart">
-  <ul class="shopping-cart__list">
-    <li class="item">
-      <div class="aiui-cells aiui-cells--checkbox merchant-cells">
-        <label for="merchant-01" class="aiui-cell">
-          <div class="aiui-cell__hd">
-            <input type="checkbox" name="checkbox1" class="aiui-check" id="merchant-01" />
-            <i class="aiui-icon-checked"></i>
+<!-- 购物车列表 start -->
+<ul class="shopcart-list">
+  <li class="shopcart-list__item">
+    <div class="aiui-cells aiui-cells--checkbox merchant-cells">
+      <div class="aiui-cell">
+        <label for="merchant-01" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox1" class="aiui-check" id="merchant-01" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+        <div class="aiui-cell__bd">
+          <div class="user-enter user-enter--normal">
+            <div class="avatar avatar-38">
+              <img src="../images/avatar.png" alt="商家">
+            </div>
+            <p class="name">这是商家名字</p>
+            <i class="icon-arrow-right"></i>
           </div>
-          <div class="aiui-cell__bd">
-            <div class="user-enter user-enter--normal">
-              <div class="avatar avatar-38">
-                <img src="../images/farm_tu02.png" alt="农场">
+        </div>
+      </div>
+    </div>
+    <div class="aiui-cells aiui-cells--checkbox commodity-cells">
+      <div class="aiui-cell">
+        <label for="commodity-01" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox2" class="aiui-check" id="commodity-01" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+
+        <div class="aiui-cell__bd">
+          <div class="Grid">
+            <a href="07.03-商品详情.html" class="thumb thumb-180">
+              <img src="../images/mall/product-14.jpg" alt="猪脚">
+            </a>
+            <div class="Cell -fill">
+              <a href="07.03-商品详情.html" class="desc">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉鸡肉营养</a>
+              <div class="renew-select">4斤装<i class="icon-arrow-down"></i></div>
+              <div class="Grid -middle">
+                <div class="Cell -fill text-warn">¥108.00</div>
+                <div class="aiui-count aiui-count--small">
+                  <button type="button" class="aiui-count__btn aiui-count__decrease">
+                    <i class="icon-decrease"></i>
+                  </button>
+                  <input type="number" class="aiui-count__number" value="1" readonly>
+                  <button type="button" class="aiui-count__btn aiui-count__increase">
+                    <i class="icon-add"></i>
+                  </button>
+                </div>
               </div>
-              <p class="name">这是农场名字</p>
-              <i class="icon-arrow-right"></i>
             </div>
           </div>
-        </label>
+        </div>
       </div>
-      <div class="aiui-cells aiui-cells--checkbox commodity-cells">
-        <label for="commodity-01" class="aiui-cell">
-          <div class="aiui-cell__hd">
-            <input type="checkbox" name="checkbox2" class="aiui-check" id="commodity-01" />
-            <i class="aiui-icon-checked"></i>
-            <div class="thumb thumb-180">
-              <img src="../images/mall/" alt="">
+      <div class="aiui-cell">
+        <label for="commodity-02" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox3" class="aiui-check" id="commodity-02" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+
+        <div class="aiui-cell__bd">
+
+          <div class="Grid">
+            <a href="07.03-商品详情.html" class="thumb thumb-180">
+              <img src="../images/mall/product-15.jpg" alt="鸡">
+            </a>
+
+            <div class="Cell -fill">
+              <a href="07.03-商品详情.html" class="desc">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉鸡肉营养</a>
+              <div class="renew-select">4斤装<i class="icon-arrow-down"></i></div>
+              <div class="Grid -middle">
+                <div class="Cell -fill text-warn">¥108.00</div>
+                <div class="aiui-count aiui-count--small">
+                  <button type="button" class="aiui-count__btn aiui-count__decrease">
+                    <i class="icon-decrease"></i>
+                  </button>
+                  <input type="number" class="aiui-count__number" value="1" readonly>
+                  <button type="button" class="aiui-count__btn aiui-count__increase">
+                    <i class="icon-add"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="aiui-cell__bd">
-            商品1
+
+          <div class="event-tips">
+            <div class="mark-tips mark-tips__plain">活动</div>
+            <p class="fz24 text-med-gray">满2件，享包邮</p>
           </div>
-        </label>
-        <label for="commodity-02" class="aiui-cell">
-          <div class="aiui-cell__hd">
-            <input type="checkbox" name="checkbox3" class="aiui-check" id="commodity-02" />
-            <i class="aiui-icon-checked"></i>
-          </div>
-          <div class="aiui-cell__bd">
-            商品2
-          </div>
-        </label>
+
+        </div>
       </div>
-    </li>
-  </ul>
+
+    </div>
+  </li>
+  <li class="shopcart-list__item">
+    <div class="aiui-cells aiui-cells--checkbox merchant-cells">
+      <div class="aiui-cell">
+        <label for="merchant-02" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox4" class="aiui-check" id="merchant-02" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+        <div class="aiui-cell__bd">
+          <div class="user-enter user-enter--normal">
+            <div class="avatar avatar-38">
+              <img src="../images/avatar-01.png" alt="商家">
+            </div>
+            <p class="name">这是商家名字</p>
+            <i class="icon-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aiui-cells aiui-cells--checkbox commodity-cells">
+      <div class="aiui-cell">
+        <label for="commodity-03" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox5" class="aiui-check" id="commodity-03" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+
+        <div class="aiui-cell__bd">
+          <div class="Grid">
+            <a href="07.03-商品详情.html" class="thumb thumb-180">
+              <img src="../images/mall/product-14.jpg" alt="猪脚">
+            </a>
+            <div class="Cell -fill">
+              <a href="07.03-商品详情.html" class="desc">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉鸡肉营养</a>
+              <div class="renew-select">4斤装<i class="icon-arrow-down"></i></div>
+              <div class="Grid -middle">
+                <div class="Cell -fill text-warn">¥108.00</div>
+                <div class="aiui-count aiui-count--small">
+                  <button type="button" class="aiui-count__btn aiui-count__decrease">
+                    <i class="icon-decrease"></i>
+                  </button>
+                  <input type="number" class="aiui-count__number" value="1" readonly>
+                  <button type="button" class="aiui-count__btn aiui-count__increase">
+                    <i class="icon-add"></i>
+                  </button>
+                </div>
+              </div>
+              </di>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aiui-cell">
+        <label for="commodity-04" class="aiui-cell__hd">
+          <input type="checkbox" name="checkbox6" class="aiui-check" id="commodity-04" />
+          <i class="aiui-icon-checked"></i>
+        </label>
+
+        <div class="aiui-cell__bd">
+          <div class="Grid">
+            <a href="07.03-商品详情.html" class="thumb thumb-180">
+              <img src="../images/mall/product-15.jpg" alt="鸡">
+            </a>
+            <div class="Cell -fill">
+              <a href="07.03-商品详情.html" class="desc">清真鸡大胸新鲜鸡脯肉冷冻鸡胸肉鸡肉营养</a>
+              <div class="renew-select">4斤装<i class="icon-arrow-down"></i></div>
+              <div class="Grid -middle">
+                <div class="Cell -fill text-warn">¥108.00</div>
+                <div class="aiui-count aiui-count--small">
+                  <button type="button" class="aiui-count__btn aiui-count__decrease">
+                    <i class="icon-decrease"></i>
+                  </button>
+                  <input type="number" class="aiui-count__number" value="1" readonly>
+                  <button type="button" class="aiui-count__btn aiui-count__increase">
+                    <i class="icon-add"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-tips">
+            <div class="mark-tips mark-tips__plain">活动</div>
+            <p class="fz24 text-med-gray">满2件，享包邮</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- 购物车列表 end -->
+
+<!-- 购物车操作栏 start -->
+<div class="shopcart-bar-wrap">
+  <div class="shopcart-bar aiui-cells--checkbox">
+    <label for="selectAll" class="Grid -middle">
+      <input type="checkbox" name="checkbox1" class="aiui-check" id="selectAll" />
+      <i class="aiui-icon-checked"></i>
+      <div class="ml10"><span class="fz26 text-med-gray">全选</span></div>
+    </label>
+    <div class="content">
+      <div class="content-info">
+        <span class="fz24 text-deep-gray mr10">不含运费</span>合计：<p class="fz26 text-orange">¥<span
+            class="fz36">108</span>.00</span>
+      </div>
+      <button type="button" class="aiui-btn aiui-btn--primary aiui-btn--medium aiui-btn--pill">结算(1)</button>
+    </div>
+  </div>
 </div>
+<!-- 购物车操作栏 end -->
+
 <!--tabbar start-->
 <div class="aiui-tabbar-wrap">
   <div class="aiui-tabbar aiui-tabbar--fixed">
@@ -84,4 +239,8 @@
   </div>
 </div>
 <!--tabbar end-->
+
+{% endblock %}
+{% block footer %}
+
 {% endblock %}
