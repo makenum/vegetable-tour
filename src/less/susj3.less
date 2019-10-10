@@ -412,6 +412,12 @@
     padding: 0 2px;
     font-size: 24px
   }
+  &--small{
+    border-radius: 6px;
+    line-height: 30px;
+    padding: 0 4px;
+    font-size: 22px
+  }
   &--red{
     color:#fff;
     background: #FC461E;
@@ -1166,6 +1172,19 @@
       width: 48px;
       height: 48px;
       background-color: @aiuiColorWarn;
+    }
+  }
+  &--small{
+    .aiui-star__item:not(:last-child) {
+      margin-right: 0px;
+    }
+    .icon-star{
+      width: 18px;
+      height: 18px;
+      &.on{
+        width: 18px;
+        height:18px;
+      }
     }
   }
 }

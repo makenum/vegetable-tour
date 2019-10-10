@@ -455,6 +455,8 @@
 }
 // 商品详情
 .swiper-mallproduct-ad {
+  background: #fff;
+  padding: 0 60px;
   .swiper-slide {
     img {
       object-fit: cover;
@@ -495,6 +497,53 @@
 }
 .txt-ellipsis{
   .ellipsis()
+}
+.mall-product-title{
+  background: #F1F1F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 88px;
+  color:#666;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    background: #DDDDDD;
+    width: 150px;
+    height: 1PX;
+    margin: 0 24px;
+  }
+}
+.mall-product-info{
+  h2{
+    margin-bottom: 40px;
+  }
+  &__item{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    &::before{
+      content:'';
+      background: #FF9500;
+      position: absolute;
+      left:0;
+      top:20px;
+      width:10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    h3{
+      font-size: 26px;
+      color:#666;
+    }
+    p{
+      margin-top: 20px;
+      color:#999;
+      font-size: 26px;
+      line-height: 40px;
+    }
+  }
 }
 .hide {
   display: none;
