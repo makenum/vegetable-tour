@@ -62,81 +62,85 @@
   <div class="aiui-popup">
     <div class="aiui-popup__content">
       <div class="aiui-cell popup-box_thumb">
-        <div class="Cell -2of2 goods-list__item">
-          <div class="thumb thumb-180"><img src="../images/farm_tu01.png"></div>
-          <div class="bd">
-            <h3>鄂尔多斯农场</h3>
-            <p class="fz28 text-deep-gray">一块地为10平方</p>
+        <div class="Cell -2of2 Grid">
+          <div class="thumb thumb-180 mr30"><img src="../images/farm_tu01.png"></div>
+          <div class="Cell -fill">
+            <h3 class="fz36 mb10">鄂尔多斯农场</h3>
+            <p class="fz28 mb10 text-deep-gray">一块地为10平方</p>
             <p class="fz28 text-deep-gray">(还剩15块地)</p>
           </div>
           <div class="popup-price">¥368</div>
         </div>
       </div>
       <div class="popup-box__scroll">
-        <div class="choose-level">
-          <h4 class="choose-title">选择菜地：</h4>
-          <ul class="chose-list choose">
-            <li class="chose-list__item active">
-              <div class="content">
-                <p>南瓜地</p>
-              </div>
-            </li>
-            <li class="chose-list__item">
-              <div class="content">
-                <p>冬瓜地</p>
-              </div>
-            </li>
-            <li class="chose-list__item">
-              <div class="content">
-                <p>丝瓜地</p>
-              </div>
-            </li>
-            <li class="chose-list__item">
-              <div class="content">
-                <p>黄瓜地</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="choose-level">
-          <h4 class="choose-title">选择养殖方式：</h4>
-          <ul class="chose-list choose">
-            <li class="chose-list__item active">
-              <div class="content">
-                <p>包种</p>
-              </div>
-            </li>
-            <li class="chose-list__item">
-              <div class="content">
-                <p>租种</p>
-              </div>
-            </li>
-          </ul>
-          <div class="aiui-cells--checkbox" id="agreementBtn">
-            <label class="aiui-cell" for="s12">
-              <div class="aiui-cell__hd">
-                <input type="checkbox" name="checkbox1" class="aiui-check" id="s12">
-                <i class="aiui-icon-checked"></i>
-              </div>
-              <div class="aiui-cell__bd">
-                <div class="text-deep-gray">我同意 <a class="text-blue fz28"> 蔬游平台《包种协议》</a></div>
-              </div>
-            </label>
+        <div class="aiui-cells">
+          <div class="aiui-cell">
+            <h4 class="choose-title">选择菜地：</h4>
+            <ul class="chose-list">
+              <li class="chose-list__item active">
+                <div class="content">
+                  <p>南瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>冬瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>丝瓜地</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>黄瓜地</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="choose-level">
-          <h4 class="choose-title">选择数量(块)：</h4>
-          <div class="aiui-count">
-            <button type="button" class="aiui-count__btn aiui-count__decrease">
-              <i class="icon-decrease"></i>
-            </button>
-            <input type="number" class="aiui-count__number" value="1" readonly>
-            <button type="button" class="aiui-count__btn aiui-count__increase">
-              <i class="icon-add"></i>
-            </button>
+          <div class="aiui-cell">
+            <h4 class="choose-title">选择养殖方式：</h4>
+            <ul class="chose-list">
+              <li class="chose-list__item active">
+                <div class="content">
+                  <p>包种</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>租种</p>
+                </div>
+              </li>
+            </ul>
+            <div class="Cell -2of2 aiui-cells--checkbox mt20" id="agreementBtn">
+              <div class="Grid -middle">
+                <label for="s12" class="aiui-cell__hd">
+                  <input type="checkbox" name="checkbox1" class="aiui-check" id="s12">
+                  <i class="aiui-icon-checked"></i>
+                </label>
+                <div class="aiui-cell__bd">
+                  <div class="text-deep-gray">我同意 <a class="text-blue fz28"> 蔬游平台《包种协议》</a></div>
+                </div>
+                </di>
+              </div>
+            </div>
           </div>
+          <div class="aiui-cell">
+            <h4 class="choose-title">选择数量(块)：</h4>
+            <div class="aiui-count">
+              <button type="button" class="aiui-count__btn aiui-count__decrease">
+                <i class="icon-decrease"></i>
+              </button>
+              <input type="number" class="aiui-count__number" value="1" readonly>
+              <button type="button" class="aiui-count__btn aiui-count__increase">
+                <i class="icon-add"></i>
+              </button>
+            </div>
+          </div>
+          <div class="aiui-cell">耕地编号(自动分配)：<span>a1069</span></div>
+
         </div>
-        <div class="popup-number">耕地编号(自动分配)：<span>a1069</span></div>
       </div>
       <div class="popup-box__ft">
         <a href="01.05-默认选地页.html"
@@ -146,115 +150,114 @@
       </div>
     </div>
   </div>
-</div>
-<!-- 点击我要养殖弹窗 end -->
-<!--协议弹框 start-->
-<div class="aiui-popup-wrap" id="agreementPopup">
-  <div class="aiui-mask" id="agreement-mask"></div>
-  <div class="aiui-popup">
-    <div class="aiui-popup__content">
-      <div class="aiui-popup__hd">
-        <div class="toolbar">
-          <button class="icon-close close-popup__btn02">取消</button>
-          <h3 class="toolbar-title">包种协议</h3>
+  <!-- 点击我要养殖弹窗 end -->
+  <!--协议弹框 start-->
+  <div class="aiui-popup-wrap" id="agreementPopup">
+    <div class="aiui-mask" id="agreement-mask"></div>
+    <div class="aiui-popup">
+      <div class="aiui-popup__content">
+        <div class="aiui-popup__hd">
+          <div class="toolbar">
+            <button class="icon-close close-popup__btn02">取消</button>
+            <h3 class="toolbar-title">包种协议</h3>
+          </div>
         </div>
-      </div>
-      <div class="popup-box__scroll">
-        <div class="popup-agreement">
-          <p>包种协议文字描述内容文本描述，不限制字数</p>
+        <div class="popup-box__scroll">
+          <div class="popup-agreement">
+            <p>包种协议文字描述内容文本描述，不限制字数</p>
+          </div>
         </div>
-      </div>
-      <div class="aiui-popup__ft">
-        <button type="button"
-          class="aiui-btn aiui-btn--block aiui-btn--primary aiui-btn--large aiui-btn--pill close-popup__btn02">好的</button>
+        <div class="aiui-popup__ft">
+          <button type="button"
+            class="aiui-btn aiui-btn--block aiui-btn--primary aiui-btn--large aiui-btn--pill close-popup__btn02">好的</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!--协议弹框 end-->
-{% endblock %}
-{% block footer %}
-<script>
-  $(function () {
-    //选地切换
-    $(".chose-list__item").on("click", function () {
-      $(this).siblings().removeClass("active");
-      $(this).addClass("active");
-    });
-    // 关闭Popup操作
-    $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
-      $(".aiui-popup").removeClass("toggle")
-      $(this).parents('.aiui-popup-wrap').fadeOut(200);
-    });
-    $(document).on('click', '#agreement-mask,.close-popup__btn02', function () {
-      $("#selectLandPopup").fadeIn(200);
-      $("#agreementPopup").fadeOut(200);
-    });
-    // 打开Popup操作
-    $('#selectLandBtn').on('click', function () {
-      $("#selectLandPopup").fadeIn(200);
-      $("#selectLandPopup").find(".aiui-popup").addClass("toggle");;
-    });
-    $('#agreementBtn').on('click', function () {
-      $("#agreementPopup").fadeIn(200);
-      $("#agreementPopup").find(".aiui-popup").addClass("toggle");;
-    });
-    // 选择地区
-    $('#cityPickerHook').on('click', function () {
-      aiui.picker([
-        {
-          label: '湖南省',
-          value: 0
-        }, {
-          label: '江西省',
-          value: 1
-        }, {
-          label: '广东省',
-          value: 2
-        }, {
-          label: '福建省',
-          value: 3
-        }, {
-          label: '其他',
-          value: 4
-        }
-      ], {
-        onChange: function (result) {
-          console.log(result);
-        },
-        onConfirm: function (result) {
-          console.log(result);
-        },
-        title: '选择地区'
+  <!--协议弹框 end-->
+  {% endblock %}
+  {% block footer %}
+  <script>
+    $(function () {
+      //选地切换
+      $(".chose-list__item").on("click", function () {
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
       });
-    });
-    //swiper相册浏览器
-    var albumSwiper = new Swiper('#albumSwiper', {
-      slidesPerView: 'auto',
-      paginationClickable: true,
-      freeMode: true
-    });
-    // 确认弹窗
-    $("#confirmDialog").bind("click", function () {
-      $("#selectLandPopup").hide();
-      var descText = '<p>您需为您的订单支付：</p>';
-      var price = '<h3 class="dialog-price">¥368<span>.00</span></h3>';
-      var alertContent = descText + price;
-      aiui.confirm(alertContent, {
-        title: '确认支付',
-        buttons: [{
-          label: '取消',
-          type: 'default',
-          onClick: function () { alert('取消') }
-        }, {
-          label: '支付',
-          type: 'primary',
-          onClick: function () {
-            window.location = "03.04-买地成功.html";
+      // 关闭Popup操作
+      $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
+        $(".aiui-popup").removeClass("toggle")
+        $(this).parents('.aiui-popup-wrap').fadeOut(200);
+      });
+      $(document).on('click', '#agreement-mask,.close-popup__btn02', function () {
+        $("#selectLandPopup").fadeIn(200);
+        $("#agreementPopup").fadeOut(200);
+      });
+      // 打开Popup操作
+      $('#selectLandBtn').on('click', function () {
+        $("#selectLandPopup").fadeIn(200);
+        $("#selectLandPopup").find(".aiui-popup").addClass("toggle");;
+      });
+      $('#agreementBtn').on('click', function () {
+        $("#agreementPopup").fadeIn(200);
+        $("#agreementPopup").find(".aiui-popup").addClass("toggle");;
+      });
+      // 选择地区
+      $('#cityPickerHook').on('click', function () {
+        aiui.picker([
+          {
+            label: '湖南省',
+            value: 0
+          }, {
+            label: '江西省',
+            value: 1
+          }, {
+            label: '广东省',
+            value: 2
+          }, {
+            label: '福建省',
+            value: 3
+          }, {
+            label: '其他',
+            value: 4
           }
-        }]
+        ], {
+          onChange: function (result) {
+            console.log(result);
+          },
+          onConfirm: function (result) {
+            console.log(result);
+          },
+          title: '选择地区'
+        });
+      });
+      //swiper相册浏览器
+      var albumSwiper = new Swiper('#albumSwiper', {
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        freeMode: true
+      });
+      // 确认弹窗
+      $("#confirmDialog").bind("click", function () {
+        $("#selectLandPopup").hide();
+        var descText = '<p>您需为您的订单支付：</p>';
+        var price = '<h3 class="dialog-price">¥368<span>.00</span></h3>';
+        var alertContent = descText + price;
+        aiui.confirm(alertContent, {
+          title: '确认支付',
+          buttons: [{
+            label: '取消',
+            type: 'default',
+            onClick: function () { alert('取消') }
+          }, {
+            label: '支付',
+            type: 'primary',
+            onClick: function () {
+              window.location = "03.04-买地成功.html";
+            }
+          }]
+        });
       });
     });
-  });
-</script>
-{% endblock %}
+  </script>
+  {% endblock %}

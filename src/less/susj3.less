@@ -400,31 +400,31 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
-  &--medium{
+  &--medium {
     border-radius: 32px;
     line-height: 54px;
     padding: 0 30px;
-    font-size: 24px
+    font-size: 24px;
   }
-  &--tiny{
+  &--tiny {
     border-radius: 0px;
     line-height: 28px;
     padding: 0 2px;
-    font-size: 24px
+    font-size: 24px;
   }
-  &--small{
+  &--small {
     border-radius: 6px;
     line-height: 30px;
     padding: 0 4px;
-    font-size: 22px
+    font-size: 22px;
   }
-  &--red{
-    color:#fff;
-    background: #FC461E;
+  &--red {
+    color: #fff;
+    background: #fc461e;
   }
-  &--default{
-    color:@aiuiColorMedGray;
-    background: #FFF3F5;
+  &--default {
+    color: @aiuiColorMedGray;
+    background: #fff3f5;
   }
   &__org {
     color: @aiuiColorWarn;
@@ -435,7 +435,6 @@
     &:before {
       .setFullLine(@aiuiColorPrimary, 5px);
     }
-  
   }
   .icon-checkbox-on {
     background-color: @aiuiColorWarn;
@@ -507,8 +506,7 @@
   padding: 40px 24px;
   flex-shrink: 0;
   &:after {
-    .setBottomLine(@aiuiBorderLineColor);
-    margin: 0 24px;
+    right: 24px;
   }
   .goods-list__item {
     .bd {
@@ -521,49 +519,14 @@
     }
   }
   .popup-price {
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
+    display: flex;
+    align-items: flex-end;
     font-size: 66px;
-    color: @aiuiColorRed;
+    line-height: 1;
+    color: @aiuiColorOrange;
   }
 }
-.choose-level {
-  padding: 30px 0;
-  position: relative;
-  .content {
-    min-width: 130px;
-  }
-  .aiui-cells--checkbox {
-    .aiui-cell {
-      padding: 20px 24px 10px 24px;
-      &__hd {
-        margin-right: 20px;
-      }
-    }
-    .aiui-icon-checked {
-      &:before {
-        font-size: 36px;
-      }
-    }
-  }
-  &:after {
-    .setBottomLine(@aiuiBorderLineColor);
-    margin: 0 24px;
-  }
-  .choose-title {
-    font-size: 28px;
-    padding: 0 24px;
-    margin-bottom: 8px;
-  }
-  .aiui-count {
-    margin: 20px 24px 12px 24px;
-  }
-}
-.popup-number {
-  padding: 20px 24px 40px 24px;
-  font-size: 28px;
-}
+
 .dialog-price {
   font-size: 66px;
   color: @aiuiColorRed;
@@ -1174,16 +1137,16 @@
       background-color: @aiuiColorWarn;
     }
   }
-  &--small{
+  &--small {
     .aiui-star__item:not(:last-child) {
       margin-right: 0px;
     }
-    .icon-star{
+    .icon-star {
       width: 18px;
       height: 18px;
-      &.on{
+      &.on {
         width: 18px;
-        height:18px;
+        height: 18px;
       }
     }
   }

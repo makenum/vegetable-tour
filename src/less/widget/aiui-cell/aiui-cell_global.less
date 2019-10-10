@@ -40,7 +40,6 @@
   }
 }
 
-
 .aiui-cell {
   padding: @aiuiCellGapV @aiuiCellGapH;
   position: relative;
@@ -56,6 +55,11 @@
     height: 38px;
     background-color: #999;
     margin-left: 10px;
+  }
+  .icon-address-2px {
+    width: 48px;
+    height: 48px;
+    background-color: @aiuiColorGray;
   }
   .icon-arrow-right--warn {
     background-color: @aiuiColorWarn;
@@ -76,8 +80,9 @@
     height: 120px;
     padding: 0 @aiuiCellGapH;
   }
+ 
   &.\-normal {
-    &:before {
+    &:after {
       display: none;
     }
   }
