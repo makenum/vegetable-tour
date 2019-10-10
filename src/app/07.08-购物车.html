@@ -15,12 +15,12 @@
 </div>
 <!--头部导航 end-->
 <div class="shopping-cart">
-  <div class="shopping-cart__list">
-    <div class="merchant">
-      <div class="aiui-cells aiui-cells--checkbox">
-        <label for="merchant" class="aiui-cell aiui-check--label">
+  <ul class="shopping-cart__list">
+    <li class="item">
+      <div class="aiui-cells aiui-cells--checkbox merchant-cells">
+        <label for="merchant-01" class="aiui-cell">
           <div class="aiui-cell__hd">
-            <input type="checkbox" name="checkbox1" class="aiui-check" id="merchant" />
+            <input type="checkbox" name="checkbox1" class="aiui-check" id="merchant-01" />
             <i class="aiui-icon-checked"></i>
           </div>
           <div class="aiui-cell__bd">
@@ -34,8 +34,31 @@
           </div>
         </label>
       </div>
-    </div>
-  </div>
+      <div class="aiui-cells aiui-cells--checkbox commodity-cells">
+        <label for="commodity-01" class="aiui-cell">
+          <div class="aiui-cell__hd">
+            <input type="checkbox" name="checkbox2" class="aiui-check" id="commodity-01" />
+            <i class="aiui-icon-checked"></i>
+            <div class="thumb thumb-180">
+              <img src="../images/mall/" alt="">
+            </div>
+          </div>
+          <div class="aiui-cell__bd">
+            商品1
+          </div>
+        </label>
+        <label for="commodity-02" class="aiui-cell">
+          <div class="aiui-cell__hd">
+            <input type="checkbox" name="checkbox3" class="aiui-check" id="commodity-02" />
+            <i class="aiui-icon-checked"></i>
+          </div>
+          <div class="aiui-cell__bd">
+            商品2
+          </div>
+        </label>
+      </div>
+    </li>
+  </ul>
 </div>
 <!--tabbar start-->
 <div class="aiui-tabbar-wrap">

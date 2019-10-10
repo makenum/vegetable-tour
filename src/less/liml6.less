@@ -1398,3 +1398,26 @@
     }
   }
 }
+
+//商城购物车
+.shopping-cart {
+  &__list {
+    padding: 20px 24px;
+    .item {
+      border-radius: 28px;
+      overflow: hidden;
+      .merchant-cells {
+      }
+      .commodity-cells {
+        .aiui-cell {
+          &:after {
+            display: none;
+          }
+          &:nth-child(odd) {
+            background-color: #fcfcfc;
+          }
+        }
+      }
+    }
+  }
+}
