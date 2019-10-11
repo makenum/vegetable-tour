@@ -22,12 +22,35 @@
         </a>
       </div>
       <div class="aiui-tab__panel">
+        <div class="aiui-tab__content">
+          <div class="aiui-tab" id="tabs">
+      <div class="aiui-tabmenu">
+        <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">
+          选项一
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项二
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项三
+        </a>
+        <a href="javascript:;" class="aiui-tabmenu__item">
+          选项四
+        </a>
+      </div>
+      <div class="aiui-tab__panel">
         <div class="aiui-tab__content">我是第一个</div>
         <div class="aiui-tab__content">我是第二个</div>
         <div class="aiui-tab__content">我是第三个</div>
         <div class="aiui-tab__content">我是第四个</div>
       </div>
+    </div></div>
+        <div class="aiui-tab__content">我是第二个</div>
+        <div class="aiui-tab__content">我是第三个</div>
+        <div class="aiui-tab__content">我是第四个</div>
+      </div>
     </div>
+  
   </div>
 </div>
 {% endblock %}
@@ -36,6 +59,13 @@
   $(function () {
     //tab
     aiui.tab('#tab', {
+      defaultIndex: 0,
+      onChange: function (index) {
+        console.log(index);
+      }
+    });
+     //tab
+    aiui.tab('#tabs', {
       defaultIndex: 0,
       onChange: function (index) {
         console.log(index);
