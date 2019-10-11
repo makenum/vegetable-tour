@@ -63,7 +63,8 @@
 }
 
 .growing-photo__thumb {
-  margin: 0 -12px;
+  margin-left: -12px;
+  margin-right: -12px;
   .thumb-list li {
     padding: 12px;
     img {
@@ -73,12 +74,45 @@
   }
 }
 .lifecycle-photo__thumb {
-  margin: 0 -6px;
+  margin-left: -6px;
+  margin-right: -6px;
   .thumb-list li {
     padding: 6px;
     img {
       width: 142px;
       height: 142px;
     }
+  }
+}
+
+.farmscene-photo__thumb {
+  padding-left: 24px;
+  padding-right: 24px;
+  .thumb-list {
+    justify-content: space-between;
+    li {
+      display: none;
+      &:nth-child(-n + 4) {
+        display: block;
+      }
+      img {
+        width: 166px;
+        height: 166px;
+      }
+    }
+  }
+  .thumb-mask {
+    pointer-events: none;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    width: 166px;
+    height: 166px;
+    background-color: fade(black, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @aiuiColorWhite;
+    font-size: 40px;
   }
 }
