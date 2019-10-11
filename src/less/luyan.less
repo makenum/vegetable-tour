@@ -414,11 +414,16 @@
   }
 }
 // 商城订单
+
 .aiui-tab__mall {
   position: relative;
-  height: calc(100vh - 90px);
+  max-height: calc(100vh - 90px);
+  min-height: 500px;
   margin-top: 1px;
   background: @aiuiColorWhite;
+  &--h{
+    height: alc(100vh - 90px);;
+  }
   .aiui-tab__panel {
     padding: 0px 48px;
     margin-left: 140px;
