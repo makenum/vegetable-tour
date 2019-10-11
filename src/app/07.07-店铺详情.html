@@ -2,6 +2,7 @@
 {% block title %}蔬游-店铺详情{% endblock %}
 {% block content %}
 <!--头部导航 start-->
+<div class="header-sticky">
 <div class="aiui-navbar aiui-navbar--default">
   <div class="aiui-navbar__item">
     <a href="javascript:history.back();" class="icon-return"></a>
@@ -10,6 +11,7 @@
   <div class="aiui-navbar__item">
     <a href="#" class="icon-shopping-cart"></a>
   </div>
+</div>
 </div>
 <!--头部导航 end-->
 <!--内容 start-->
@@ -24,7 +26,7 @@
       <div class="Cell -fill Grid ">
         <h3 class="Cell -2of2 fz36">鄂尔多斯农场</h3>
         <div class="mt20 ">
-          <div class="mark-tips mark-tips--transparent"><span class="text-deep-gray fz22">综合体验</span>
+          <div class="mark-tips mark-tips--transparent"><span class="fz22">综合体验</span>
             <div class="aiui-star aiui-star--small ml10">
               <ul class="aiui-star__box star" score="4">
                 <li class="aiui-star__item icon-star on"><a href="javascript:;">1</a></li>
@@ -43,24 +45,23 @@
       <div class=" mark">
         <span class="fz24  mr20">商品描述</span>
         <span class="fz24  mr10">4.9</span>
-        <span class="mark-tips mark-tips--small  mark-tips__plain-white">高</span>
+        <span class="mark-tips mark-tips--small  mark-tips__white">高</span>
       </div>
       <div class=" Cell -fill Grid -middle -center ">
         <span class="fz24  mr20">卖家服务</span>
         <span class="fz24  mr10">4.8</span>
-        <span class="mark-tips mark-tips--small mark-tips__plain-white">高</span>
+        <span class="mark-tips mark-tips--small mark-tips__white">高</span>
       </div>
       <div class=" mark">
         <span class="fz24  mr20">物流服务</span>
         <span class="fz24  mr10">4.8</span>
-        <span class="mark-tips mark-tips--small  mark-tips__plain-white">高</span>
+        <span class="mark-tips mark-tips--small  mark-tips__white">高</span>
       </div>
     </div>
   </div>
 </div>
 <!-- 店铺信息 end -->
 <!-- 相关信息 start -->
-<div class="aiui-tab" id="tab">
 <div class="aiui-cells">
   <div class="aiui-cell">
     <div class="Cell -2of2 Grid">
@@ -79,7 +80,7 @@
   <!-- 相关信息 end -->
   <div class="aui-cell"></div>
 </div>
-<div class="aiui-tab" id="tab">
+
    <!-- tab菜单 start -->
    <div class="aiui-tabmenu aiui-tabmenu-b">
       <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">商品</a>
@@ -88,9 +89,7 @@
     </div>
     <!-- tab菜单 end -->
   <!-- tab内容 start -->
-  <div class="aiui-tab__panel">
      <!-- 商品内容 start -->
-    <div class="aiui-tab__content">
       <!--搜索区域 start-->
     <div class="filter-bar">
         <div class="aiui-search-bar" id="searchBar">
@@ -106,18 +105,23 @@
       </div>
       <!--搜索区域 end-->
       <!-- 商家推荐 start -->
-      <div class="mall-floor">
+      <div class="aiui-cells">
           <div class="mall-floor__hd">
-            <h3 class="fs36">商家推荐</h3>
-            <p class="Cell -fill fs24 text-deep-gray ml24">甄选品质推荐</p>
+            <h3 class="fz30">商家推荐</h3>
+            <p class="Cell -fill fz24 text-deep-gray ml24">甄选品质推荐</p>
           </div>
           <div class="swiper-container swiper-index__product swiperProduct">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a class="mall-product__item " href="">
+                <div class="swiper-slide ">
+                  <a  class="mall-product__item" href="">
                     <div class="thumb-240"><img src="../images/mall/product-11.jpg" alt=""></div>
                     <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
                     <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
+                    
+                  </a>
+                  <a class="Grid -between mt20">
+                      <p class="fz34 text-red">¥39.9</p>
+                      <div class="cart-cirle"><i class="icon-shopping-cart"></i></div>
                   </a>
                 </div>
                 <div class="swiper-slide">
@@ -126,6 +130,10 @@
                         <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
                         <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
                       </a>
+                      <a class="Grid -between mt20">
+                          <p class="fz34 text-red">¥39.9</p>
+                          <div class="cart-cirle"><i class="icon-shopping-cart"></i></div>
+                      </a>
                 </div>
                 <div class="swiper-slide">
                     <a class="mall-product__item " href="">
@@ -133,33 +141,157 @@
                         <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
                         <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
                       </a>
+                      <a class="Grid -between mt20">
+                          <p class="fz34 text-red">¥39.9</p>
+                          <div class="cart-cirle"><i class="icon-shopping-cart"></i></div>
+                      </a>
                 </div>
               </div>
             </div>
         </div>
        <!-- 商家推荐 end -->
+       <!-- 商品分类 begin -->
+       <div class="aiui-tab" id="tab">
+       <div class="aiui-tab aiui-tab__mall" >
+          <div class="aiui-tabmenu aiui-tabmenu--vertical  ">
+            <a href="javascript:;" class="aiui-tabmenu__item ">粮油米面</a>
+            <a href="javascript:;" class="aiui-tabmenu__item ">五谷杂粮</a>
+            <a href="javascript:;" class="aiui-tabmenu__item">生鲜蔬果</a>
+            <a href="javascript:;" class="aiui-tabmenu__item">家禽肉食</a>
+          </div>
+          <!--tab end-->
+          <!--内容区域 start-->
+          <div class="aiui-tab__panel">
+            <div class="aiui-tab__content">
+              <div class="categories-title">粮类</div>
+            </div>
+            <div class="aiui-tab__content">22</div>
+            <div class="aiui-tab__content">22</div>
+            <div class="aiui-tab__content">
+              <div class="categories-title">肉类</div>
+              <div class="categories-list">
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat01.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸡肉</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat02.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸡翅</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat03.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸭肉</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat04.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">牛排</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat05.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">牛腩</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat06.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">牛腱子</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat07.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">牛肉</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat08.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">羊腿</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat09.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">羊排</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat10.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">羊肉串</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat11.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">羊蝎子</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/meat12.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">乳鸽</p>
+                </a>
+              </div>
+              <div class="categories-title">蛋类</div>
+              <div class="categories-list">
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/egg00.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸡蛋</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/egg02.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸭蛋</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/egg05.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">鸽子蛋</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/egg01.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">皮蛋</p>
+                </a>
+                <a class="categories-list__item Cell -1of3" href="">
+                  <div class="thumb thumb-128">
+                    <img src="../images/mall/egg03.jpg" alt="">
+                  </div>
+                  <p class="mt20 fz24 text-med-gray">咸鸭蛋</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--内容区域 end-->
+       <!-- 商品分类 end -->
     </div>
       <!-- 商品内容 end -->
-    <!-- 评价内容 start -->
-    <div class="aiui-tab__content">
-
-    </div>
-     <!-- 评价内容 end -->
-    <!-- 商家内容 start -->
-    <div class="aiui-tab__content">
-    </div>
-    <!-- 商家内容 end -->
   </div>
   <!-- tab内容 end -->
   <!--内容 end-->
-</div>
 {% endblock %}
 {% block footer %}
 <script type="text/javascript">
   $(function () {
     //搜索
     aiui.searchBar('#searchBar');
-    $(".header-sticky-hook").sticky({ topSpacing: 0 });
+    $(".header-sticky").sticky({ topSpacing: 0 });
     //tab
     aiui.tab('#tab', {
       defaultIndex: 0,
@@ -167,6 +299,7 @@
         console.log(index);
       }
     });
+    //tab
     var produvtswiper = new Swiper('.swiperProduct', {
     slidesPerView: 'auto',
     spaceBetween: 0,
