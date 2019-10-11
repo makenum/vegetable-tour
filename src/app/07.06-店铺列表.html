@@ -1,153 +1,276 @@
 {% extends 'app.nunjucks' %}
-{% block title %}蔬游-商品分类{% endblock %}
+{% block title %}蔬游-店铺列表{% endblock %}
 {% block content %}
-<!--头部导航 start-->
-<div class="aiui-navbar aiui-navbar--default">
-  <div class="aiui-navbar__item">
-    <a href="javascript:history.back();" class="icon-return"></a>
-  </div>
-  <div class="aiui-search-bar" id="searchBar">
-    <form class="aiui-search-bar__form" action="#">
-      <div class="aiui-search-bar__box">
-        <i class="icon-search"></i>
-        <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
-        <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+<div class="aiui-tab" id="tab">
+  <div class="header-sticky-hook">
+    <!--头部导航 start-->
+    <div class="aiui-navbar aiui-navbar--default">
+      <div class="aiui-navbar__item">
+        <a href="javascript:history.back();" class="icon-return"></a>
       </div>
-    </form>
-    <button class="aiui-search-bar__cancel-btn">取消</button>
-  </div>
-  <div class="aiui-navbar__item">
-    <a href="#" class="icon-shopping-cart"></a>
-  </div>
-</div>
-<!--头部导航 end-->
-<div class="aiui-tab aiui-tab__mall" id="tab">
-  <div class="aiui-tabmenu aiui-tabmenu--vertical  ">
-    <a href="javascript:;" class="aiui-tabmenu__item ">粮油米面</a>
-    <a href="javascript:;" class="aiui-tabmenu__item ">五谷杂粮</a>
-    <a href="javascript:;" class="aiui-tabmenu__item">生鲜蔬果</a>
-    <a href="javascript:;" class="aiui-tabmenu__item">家禽肉食</a>
-  </div>
-  <!--tab end-->
-  <!--内容区域 start-->
-  <div class="aiui-tab__panel">
-    <div class="aiui-tab__content">
-      <div class="categories-title">粮类</div>
-    </div>
-    <div class="aiui-tab__content">22</div>
-    <div class="aiui-tab__content">22</div>
-    <div class="aiui-tab__content">
-      <div class="categories-title">肉类</div>
-      <div class="categories-list">
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat01.jpg" alt="">
+      <div class="aiui-search-bar" id="searchBar">
+        <form class="aiui-search-bar__form" action="#">
+          <div class="aiui-search-bar__box">
+            <i class="icon-search"></i>
+            <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+            <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
           </div>
-          <p class="mt20 fz24 text-med-gray">鸡肉</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat02.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">鸡翅</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat03.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">鸭肉</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat04.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">牛排</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat05.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">牛腩</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat06.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">牛腱子</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat07.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">牛肉</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat08.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">羊腿</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat09.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">羊排</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat10.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">羊肉串</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat11.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">羊蝎子</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/meat12.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">乳鸽</p>
-        </a>
+        </form>
+        <button class="aiui-search-bar__cancel-btn">取消</button>
       </div>
-      <div class="categories-title">蛋类</div>
-      <div class="categories-list">
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/egg00.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">鸡蛋</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/egg02.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">鸭蛋</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/egg05.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">鸽子蛋</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/egg01.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">皮蛋</p>
-        </a>
-        <a class="categories-list__item Cell -1of3" href="">
-          <div class="thumb thumb-128">
-            <img src="../images/mall/egg03.jpg" alt="">
-          </div>
-          <p class="mt20 fz24 text-med-gray">咸鸭蛋</p>
-        </a>
+      <div class="aiui-navbar__item">
+        <a href="#" class="icon-shopping-cart"></a>
       </div>
     </div>
+    <!--头部导航 end-->
+    <!--内容 start-->
+    <!-- tab菜单 start -->
+    <div class="aiui-tabmenu">
+      <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">
+        综合排序
+      </a>
+      <a href="javascript:;" class="aiui-tabmenu__item">
+        销量优先
+      </a>
+      <a href="javascript:;" class="aiui-tabmenu__item">
+        距离最近
+      </a>
+    </div>
+    <!-- tab菜单 end -->
+    <!-- tab内容 start -->
+    <div class="aiui-tab__panel">
+      <div class="aiui-tab__content">
+        <div class="stores stores-space">
+          <div class="stores__item">
+            <div class="stores__item__hd">
+              <div class="avatar avatar-80">
+                <img src="../images/avatar-01.png" alt="">
+              </div>
+              <div class="Cell -fill ml24 mr24">
+                <p>鄂尔多斯有机农场</p>
+                <p class="fz24  text-deep-gray"><span>销量：</span><span>97890</span><span
+                    class="ml24">距离：</span><span>963.9km</span></p>
+              </div>
+              <div class="Cell">
+                <button type="button"
+                  class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">进店</button>
+              </div>
+            </div>
+            <div class="stores__item__bd">
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-08.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-09.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="stores stores-space">
+          <div class="stores__item">
+            <div class="stores__item__hd">
+              <div class="avatar avatar-80">
+                <img src="../images/avatar-01.png" alt="">
+              </div>
+              <div class="Cell -fill ml24 mr24">
+                <p>鄂尔多斯有机农场</p>
+                <p class="fz24  text-deep-gray"><span>销量：</span><span>97890</span><span
+                    class="ml24">距离：</span><span>963.9km</span></p>
+              </div>
+              <div class="Cell">
+                <button type="button"
+                  class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">进店</button>
+              </div>
+            </div>
+            <div class="stores__item__bd">
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-08.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-09.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="stores stores-space">
+          <div class="stores__item">
+            <div class="stores__item__hd">
+              <div class="avatar avatar-80">
+                <img src="../images/avatar-01.png" alt="">
+              </div>
+              <div class="Cell -fill ml24 mr24">
+                <p>鄂尔多斯有机农场</p>
+                <p class="fz24  text-deep-gray"><span>销量：</span><span>97890</span><span
+                    class="ml24">距离：</span><span>963.9km</span></p>
+              </div>
+              <div class="Cell">
+                <button type="button"
+                  class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">进店</button>
+              </div>
+            </div>
+            <div class="stores__item__bd">
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-08.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-09.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+              <a class="stores__item__link Cell -1of4" href="">
+                <div class="thumb thumb-156">
+                  <img src="../images/mall/product-10.jpg" alt="">
+                </div>
+                <div class="desc">¥29.9</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tab内容2 -->
+      <div class="aiui-tab__content">
+          <div class="stores stores-space">
+              <div class="stores__item">
+                <div class="stores__item__hd">
+                  <div class="avatar avatar-80">
+                    <img src="../images/avatar-01.png" alt="">
+                  </div>
+                  <div class="Cell -fill ml24 mr24">
+                    <p>鄂尔多斯有机农场</p>
+                    <p class="fz24  text-deep-gray"><span>销量：</span><span>97890</span><span
+                        class="ml24">距离：</span><span>963.9km</span></p>
+                  </div>
+                  <div class="Cell">
+                    <button type="button"
+                      class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">进店</button>
+                  </div>
+                </div>
+                <div class="stores__item__bd">
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-08.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-09.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-10.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-10.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+      </div>
+      <!-- tab内容2 -->
+      <div class="aiui-tab__content">
+          <div class="stores stores-space">
+              <div class="stores__item">
+                <div class="stores__item__hd">
+                  <div class="avatar avatar-80">
+                    <img src="../images/avatar-01.png" alt="">
+                  </div>
+                  <div class="Cell -fill ml24 mr24">
+                    <p>鄂尔多斯有机农场</p>
+                    <p class="fz24  text-deep-gray"><span>销量：</span><span>97890</span><span
+                        class="ml24">距离：</span><span>963.9km</span></p>
+                  </div>
+                  <div class="Cell">
+                    <button type="button"
+                      class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill">进店</button>
+                  </div>
+                </div>
+                <div class="stores__item__bd">
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-08.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-09.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-10.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                  <a class="stores__item__link Cell -1of4" href="">
+                    <div class="thumb thumb-156">
+                      <img src="../images/mall/product-10.jpg" alt="">
+                    </div>
+                    <div class="desc">¥29.9</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- tab内容 end -->
+    <!--内容 end-->
   </div>
-  <!--内容区域 end-->
 </div>
 {% endblock %}
 {% block footer %}
@@ -155,14 +278,14 @@
   $(function () {
     //搜索
     aiui.searchBar('#searchBar');
+    $(".header-sticky-hook").sticky({ topSpacing: 0 });
     //tab
     aiui.tab('#tab', {
-      defaultIndex: 3,
+      defaultIndex: 0,
       onChange: function (index) {
         console.log(index);
       }
     });
-
   });
 </script>
 {% endblock %}
