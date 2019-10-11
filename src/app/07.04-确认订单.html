@@ -83,7 +83,8 @@
     </div>
   </div>
 </div>
-<div class="aiui-cells--checkbox aiui-cells--checkbox--warn default-gap">
+
+<div class="aiui-cells--checkbox aiui-cells--checkbox--warn mall-order-warp">
   <label for="selectAll" class="Grid -middle">
     <input type="checkbox" name="checkbox1" class="aiui-check" checked="checked" />
     <i class="aiui-icon-checked "></i>
@@ -94,10 +95,11 @@
 <!--底部悬浮按钮 start-->
 <div class="aiui-footbtn-wrap">
   <div class="aiui-footbtn aiui-footbtn__default Grid -right">
-    <button type="button" onclick="window.location.href='04.12.04-物流详情.html'"
-      class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--default aiui-btn--pill">查看物流</button>
-    <button type="button" class="aiui-btn aiui-btn--plain aiui-btn--small aiui-btn--primary aiui-btn--pill"
-      id="confirmDialog">确认收货</button>
+    <p class="fz26 text-med-gray">共1件商品<span class="ml10">合计：</span></p>
+    <p class="fz26 text-orange mr20">¥<span class="fz36">108</span>.00
+    </p>
+    <button type="button" class="aiui-btn aiui-btn--primary aiui-btn--medium aiui-btn--pill"
+      id="confirmDialog">提交订单</button>
   </div>
 </div>
 <!--底部悬浮按钮 end-->
@@ -108,17 +110,17 @@
     //确认弹窗
     $("#confirmDialog").bind("click", function () {
       $("#selectLandPopup").hide();
-      var descText = '<p>您的蔬菜已配送成功，确定收货请点确认按钮。</p>';
+      var descText = '<p>您需为您的订单支付：</p><p class="text-orange mr20"><span class="fz66">¥108</span>.00</p>';
       aiui.confirm(descText, {
-        title: '提示',
+        title: '确认支付',
         buttons: [{
           label: '取消',
           type: 'default',
           onClick: function () { alert('取消') }
         }, {
-          label: '确认',
+          label: '支付',
           type: 'primary',
-          onClick: function () { alert('确认') }
+          onClick: function () { window.location.href='07.05-购买成功.html' }
         }]
       });
     });
