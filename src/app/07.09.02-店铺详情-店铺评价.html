@@ -1,0 +1,30 @@
+{% extends 'app.nunjucks' %}
+{% block title %}店铺详情-店铺评价{% endblock %}
+{% block content %}
+<ul class="shop-assess">
+  <li class="shop-assess__item">
+    <div class="name">描述服务</div>
+    <div class="scorebar">
+      <div class="scorebar-inner" style="width: 96%;"></div>
+    </div>
+    <span class="score">4.8</span>
+    <p class="desc">持平于同行</p>
+  </li>
+  <li class="shop-assess__item">
+    <div class="name">服务态度</div>
+    <div class="scorebar">
+      <div class="scorebar-inner" style="width: 96%;"></div>
+    </div>
+    <span class="score">4.8</span>
+    <p class="desc">高于同行12.45%</p>
+  </li>
+  <li class="shop-assess__item">
+    <div class="name">物流服务</div>
+    <div class="scorebar">
+      <div class="scorebar-inner" style="width: 96%;"></div>
+    </div>
+    <span class="score">4.8</span>
+    <p class="desc">高于同行12.07%</p>
+  </li>
+</ul>
+{% endblock %}

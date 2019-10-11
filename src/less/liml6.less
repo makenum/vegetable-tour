@@ -1482,3 +1482,35 @@
     }
   }
 }
+
+.shop-assess {
+  &__item {
+    display: flex;
+    align-items: center;
+    .scorebar {
+      margin-left: 30px;
+      margin-right: 24px;
+      width: 242px;
+      height: 24px;
+      background-color: #ddd;
+      border-radius: 12px;
+      &-inner {
+        height: 100%;
+        border-radius: 12px;
+        background-image: linear-gradient(90deg, #fff085 0%, #ff9500 100%);
+      }
+    }
+    .name {
+      color: @aiuiColorMedGray;
+    }
+    .score {
+      font-size: 32px;
+      color: @aiuiColorWarn;
+      margin-right: 30px;
+    }
+    .desc {
+      font-size: 22px;
+      color: @aiuiColorWarn;
+    }
+  }
+}
