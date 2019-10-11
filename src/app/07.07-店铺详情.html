@@ -1,0 +1,176 @@
+{% extends 'app.nunjucks' %}
+{% block title %}蔬游-店铺详情{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-navbar aiui-navbar--default">
+  <div class="aiui-navbar__item">
+    <a href="javascript:history.back();" class="icon-return"></a>
+  </div>
+  <h3 class="aiui-navbar__title">鄂尔多斯农场</h3>
+  <div class="aiui-navbar__item">
+    <a href="#" class="icon-shopping-cart"></a>
+  </div>
+</div>
+<!--头部导航 end-->
+<!--内容 start-->
+<!-- 店铺信息 start -->
+<div class="my-store">
+  <img src="../images/store-bg.png" class="response-img">
+  <div class="content">
+    <div class="Cell -2of2 Grid">
+      <div class="avatar avatar-100 mr20">
+        <img src="../images/avatar-01.png" alt="">
+      </div>
+      <div class="Cell -fill Grid ">
+        <h3 class="Cell -2of2 fz36">鄂尔多斯农场</h3>
+        <div class="mt20 ">
+          <div class="mark-tips mark-tips--transparent"><span class="text-deep-gray fz22">综合体验</span>
+            <div class="aiui-star aiui-star--small ml10">
+              <ul class="aiui-star__box star" score="4">
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">1</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">2</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">3</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">4</a></li>
+                <li class="aiui-star__item icon-star"><a href="javascript:;">5</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="icon-share-3px"></a>
+    </div>
+    <div class="Cell -2of2 Grid -middle ">
+      <div class=" mark">
+        <span class="fz24  mr20">商品描述</span>
+        <span class="fz24  mr10">4.9</span>
+        <span class="mark-tips mark-tips--small  mark-tips__plain-white">高</span>
+      </div>
+      <div class=" Cell -fill Grid -middle -center ">
+        <span class="fz24  mr20">卖家服务</span>
+        <span class="fz24  mr10">4.8</span>
+        <span class="mark-tips mark-tips--small mark-tips__plain-white">高</span>
+      </div>
+      <div class=" mark">
+        <span class="fz24  mr20">物流服务</span>
+        <span class="fz24  mr10">4.8</span>
+        <span class="mark-tips mark-tips--small  mark-tips__plain-white">高</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 店铺信息 end -->
+<!-- 相关信息 start -->
+<div class="aiui-tab" id="tab">
+<div class="aiui-cells">
+  <div class="aiui-cell">
+    <div class="Cell -2of2 Grid">
+      <span class="icon-shop"></span>
+      <p class="Cell -fill ml20">营业时间：00:00—23:59</p>
+    </div>
+    <div class="Cell -2of2 Grid mt20">
+        <span class="icon-address-2px"></span>
+        <div class="Cell -fill ml20 mr20">
+          <p>内蒙古鄂尔多斯市东胜区达拉特南路102号</p>
+          <p class="text-deep-gray fz24 mt10">距您12.34km</p>
+        </div>
+        <span class="icon-telephone"></span>
+      </div>
+  </div>
+  <!-- 相关信息 end -->
+  <div class="aui-cell"></div>
+</div>
+<div class="aiui-tab" id="tab">
+   <!-- tab菜单 start -->
+   <div class="aiui-tabmenu aiui-tabmenu-b">
+      <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">商品</a>
+      <a href="javascript:;" class="aiui-tabmenu__item">评价</a>
+      <a href="javascript:;" class="aiui-tabmenu__item">商家</a>
+    </div>
+    <!-- tab菜单 end -->
+  <!-- tab内容 start -->
+  <div class="aiui-tab__panel">
+     <!-- 商品内容 start -->
+    <div class="aiui-tab__content">
+      <!--搜索区域 start-->
+    <div class="filter-bar">
+        <div class="aiui-search-bar" id="searchBar">
+          <form class="aiui-search-bar__form" action="#">
+            <div class="aiui-search-bar__box">
+              <i class="icon-search"></i>
+              <input type="search" class="aiui-search-bar__input" autocomplete="off" placeholder="请输入关键字搜索" />
+              <button type="button" class="aiui-search-bar__clear-btn icon-close-fill"></button>
+            </div>
+          </form>
+          <button class="aiui-search-bar__cancel-btn">取消</button>
+        </div>
+      </div>
+      <!--搜索区域 end-->
+      <!-- 商家推荐 start -->
+      <div class="mall-floor">
+          <div class="mall-floor__hd">
+            <h3 class="fs36">商家推荐</h3>
+            <p class="Cell -fill fs24 text-deep-gray ml24">甄选品质推荐</p>
+          </div>
+          <div class="swiper-container swiper-index__product swiperProduct">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="mall-product__item " href="">
+                    <div class="thumb-240"><img src="../images/mall/product-11.jpg" alt=""></div>
+                    <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
+                    <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="mall-product__item " href="">
+                        <div class="thumb-240"><img src="../images/mall/product-11.jpg" alt=""></div>
+                        <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
+                        <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
+                      </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="mall-product__item " href="">
+                        <div class="thumb-240"><img src="../images/mall/product-11.jpg" alt=""></div>
+                        <p class="title ">2ph澳洲柑约4002ph澳洲柑约400</p>
+                        <p class="desc fz22 text-deep-gray">月售<span>123</span>份<span class="ml10">好评率</span><span>98%</span></p>
+                      </a>
+                </div>
+              </div>
+            </div>
+        </div>
+       <!-- 商家推荐 end -->
+    </div>
+      <!-- 商品内容 end -->
+    <!-- 评价内容 start -->
+    <div class="aiui-tab__content">
+
+    </div>
+     <!-- 评价内容 end -->
+    <!-- 商家内容 start -->
+    <div class="aiui-tab__content">
+    </div>
+    <!-- 商家内容 end -->
+  </div>
+  <!-- tab内容 end -->
+  <!--内容 end-->
+</div>
+{% endblock %}
+{% block footer %}
+<script type="text/javascript">
+  $(function () {
+    //搜索
+    aiui.searchBar('#searchBar');
+    $(".header-sticky-hook").sticky({ topSpacing: 0 });
+    //tab
+    aiui.tab('#tab', {
+      defaultIndex: 0,
+      onChange: function (index) {
+        console.log(index);
+      }
+    });
+    var produvtswiper = new Swiper('.swiperProduct', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+  });
+  });
+</script>
+{% endblock %}

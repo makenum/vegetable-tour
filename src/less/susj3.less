@@ -430,10 +430,21 @@
     color: @aiuiColorWarn;
     background-color: @aiuiBgColorDefault;
   }
+  &--transparent{
+    background: rgba(0,0,0,0.40);
+    border-radius: 5px;
+    color:@aiuiColorWhite;
+  }
   &__plain {
     color: @aiuiColorPrimary;
     &:before {
       .setFullLine(@aiuiColorPrimary, 5px);
+    }
+  }
+  &__plain-white {
+    color: @aiuiColorWhite;
+    &:before {
+      .setFullLine(@aiuiColorWhite, 5px);
     }
   }
   .icon-checkbox-on {
