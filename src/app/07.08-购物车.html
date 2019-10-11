@@ -241,9 +241,9 @@
 <!--tabbar end-->
 
 
-<!-- 点击我要养殖弹窗 start -->
+<!-- 立即购买弹窗 start -->
 <div class="aiui-popup-wrap" id="buyPopup" style="display: block;">
-  <div class="aiui-mask" id="aiui-mask"></div>
+  <div class="aiui-mask"></div>
   <div class="aiui-popup toggle">
     <div class="aiui-popup__content">
       <div class="aiui-cell popup-box_thumb -bottom">
@@ -285,7 +285,7 @@
               </li>
             </ul>
           </div>
-          <div class="aiui-cell">
+          <a class="aiui-cell" href="04.02.02-选择配送地址.html">
             <div class="Cell -2of2 Grid -middle">
               <p class="mr20">配送区域</p>
               <p class="fz24 text-deep-gray">(配送地可能会影响库存，请正确选择)</p>
@@ -297,7 +297,7 @@
               </div>
               <i class="icon-arrow-right"></i>
             </div>
-          </div>
+          </a>
           <div class="aiui-cell">
             <div class="Cell -fill"><span>购买数量：</span></div>
             <div class="aiui-count">
@@ -321,7 +321,7 @@
     </div>
   </div>
 </div>
-<!-- 点击我要养殖弹窗 end -->
+<!-- 立即购买弹窗 end -->
 
 {% endblock %}
 {% block footer %}
@@ -336,7 +336,7 @@
     $("#buyPopup").find(".aiui-popup").addClass("toggle");;
   });
   // 关闭Popup操作
-  $(document).on('click', '#aiui-mask,.close-popup__btn', function () {
+  $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
     $(".aiui-popup").removeClass("toggle")
     $(this).parents('.aiui-popup-wrap').fadeOut(200);
   });
