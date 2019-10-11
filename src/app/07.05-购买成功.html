@@ -1,0 +1,28 @@
+{% extends 'app.nunjucks' %}
+{% block title %}支付成功{% endblock %}
+{% block content %}
+<!--头部导航 start-->
+<div class="aiui-navbar-wrap">
+  <div class="aiui-navbar aiui-navbar--default aiui-navbar--fixed">
+    <div class="aiui-navbar__item">
+      <a href="javascript:history.back();" class="icon-return">
+      </a>
+    </div>
+    <h3 class="aiui-navbar__title">支付成功</h3>
+  </div>
+</div>
+<!--头部导航 start-->
+<div class="aiui-msg">
+  <div class="aiui-msg__hd aiui-msg__success">
+    <i class="icon-success aiui-icon__msg"></i>
+    <h2 class="aiui-msg__title">支付成功</h2>
+  </div>
+  <div class="aiui-msg__bd">
+    <p class="aiui-msg__desc">购买成功文案提示描述</p>
+  </div>
+  <div class="aiui-msg__ft">
+    <a href="05.09.01-商城订单.html" class="aiui-btn aiui-btn--plain aiui-btn--large aiui-btn--primary aiui-btn--pill">查看订单</a>
+    <a href="07.01-商城首页.html" class="aiui-btn aiui-btn--large aiui-btn--primary aiui-btn--pill">商城首页</a>
+  </div>
+</div>
+{% endblock %}
