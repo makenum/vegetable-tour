@@ -193,17 +193,17 @@
 </div>
 <div class="aiui-cells mb20">
   <div class="aiui-cell mall-product-info">
-    <h2 >价格说明</h2>
-      <div class="mall-product-info__item">
-        <h3>划线价格</h3>
-        <p>商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品展示过的销售价等，<strong>并非原价</strong>，仅供参考。</p>
-      </div>
-      <div class="mall-product-info__item">
-          <h3>未划线价格</h3>
-          <p>商品的<strong>实时标价</strong>，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员食用优惠券、积分等发生变化，</p>
-        </div>
+    <h2>价格说明</h2>
+    <div class="mall-product-info__item">
+      <h3>划线价格</h3>
+      <p>商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品展示过的销售价等，<strong>并非原价</strong>，仅供参考。</p>
+    </div>
+    <div class="mall-product-info__item">
+      <h3>未划线价格</h3>
+      <p>商品的<strong>实时标价</strong>，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员食用优惠券、积分等发生变化，</p>
     </div>
   </div>
+</div>
 <!--内容区域 end-->
 <!--底部悬浮按钮 start-->
 <div class="aiui-footbtn-wrap">
@@ -213,14 +213,98 @@
       <p>店铺主页</p>
     </a>
     <a href="javascript:;" class="aiui-footbtn__item" id="btnFavorite">
-        <div class="icon-favorite"></div>
-        <p>收藏</p>
-      </a>
-    <button type="button" class="aiui-btn  aiui-btn--giant aiui-btn--lightgreen">加入购物车</button>
-    <a href="07.04-确认订单.html" class="aiui-btn  aiui-btn--giant aiui-btn--green" >立即购买</a>
+      <div class="icon-favorite"></div>
+      <p>收藏</p>
+    </a>
+    <button type="button" class="aiui-btn aiui-btn--giant aiui-btn--lightgreen">加入购物车</button>
+    <button type="button" class="aiui-btn aiui-btn--giant aiui-btn--green" id="buyNowBtn">立即购买</a>
   </div>
 </div>
 <!--底部悬浮按钮 end-->
+
+<!-- 立即购买弹窗 start -->
+<div class="aiui-popup-wrap" id="buyPopup">
+  <div class="aiui-mask"></div>
+  <div class="aiui-popup">
+    <div class="aiui-popup__content">
+      <div class="aiui-cell popup-box_thumb -bottom">
+        <div class="thumb thumb-180 mr30"><img src="../images/mall/product-15.jpg"></div>
+        <div class="Cell -fill">
+          <p class="fz34 mb10 text-orange">¥59.00</p>
+          <p class="fz24 mb10 lh-noraml text-deep-gray">库存14353件</p>
+          <p class="fz24 lh-noraml">配送至：岳麓区</p>
+        </div>
+      </div>
+      <div class="popup-box__scroll">
+        <div class="aiui-cells">
+          <div class="aiui-cell">
+            <ul class="chose-list">
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>1斤装</p>
+                </div>
+              </li>
+              <li class="chose-list__item active">
+                <div class="content">
+                  <p>4斤装</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>8斤装</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>16斤装</p>
+                </div>
+              </li>
+              <li class="chose-list__item">
+                <div class="content">
+                  <p>自定义请联系店主</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="aiui-cell" href="04.02.02-选择配送地址.html">
+            <div class="Cell -2of2 Grid -middle">
+              <p class="mr20">配送区域</p>
+              <p class="fz24 text-deep-gray">(配送地可能会影响库存，请正确选择)</p>
+            </div>
+            <div class="Cell -2of2 Grid -middle mt20">
+              <i class="icon-address-2px"></i>
+              <div class="Cell -fill">
+                <p class="fz26 text-med-gray">长沙市 岳麓区 梅溪湖街道</p>
+              </div>
+              <i class="icon-arrow-right"></i>
+            </div>
+          </a>
+          <div class="aiui-cell">
+            <div class="Cell -fill"><span>购买数量：</span></div>
+            <div class="aiui-count">
+              <button type="button" class="aiui-count__btn aiui-count__decrease">
+                <i class="icon-decrease"></i>
+              </button>
+              <input type="number" class="aiui-count__number" value="1" readonly>
+              <button type="button" class="aiui-count__btn aiui-count__increase">
+                <i class="icon-add"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-box__ft">
+        <div class="aiui-segmented-control aiui-segmented-control--large aiui-segmented-control--primary">
+          <button type="button" class="aiui-segmented-control__item" id="addShoppingCartBtn">加入购物车</button>
+          <a href="07.04-确认订单.html" class="aiui-segmented-control__item active">立即购买</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 立即购买弹窗 end -->
+
+
 {% endblock %}
 {% block footer %}
 <script>
@@ -235,17 +319,42 @@
       }
     });
     // 收藏
-    $('#btnFavorite').click(function(){
-      var statusFavoriteBtn=$(this).find('.icon-favorite');
-      var favoriteTxt=$(this).find('p');
-      if(statusFavoriteBtn.hasClass('icon-favorite-fill')){
+    $('#btnFavorite').click(function () {
+      var statusFavoriteBtn = $(this).find('.icon-favorite');
+      var favoriteTxt = $(this).find('p');
+      if (statusFavoriteBtn.hasClass('icon-favorite-fill')) {
         statusFavoriteBtn.removeClass('icon-favorite-fill');
         favoriteTxt.html('收藏');
-      }else{
+      } else {
         statusFavoriteBtn.addClass('icon-favorite-fill');
         favoriteTxt.html('已收藏');
       }
     })
+    // 选择高亮
+    $(".chose-list__item").on("click", function () {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+    });
+    // 打开Popup操作
+    $('#buyNowBtn').on('click', function () {
+      $("#buyPopup").fadeIn(200);
+      $("#buyPopup").find(".aiui-popup").addClass("toggle");;
+    });
+    // 关闭Popup操作
+    $(document).on('click', '.aiui-mask,.close-popup__btn', function () {
+      $("#buyPopup").find(".aiui-popup").removeClass("toggle")
+      $("#buyPopup").fadeOut(200);
+    });
+    // 加入购物车
+    $("#addShoppingCartBtn").bind("click", function () {
+      $("#buyPopup").find(".aiui-popup").removeClass("toggle")
+      $("#buyPopup").fadeOut(200);
+      aiui.toast('成功加入购物车', {
+        duration: 3000,
+        className: 'aiui-toast--success'
+      });
+    });
+
   });
 </script>
 {% endblock %}
