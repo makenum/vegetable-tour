@@ -1,30 +1,122 @@
 {% extends 'app.nunjucks' %}
 {% block title %}店铺详情-店铺评价{% endblock %}
 {% block content %}
-<ul class="shop-assess">
-  <li class="shop-assess__item">
-    <div class="name">描述服务</div>
-    <div class="scorebar">
-      <div class="scorebar-inner" style="width: 96%;"></div>
+<!--头部导航 start-->
+<div class="header-sticky">
+  <div class="aiui-navbar aiui-navbar--default">
+    <div class="aiui-navbar__item">
+      <a href="javascript:history.back();" class="icon-return"></a>
     </div>
-    <span class="score">4.8</span>
-    <p class="desc">持平于同行</p>
-  </li>
-  <li class="shop-assess__item">
-    <div class="name">服务态度</div>
-    <div class="scorebar">
-      <div class="scorebar-inner" style="width: 96%;"></div>
+    <h3 class="aiui-navbar__title">鄂尔多斯农场</h3>
+    <div class="aiui-navbar__item">
+      <a href="#" class="icon-shopping-cart"></a>
     </div>
-    <span class="score">4.8</span>
-    <p class="desc">高于同行12.45%</p>
-  </li>
-  <li class="shop-assess__item">
-    <div class="name">物流服务</div>
-    <div class="scorebar">
-      <div class="scorebar-inner" style="width: 96%;"></div>
+  </div>
+</div>
+<!--头部导航 end-->
+<!-- 店铺信息 start -->
+<div class="my-store">
+  <img src="../images/store-bg.png" class="response-img">
+  <div class="content">
+    <div class="Cell -2of2 Grid">
+      <div class="avatar avatar-100 mr20">
+        <img src="../images/avatar-01.png" alt="">
+      </div>
+      <div class="Cell -fill Grid ">
+        <h3 class="Cell -2of2 fz36">鄂尔多斯农场</h3>
+        <div class="mt20 ">
+          <div class="mark-tips mark-tips--transparent"><span class="fz22">综合体验</span>
+            <div class="aiui-star aiui-star--small ml10">
+              <ul class="aiui-star__box star" score="4">
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">1</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">2</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">3</a></li>
+                <li class="aiui-star__item icon-star on"><a href="javascript:;">4</a></li>
+                <li class="aiui-star__item icon-star"><a href="javascript:;">5</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="icon-share-3px"></a>
     </div>
-    <span class="score">4.8</span>
-    <p class="desc">高于同行12.07%</p>
-  </li>
-</ul>
+    <div class="Cell -2of2 Grid -middle ">
+      <div class=" mark">
+        <span class="fz24  mr20">商品描述</span>
+        <span class="fz24  mr10">4.9</span>
+        <span class="mark-tips mark-tips--small  mark-tips__white">高</span>
+      </div>
+      <div class=" Cell -fill Grid -middle -center ">
+        <span class="fz24  mr20">卖家服务</span>
+        <span class="fz24  mr10">4.8</span>
+        <span class="mark-tips mark-tips--small mark-tips__white">高</span>
+      </div>
+      <div class=" mark">
+        <span class="fz24  mr20">物流服务</span>
+        <span class="fz24  mr10">4.8</span>
+        <span class="mark-tips mark-tips--small  mark-tips__white">高</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 店铺信息 end -->
+
+<!-- 相关信息 start -->
+<div class="aiui-cell -primary">
+  <div class="Cell -2of2 Grid">
+    <span class="icon-shop"></span>
+    <p class="Cell -fill ml20">营业时间：00:00—23:59</p>
+  </div>
+  <div class="Cell -2of2 Grid mt20">
+    <span class="icon-address-2px"></span>
+    <div class="Cell -fill ml20 mr20">
+      <p>内蒙古鄂尔多斯市东胜区达拉特南路102号</p>
+      <p class="text-deep-gray fz24 mt10">距您12.34km</p>
+    </div>
+    <span class="icon-telephone"></span>
+  </div>
+</div>
+
+<!-- 相关信息 end -->
+
+<!-- tab菜单 start -->
+<div class="aiui-tabmenu aiui-tabmenu-b">
+  <a href="javascript:;" class="aiui-tabmenu__item">商品</a>
+  <a href="javascript:;" class="aiui-tabmenu__item aiui-tabmenu__item--on">评价</a>
+  <a href="javascript:;" class="aiui-tabmenu__item">商家</a>
+</div>
+<!-- tab菜单 end -->
+
+<div class="aiui-cells mt20">
+  <div class="mall-floor__hd">
+    <h3 class="fz30">店铺好评率100.00%</h3>
+  </div>
+  <ul class="shop-assess">
+    <li class="shop-assess__item">
+      <div class="name">描述服务</div>
+      <div class="scorebar">
+        <div class="scorebar-inner" style="width: 96%;"></div>
+      </div>
+      <span class="score">4.8</span>
+      <p class="desc">持平于同行</p>
+    </li>
+    <li class="shop-assess__item">
+      <div class="name">服务态度</div>
+      <div class="scorebar">
+        <div class="scorebar-inner" style="width: 96%;"></div>
+      </div>
+      <span class="score">4.8</span>
+      <p class="desc">高于同行12.45%</p>
+    </li>
+    <li class="shop-assess__item">
+      <div class="name">物流服务</div>
+      <div class="scorebar">
+        <div class="scorebar-inner" style="width: 96%;"></div>
+      </div>
+      <span class="score">4.8</span>
+      <p class="desc">高于同行12.07%</p>
+    </li>
+  </ul>
+</div>
+
 {% endblock %}
