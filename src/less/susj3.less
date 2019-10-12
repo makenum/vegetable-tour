@@ -440,11 +440,13 @@
     &:before {
       .setFullLine(@aiuiColorPrimary, 5px);
     }
+    &--white {
+      color: @aiuiColorWhite;
+      &:before {
+        .setFullLine(@aiuiColorWhite, 5px);
+    }
   }
-  &__white {
-    color:@aiuiColorMedGray ;
-    background: @aiuiColorWhite;
-  }
+}
   .icon-checkbox-on {
     background-color: @aiuiColorWarn;
     width: 32px;
